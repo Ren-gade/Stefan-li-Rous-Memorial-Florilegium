@@ -1,0 +1,36 @@
+{
+  "Art": {
+    "Beadwork": [
+      {
+        "name": "Floral Pattern.jpg",
+        "url": "https://example-bucket.s3.amazonaws.com/FloralPattern.jpg",
+        "type": "image"
+      }
+    ],
+    "Paintings": [
+      {
+        "name": "Sunset Watercolor.jpg",
+        "url": "https://example-bucket.s3.amazonaws.com/SunsetWatercolor.jpg",
+        "type": "image"
+      }
+    ]
+  },
+  "Bibliographies": {
+    "Research": [
+      {
+        "name": "Cultural_Study.pdf",
+        "url": "https://example-bucket.s3.amazonaws.com/Cultural_Study.pdf",
+        "type": "pdf"
+      }
+    ]
+  },
+  "Messages": {
+    "Letters": [
+      {
+        "name": "Welcome.msg",
+        "url": "https://example-bucket.s3.amazonaws.com/Welcome.msg",
+        "type": "msg"
+      }
+    ]
+  }
+}
