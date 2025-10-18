@@ -1,98 +1,169 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Food By Region</title>
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <header style="display:flex; align-items:center; justify-content:flex-start; padding:10px;">
-  <span style="display:flex; align-items:center;">
-    <img src="img/Trillium_flower.svg.png" alt="Icon" style="width:50px; height:50px;">
-    <span style="margin-left:550px;">Stefan li Rous Memorial Florilegium</span>
-  </span>
-      <button id="modeToggle" style="float: right; margin-left: 600px;">
-        🌙
-      </button>
-    </header>
-    <div style="display: flex">
-     <div id="sidebar" style="width:200px; padding:10px;">
-    <input type="text" placeholder="Search..." id="sidebarSearch"><br>
-<p><a href="index.html" style="text-decoration:none; color:#3a2a1a;">🏠 Home</a></p>
-    <div id="categoryList">
-        <p><a href="category-12th-century.html">12th Century</a></p>
-        <p><a href="category-accessories.html">Accessories</a></p>
-            <p><a href="category-animals.html">Animals</a></p>
-            <p><a href="category-archery.html">Archery</a></p>
-             <p><a href="category-armor.html">Armor</a></p>
-             <p><a href="category-beverages.html">Beverages</a></p>
-              <p><a href="category-camping.html">Camping</a></p>
-               <p><a href="category-celebrations-events.html">Celebrations & Events</a></p>
-                <p><a href="category-children.html">Children</a></p>
-                 <p><a href="category-chivalry.html">Chivalry</a></p>
-                  <p><a href="category-clothing.html">Clothing</a></p>
-                   <p><a href="category-combat.html">Combat</a></p>
-                    <p><a href="category-combat-rapier.html">Combat - Rapier</a></p>
-                     <p><a href="category-commerce.html">Commerce</a></p>
-                      <p><a href="category-crime.html">Crime</a></p>
-                       <p><a href="category-cultures.html">Cultures</a></p>
-                        <p><a href="category-dance.html">Dance</a></p>
-                         <p><a href="category-disabilities.html">Disabilities</a></p>
-                          <p><a href="category-education.html">Education</a></p>
-                           <p><a href="category-entertainment.html">Entertainment</a></p>
-                            <p><a href="category-equestrian.html">Equestrian</a></p>
-                             <p><a href="category-feast-reviews.html">Feast Reviews</a></p>
-                              <p><a href="category-food-books.html">Food - Books</a></p>
-                               <p><a href="category-food-bread.html">Food - Bread</a></p>
-                                <p><a href="category-food-by-region.html">Food - By Region</a></p>
-                                 <p><a href="category-food-condiments.html">Food - Condiments</a></p>
-                                  <p><a href="category-food-dairy.html">Food - Dairy</a></p>
-                                   <p><a href="category-food-eggs.html">Food - Eggs</a></p>
-                                    <p><a href="category-food-fruits.html">Food - Fruits</a></p>
-                                     <p><a href="category-food-manuscripts.html">Food - Manuscripts</a></p>
-                                      <p><a href="category-food-meats.html">Food - Meats</a></p>
-                                       <p><a href="category-food-snacks.html">Food - Snacks</a></p>
-                                        <p><a href="category-food-sweet-or-decorated.html">Food - Sweet or Decorated</a></p>
-                                         <p><a href="category-food-utensils.html">Food - Utensils</a></p>
-                                          <p><a href="category-food-vegetables.html">Food - Vegetables</a></p>
-                                           <p><a href="category-heraldry.html">Heraldry</a></p>
-                                            <p><a href="category-home-sweet-home.html">Home Sweet Home</a></p>
-                                             <p><a href="category-humor.html">Humor</a></p>
-                                              <p><a href="category-medieval-events.html">Medieval Events</a></p>
-                                               <p><a href="category-medieval-life.html">Medieval Life</a></p>
-                                                 <p><a href="category-medieval-technology.html">Medieval Technology</a></p>
-                                                <p><a href="category-newcomers-corner.html">Newcomers Corner</a></p>
-                                                 <p><a href="category-norse.html">Norse</a></p>
-                                                  <p><a href="category-pennsic.html">Pennsic</a></p>
-                                                   <p><a href="category-people.html">People</a></p>
-                                                    <p><a href="category-performance-arts.html">Performance Arts</a></p>
-                                                     <p><a href="category-period-thought.html">Period Thought</a></p>
-                                                      <p><a href="category-personal-care.html">Personal Care</a></p>
-                                                       <p><a href="category-personas.html">Personas</a></p>
-                                                        <p><a href="category-plants-herbs-spices.html">Plants, Herbs, & Spices</a></p>
-                                                           <p><a href="category-planning-sca-events.html">Planning SCA Events</a></p>
-                                                           <p><a href="category-religion.html">Religion</a></p>
-                                                          <p><a href="category-research.html">Research & Documentation</a></p>
-                                                            <p><a href="category-sca-inc.html">The SCA, Inc.</a></p>
-                                                             <p><a href="category-sca-sociology.html">SCA Sociology</a></p>
-                                                              <p><a href="category-sca-stories.html">SCA Stories</a></p>
-                                                               <p><a href="category-scribal-arts.html">Scribal Arts</a></p>
-                                                                <p><a href="category-structures.html">Structures, Pavilions, and Tents</a></p>
-                                                                  <p><a href="category-textile-arts.html">Textile Arts</a></p>
-                                                                  <p><a href="category-thrown-weapons.html">Thrown Weapons</a></p>
-                                                                  <p><a href="category-time.html">Time</a></p>
-                                                                     <p><a href="category-travel.html">Travel</a></p>
-                                                                      <p><a href="category-weddings.html">Weddings</a></p>
-                                                                      <p><a href="category-unclassified.html">Unclassified</a></p>
-                                                                       
-                                                    
-    </div>
-</div>
+ <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Food By Region</title>
+      <link href="css/style.css" rel="stylesheet" />
+      <style>
+       body {
+  background-color: #f5f0e1; /* beige parchment */
+  font-family: "Cormorant Garamond", serif;
+  color: #3a2a1a;
+  margin: 0;
+  padding-top: 60px; /* header space */
+}
 
- <!-- Main Content -->
-   
-  </body>
+        .alphabet-nav {
+          text-align: center;
+          background: #e9ecef;
+          padding: 0.75rem;
+          position: sticky;
+          top: 0;
+          z-index: 10;
+          border-bottom: 1px solid #ccc;
+        }
+
+        .alphabet-nav a {
+          margin: 0 0.4rem;
+          color: #0077cc;
+          text-decoration: none;
+          font-weight: bold;
+        }
+
+        .alphabet-nav a:hover {
+          color: #005999;
+        }
+
+        .alphabet-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 1.5rem;
+          padding: 2rem;
+        }
+
+        .letter-section {
+          background: #fff;
+          border-radius: 8px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          padding: 1rem;
+        }
+
+        .letter-section h2 {
+          font-size: 1.5em;
+          border-bottom: 2px solid #0077cc;
+          padding-bottom: 0.3em;
+          margin-bottom: 0.5em;
+          color: #0077cc;
+        }
+
+        .letter-section ul {
+          list-style: none;
+          padding-left: 0;
+          margin: 0;
+        }
+
+        .letter-section li {
+          margin: 0.4em 0;
+        }
+
+        .letter-section a {
+          color: #333;
+          text-decoration: none;
+        }
+
+        .letter-section a:hover {
+          color: #0077cc;
+          text-decoration: underline;
+        }
+      </style>
+    </head>
+    <body>
+      <header
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          padding: 10px;
+        "
+      >
+        <span style="display: flex; align-items: center">
+          <img
+            src="img/Trillium_flower.svg.png"
+            alt="Icon"
+            style="width: 50px; height: 50px"
+          />
+          <a href="index.html" style="text-decoration:none; color:#3a2a1a;">🏠</a>
+          <span style="margin-left: 550px"
+            >Stefan li Rous Memorial Florilegium</span
+          >
+        </span>
+        <button id="modeToggle" style="float: right; margin-left: 550px">
+          🌙
+        </button>
+      </header>
+
+      <nav class="alphabet-nav">
+        <a href="#A">A</a>
+        <a href="#B">B</a>
+        <a href="#C">C</a>
+        <a href="#D">D</a>
+        <a href="#E">E</a>
+        <a href="#F">F</a>
+        <a href="#G">G</a>
+        <a href="#H">H</a>
+        <a href="#I">I</a>
+        <a href="#J">J</a>
+        <a href="#K">K</a>
+        <a href="#L">L</a>
+        <a href="#M">M</a>
+        <a href="#N">N</a>
+        <a href="#O">O</a>
+        <a href="#P">P</a>
+        <a href="#Q">Q</a>
+        <a href="#R">R</a>
+        <a href="#S">S</a>
+        <a href="#T">T</a>
+        <a href="#U">U</a>
+        <a href="#V">V</a>
+        <a href="#W">W</a>
+        <a href="#X">X</a>
+        <a href="#Y">Y</a>
+        <a href="#Z">Z</a>
+      </nav>
+
+      <div class="alphabet-list">
+        <div class="letter-section" id="A">
+          <h2>A</h2>
+          <ul>
+            <li>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Food/Arab+Recipes%2C+In+a+Caliph's+Kitchen.pdf"
+                >Arab: In a Caliph's Kitchen (out of Print)
+              </a>
+            </li>
+            <li><a href="#">Avocado</a></li>
+          </ul>
+        </div>
+
+        <div class="letter-section" id="B">
+          <h2>B</h2>
+          <ul>
+            <li><a href="#">Banana</a></li>
+            <li><a href="#">Blueberry</a></li>
+          </ul>
+        </div>
+
+        <div class="letter-section" id="C">
+          <h2>C</h2>
+          <ul>
+            <li><a href="#">Cherry</a></li>
+            <li><a href="#">Cantaloupe</a></li>
+          </ul>
+        </div>
+
+        <!-- You can continue through D–Z as needed -->
+      </div>
+    </body>
+  </html>
 </html>
-
-
