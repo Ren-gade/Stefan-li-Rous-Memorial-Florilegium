@@ -1,0 +1,32 @@
+[
+  {
+    "title": "The Art of Medieval Calligraphy",
+    "tags": [
+      "calligraphy",
+      "manuscripts",
+      "illumination"
+    ],
+    "description": "An introduction to medieval calligraphy styles and tools.",
+    "download_url": "#"
+  },
+  {
+    "title": "Period Leatherworking Techniques",
+    "tags": [
+      "leatherwork",
+      "crafts",
+      "tools"
+    ],
+    "description": "A look at historical methods of leather preparation and decoration.",
+    "download_url": "#"
+  },
+  {
+    "title": "Feasting in the 14th Century",
+    "tags": [
+      "cooking",
+      "feasts",
+      "food"
+    ],
+    "description": "Exploring menus and recipes from medieval banquets.",
+    "download_url": "#"
+  }
+]
