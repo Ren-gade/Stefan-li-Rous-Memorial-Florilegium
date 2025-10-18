@@ -1,40 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Stefan li Rous Memorial Florilegium</title>
-  <link href="css/style.css" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Stefan li Rous Memorial Florilegium</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      Stefan li Rous Memorial Florilegium
+      <button id="modeToggle" style="float: right; margin-right: 10px">
+        🌙
+      </button>
+    </header>
 
-<header>Stefan li Rous Memorial Florilegium <button id="modeToggle" style="float:right;margin-right:10px;">🌙</button></header>
-
-<div style="display:flex;">
-    <div id="sidebar" style="width:200px; padding:10px;">
-        <input type="text" placeholder="Search..." id="sidebarSearch"><br><br>
-        <div id="categoryList">
-            <p>Category 1</p>
-            <p>Category 2</p>
-        </div>
+    <div style="display: flex">
+     <div id="sidebar" style="width:200px; padding:10px;">
+    <input type="text" placeholder="Search..." id="sidebarSearch"><br>
+<p><a href="index.html" style="text-decoration:none; color:#3a2a1a;">🏠 Home</a></p>
+    <div id="categoryList">
+        <p>Category 1</p>
+        <p>Category 2</p>
     </div>
-    <main style="flex:1; padding:20px;">
-        <div id="contentArea">
-            <h2>Welcome</h2>
-            <p>This Florilegium contains various articles and files curated for study.</p>
-            <h3>How it works:</h3>
-            <ul>
-                <li>Browse categories using the sidebar.</li>
-                <li>Search by tags or titles in the sidebar search box.</li>
-                <li>Click on a tag to view all items with that tag.</li>
-                <li>Download files using the download button on each card.</li>
-            </ul>
-            <h3>Submit an article:</h3>
-            <p>To submit an article, please email your text submission directly to example@email.com. Include your name and any relevant affiliation.</p>
-        </div>
-    </main>
 </div>
 
-<script src="js/script.js"></script>
-</body>
+      <main style="flex: 1; padding: 20px">
+        <div id="contentArea">
+          <h2>Welcome</h2>
+          <p>
+            This Florilegium was meticulously assembled by The Honorable Lord Stefan li
+            Rous (Mark S. Harris)who passed away before I ever had the chance to
+            discover it. After learning about his work, I felt inspired to carry
+            it forward — honouring his vision by maintaining and curating the
+            original articles, while also contributing new ones to continue and
+            expand his legacy.
+          </p>
+        </br>
+          <h3>How it works</h3>
+          <ul>
+            <li>Browse categories using the sidebar.</li>
+            <li>Search by tags or titles in the sidebar search box.</li>
+            <li>Click on a tag to view all items with that tag.</li>
+            <li>Download files using the download button on each card.</li>
+          </ul>
+          <h3>Submit an article</h3>
+          <p>
+            To submit an article, please <a href="mailto:ren.swiftwater@gmail.com">email your text submission directly</a> , either in word or pdf format. Include your name and any SCA kingdom or baronial affiliation.
+          </p>
+          <br>
+        <h2> New Uploads </h2>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>

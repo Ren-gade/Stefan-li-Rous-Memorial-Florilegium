@@ -1,30 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Articles - Stefan li Rous Memorial Florilegium</title>
-  <link href="css/style.css" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Articles - Stefan li Rous Memorial Florilegium</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      Stefan li Rous Memorial Florilegium
+      <button id="modeToggle" style="float: right; margin-right: 10px">
+        🌙
+      </button>
+    </header>
 
-<header>Stefan li Rous Memorial Florilegium <button id="modeToggle" style="float:right;margin-right:10px;">🌙</button></header>
-
-<div style="display:flex;">
-    <div id="sidebar" style="width:200px; padding:10px;">
-        <input type="text" placeholder="Search..." id="sidebarSearch"><br><br>
+    <div style="display: flex">
+      <div id="sidebar" style="width: 200px; padding: 10px">
+        <input type="text" placeholder="Search..." id="sidebarSearch" /><br />
+        <p>
+          <a href="index.html" style="text-decoration: none; color: #3a2a1a"
+            >🏠 Home</a
+          >
+        </p>
         <div id="categoryList">
-            <p>Category 1</p>
-            <p>Category 2</p>
+          <p>Category 1</p>
+          <p>Category 2</p>
         </div>
-    </div>
-    <main style="flex:1; padding:20px;">
+      </div>
+      <main style="flex: 1; padding: 20px">
         <div id="contentArea">
-            <!-- JS will populate cards here -->
+          <!-- JS will populate cards here -->
         </div>
-    </main>
-</div>
+      </main>
+    </div>
 
-<script src="js/script.js"></script>
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>
