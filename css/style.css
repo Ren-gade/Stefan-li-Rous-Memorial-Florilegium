@@ -54,3 +54,6 @@ header {
   border-radius: 4px;
   box-sizing: border-box;
 }
+main#contentArea {
+  padding-top: 50px; /* adjust as needed */
+}

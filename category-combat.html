@@ -3,26 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Stefan li Rous Memorial Florilegium</title>
+    <title>Combat</title>
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
-    <header style="display:flex; align-items:center; justify-content:flex-start; padding:10px;">
+      <header style="display:flex; align-items:center; justify-content:flex-start; padding:10px;">
   <span style="display:flex; align-items:center;">
     <img src="img/Trillium_flower.svg.png" alt="Icon" style="width:50px; height:50px;">
     <span style="margin-left:550px;">Stefan li Rous Memorial Florilegium</span>
   </span>
-</header>
       <button id="modeToggle" style="float: right; margin-right: 10px">
         🌙
       </button>
     </header>
 
+
     <div style="display: flex">
      <div id="sidebar" style="width:200px; padding:10px;">
     <input type="text" placeholder="Search..." id="sidebarSearch"><br>
-<p><a href="#" style="text-decoration:none; color:#3a2a1a;">🏠 Home</a></p>
-<p><a href="about-stefan.html">About THL Stefan li Rous</a></p>
+<p><a href="index.html" style="text-decoration:none; color:#3a2a1a;">🏠 Home</a></p>
     <div id="categoryList">
         <p><a href="category-12th-century.html">12th Century</a></p>
         <p><a href="category-accessories.html">Accessories</a></p>
@@ -35,7 +34,7 @@
                 <p><a href="category-children.html">Children</a></p>
                  <p><a href="category-chivalry.html">Chivalry</a></p>
                   <p><a href="category-clothing.html">Clothing</a></p>
-                   <p><a href="category-combat.html">Combat</a></p>
+                   <p><a href="#">Combat</a></p>
                     <p><a href="category-combat-rapier.html">Combat - Rapier</a></p>
                      <p><a href="category-commerce.html">Commerce</a></p>
                       <p><a href="category-crime.html">Crime</a></p>
@@ -93,31 +92,18 @@
     </div>
 </div>
 
-      <main style="flex: 1; padding: 20px">
-        <div id="contentArea">
-          <h2>Welcome</h2>
-          <p>
-            This Florilegium was meticulously assembled by The Honorable Lord Stefan li
-            Rous (Mark S. Harris)who passed away before I ever had the chance to
-            discover it. After learning about his work, I felt inspired to carry
-            it forward — honouring his vision by maintaining and curating the
-            original articles, while also contributing new ones to continue and
-            expand his legacy.
-          </p>
-        </br>
-          <h3>How it works</h3>
-          <ul>
-            <li>Browse categories using the sidebar.</li>
-            <li>Search by tags or titles in the sidebar search box.</li>
-            <li>Click on a tag to view all items with that tag.</li>
-            <li>Download files using the download button on each card.</li>
-          </ul>
-          <h3>Submit an article</h3>
-          <p>
-            To submit an article, please <a href="mailto:ren.swiftwater@gmail.com">email your text submission directly</a>, either in doc/docx or pdf format. Include your name and any SCA kingdom or baronial affiliation.
-          </p>
-               </div>
-      </main>
+ <!-- Main Content -->
+        <main class="col-md-10" id="contentArea">
+          <!-- Cards populated dynamically by script.js -->
+        </main>
+      </div>
     </div>
+    <script>
+      // Set category for this page
+      window.currentCategory = "Combat";
+    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
+
+

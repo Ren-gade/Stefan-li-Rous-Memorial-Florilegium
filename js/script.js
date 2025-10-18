@@ -36,10 +36,29 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const query = getQueryParam("q");
+  const currentCategory = window.currentCategory || null;
 
-  // Load JSON and display cards
-  const dataUrl = "data/data.json";
-  fetch(dataUrl)
+  // --- Load Categories dynamically ---
+  fetch("data/categories.json")
+    .then((res) => res.json())
+    .then((categories) => {
+      const categoryList = document.getElementById("categoryList");
+      if (!categoryList) return;
+      categoryList.innerHTML = "";
+
+      categories.forEach((cat) => {
+        const link = document.createElement("p");
+        const url = `category-${cat
+          .toLowerCase()
+          .replace(/ /g, "-")
+          .replace(/[&]/g, "and")}.html`;
+        link.innerHTML = `<a href="${url}">${cat}</a>`;
+        categoryList.appendChild(link);
+      });
+    });
+
+  // --- Load and display articles ---
+  fetch("data/data.json")
     .then((response) => response.json())
     .then((data) => {
       const contentArea = document.getElementById("contentArea");
@@ -49,9 +68,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
       let displayData = data;
 
+      // Filter by search query if present
       if (query) {
         const q = query.toLowerCase();
-        displayData = data.filter(
+        displayData = displayData.filter(
           (item) =>
             item.title.toLowerCase().includes(q) ||
             (item.tags &&
@@ -59,6 +79,15 @@ document.addEventListener("DOMContentLoaded", function () {
         );
       }
 
+      // Filter by current page category if set
+      if (currentCategory) {
+        const cat = currentCategory.toLowerCase();
+        displayData = displayData.filter(
+          (item) => item.category && item.category.toLowerCase() === cat
+        );
+      }
+
+      // Generate cards
       displayData.forEach((item) => {
         const card = document.createElement("div");
         card.className = "card";
@@ -66,13 +95,17 @@ document.addEventListener("DOMContentLoaded", function () {
         let tagsHtml = "";
         if (item.tags) {
           item.tags.forEach((tag) => {
-            tagsHtml += `<span class="tag-badge" onclick="window.location.href='search.html?q=${tag}'">#${tag}</span>`;
+            tagsHtml += `<span class="tag-badge" onclick="window.location.href='category-${tag
+              .toLowerCase()
+              .replace(/ /g, "-")
+              .replace(/[&]/g, "and")}.html'">#${tag}</span>`;
           });
         }
 
-        // Highlight query in title and description
         let titleHtml = item.title;
         let descHtml = item.description;
+
+        // Highlight query matches
         if (query) {
           const regex = new RegExp(`(${query})`, "gi");
           titleHtml = titleHtml.replace(
