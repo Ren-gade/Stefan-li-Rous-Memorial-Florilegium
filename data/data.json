@@ -1,5 +1,97 @@
 [
   {
+    "title": "BIB - Art and Architecture by HL Elaine de Montgris",
+    "category": "12th Century",
+    "tags": [" architecture", "research", "resources"],
+    "description": "A bibliography on resources for Art and Architecture in the 12th century.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/12th+Century/BIB+-+Art+and+Architecture+by+HL+Elaine+de+Montgris.pdf"
+  },
+  {
+    "title": "BIB- The British Isles",
+    "category": "12th Century",
+    "tags": ["britain", "research", "resources"],
+    "description": "A bibliography on resources for the British Isles in the 12th century.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/12th+Century/BIB+-+The+British+Isles.pdf"
+  },
+  {
+    "title": "BIB- Chivalry",
+    "category": "12th Century",
+    "tags": ["chivalry", "research", "resources"],
+    "description": "A bibliography on resources for Chivalry in the 12th century.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/12th+Century/BIB-+Chivalry.pdf"
+  },
+  {
+    "title": "BIB- The Crusades",
+    "category": "12th Century",
+    "tags": ["crusades", "research", "resources"],
+    "description": "A bibliography on resources for The Crusades in the 12th century.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/12th+Century/BIB-+The+Crusades.pdf"
+  },
+  {
+    "title": "BIB- Continental Europe",
+    "category": "12th Century",
+    "tags": ["europe", "research", "resources"],
+    "description": "A bibliography on resources for Contiental Europe in the 12th century.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/12th+Century/BIB-+Continental+Europe.pdf"
+  },
+  {
+    "title": "BIB- Law",
+    "category": "12th Century",
+    "tags": ["law"],
+    "description": "A bibliography on resources for Law in the 12th century.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/12th+Century/BIB-+Law.pdf"
+  },
+  {
+    "title": "BIB-Movies",
+    "category": "12th Century",
+    "tags": ["movies"],
+    "description": "A bibliography on resources for movies in the 12th century.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/12th+Century/BIB-+Movies.pdf"
+  },
+  {
+    "title": "BIB-Music",
+    "category": "12th Century",
+    "tags": ["music", "research", "resources"],
+    "description": "A bibliography on resources for music in the 12th century.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/12th+Century/BIB-+Music.pdf"
+  },
+  {
+    "title": "BIB-Must Reads",
+    "category": "12th Century",
+    "tags": ["read", "research"],
+    "description": "A bibliography on things you must read from the 12th century.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/12th+Century/BIB-+Must+Reads.pdf"
+  },
+  {
+    "title": "BIB-On the Margins",
+    "category": "12th Century",
+    "tags": ["women", "sex", "minorities", "research", "resources"],
+    "description": "A bibliography on resources for minorities and women in the 12th century.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/12th+Century/BIB-+On+the+Margins+(Women%2C+sex%2C+minorities%2C+etc.).pdf"
+  },
+  {
+    "title": "BIB-Philosophy and Education",
+    "category": "12th Century",
+    "tags": ["philosophy", "education", "resources", "research"],
+    "description": "A bibliography on resources for philosophy and education in the 12th century.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/12th+Century/BIB-+Philosophy+and+Education.pdf"
+  },
+  {
+    "title": "BIB-Pop Literature",
+    "category": "12th Century",
+    "tags": ["literature", "research", "resources"],
+    "description": "A bibliography on resources for popular literature in the 12th century.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/12th+Century/BIB-+Pop+Literature.pdf"
+  },
+  {
+    "title": "BIB-The Normans",
+    "category": "12th Century",
+    "tags": ["norman", "research", "resources"],
+    "description": "A bibliography on resources for the Normans in the 12th century.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/12th+Century/BIB-+The+Normans.pdf"
+  },
+
+  {
     "title": "Common Questions: What is the term Anno Societatis",
     "category": "Newcomers Corner",
     "tags": ["scrolls", "manuscripts", "illumination", "court"],
@@ -7,24 +99,276 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Common+Questions+-+What+is+the+Term+Anno+Societatis.pdf"
   },
   {
+    "title": "A Beginner's Guide to Medieval Cooking",
+    "category": "Newcomers Corner",
+    "tags": ["cooking"],
+    "description": "A Guide on Medieval Cooking for Newcomers.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/A+Beginner's+Guide+to+Medieval+Cooking.pdf"
+  },
+  {
+    "title": "The Estrella War",
+    "category": "Newcomers Corner",
+    "tags": ["past events"],
+    "description": "A report about a trip to Estrella War.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/A+report+about+Jenna's+trip+to+the+Estrella+War.pdf"
+  },
+  {
+    "title": "Chatelaine (1999)",
+    "category": "Newcomers Corner",
+    "tags": ["chatelaine", "jobs"],
+    "description": "Chatelaine: What?",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Chatelaine+(1999).pdf"
+  },
+  {
+    "title": "Children in the SCA (2012)",
+    "category": "Newcomers Corner",
+    "tags": ["children"],
+    "description": "Children in the SCA",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Children+in+the+SCA+(2012).pdf"
+  },
+  {
+    "title": "Choosing a Society Name",
+    "category": "Newcomers Corner",
+    "tags": ["heraldy", "names"],
+    "description": "Choosing a Society Name",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Choosing+a+Society+Name.pdf"
+  },
+  {
+    "title": "Creating an Academie",
+    "category": "Newcomers Corner",
+    "tags": ["group"],
+    "description": "Creating an Academie",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Creating+an+Academie.pdf"
+  },
+  {
+    "title": "Defining Your 'Win'",
+    "category": "Newcomers Corner",
+    "tags": ["combat", "positive thinking"],
+    "description": "How do you define a win?",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Defining+Your+_Win_.pdf"
+  },
+  {
+    "title": "Don't Fear the Fabric Store (2006)",
+    "category": "Newcomers Corner",
+    "tags": ["clothing", "fabric", "garb"],
+    "description": "How to approach the fabric store and garb making",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Don't+Fear+the+Fabric+Store+(2006).pdf"
+  },
+  {
+    "title": "Earning Your AOA",
+    "category": "Newcomers Corner",
+    "tags": ["awards"],
+    "description": "How to earn an AOA",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Earning+Your+AOA.pdf"
+  },
+  {
+    "title": "Easy T Tunics (2005)",
+    "category": "Newcomers Corner",
+    "tags": ["clothing", "garb"],
+    "description": "How to make a T Tunic",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Easy+T-Tunics+(2005).pdf"
+  },
+  {
+    "title": "Event Etiquette (2011)",
+    "category": "Newcomers Corner",
+    "tags": ["events"],
+    "description": "What is the etiquette for attending events?",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Event+Etiquette+(2011).pdf"
+  },
+  {
+    "title": "FAQ- Names",
+    "category": "Newcomers Corner",
+    "tags": ["heraldry", "names"],
+    "description": "Some Frequently Asked Questions about Names",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/FAQ-+Names.pdf"
+  },
+  {
+    "title": "Generic Clothing",
+    "category": "Newcomers Corner",
+    "tags": ["clothing", "garb"],
+    "description": "Helpful steps on making generic garb",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Generic+Clothing.pdf"
+  },
+  {
+    "title": "Generic Pants",
+    "category": "Newcomers Corner",
+    "tags": ["clothing", "garb"],
+    "description": "Helpful steps on making generic garb pants",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Generic+Pants.pdf"
+  },
+  {
+    "title": "Households, Guilds etc",
+    "category": "Newcomers Corner",
+    "tags": ["household", "guild", "group", "people"],
+    "description": "Information on Households and Guilds in the SCA",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Households%2C+Guilds+Etc.pdf"
+  },
+  {
+    "title": "How to Behave in these Current Middle Ages (2000)",
+    "category": "Newcomers Corner",
+    "tags": ["etiquette", "events"],
+    "description": "Information on Etiquette ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/How+to+Behave+in+these+Current+Middle+Ages+(2000).pdf"
+  },
+  {
+    "title": "How to Get to Do Things in the SCA",
+    "category": "Newcomers Corner",
+    "tags": ["newcomers"],
+    "description": "How to get involved with the SCA ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/How+to+Get+to+Do+Things+in+the+SCA.pdf"
+  },
+  {
+    "title": "How to Greet Others",
+    "category": "Newcomers Corner",
+    "tags": ["events", "etiquette"],
+    "description": "How to address others in the SCA ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/How+to+Greet+Others.pdf"
+  },
+  {
+    "title": "Introduction to SCA Households",
+    "category": "Newcomers Corner",
+    "tags": ["household", "group", "people"],
+    "description": "Introduction to SCA Households ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Introduction+to+SCA+Households.pdf"
+  },
+  {
+    "title": "LINK- Newcomers",
+    "category": "Newcomers Corner",
+    "tags": ["resources", "links"],
+    "description": "A list of resource links for Newcomers ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/LINK-+Newcomers.pdf"
+  },
+  {
+    "title": "Making a Feast Basket",
+    "category": "Newcomers Corner",
+    "tags": ["feast", "events"],
+    "description": "Things to include in a feast basket for events ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Making+a+Feast+Basket.pdf"
+  },
+  {
+    "title": "No Cook Potluck Contributions",
+    "category": "Newcomers Corner",
+    "tags": ["feast", "events", "potluck"],
+    "description": "Ideas on what to bring to a potluck that don't require cooking ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/No+Cook+Potluck+Contributions.pdf"
+  },
+  {
+    "title": "On Personae",
+    "category": "Newcomers Corner",
+    "tags": ["heraldry", "names", "persona", "people"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/On+Personae.pdf"
+  },
+  {
+    "title": "Orts It All About?",
+    "category": "Newcomers Corner",
+    "tags": ["feast", "events"],
+    "description": "What is a feast, and what should I bring?",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Orts+It+All+About_.pdf"
+  },
+  {
+    "title": "Period Names",
+    "category": "Newcomers Corner",
+    "tags": ["heraldry", "names"],
+    "description": "What is a period name?",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Period+Names.pdf"
+  },
+  {
+    "title": "Persona 101",
+    "category": "Newcomers Corner",
+    "tags": ["heraldry", "names", "persona"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Persona+101.pdf"
+  },
+  {
+    "title": "Persona Development",
+    "category": "Newcomers Corner",
+    "tags": ["heraldry", "names", "persona"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Persona+Development.pdf"
+  },
+  {
+    "title": "Persona, Do I Need One?",
+    "category": "Newcomers Corner",
+    "tags": ["heraldry", "names", "persona"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Persona%2C+Do+I+Need+One_.pdf"
+  },
+  {
+    "title": "SCA Awards",
+    "category": "Newcomers Corner",
+    "tags": ["awards"],
+    "description": "Some awards in the SCA",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/SCA+Awards.pdf"
+  },
+  {
+    "title": "SCA Cooking",
+    "category": "Newcomers Corner",
+    "tags": ["cooking", "food", "feast"],
+    "description": "Cooking for the SCA",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/SCA+Cooking.pdf"
+  },
+  {
+    "title": "The Thrifty Anachronist",
+    "category": "Newcomers Corner",
+    "tags": ["garb", "clothing"],
+    "description": "Thrifting for the SCA",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/The+Thrifty+Anachronist.pdf"
+  },
+  {
+    "title": "Transfers",
+    "category": "Newcomers Corner",
+    "tags": ["people"],
+    "description": "People transferring from another kingdom",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Transfers.pdf"
+  },
+  {
+    "title": "Volunteering in the SCA",
+    "category": "Newcomers Corner",
+    "tags": ["volunteer"],
+    "description": "Getting involved by volunteering",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Volunteering+in+the+SCA.pdf"
+  },
+  {
+    "title": "What NOT to Wear (2012)",
+    "category": "Newcomers Corner",
+    "tags": ["clothing", "garb", "accessories"],
+    "description": "Some items you shouldn't wear as a newcomer",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/What+NOT+to+Wear+(2012).pdf"
+  },
+  {
+    "title": "Why Join the SCA?",
+    "category": "Newcomers Corner",
+    "tags": ["newcomers"],
+    "description": "Why should I join the SCA?",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Why+Join+the+SCA_.pdf"
+  },
+  {
+    "title": "Why Register a Name in the SCA?",
+    "category": "Newcomers Corner",
+    "tags": ["newcomers", "heraldry", "names"],
+    "description": "Why should I register a name with the College of Heralds?",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Why+Register+a+Name+in+the+SCA_.pdf"
+  },
+  {
+    "title": "Your First Event",
+    "category": "Newcomers Corner",
+    "tags": ["newcomers", "events"],
+    "description": "What should I do for my first event?",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Your+First+Event.pdf"
+  },
+  {
+    "title": "Your First Feast",
+    "category": "Newcomers Corner",
+    "tags": ["newcomers", "events", "feast"],
+    "description": "What should I bring for my first feast?",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Your+First+Feast.pdf"
+  },
+  {
     "title": "Improvised Thrown Weapons Targets",
     "category": "Thrown Weapons",
     "tags": ["martial", "thrown weapons", "target"],
     "description": "An article on making improvised targets for thrown weapons.",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Thrown+Weapons/Improvised+Thrown+Weapons.pdf"
-  },
-  {
-    "title": "Art and Architecture by HL Elaine de Montgris",
-    "category": "12th Century",
-    "tags": [" architecture", "research", "resources"],
-    "description": "A bibliography on resources for Art and Architecture in the 12th century.",
-    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/12th+Century/BIB+-+Art+and+Architecture+by+HL+Elaine+de+Montgris.pdf"
-  },
-  {
-    "title": "The British Isles",
-    "category": "12th Century",
-    "tags": ["britain", "research", "resources"],
-    "description": "A bibliography on resources for the British Isles in the 12th century.",
-    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/12th+Century/BIB+-+The+British+Isles.pdf"
   }
 ]
