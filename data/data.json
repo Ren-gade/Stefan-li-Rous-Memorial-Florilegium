@@ -12,14 +12,19 @@
     "tags": ["martial", "thrown weapons", "target"],
     "description": "An article on making improvised targets for thrown weapons.",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Thrown+Weapons/Improvised+Thrown+Weapons.pdf"
- 
- 
- }
- {
-  "title": "Art and Architecture by HL Elaine de Montgris",
-  "category": "12th Century",
-  "tags": [" architecture", "research", "resources"],
-  "description": "A bibliography on resources for Art and Architecture in the 12th century.",
-  "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/12th+Century/BIB+-+Art+and+Architecture+by+HL+Elaine+de+Montgris.pdf"
- }
+  },
+  {
+    "title": "Art and Architecture by HL Elaine de Montgris",
+    "category": "12th Century",
+    "tags": [" architecture", "research", "resources"],
+    "description": "A bibliography on resources for Art and Architecture in the 12th century.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/12th+Century/BIB+-+Art+and+Architecture+by+HL+Elaine+de+Montgris.pdf"
+  },
+  {
+    "title": "The British Isles",
+    "category": "12th Century",
+    "tags": ["britain", "research", "resources"],
+    "description": "A bibliography on resources for the British Isles in the 12th century.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/12th+Century/BIB+-+The+British+Isles.pdf"
+  }
 ]
