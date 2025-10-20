@@ -90,7 +90,252 @@
     "description": "A bibliography on resources for the Normans in the 12th century.",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/12th+Century/BIB-+The+Normans.pdf"
   },
+  {
+    "title": "13th C Womens' Headgear",
+    "category": "Accessories",
+    "tags": ["hat", "clothing", "women"],
+    "description": "An article on headgear for women in the 13th century.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/13th+Century+Women's+Headgear.pdf"
+  },
+  {
+    "title": "15th Century Padded Roll Headwear",
+    "category": "Accessories",
+    "tags": ["hat", "clothing"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/13th+Century+Women's+Headgear.pdf"
+  },
+  {
+    "title": "16th c Irish 'Onion Hat'",
+    "category": "Accessories",
+    "tags": ["hat", "clothing"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/16th+c+Irish+'Onion+Hat'.pdf"
+  },
+  {
+    "title": "A Brief Historical Summery of Signet Rings",
+    "category": "Accessories",
+    "tags": ["ring", "jewelry", "clothing"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/A+Brief+Historical+Summery+of+Signet+Rings.pdf"
+  },
+  {
+    "title": "A Liripipe Hood",
+    "category": "Accessories",
+    "tags": ["hat", "clothing"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/A+Liripipe+Hood.pdf"
+  },
+  {
+    "title": "An Overview of Glass Beads",
+    "category": "Accessories",
+    "tags": ["beads", "glass"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/An+Overview+of+Glass+Beads.pdf"
+  },
+  {
+    "title": "Anglo-Saxon Glass Beads",
+    "category": "Accessories",
+    "tags": ["accessories", "beads", "glass"],
+    "description": "A class handout on Anglo-Saxon glass beads with a few instructions on how to make them.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Anglo-Saxon+Glass+Beads.pdf"
+  },
+  {
+    "title": "Basic Hats",
+    "category": "Accessories",
+    "tags": ["accessories", "hat", "clothing"],
+    "description": "An article on the hats in the middle ages",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Basic+Hats.pdf"
+  },
+  {
+    "title": "Cloth Circlets",
+    "category": "Accessories",
+    "tags": ["accessories", "hat", "clothing"],
+    "description": "Millinery Basics - Using Professional Millinery Techniques to Create a 12th -15th century cloth circlet",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Cloth+Circlet.pdf"
+  },
+  {
+    "title": "Diamonds",
+    "category": "Accessories",
+    "tags": ["accessories", "jewels", "jewelry"],
+    "description": "Medieval Diamonds",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Diamonds.pdf"
+  },
+  {
+    "title": "Early Period Hats",
+    "category": "Accessories",
+    "tags": ["hat", "accessories"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Early+Period+Hats.pdf"
+  },
+  {
+    "title": "Emeralds Throughout History",
+    "category": "Accessories",
+    "tags": ["jewelry", "jewels"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Emeralds+Throughout+History.pdf"
+  },
+  {
+    "title": "Fourteenth Century Drawstring Pouch",
+    "category": "Accessories",
+    "tags": ["bag", "clothing", "pouch", "accessories"],
+    "description": "An article on drawstring pouches from the 14th century.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Fourteenth+Century+Drawstring+Pouch.pdf"
+  },
+  {
+    "title": "Fur lined Hunting Hood",
+    "category": "Accessories",
+    "tags": ["clothing", "accessories"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Fur+lined+Hunting+Hood.pdf"
+  },
+  {
+    "title": "How to Make a Kolpac",
+    "category": "Accessories",
+    "tags": ["hat", "clothing", "accessories"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/How+to+Make+a+Kolpac.pdf"
+  },
 
+  {
+    "title": "How to Make a Simple Barbette and Fillet",
+    "category": "Accessories",
+    "tags": ["hat", "clothing", "accessories"],
+    "description": "An article on how to make a simple barbette and fillet",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/How+to+Make+a+Simple+Barbette+and+Fillet.pdf"
+  },
+  {
+    "title": "How to make a simple medieval wimple",
+    "category": "Accessories",
+    "tags": ["hat", "clothing", "accessories"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/How+to+make+a+simple+medieval+wimple.pdf"
+  },
+  {
+    "title": "Knit Purses in 14thC Switzerland",
+    "category": "Accessories",
+    "tags": ["bag", "pouch", "purse", "accessories"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Knit+Purses+in+14thC+Switzerland.pdf"
+  },
+  {
+    "title": "Kyvian Rus Hat",
+    "category": "Accessories",
+    "tags": ["hat", "clothing", "accessories"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Kyvian+Rus+Hat.pdf"
+  },
+  {
+    "title": "Making a Goffered Veil",
+    "category": "Accessories",
+    "tags": ["hat", "clothing", "accessories"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Making+a+Goffered+Veil+.pdf"
+  },
+  {
+    "title": "Medieval Herbal Beads",
+    "category": "Accessories",
+    "tags": ["beads", "herbs", "accessories"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Medieval+Herbal+Beads.pdf"
+  },
+  {
+    "title": "On Favors",
+    "category": "Accessories",
+    "tags": ["accessories"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/On+Favors.pdf"
+  },
+  {
+    "title": "Pearls - An Example Sumptuary Law",
+    "category": "Accessories",
+    "tags": ["accessories", "jewels", "law"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Pearls+-+An+Example+Sumptuary+Law.pdf"
+  },
+  {
+    "title": "Period Sumptuary Laws",
+    "category": "Accessories",
+    "tags": ["accessories", "jewels", "law"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Period+Sumptuary+Laws.pdf"
+  },
+  {
+    "title": "Renaissance Pocket",
+    "category": "Accessories",
+    "tags": ["accessories", "pockets", "clothing"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Renaissance+Pocket.pdf"
+  },
+  {
+    "title": "Rubies and Sapphires",
+    "category": "Accessories",
+    "tags": ["accessories", "jewels"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Rubies+and+Sapphires.pdf"
+  },
+  {
+    "title": "Russian 16th Century Men's Taffia",
+    "category": "Accessories",
+    "tags": ["hat", "clothing", "accessories"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Russian+16th+Century+Men's+Taffia+(Skull+cap).pdf"
+  },
+  {
+    "title": "SCA Bling on a Budget",
+    "category": "Accessories",
+    "tags": ["accessories", "jewelry"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/SCA+Bling+on+a+Budget.pdf"
+  },
+  {
+    "title": "Seemly and Fashionable head-dress for the Lady of the Middle-age",
+    "category": "Accessories",
+    "tags": ["hat", "clothing", "accessories", "women"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Seemly+and+Fashionable+head-dress+for+the+Lady+of+the+Middle-age.pdf"
+  },
+  {
+    "title": "Semi-Precious Gems in Periodt",
+    "category": "Accessories",
+    "tags": ["accessories", "jewelry"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Semi-Precious+Gems+in+Period.pdf"
+  },
+  {
+    "title": "Skjoldehamn Hoods",
+    "category": "Accessories",
+    "tags": ["norse", "clothing", "accessories"],
+    "description": "An article on Skjoldehamn Hoods",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Skjoldehamn+Hoods.pdf"
+  },
+  {
+    "title": "The Market Wallet",
+    "category": "Accessories",
+    "tags": ["wallet", "accessories"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/The+Market+Wallet.pdf"
+  },
+  {
+    "title": "Thoughts on the Making of Hoods",
+    "category": "Accessories",
+    "tags": ["clothing", "accessories"],
+    "description": "s",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Thoughts+on+the+Making+of+Hoods.pdf"
+  },
+  {
+    "title": "Viking Beads",
+    "category": "Accessories",
+    "tags": ["accessories", "beads", "viking"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Viking+Beads.pdf"
+  },
+  {
+    "title": "Viking hand bag based on the Haithabu find",
+    "category": "Accessories",
+    "tags": ["bag", "pouch", "purse", "accessories", "viking"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Viking+hand+bag+based+on+the+Haithabu+find.pdf"
+  },
   {
     "title": "Common Questions: What is the term Anno Societatis",
     "category": "Newcomers Corner",
