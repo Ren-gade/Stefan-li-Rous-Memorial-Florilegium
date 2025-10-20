@@ -13,12 +13,13 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
+    
     <header style="display:flex; align-items:center; justify-content:flex-start; padding:10px;">
   <span style="display:flex; align-items:center;">
     <img src="img/Trillium_flower.svg.png" alt="Icon" style="width:50px; height:50px;">
-    <span style="margin-left:550px;">Stefan li Rous Memorial Florilegium</span>
+    <span style="margin-left:450px;">Stefan li Rous Memorial Florilegium</span>
   </span>
-      <button id="modeToggle" style="float: right; margin-left: 550px;">
+      <button id="modeToggle" style="float: right; margin-left: 300px;">
         🌙
       </button>
     </header>
@@ -98,7 +99,7 @@
     </div>
 </div>
 
-      <main style="flex: 1; padding: 20px">
+      <main style="padding-top: 50px">
         <div id="contentArea">
           <h2>Welcome</h2>
           <p>
@@ -144,6 +145,34 @@
                </div>
       </main>
     </div>
+     <!-- Back to Top Button -->
+<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑ Top</button>
+    <div id="footer-container"></div>
+<script>
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("footer-container").innerHTML = html;
+    });
+</script>
+<script>
+  // Show button when scrolled down
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    const button = document.getElementById("backToTopBtn");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      button.style.display = "block";
+    } else {
+      button.style.display = "none";
+    }
+  }
+
+  // Smooth scroll to top
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
   </body>
   <script>
   const modeToggle = document.getElementById('modeToggle');

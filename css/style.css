@@ -1,21 +1,37 @@
-body {
-  background-color: #f5f0e1; /* beige parchment */
-  font-family: "Cormorant Garamond", serif;
-  color: #3a2a1a;
-  margin: 0;
-  padding-top: 60px; /* header space */
+:root {
+  --background-color: #f5f0e1;
+  --text-color: #3a2a1a;
+  --header-background-color: #e8dfc4;
+  --border-color: #d2b48c;
+  --font-family: "Cormorant Garamond", serif;
 }
+
+body {
+  background-color: var(--background-color); /* beige parchment */
+  font-family: var(--font-family);
+  color: var(--text-color);
+  margin: 0; /* Initial margin reset */
+  padding-top: 70px; /* header space */
+}
+
 header {
-  position: fixed;
-  top: 0;
+  display: flex;
   width: 100%;
-  background-color: #e8dfc4;
+  background-color: var(--header-background-color);
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 3vw; /* Use viewport width for responsive font size */
   padding: 10px 0;
-  border-bottom: 2px solid #d2b48c;
+  border-bottom: 2px solid var(--border-color);
   z-index: 1000;
 }
+
+@media (max-width: 600px) {
+  header {
+    font-size: 4vw; /* Increase font size for smaller screens */
+    padding: 15px 0; /* More padding on smaller screens */
+  }
+}
+
 .card {
   background-color: #e2d6b3; /* contrasting card */
   border: 1px solid #d2b48c;
@@ -64,11 +80,34 @@ header {
   width: 100%;
   padding: 5px 8px;
   font-size: 0.9rem; /* slightly smaller */
+  margin-top: 50px;
   margin-bottom: 10px;
-  border: 1px solid #d2b48c;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   box-sizing: border-box;
 }
-main#contentArea {
-  padding-top: 50px; /* adjust as needed */
+/* Back to Top Button */
+#backToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: 2px solid #d2b48c;
+  outline: none;
+  background-color: #f5f0e1;
+  color: #3a2a1a;
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+#backToTopBtn:hover {
+  background-color: #e8dfc4;
+  border-color: #c7a26a;
+  transform: scale(1.05);
 }

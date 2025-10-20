@@ -226,7 +226,7 @@
             <li><a href="#">L</a></li>
           </ul>
         </div>
-<div class="letter-section" id="M"></div>
+<div class="letter-section" id="M">
           <h2>M</h2>
           <ul>
             <li><a href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Food/Mongol+Cooking.pdf"> Mongol Cooking 
@@ -310,8 +310,30 @@
             <li><a href="#">Z</a></li>
           </ul>
         </div>                                           
-        <!-- You can continue through D–Z as needed -->
-      </div>
+       </div>
+        <!-- Back to Top Button -->
+<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑ Top</button>
+<script>
+  // Show button when scrolled down
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    const button = document.getElementById("backToTopBtn");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      button.style.display = "block";
+    } else {
+      button.style.display = "none";
+    }
+  }
+
+  // Smooth scroll to top
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
+       <footer class="site-footer">
+  <p>© <span id="year"></span> Rencraft 2025</p>
+</footer>
     </body>
   </html>
 </html>
