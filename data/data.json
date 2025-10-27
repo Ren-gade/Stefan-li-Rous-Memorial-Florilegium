@@ -414,6 +414,13 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/MSG+-+Watches.pdf"
   },
   {
+    "title": "",
+    "category": "Armor",
+    "tags": ["armor", "pattern"],
+    "description": "A pattern for",
+    "download_url": ""
+  },
+  {
     "title": "Beads: Symbols of Indigenous Cultural Resilience and Value",
     "category": "FN Indigenous",
     "tags": ["accessories", "native", "first nations", "beads"],
@@ -448,12 +455,13 @@
     "description": "This is a study on Trade Ornaments. A “trade ornament” is any non-native item used by Indigenous people for decoration, including goods from traders, gifts, government distributions, store purchases, or items made from non-native materials.",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Indigenous+North+America/trade-ornaments.pdf"
   },
-   {
+  {
     "title": "The Book of Kells",
     "category": "Scribal",
     "tags": ["scribal arts", "illumination", "manuscripts", "celtic"],
     "description": "The Book of Kells is a richly decorated manuscript created by Celtic monks around the 9th century, containing the four Gospels of the New Testament. Renowned for its intricate illustrations, vivid colors, and elaborate calligraphy, it represents the height of early medieval art.",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Illumination+and+Scrolls/thebookof+kells.pdf"
+  },
   {
     "title": "Illuminated Manuscripts in Classical and Mediaeval Times",
     "category": "Scribal",

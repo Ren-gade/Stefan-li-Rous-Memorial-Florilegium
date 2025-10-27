@@ -16,82 +16,34 @@
         🌙
       </button>
     </header>
-
-    <div style="display: flex">
+ <div style="display: flex">
      <div id="sidebar" style="width:200px; padding:10px;">
     <input type="text" placeholder="Search..." id="sidebarSearch"><br>
-<p><a href="index.html" style="text-decoration:none; color:#3a2a1a;">🏠 Home</a></p>
     <div id="categoryList">
-        <p><a href="category-12th-century.html">12th Century</a></p>
-        <p><a href="category-accessories.html">Accessories</a></p>
-            <p><a href="category-animals.html">Animals</a></p>
-            <p><a href="category-archery.html">Archery</a></p>
-             <p><a href="category-armor.html">Armor</a></p>
-             <p><a href="category-beverages.html">Beverages</a></p>
-              <p><a href="category-camping.html">Camping</a></p>
-               <p><a href="category-celebrations-events.html">Celebrations & Events</a></p>
-                <p><a href="category-children.html">Children</a></p>
-                 <p><a href="category-chivalry.html">Chivalry</a></p>
-                  <p><a href="category-clothing.html">Clothing</a></p>
-                   <p><a href="category-combat.html">Combat</a></p>
-                    <p><a href="category-combat-rapier.html">Combat - Rapier</a></p>
-                     <p><a href="category-commerce.html">Commerce</a></p>
-                      <p><a href="category-crime.html">Crime</a></p>
-                       <p><a href="category-cultures.html">Cultures</a></p>
-                        <p><a href="category-dance.html">Dance</a></p>
-                         <p><a href="category-disabilities.html">Disabilities</a></p>
-                          <p><a href="category-education.html">Education</a></p>
-                           <p><a href="category-entertainment.html">Entertainment</a></p>
-                            <p><a href="category-equestrian.html">Equestrian</a></p>
-                             <p><a href="category-feast-reviews.html">Feast Reviews</a></p>
-                              <p><a href="category-food-books.html">Food - Books</a></p>
-                               <p><a href="category-food-bread.html">Food - Bread</a></p>
-                                <p><a href="category-food-by-region.html">Food - By Region</a></p>
-                                 <p><a href="category-food-condiments.html">Food - Condiments</a></p>
-                                  <p><a href="category-food-dairy.html">Food - Dairy</a></p>
-                                   <p><a href="category-food-eggs.html">Food - Eggs</a></p>
-                                    <p><a href="category-food-fruits.html">Food - Fruits</a></p>
-                                     <p><a href="category-food-manuscripts.html">Food - Manuscripts</a></p>
-                                      <p><a href="category-food-meats.html">Food - Meats</a></p>
-                                       <p><a href="category-food-snacks.html">Food - Snacks</a></p>
-                                        <p><a href="category-food-sweet-or-decorated.html">Food - Sweet or Decorated</a></p>
-                                         <p><a href="category-food-utensils.html">Food - Utensils</a></p>
-                                          <p><a href="category-food-vegetables.html">Food - Vegetables</a></p>
-                                           <p><a href="category-heraldry.html">Heraldry</a></p>
-                                            <p><a href="category-home-sweet-home.html">Home Sweet Home</a></p>
-                                             <p><a href="category-humor.html">Humor</a></p>
-                                             <p><a href="category-indigenous-north-america.html">Indigenous North America</a></p>
-                                              <p><a href="category-medieval-events.html">Medieval Events</a></p>
-                                               <p><a href="category-medieval-life.html">Medieval Life</a></p>
-                                                 <p><a href="category-medieval-technology.html">Medieval Technology</a></p>
-                                                <p><a href="category-newcomers-corner.html">Newcomers Corner</a></p>
-                                                 <p><a href="category-norse.html">Norse</a></p>
-                                                  <p><a href="category-pennsic.html">Pennsic</a></p>
-                                                   <p><a href="category-people.html">People</a></p>
-                                                    <p><a href="category-performance-arts.html">Performance Arts</a></p>
-                                                     <p><a href="#">Period Thought</a></p>
-                                                      <p><a href="category-personal-care.html">Personal Care</a></p>
-                                                       <p><a href="category-personas.html">Personas</a></p>
-                                                        <p><a href="category-plants-herbs-spices.html">Plants, Herbs, & Spices</a></p>
-                                                           <p><a href="category-planning-sca-events.html">Planning SCA Events</a></p>
-                                                           <p><a href="category-religion.html">Religion</a></p>
-                                                          <p><a href="category-research.html">Research & Documentation</a></p>
-                                                            <p><a href="category-sca-inc.html">The SCA, Inc.</a></p>
-                                                             <p><a href="category-sca-sociology.html">SCA Sociology</a></p>
-                                                              <p><a href="category-sca-stories.html">SCA Stories</a></p>
-                                                               <p><a href="category-scribal-arts.html">Scribal Arts</a></p>
-                                                                <p><a href="category-structures.html">Structures, Pavilions, and Tents</a></p>
-                                                                  <p><a href="category-textile-arts.html">Textile Arts</a></p>
-                                                                  <p><a href="category-thrown-weapons.html">Thrown Weapons</a></p>
-                                                                  <p><a href="category-time.html">Time</a></p>
-                                                                     <p><a href="category-travel.html">Travel</a></p>
-                                                                      <p><a href="category-weddings.html">Weddings</a></p>
-                                                                      <p><a href="category-unclassified.html">Unclassified</a></p>
-                                                                       
-                                                    
+       <script>
+        function loadCategories() {
+            fetch('updated-menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    const currentPage = window.location.pathname.split('/').pop(); // Get current page
+                    const sidebar = document.getElementById('sidebar');
+                    sidebar.innerHTML = data;
+
+                    // Modify links
+                    const links = sidebar.querySelectorAll('.category');
+                    links.forEach(link => {
+                        if (link.getAttribute('data-page') === currentPage) {
+                            link.href = '#'; // Replace href with '#'
+                        }
+                    });
+                })
+                .catch(error => console.error('Error loading categories:', error));
+        }
+
+        window.onload = loadCategories;
+    </script>
     </div>
 </div>
-
  <!-- Main Content -->
         <main class="col-md-10" id="contentArea">
           <!-- Cards populated dynamically by script.js -->
