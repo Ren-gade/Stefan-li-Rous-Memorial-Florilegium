@@ -3,25 +3,27 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Weddings</title>
+    <title>12th Century</title>
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
-   <header style="display:flex; align-items:center; justify-content:flex-start; padding:10px;">
+      <header style="display:flex; align-items:center; justify-content:flex-start; padding:10px;">
   <span style="display:flex; align-items:center;">
     <img src="img/Trillium_flower.svg.png" alt="Icon" style="width:50px; height:50px;">
     <span style="margin-left:450px;">Stefan li Rous Memorial Florilegium</span>
   </span>
-      <button id="modeToggle" style="float: right; margin-left: 300px;">
+      <button id="modeToggle" style="float: right; margin-left: 400px;">
         🌙
       </button>
     </header>
+
+
     <div style="display: flex">
      <div id="sidebar" style="width:200px; padding:10px;">
     <input type="text" placeholder="Search..." id="sidebarSearch"><br>
 <p><a href="index.html" style="text-decoration:none; color:#3a2a1a;">🏠 Home</a></p>
     <div id="categoryList">
-        <p><a href="category-12th-century.html">12th Century</a></p>
+        <p><a href="#">12th Century</a></p>
         <p><a href="category-accessories.html">Accessories</a></p>
             <p><a href="category-animals.html">Animals</a></p>
             <p><a href="category-archery.html">Archery</a></p>
@@ -59,7 +61,7 @@
                                            <p><a href="category-heraldry.html">Heraldry</a></p>
                                             <p><a href="category-home-sweet-home.html">Home Sweet Home</a></p>
                                              <p><a href="category-humor.html">Humor</a></p>
-                                             <p><a href="category-indigenous-north-america.html">Indigenous North America</a></p>
+                                             <p><a href="#">Indigenous North America</a></p>
                                               <p><a href="category-medieval-events.html">Medieval Events</a></p>
                                                <p><a href="category-medieval-life.html">Medieval Life</a></p>
                                                  <p><a href="category-medieval-technology.html">Medieval Technology</a></p>
@@ -84,27 +86,30 @@
                                                                   <p><a href="category-thrown-weapons.html">Thrown Weapons</a></p>
                                                                   <p><a href="category-time.html">Time</a></p>
                                                                      <p><a href="category-travel.html">Travel</a></p>
-                                                                      <p><a href="#">Weddings</a></p>
+                                                                      <p><a href="category-weddings.html">Weddings</a></p>
                                                                       <p><a href="category-unclassified.html">Unclassified</a></p>
                                                                        
                                                     
     </div>
 </div>
 
- <!-- Main Content -->
+        <!-- Main Content -->
         <main class="col-md-10" id="contentArea">
           <!-- Cards populated dynamically by script.js -->
         </main>
       </div>
     </div>
+    <!-- Back to Top Button -->
+<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑ Top</button>
+
+ <footer class="site-footer">
+  <p>© <span id="year"></span> Rencraft 2025</p>
+</footer>
     <script>
       // Set category for this page
-      window.currentCategory = "Wedding";
+      window.currentCategory = "FN Indigenous";
     </script>
-     <!-- Back to Top Button -->
-<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑ Top</button>
-    <script src="js/script.js"></script>
-    <script>
+ <script>
   // Show button when scrolled down
   window.onscroll = function() {scrollFunction()};
 
@@ -122,10 +127,8 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 </script>
-     <footer class="site-footer">
-  <p>© <span id="year"></span> Rencraft 2025</p>
-</footer>
+
+    <script src="js/script.js"></script>
+
   </body>
 </html>
-
-
