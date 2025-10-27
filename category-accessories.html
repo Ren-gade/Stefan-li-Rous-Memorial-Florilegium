@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Accessories</title>
+    <title>12th Century</title>
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
@@ -17,11 +17,13 @@
       </button>
     </header>
 
+
     <div style="display: flex">
      <div id="sidebar" style="width:200px; padding:10px;">
     <input type="text" placeholder="Search..." id="sidebarSearch"><br>
 <p><a href="index.html" style="text-decoration:none; color:#3a2a1a;">🏠 Home</a></p>
-    <di   <p><a href="category-12th-century.html">12th Century</a></p>
+    <div id="categoryList">
+        <p><a href="category-12th-century.html">12th Century</a></p>
         <p><a href="#">Accessories</a></p>
             <p><a href="category-animals.html">Animals</a></p>
             <p><a href="category-archery.html">Archery</a></p>
@@ -90,20 +92,24 @@
                                                     
     </div>
 </div>
- <!-- Main Content -->
+
+        <!-- Main Content -->
         <main class="col-md-10" id="contentArea">
           <!-- Cards populated dynamically by script.js -->
         </main>
-       
       </div>
     </div>
+    <!-- Back to Top Button -->
+<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑ Top</button>
+
+ <footer class="site-footer">
+  <p>© <span id="year"></span> Rencraft 2025</p>
+</footer>
     <script>
       // Set category for this page
       window.currentCategory = "Accessories";
     </script>
-      <!-- Back to Top Button -->
-<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑ Top</button>
-<script>
+ <script>
   // Show button when scrolled down
   window.onscroll = function() {scrollFunction()};
 
@@ -121,9 +127,3 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 </script>
-    <script src="js/script.js"></script>
-     <footer class="site-footer">
-  <p>© <span id="year"></span> Rencraft 2025</p>
-</footer>
-  </body>
-</html>
