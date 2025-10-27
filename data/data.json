@@ -126,6 +126,13 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/A+Liripipe+Hood.pdf"
   },
   {
+    "title": "MSG - Amber in Period",
+    "category": "Accessory",
+    "tags": ["accessories", "jewelry", "gem", "jewels"],
+    "description": "A message thread about amber in period",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/MSG+-+Amber+in+Period.pdf"
+  },
+  {
     "title": "An Overview of Glass Beads",
     "category": "Accessory",
     "tags": ["beads", "glass"],
@@ -140,11 +147,25 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Anglo-Saxon+Glass+Beads.pdf"
   },
   {
+    "title": "MSG - Bags and Baskets",
+    "category": "Accessory",
+    "tags": ["accessories", "bag", "basket"],
+    "description": "A message thread about bags and baskets",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/MSG+-+Bags+and+Baskets.pdf"
+  },
+  {
     "title": "Basic Hats",
     "category": "Accessory",
     "tags": ["accessories", "hat", "clothing"],
     "description": "An article on the hats in the middle ages",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Basic+Hats.pdf"
+  },
+  {
+    "title": "MSG - Body Piercings",
+    "category": "Accessory",
+    "tags": ["accessories", "jewelry", "piercings"],
+    "description": "A message thread about body piercings in period.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/MSG+-+Body+Piercings.pdf"
   },
   {
     "title": "Cloth Circlets",
@@ -189,6 +210,35 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Fur+lined+Hunting+Hood.pdf"
   },
   {
+    "title": "LINK - Gloves and Mittens",
+    "category": "Accessory",
+    "tags": ["accessories", "gloves"],
+    "description": "A thread with resources and links about gloves and mittens.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/LINK-+Gloves+and+Mittens.pdff"
+  },
+  {
+    "title": "MSG - Glovemaking",
+    "category": "Accessory",
+    "tags": ["accessories", "gloves"],
+    "description": "A message thread about glovemaking",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/MSG+-+Glovemaking.pdf"
+  },
+  {
+    "title": "MSG - Hand muffs",
+    "category": "Accessory",
+    "tags": ["accessories", "fur", "hand"],
+    "description": "A message thread about hand muffs",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/MSG+-+Hand+Muffs.pdf"
+  },
+  {
+    "title": "MSG - Headgear",
+    "category": "Accessory",
+    "tags": ["accessories", "hat"],
+    "description": "A message thread about headwear.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/MSG+-+Headgear.pdf"
+  },
+
+  {
     "title": "How to Make a Kolpac",
     "category": "Accessory",
     "tags": ["hat", "clothing", "accessories"],
@@ -208,6 +258,13 @@
     "tags": ["hat", "clothing", "accessories"],
     "description": " ",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/How+to+make+a+simple+medieval+wimple.pdf"
+  },
+  {
+    "title": "MSG - Jewelry",
+    "category": "Accessory",
+    "tags": ["accessories", "jewelry"],
+    "description": "A message thread about Jewelry.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/MSG+-+Jewelry.pdf"
   },
   {
     "title": "Knit Purses in 14thC Switzerland",
@@ -322,6 +379,13 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/The+Market+Wallet.pdf"
   },
   {
+    "title": "The Medieval Rosary",
+    "category": "Accessory",
+    "tags": ["accessories", "jewelry"],
+    "description": "An article about the medieval rosary.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/The+Medieval+Rosary.pdf"
+  },
+  {
     "title": "Thoughts on the Making of Hoods",
     "category": "Accessory",
     "tags": ["clothing", "accessories"],
@@ -341,6 +405,13 @@
     "tags": ["bag", "pouch", "purse", "accessories", "viking"],
     "description": " ",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Viking+hand+bag+based+on+the+Haithabu+find.pdf"
+  },
+  {
+    "title": "MSG - Watches",
+    "category": "Accessory",
+    "tags": ["accessories", "watch"],
+    "description": "A message thread about wearing watches at events.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/MSG+-+Watches.pdf"
   },
   {
     "title": "Beads: Symbols of Indigenous Cultural Resilience and Value",
