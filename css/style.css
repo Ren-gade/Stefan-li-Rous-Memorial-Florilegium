@@ -11,26 +11,17 @@ body {
   font-family: var(--font-family);
   color: var(--text-color);
   margin: 0; /* Initial margin reset */
-  padding-top: 70px; /* header space */
-}
+ }
 
 header {
-  display: flex;
+  display: flexbox;
   width: 100%;
   background-color: var(--header-background-color);
   text-align: center;
   font-size: 3vw; /* Use viewport width for responsive font size */
   padding: 10px 0;
   border-bottom: 2px solid var(--border-color);
-  z-index: 1000;
-}
-
-@media (max-width: 600px) {
-  header {
-    font-size: 4vw; /* Increase font size for smaller screens */
-    padding: 15px 0; /* More padding on smaller screens */
-  }
-}
+ }
 
 .card {
   background-color: #e2d6b3; /* contrasting card */
