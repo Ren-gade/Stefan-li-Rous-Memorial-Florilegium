@@ -3,109 +3,265 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Memorial Florilegium</title>
+    <title>About SLR</title>
     <link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-  crossorigin="anonymous"
-/>
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <link href="css/style.css" rel="stylesheet" />
-  </head>
-  <body>
-<div id="header-container"></div>
- <div style="display: flex">
-     <div id="sidebar" style="width:200px; padding:10px;">
-    <input type="text" placeholder="Search..." id="sidebarSearch"><br>
-    <div id="categoryList">
-           <script>
-        function loadCategories() {
-            fetch('updated-menu.html')
-                .then(response => response.text())
-                .then(data => {
-                    const currentPage = window.location.pathname.split('/').pop(); // Get current page
-                    const sidebar = document.getElementById('sidebar');
-                    sidebar.innerHTML = data;
+    <style>
+      body {
+        margin: 0;
+        font-family: "Cormorant Garamond", serif;
+        background-color: #f5f0e1;
+        color: #3a2a1a;
+      }
 
-                    // Modify links
-                    const links = sidebar.querySelectorAll('.category');
-                    links.forEach(link => {
-                        if (link.getAttribute('data-page') === currentPage) {
-                            link.href = '#'; // Replace href with '#'
-                        }
-                    });
-                })
-                .catch(error => console.error('Error loading categories:', error));
+      .page-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
+
+      #sidebar {
+        flex: 0 0 220px;
+        padding: 10px;
+        background: #f0eee6;
+        box-sizing: border-box;
+      }
+
+      #sidebar input {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #d2b48c;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      #contentArea {
+        flex: 1;
+        padding: 30px;
+        box-sizing: border-box;
+      }
+
+      .subtitle {
+        font-style: italic;
+        color: #555;
+      }
+
+      a {
+        color: #0077cc;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #005999;
+        text-decoration: underline;
+      }
+
+      /* Back to Top Button */
+      #backToTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        border: 2px solid #d2b48c;
+        outline: none;
+        background-color: #f5f0e1;
+        color: #3a2a1a;
+        cursor: pointer;
+        padding: 10px 16px;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      #backToTopBtn:hover {
+        background-color: #e8dfc4;
+        border-color: #c7a26a;
+        transform: scale(1.05);
+      }
+
+      /* Dark Mode */
+      .dark-mode body {
+        background-color: #1c1c1c;
+        color: #f2f2f2;
+      }
+
+      .dark-mode #sidebar {
+        background-color: #2d2d2d;
+        color: #fff;
+      }
+
+      .dark-mode #sidebar input {
+        background-color: #444;
+        color: #fff;
+        border-color: #666;
+      }
+
+      .dark-mode a {
+        color: #88c0ff;
+      }
+
+      .dark-mode a:hover {
+        color: #5590cc;
+      }
+
+      .dark-mode #backToTopBtn {
+        background-color: #333;
+        border-color: #888;
+        color: #fff;
+      }
+
+      .dark-mode #backToTopBtn:hover {
+        background-color: #444;
+        border-color: #aaa;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .page-container {
+          flex-direction: column;
         }
 
-        window.onload = loadCategories;
-    </script>
-    </div>
-</div>
-      <main style="flex: 1; padding: 30px">
-        <div id="contentArea">
-          <h2>The Honorable Lord Stefan li Rous</h2>
-          <subtitle>Pulled from his <a href="https://web.archive.org/web/20240816014607/https://www.joincake.com/memorial-pages/mark-harris/#obituary">Obituary</a></subtitle>
-          <p>
-            Mark Stephen Harris was born in Dallas, Texas, on August 26, 1957. He left this world on Friday, June 10, 2022, at the age of 64 from North Austin Medical Center. 
-            We miss him.
-          </p>
+        #sidebar {
+          width: 100%;
+          flex: 0 0 auto;
+          margin-bottom: 20px;
+        }
+
+        #contentArea {
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Page Content -->
+    <div class="page-container">
+      <!-- Sidebar -->
+      <div id="sidebar">
+     <div id="categoryList"></div>
+      </div>
+
+      <!-- Main Content -->
+      <main style="padding: min(0.5rem, 2vw) min(1rem, 3vw);">
+        <h2>The Honorable Lord Stefan li Rous</h2>
+        <p class="subtitle">
+          Pulled from his
+          <a
+            href="https://web.archive.org/web/20240816014607/https://www.joincake.com/memorial-pages/mark-harris/#obituary"
+            >Obituary</a
+          >
+        </p>
         <p>
-One of Mark’s passions was his membership in the local barony of the Society for Creative Anachronism (SCA). Interesting, right? that someone so knowledgeable about modern computers loved learning and practicing the technology of medieval times. Mark collected and tried different recipes from ye olden days, seeking to use authentic ingredients and methods. He made his own chain mail and participated in medieval combat, including jousting tournaments.
-</p>
-<p>
-Mark, a.k.a. Stefan Li Rous, met his wife, Alice Morrow, a.k.a. Alina Mitchell, through the SCA. During their marriage, they traveled across the country several times to SCA “wars,” which were huge meet-ups with other SCA groups where they could share knowledge through demonstrations and classes, compete in sporting events, and live the medieval life in a big campground for a few days.  
-</p>
-<p>
-Mark loved animals, too, and had several cats and dogs over the years. Two of his favorite dogs, Snowball and Caspar, marched in many a Fourth of July parade and SCA event, pulling a small medieval-style cart.
-</p>
-<p>
-Mark was fairly adventurous about food, although he couldn’t remember a green vegetable that he liked. He was also a good sport when the family met at noisy, crowded local Mexican restaurants to celebrate Father’s Day and birthdays. Mark was kind and generous. 
-</p>
-<a href="https://photos.google.com/share/AF1QipPVGfQhqJLNstIzJ9dAu-FcNqxiewi5jDWTRvuhwKdU_TcsZJN-T2GxIXj3B059ag?key=NkQ3MTVMNHBwRjZLejRIWmhfQ2thc2hMclc2WGdn"target="_blank" rel="noopener noreferrer">Photos</a>
-        </br>
-     
+          Mark Stephen Harris was born in Dallas, Texas, on August 26, 1957. He
+          left this world on Friday, June 10, 2022, at the age of 64 from North
+          Austin Medical Center. We miss him.
+        </p>
+        <p>
+          One of Mark’s passions was his membership in the local barony of the
+          Society for Creative Anachronism (SCA). Interesting, right? That
+          someone so knowledgeable about modern computers loved learning and
+          practicing the technology of medieval times. Mark collected and tried
+          different recipes from ye olden days, seeking to use authentic
+          ingredients and methods. He made his own chain mail and participated
+          in medieval combat, including jousting tournaments.
+        </p>
+        <p>
+          Mark, a.k.a. Stefan Li Rous, met his wife, Alice Morrow, a.k.a. Alina
+          Mitchell, through the SCA. During their marriage, they traveled across
+          the country several times to SCA “wars,” which were huge meet-ups with
+          other SCA groups where they could share knowledge through
+          demonstrations and classes, compete in sporting events, and live the
+          medieval life in a big campground for a few days.
+        </p>
+        <p>
+          Mark loved animals, too, and had several cats and dogs over the years.
+          Two of his favorite dogs, Snowball and Caspar, marched in many a
+          Fourth of July parade and SCA event, pulling a small medieval-style
+          cart.
+        </p>
+        <p>
+          Mark was fairly adventurous about food, although he couldn’t remember
+          a green vegetable that he liked. He was also a good sport when the
+          family met at noisy, crowded local Mexican restaurants to celebrate
+          Father’s Day and birthdays. Mark was kind and generous.
+        </p>
+        <p>
+          <a
+            href="https://photos.google.com/share/AF1QipPVGfQhqJLNstIzJ9dAu-FcNqxiewi5jDWTRvuhwKdU_TcsZJN-T2GxIXj3B059ag?key=NkQ3MTVMNHBwRjZLejRIWmhfQ2thc2hMclc2WGdn"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Photos</a
+          >
+        </p>
       </main>
     </div>
 
     <!-- Back to Top Button -->
-<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑ Top</button>
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">
+      ↑ Top
+    </button>
+
+    <!-- Scripts -->
+    <script src="data/header.js"></script>
+    <script>
+      // Sidebar category loader
+      function loadCategories() {
+        fetch("updated-menu.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("categoryList").innerHTML = data;
+          })
+          .catch((err) => console.error(err));
+      }
+      window.onload = loadCategories;
+
+      // Back to top
+      function scrollFunction() {
+        const button = document.getElementById("backToTopBtn");
+        if (
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+          button.style.display = "block";
+        } else {
+          button.style.display = "none";
+        }
+      }
+      window.onscroll = scrollFunction;
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      // Dark Mode Toggle
+      const modeToggle = document.getElementById("modeToggle");
+      if (modeToggle) {
+        modeToggle.addEventListener("click", () => {
+          document.documentElement.classList.toggle("dark-mode");
+          const isDark =
+            document.documentElement.classList.contains("dark-mode");
+          modeToggle.textContent = isDark ? "☀️" : "🌙";
+          localStorage.setItem("darkMode", isDark ? "enabled" : "disabled");
+        });
+
+        if (localStorage.getItem("darkMode") === "enabled") {
+          document.documentElement.classList.add("dark-mode");
+          modeToggle.textContent = "☀️";
+        }
+      }
+    </script>
+    <script src="data/footer.js"></script>
   </body>
-  <script src="data/header.js"></script>
-   <script>
-  // Show button when scrolled down
-  window.onscroll = function() {scrollFunction()};
-
-  function scrollFunction() {
-    const button = document.getElementById("backToTopBtn");
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      button.style.display = "block";
-    } else {
-      button.style.display = "none";
-    }
-  }
-
-  // Smooth scroll to top
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-</script>
-  <script>
-  const modeToggle = document.getElementById('modeToggle');
-  modeToggle.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark-mode');
-    const isDark = document.documentElement.classList.contains('dark-mode');
-    modeToggle.textContent = isDark ? '☀️' : '🌙';
-    localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
-  });
-
-  // Preserve mode preference between pages
-  if (localStorage.getItem('darkMode') === 'enabled') {
-    document.documentElement.classList.add('dark-mode');
-    modeToggle.textContent = '☀️';
-  }
-</script>
-<div id="footer-container"></div>
-<script src="data/footer.js"></script>
-
 </html>

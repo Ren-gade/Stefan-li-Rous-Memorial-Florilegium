@@ -2,26 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>12th Century</title>
     <link href="css/style.css" rel="stylesheet" />
   </head>
-  <script src="js/analytics.js"></script>
   <body>
-    <!-- Header placeholder -->
+    <!-- Placeholder for injected header -->
     <div id="header-container"></div>
+    <div style="display: flex">
+      <div id="sidebar" style="width: 200px; padding: 10px">
+        <div id="categoryList">
+          <script>
+            function loadCategories() {
+              fetch("updated-menu.html")
+                .then((response) => response.text())
+                .then((data) => {
+                  const currentPage = window.location.pathname.split("/").pop(); // Get current page
+                  const sidebar = document.getElementById("sidebar");
+                  sidebar.innerHTML = data;
 
-    <!-- Main layout wrapper -->
-    <div id="page-wrapper" style="display: flex; flex: 1; min-height: 0">
-      <!-- Sidebar -->
-      <aside id="sidebar" style="width: 200px; padding: 10px">
-        <input type="text" placeholder="Search..." id="sidebarSearch" /><br />
-        <div id="categoryList"></div>
-      </aside>
+                  // Modify links
+                  const links = sidebar.querySelectorAll(".category");
+                  links.forEach((link) => {
+                    if (link.getAttribute("data-page") === currentPage) {
+                      link.href = "#"; // Replace href with '#'
+                    }
+                  });
+                })
+                .catch((error) =>
+                  console.error("Error loading categories:", error)
+                );
+            }
+
+            window.onload = loadCategories;
+          </script>
+        </div>
+      </div>
 
       <!-- Main content -->
       <main id="contentArea" style="flex: 1; min-height: 0">
-        <!-- Cards injected by script.js -->
+        <!-- Cards injected by JS -->
       </main>
     </div>
 
@@ -34,54 +54,11 @@
     <div id="footer-container"></div>
 
     <!-- Scripts -->
-    <script>
-      // Category for this page
-      window.currentCategory = "12th Century";
-
-      // Sidebar categories
-      function loadCategories() {
-        fetch("updated-menu.html")
-          .then((response) => response.text())
-          .then((data) => {
-            const currentPage = window.location.pathname.split("/").pop();
-            const sidebar = document.getElementById("sidebar");
-            sidebar.innerHTML = data;
-
-            // Modify links
-            const links = sidebar.querySelectorAll(".category");
-            links.forEach((link) => {
-              if (link.getAttribute("data-page") === currentPage) {
-                link.href = "#";
-              }
-            });
-          })
-          .catch((error) => console.error("Error loading categories:", error));
-      }
-      window.onload = loadCategories;
-
-      // Back to top
-      window.onscroll = function () {
-        scrollFunction();
-      };
-      function scrollFunction() {
-        const button = document.getElementById("backToTopBtn");
-        if (
-          document.body.scrollTop > 200 ||
-          document.documentElement.scrollTop > 200
-        ) {
-          button.style.display = "block";
-        } else {
-          button.style.display = "none";
-        }
-      }
-      function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-    </script>
-
-    <!-- Injected header, cards, footer -->
     <script src="data/header.js"></script>
     <script src="js/script.js"></script>
     <script src="data/footer.js"></script>
+    <script>
+      window.currentCategory = "12th Century";
+    </script>
   </body>
 </html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tag Results</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header placeholder -->
+    <div id="header-container"></div>
+
+    <!-- Main layout -->
+    <div id="page-wrapper" style="display: flex; flex: 1; min-height: 0">
+      <!-- Sidebar -->
+      <aside id="sidebar" style="width: 200px; padding: 10px"></aside>
+
+      <!-- Main content -->
+      <main id="contentArea" style="flex: 1; min-height: 0"></main>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">
+      ↑ Top
+    </button>
+
+    <!-- Footer placeholder -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script>
+      window.currentTag = new URLSearchParams(window.location.search).get("tag");
+
+      // Pass the tag query to script.js
+      const urlParams = new URLSearchParams(window.location.search);
+      const tagQuery = urlParams.get("tag");
+      window.currentTag = tagQuery ? tagQuery.toLowerCase() : null;
+
+      // Optional: set a default category if needed
+      window.currentCategory = null;
+    </script>
+
+    <!-- Inject header, footer, and main JS -->
+    <script src="data/header.js"></script>
+    <script src="data/footer.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+      // Once script.js has loaded and injected articles, filter by tag if present
+      document.addEventListener("DOMContentLoaded", function () {
+        if (!window.currentTag) return;
+
+        fetch("data/data.json")
+          .then((res) => res.json())
+          .then((allItems) => {
+            const filtered = allItems.filter(
+              (item) =>
+                item.tags &&
+                item.tags.some((t) => t.toLowerCase() === window.currentTag)
+            );
+
+            const contentArea = document.getElementById("contentArea");
+            if (!contentArea) return;
+
+            const header = document.createElement("h2");
+            header.textContent = `Results for #${window.currentTag}`;
+            contentArea.prepend(header);
+
+            if (!filtered || filtered.length === 0) {
+              // Show friendly message when no results
+              contentArea.innerHTML = `<h2>Results for #${window.currentTag}</h2>
+                                   <p>Oops… try a different search term.</p>`;
+            } else {
+              // Call the same displayArticles function from script.js
+              if (typeof displayArticles === "function") {
+                displayArticles(filtered, window.currentTag);
+              } else {
+                console.warn("displayArticles function not found yet.");
+              }
+            }
+          })
+          .catch((err) => console.error(err));
+      });
+    </script>
+  </body>
+</html>

@@ -1,319 +1,439 @@
- <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Food By Region</title>
-      <link href="css/style.css" rel="stylesheet" />
-      <style>
-       body {
-  background-color: #f5f0e1; /* beige parchment */
-  font-family: "Cormorant Garamond", serif;
-  color: #3a2a1a;
-  margin: 0;
-       }
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food By Region</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      :root {
+        --font-heading: "Cormorant Garamond", serif; /* elegant but legible */
+        --font-body: "Lora", serif; /* readable for long text */
+        --font-ui: "Open Sans", sans-serif; /* clean for nav and labels */
 
-        .alphabet-nav {
-          text-align: center;
-          background: #e9ecef;
-          padding: 0.75rem;
-          position: sticky;
-          top: 0;
-          z-index: 10;
-          border-bottom: 1px solid #ccc;
+        --text-color: #3a2a1a;
+        --background-color: #f5f0e1;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* sticky footer support */
+        margin: 0;
+        background-color: var(--background-color);
+        font-family: var(--font-family);
+        color: var(--text-color);
+        font-size: min(1.1rem, 3vw);
+        line-height: 1.6;
+      }
+
+      .alphabet-nav {
+        text-align: center;
+        background: #e9ecef;
+        padding: 0.75rem 2rem; /* added horizontal padding to prevent links from hitting the edges */
+        position: relative; /* allows positioning the house */
+        z-index: 10;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        align-items: center; /* vertically centers links */
+        justify-content: center;
+        flex-wrap: wrap; /* wrap if needed on very narrow screens */
+      }
+
+      .alphabet-nav a {
+        margin: 0 0.4rem;
+        color: #0077cc;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: clamp(1rem, 2.5vw, 1.3rem); /* responsive alphabet links */
+      }
+
+      .alphabet-nav a:hover {
+        color: #005999;
+      }
+
+      /* House emoji on far left, aligned with alphabet links */
+      .alphabet-nav a:first-child {
+        position: absolute;
+        left: 0.5rem; /* distance from left edge */
+        font-size: clamp(
+          1.5rem,
+          2.5vw,
+          2rem
+        ); /* slightly smaller and responsive */
+        top: 50%;
+        transform: translateY(-50%); /* vertically center with links */
+        text-decoration: none;
+      }
+      /* Make house emoji bigger on large screens */
+      @media (min-width: 1200px) {
+        .alphabet-nav a:first-child {
+          font-size: 3rem; /* slightly bigger than default */
         }
+      }
 
-        .alphabet-nav a {
-          margin: 0 0.4rem;
-          color: #0077cc;
-          text-decoration: none;
-          font-weight: bold;
+      .alphabet-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        padding: 2rem;
+      }
+
+      .letter-section {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+      }
+
+      .letter-section h2 {
+        font-size: 1.5em;
+        border-bottom: 2px solid #0077cc;
+        padding-bottom: 0.3em;
+        margin-bottom: 0.5em;
+        color: #0077cc;
+      }
+
+      .letter-section ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+      }
+
+      .letter-section li {
+        margin: 0.4em 0;
+      }
+
+      .letter-section a {
+        color: #333;
+        text-decoration: none;
+      }
+
+      .letter-section a:hover {
+        color: #0077cc;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <script src="js/analytics.js"></script>
+  <body>
+    <!-- Placeholder for injected header -->
+    <div id="header-container"></div>
+
+    <nav class="alphabet-nav">
+      <a href="index.html">🏠</a>
+      <a href="#A">A</a>
+      <a href="#B">B</a>
+      <a href="#C">C</a>
+      <a href="#D">D</a>
+      <a href="#E">E</a>
+      <a href="#F">F</a>
+      <a href="#G">G</a>
+      <a href="#H">H</a>
+      <a href="#I">I</a>
+      <a href="#J">J</a>
+      <a href="#K">K</a>
+      <a href="#L">L</a>
+      <a href="#M">M</a>
+      <a href="#N">N</a>
+      <a href="#O">O</a>
+      <a href="#P">P</a>
+      <a href="#Q">Q</a>
+      <a href="#R">R</a>
+      <a href="#S">S</a>
+      <a href="#T">T</a>
+      <a href="#U">U</a>
+      <a href="#V">V</a>
+      <a href="#W">W</a>
+      <a href="#X">X</a>
+      <a href="#Y">Y</a>
+      <a href="#Z">Z</a>
+    </nav>
+
+    <div class="alphabet-list">
+      <div class="letter-section" id="A">
+        <h2>A</h2>
+        <ul>
+          <li>
+            <a
+              href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Food/Arab+Recipes%2C+In+a+Caliph's+Kitchen.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Arab: In a Caliph's Kitchen (out of Print)
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Food/MSG-+Africa.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MSG - Africa
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Food/MSG-+Anglo-Saxon+England.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MSG - Anglo-Saxon England
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="B">
+        <h2>B</h2>
+        <ul>
+          <li><a href="#">Banana</a></li>
+          <li><a href="#">Blueberry</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="C">
+        <h2>C</h2>
+        <ul>
+          <li><a href="#">Cherry</a></li>
+          <li><a href="#">Cantaloupe</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="D">
+        <h2>D</h2>
+        <ul>
+          <li><a href="#">D</a></li>
+          <li><a href="#">D</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="E">
+        <h2>E</h2>
+        <ul>
+          <li>
+            <a
+              href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Food/MSG-+Anglo-Saxon+England.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MSG - Anglo-Saxon England
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Food/MSG+-+King+Arthur+Legends.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              England - King Arthur Legends
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="F">
+        <h2>F</h2>
+        <ul>
+          <li><a href="#">F</a></li>
+          <li><a href="#">F</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="G">
+        <h2>G</h2>
+        <ul>
+          <li><a href="#">G</a></li>
+          <li><a href="#">G</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="H">
+        <h2>H</h2>
+        <ul>
+          <li><a href="#">H</a></li>
+          <li><a href="#">H</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="I">
+        <h2>I</h2>
+        <ul>
+          <li>
+            <a
+              href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Food/Lawyers%2C+Legends+and+Landfills_+Early+Irish+Food.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Lawyers, Legends and Landfills: Early Irish Food
+            </a>
+          </li>
+          <li><a href="#">Cantaloupe</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="J">
+        <h2>J</h2>
+        <ul>
+          <li><a href="#">#J</a></li>
+          <li><a href="#">J</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="K">
+        <h2>K</h2>
+        <ul>
+          <li><a href="#">K</a></li>
+          <li><a href="#">K</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="L">
+        <h2>L</h2>
+        <ul>
+          <li><a href="#">L</a></li>
+          <li><a href="#">L</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="M">
+        <h2>M</h2>
+        <ul>
+          <li>
+            <a
+              href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Food/Mongol+Cooking.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Mongol Cooking
+            </a>
+          </li>
+          <li><a href="#">M</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="N">
+        <h2>N</h2>
+        <ul>
+          <li><a href="#">N</a></li>
+          <li><a href="#">N</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="O">
+        <h2>O</h2>
+        <ul>
+          <li><a href="#">O</a></li>
+          <li><a href="#">O</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="P">
+        <h2>P</h2>
+        <ul>
+          <li><a href="#">P</a></li>
+          <li><a href="#">P</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="Q">
+        <h2>Q</h2>
+        <ul>
+          <li><a href="#">Q</a></li>
+          <li><a href="#">Q</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="R">
+        <h2>R</h2>
+        <ul>
+          <li><a href="#">R</a></li>
+          <li><a href="#">R</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="S">
+        <h2>S</h2>
+        <ul>
+          <li><a href="#">S</a></li>
+          <li><a href="#">S</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="T">
+        <h2>T</h2>
+        <ul>
+          <li><a href="#">T</a></li>
+          <li><a href="#">T</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="U">
+        <h2>U</h2>
+        <ul>
+          <li><a href="#">U</a></li>
+          <li><a href="#">U</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="V">
+        <h2>V</h2>
+        <ul>
+          <li><a href="#">V</a></li>
+          <li><a href="#">V</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="Y">
+        <h2>Y</h2>
+        <ul>
+          <li><a href="#">Y</a></li>
+          <li><a href="#">Y</a></li>
+        </ul>
+      </div>
+
+      <div class="letter-section" id="Z">
+        <h2>Z</h2>
+        <ul>
+          <li><a href="#">Z</a></li>
+          <li><a href="#">Z</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Inject header + handle dark mode -->
+    <script src="data/header.js"></script>
+
+    <!-- Back to Top Button -->
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">
+      ↑ Top
+    </button>
+
+    <script>
+      // Show button when scrolled down
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        const button = document.getElementById("backToTopBtn");
+        if (
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+          button.style.display = "block";
+        } else {
+          button.style.display = "none";
         }
+      }
 
-        .alphabet-nav a:hover {
-          color: #005999;
-        }
+      // Smooth scroll to top
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
 
-        .alphabet-list {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-          gap: 1.5rem;
-          padding: 2rem;
-        }
-
-        .letter-section {
-          background: #fff;
-          border-radius: 8px;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-          padding: 1rem;
-        }
-
-        .letter-section h2 {
-          font-size: 1.5em;
-          border-bottom: 2px solid #0077cc;
-          padding-bottom: 0.3em;
-          margin-bottom: 0.5em;
-          color: #0077cc;
-        }
-
-        .letter-section ul {
-          list-style: none;
-          padding-left: 0;
-          margin: 0;
-        }
-
-        .letter-section li {
-          margin: 0.4em 0;
-        }
-
-        .letter-section a {
-          color: #333;
-          text-decoration: none;
-        }
-
-        .letter-section a:hover {
-          color: #0077cc;
-          text-decoration: underline;
-        }
-      </style>
-    </head>
-    <script src="js/analytics.js"></script>
-    <body>
-      <!-- Placeholder for injected header -->
-  <div id="header-container"></div>
-            <nav class="alphabet-nav">
-               <a href="index.html">🏠</a>
-        <a href="#A">A</a>
-        <a href="#B">B</a>
-        <a href="#C">C</a>
-        <a href="#D">D</a>
-        <a href="#E">E</a>
-        <a href="#F">F</a>
-        <a href="#G">G</a>
-        <a href="#H">H</a>
-        <a href="#I">I</a>
-        <a href="#J">J</a>
-        <a href="#K">K</a>
-        <a href="#L">L</a>
-        <a href="#M">M</a>
-        <a href="#N">N</a>
-        <a href="#O">O</a>
-        <a href="#P">P</a>
-        <a href="#Q">Q</a>
-        <a href="#R">R</a>
-        <a href="#S">S</a>
-        <a href="#T">T</a>
-        <a href="#U">U</a>
-        <a href="#V">V</a>
-        <a href="#W">W</a>
-        <a href="#X">X</a>
-        <a href="#Y">Y</a>
-        <a href="#Z">Z</a>
-      </nav>
-
-      <div class="alphabet-list">
-        <div class="letter-section" id="A">
-          <h2>A</h2>
-          <ul>
-            <li>
-              <a
-                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Food/Arab+Recipes%2C+In+a+Caliph's+Kitchen.pdf"
-                >Arab: In a Caliph's Kitchen (out of Print)
-              </a>
-            </li>
-            <li><a href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Food/MSG-+Africa.pdf">MSG - Africa</a></li>
-            <li> <a href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Food/MSG-+Anglo-Saxon+England.pdf"> MSG - Anglo-Saxon England</a></li>
-          </ul>
-        </div>
-
-        <div class="letter-section" id="B">
-          <h2>B</h2>
-          <ul>
-            <li><a href="#">Banana</a></li>
-            <li><a href="#">Blueberry</a></li>
-          </ul>
-        </div>
-
-        <div class="letter-section" id="C">
-          <h2>C</h2>
-          <ul>
-            <li><a href="#">Cherry</a></li>
-            <li><a href="#">Cantaloupe</a></li>
-          </ul>
-        </div>
-        <div class="letter-section" id="D">
-          <h2>D</h2>
-          <ul>
-            <li><a href="#">D</a></li>
-            <li><a href="#">D</a></li>
-          </ul>
-        </div>
-        <div class="letter-section" id="E">
-          <h2>E</h2>
-          <ul>
-             <li> <a href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Food/MSG-+Anglo-Saxon+England.pdf"> MSG - Anglo-Saxon England</a></li>
-            <li><a href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Food/MSG+-+King+Arthur+Legends.pdf">England - King Arthur Legends</a></li>
-          </ul>
-        </div>
-        <div class="letter-section" id="F">
-          <h2>F</h2>
-          <ul>
-            <li><a href="#">F</a></li>
-            <li><a href="#">F</a></li>
-          </ul>
-        </div>
-        <div class="letter-section" id="G">
-          <h2>G</h2>
-          <ul>
-            <li><a href="#">G</a></li>
-            <li><a href="#">G</a></li>
-          </ul>
-        </div>
-        <div class="letter-section" id="H">
-          <h2>H</h2>
-          <ul>
-            <li><a href="#">H</a></li>
-            <li><a href="#">H</a></li>
-          </ul>
-        </div>
-        <div class="letter-section" id="I">
-          <h2>I</h2>
-          <ul>
-            <li><a href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Food/Lawyers%2C+Legends+and+Landfills_+Early+Irish+Food.pdf">Lawyers, Legends and Landfills: Early Irish Food
-            </a></li>
-            <li><a href="#">Cantaloupe</a></li>
-          </ul>
-        </div>
-<div class="letter-section" id="J">
-          <h2>J</h2>
-          <ul>
-            <li><a href="#">#J</a></li>
-            <li><a href="#">J</a></li>
-          </ul>
-        </div>
-<div class="letter-section" id="K">
-          <h2>K</h2>
-          <ul>
-            <li><a href="#">K</a></li>
-            <li><a href="#">K</a></li>
-          </ul>
-        </div>
-<div class="letter-section" id="L">
-          <h2>L</h2>
-          <ul>
-            <li><a href="#">L</a></li>
-            <li><a href="#">L</a></li>
-          </ul>
-        </div>
-<div class="letter-section" id="M">
-          <h2>M</h2>
-          <ul>
-            <li><a href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Food/Mongol+Cooking.pdf"> Mongol Cooking 
-            </a></li>
-            <li><a href="#">M</a></li>
-          </ul>
-        </div>
-<div class="letter-section" id="N">
-          <h2>N</h2>
-          <ul>
-            <li><a href="#">N</a></li>
-            <li><a href="#">N</a></li>
-          </ul>
-        </div>    
-<div class="letter-section" id="O">
-          <h2>O</h2>
-          <ul>
-            <li><a href="#">O</a></li>
-            <li><a href="#">O</a></li>
-          </ul>
-        </div>
-<div class="letter-section" id="P">
-          <h2>P</h2>
-          <ul>
-            <li><a href="#">P</a></li>
-            <li><a href="#">P</a></li>
-          </ul>
-        </div>                   
-<div class="letter-section" id="Q">
-          <h2>Q</h2>
-          <ul>
-            <li><a href="#">Q</a></li>
-            <li><a href="#">Q</a></li>
-          </ul>
-        </div>
-<div class="letter-section" id="R">
-          <h2>R</h2>
-          <ul>
-            <li><a href="#">R</a></li>
-            <li><a href="#">R</a></li>
-          </ul>
-        </div>  
-<div class="letter-section" id="S">
-          <h2>S</h2>
-          <ul>
-            <li><a href="#">S</a></li>
-            <li><a href="#">S</a></li>
-          </ul>
-        </div>
-<div class="letter-section" id="T">
-          <h2>T</h2>
-          <ul>
-            <li><a href="#">T</a></li>
-            <li><a href="#">T</a></li>
-          </ul>
-        </div>  
-<div class="letter-section" id="U">
-          <h2>U</h2>
-          <ul>
-            <li><a href="#">U</a></li>
-            <li><a href="#">U</a></li>
-          </ul>
-        </div>
-<div class="letter-section" id="V">
-          <h2>V</h2>
-          <ul>
-            <li><a href="#">V</a></li>
-            <li><a href="#">V</a></li>
-          </ul>
-        </div> 
-<div class="letter-section" id="Y">
-          <h2>Y</h2>
-          <ul>
-            <li><a href="#">Y</a></li>
-            <li><a href="#">Y</a></li>
-          </ul>
-        </div><div class="letter-section" id="Z">
-          <h2>Z</h2>
-          <ul>
-            <li><a href="#">Z</a></li>
-            <li><a href="#">Z</a></li>
-          </ul>
-        </div>                                           
-       </div>
-        <!-- Inject header + handle dark mode -->
-  <script src="data/header.js"></script>
-        <!-- Back to Top Button -->
-<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑ Top</button>
-<script>
-  // Show button when scrolled down
-  window.onscroll = function() {scrollFunction()};
-
-  function scrollFunction() {
-    const button = document.getElementById("backToTopBtn");
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      button.style.display = "block";
-    } else {
-      button.style.display = "none";
-    }
-  }
-
-  // Smooth scroll to top
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-</script>
     <div id="footer-container"></div>
-<script src="data/footer.js"></script>
-    </body>
-  </html>
+    <script src="data/footer.js"></script>
+  </body>
 </html>
