@@ -751,6 +751,7 @@
     "description": "A pattern for a Wisby coat-of-plates.",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Wisby+Coat-of-Plates+3.pdf"
   },
+
   {
     "title": "Beads: Symbols of Indigenous Cultural Resilience and Value",
     "category": "FN Indigenous",
@@ -785,27 +786,6 @@
     "tags": ["accessories", "native", "first nations", "trade goods"],
     "description": "This is a study on Trade Ornaments. A “trade ornament” is any non-native item used by Indigenous people for decoration, including goods from traders, gifts, government distributions, store purchases, or items made from non-native materials.",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Indigenous+North+America/trade-ornaments.pdf"
-  },
-  {
-    "title": "The Book of Kells",
-    "category": "Scribal",
-    "tags": ["scribal arts", "illumination", "manuscripts", "celtic"],
-    "description": "The Book of Kells is a richly decorated manuscript created by Celtic monks around the 9th century, containing the four Gospels of the New Testament. Renowned for its intricate illustrations, vivid colors, and elaborate calligraphy, it represents the height of early medieval art.",
-    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Illumination+and+Scrolls/thebookof+kells.pdf"
-  },
-  {
-    "title": "Illuminated Manuscripts in Classical and Mediaeval Times",
-    "category": "Scribal",
-    "tags": ["scribal arts", "illumination", "manuscripts"],
-    "description": "Their art and their technique. Originally published in 1892.",
-    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Illumination+and+Scrolls/Illuminated+Manuscripts+in+Classical+and+Mediaeval+Times.pdf"
-  },
-  {
-    "title": "Medieval & Renaissance Manuscripts",
-    "category": "Scribal",
-    "tags": ["scribal arts", "illumination", "manuscripts"],
-    "description": "he manuscripts are arranged in an alphabetical sequence. All are on vellum unless otherwise noted. They are described physically with reference to script, ruling, ink, decoration, condition and general appearance.",
-    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Illumination+and+Scrolls/Quaritch-Medieval-Manuscripts-2023.pdf"
   },
   {
     "title": "Common Questions: What is the term Anno Societatis",
@@ -1079,6 +1059,34 @@
     "tags": ["newcomers", "events", "feast"],
     "description": "What should I bring for my first feast?",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/Your+First+Feast.pdf"
+  },
+  {
+    "title": "Psychology and the SCA Fencing Woman",
+    "category": "Rapier",
+    "tags": ["rapier", "psychology", "woman", "combat", "fencing"],
+    "description": "A amnual for students and teachers",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Psychology-and-the-SCA-Fencing-Woman-A-Manual-for-Students-and-Teachers-copy.pdf"
+  },
+  {
+    "title": "The Book of Kells",
+    "category": "Scribal",
+    "tags": ["scribal arts", "illumination", "manuscripts", "celtic"],
+    "description": "The Book of Kells is a richly decorated manuscript created by Celtic monks around the 9th century, containing the four Gospels of the New Testament. Renowned for its intricate illustrations, vivid colors, and elaborate calligraphy, it represents the height of early medieval art.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Illumination+and+Scrolls/thebookof+kells.pdf"
+  },
+  {
+    "title": "Illuminated Manuscripts in Classical and Mediaeval Times",
+    "category": "Scribal",
+    "tags": ["scribal arts", "illumination", "manuscripts"],
+    "description": "Their art and their technique. Originally published in 1892.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Illumination+and+Scrolls/Illuminated+Manuscripts+in+Classical+and+Mediaeval+Times.pdf"
+  },
+  {
+    "title": "Medieval & Renaissance Manuscripts",
+    "category": "Scribal",
+    "tags": ["scribal arts", "illumination", "manuscripts"],
+    "description": "he manuscripts are arranged in an alphabetical sequence. All are on vellum unless otherwise noted. They are described physically with reference to script, ruling, ink, decoration, condition and general appearance.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Illumination+and+Scrolls/Quaritch-Medieval-Manuscripts-2023.pdf"
   },
   {
     "title": "Improvised Thrown Weapons Targets",
