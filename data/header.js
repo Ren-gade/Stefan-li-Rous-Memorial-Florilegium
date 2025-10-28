@@ -1,8 +1,28 @@
 fetch("header.html")
   .then((response) => response.text())
   .then((html) => {
+    // Inject header HTML
     document.getElementById("header-container").innerHTML = html;
 
+    // --- GA4 snippet injection ---
+    (function () {
+      const gtagScript = document.createElement("script");
+      gtagScript.async = true;
+      gtagScript.src =
+        "https://www.googletagmanager.com/gtag/js?id=G-3G5VT9X2VF";
+      document.head.appendChild(gtagScript);
+
+      const inlineScript = document.createElement("script");
+      inlineScript.textContent = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3G5VT9X2VF');
+      `;
+      document.head.appendChild(inlineScript);
+    })();
+
+    // --- Dark Mode Handling ---
     const modeToggle = document.getElementById("modeToggle");
     if (!modeToggle) return;
 
