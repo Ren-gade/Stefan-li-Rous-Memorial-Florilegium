@@ -414,11 +414,342 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/MSG+-+Watches.pdf"
   },
   {
-    "title": "",
+    "title": "Arming Cap",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "accessories"],
+    "description": "A pattern for and arming cap (cloth)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Arming+Cap.pdf"
+  },
+  {
+    "title": "Armor Patterns ",
     "category": "Armor",
     "tags": ["armor", "pattern"],
-    "description": "A pattern for",
-    "download_url": ""
+    "description": "A collection of patterns for armor",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Armor+Patterns.pdf"
+  },
+  {
+    "title": "Armor Patterns 2",
+    "category": "Armor",
+    "tags": ["armor", "pattern"],
+    "description": "A collection of patterns for armor",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Armor+Patterns+2.pdf"
+  },
+  {
+    "title": "Barbute",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "helm"],
+    "description": "A pattern for a Barbute helm (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Arming+Cap.pdf"
+  },
+  {
+    "title": "Bascinet (Based on Mid 14th Century Style)",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "helm", "14th century"],
+    "description": "A pattern for a bascinet helm (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Bascinet+(Based+on+Mid+14th+Century+Style_).pdf"
+  },
+  {
+    "title": "Bevor",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal"],
+    "description": "A pattern for a Bevor (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Bevor.pdf"
+  },
+  {
+    "title": "Body Armour (c. Early 15th Century Italian Style)",
+    "category": "Armor",
+    "tags": [
+      "armor",
+      "pattern",
+      "metalwork",
+      "metal",
+      "15th century",
+      "italy",
+      "italian"
+    ],
+    "description": "A pattern for body armor in the early 15th century Italian style (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Body+Armour+(c.+Early+15th+Century+Italian+Style).pdf"
+  },
+  {
+    "title": "Breastplate 1",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal"],
+    "description": "A pattern for a breastplate (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Breastplate+1.pdf"
+  },
+  {
+    "title": "Buckler",
+    "category": "Armor",
+    "tags": [
+      "armor",
+      "pattern",
+      "metalwork",
+      "metal",
+      "accessories",
+      "buckler"
+    ],
+    "description": "A pattern for a buckler (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Buckler.pdf"
+  },
+  {
+    "title": "Coat of Plates _ Brigandine 14_15_16c",
+    "category": "Armor",
+    "tags": [
+      "armor",
+      "pattern",
+      "metalwork",
+      "metal",
+      "14th century",
+      "15th century",
+      "16th century"
+    ],
+    "description": "A pattern for a Coat of Plates from the 14th, 15th and 16th centuries (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Coat+of+Plates+_+Brigandine+14_15_16c.pdf"
+  },
+  {
+    "title": "Conical Helmet (10th - 13th century",
+    "category": "Armor",
+    "tags": [
+      "armor",
+      "pattern",
+      "metalwork",
+      "metal",
+      "helm",
+      "10th century",
+      "11th century",
+      "12th century",
+      "13th century"
+    ],
+    "description": "A pattern for a conical helm covering the 10th-13th centuries (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Conical+Helmet+(10th+-+13th+century).pdf"
+  },
+  {
+    "title": "Construction and Use of Lamellar Armour in the Current Middle Ages",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "lamellar"],
+    "description": "An article including a pattern and instruction for various lamellar armors",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Construction+and+Use+of+Lamellar+Armour+in+the+Current+Middle+Ages.pdf"
+  },
+  {
+    "title": "Cup Hilt (SCA Sport Hilt)",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "hilt"],
+    "description": "A pattern for a cup hilt (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Cup+Hilt+(SCA+Sport+Hilt).pdf"
+  },
+  {
+    "title": "Early 14th Century Style Sugar Loaf Helm with Visor",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "helm"],
+    "description": "A pattern for a Sugar Loaf Helm with a Visor (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Early+14th+Century+Style+Sugar+Loaf+Helm+with+Visor.pdf"
+  },
+  {
+    "title": "Early 14th Century Style Sugar Loaf Helm",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "helm"],
+    "description": "A pattern for a Sugar Loaf Helm (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Early+14th+Century+Style+Sugar+Loaf+Helm.pdf"
+  },
+  {
+    "title": "English Style Close Helm (c. 1510",
+    "category": "Armor",
+    "tags": [
+      "armor",
+      "pattern",
+      "metalwork",
+      "metal",
+      "helm",
+      "England",
+      "16th century"
+    ],
+    "description": "A pattern for a English Close Helm",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/English+Style+Close+Helm+(c.+1510).pdf"
+  },
+  {
+    "title": "Generic Bascinet",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "helm"],
+    "description": "A pattern for a Bascinet (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Generic+Bascinet.pdf"
+  },
+  {
+    "title": "Globose Chestplate",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal"],
+    "description": "A pattern for a Globose Chestplate (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Globose+Chestplate.pdf"
+  },
+  {
+    "title": "Gorget 1",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "gorget"],
+    "description": "A pattern for a gorget (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Gorget+1.pdf"
+  },
+  {
+    "title": "Gorget 2",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "gorget"],
+    "description": "A pattern for a gorget (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Gorget+2.pdf"
+  },
+  {
+    "title": "Gorget 3",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "gorget"],
+    "description": "A pattern for a gorget (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Gorget+3.pdf"
+  },
+  {
+    "title": "Gothic German Armor Design Notes",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "gothic", "german"],
+    "description": "Notes and various patterns for gothic German armor.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Gothic+German+Armor+Design+Notes.pdf"
+  },
+  {
+    "title": "Great Helm (c. Late 13th to Early 14th Century)",
+    "category": "Armor",
+    "tags": [
+      "armor",
+      "pattern",
+      "metalwork",
+      "metal",
+      "helm",
+      "13th century",
+      "14th century"
+    ],
+    "description": "A pattern for a great halm (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Great+Helm+(c.+Late+13th+to+Early+14th+Century).pdf"
+  },
+  {
+    "title": "Great Helm",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "helm"],
+    "description": "A pattern for a great helm (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Greathelm.pdf"
+  },
+  {
+    "title": "Kettle Helm",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "helm"],
+    "description": "A pattern for a kettle helm (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Kettle+Helm.pdf"
+  },
+  {
+    "title": "Leather Helm",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "mleatherwork", "leather", "helm"],
+    "description": "A pattern for a leather helm",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Leather+Helm.pdf"
+  },
+  {
+    "title": "Lorica",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal"],
+    "description": "A pattern for lorica (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Lorica.pdf"
+  },
+  {
+    "title": "Mid-14th Century style Klapp Visor Bascinet",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "helm", "14th century"],
+    "description": "A pattern for a bascinet (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Mid-14th+Century+style+Klapp+Visor+Bascinet.pdf"
+  },
+  {
+    "title": "Milanese Style Armet (c. 1500)",
+    "category": "Armor",
+    "tags": [
+      "armor",
+      "pattern",
+      "metalwork",
+      "metal",
+      "helm",
+      "italian",
+      "italy",
+      "16th century"
+    ],
+    "description": "A pattern for an armet/helm (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Milanese+Style+Armet+(c.+1500).pdf"
+  },
+  {
+    "title": "Norman Spangenhelm",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "helm", "norman"],
+    "description": "A pattern for a Norman Spangenhelm (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Norman+Spangenhelm.pdf"
+  },
+  {
+    "title": "Padded Jack (c. 15th Century Style)",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "clothing", "gambeson", "15th century"],
+    "description": "A pattern for a padded gambeson",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Padded+Jack+(c.+15th+Century+Style).pdf"
+  },
+  {
+    "title": "Peascod Breastplate",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal"],
+    "description": "A pattern for a Peascod Breastplate (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Peascod+Breastplate.pdf"
+  },
+  {
+    "title": "Pigface Klappvisor",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "helm"],
+    "description": "A pattern for a Pigface Klappvisor (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Pigface+Klappvisor.pdf"
+  },
+  {
+    "title": "Sallet",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "helm"],
+    "description": "A pattern for a sallet (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Sallet.pdf"
+  },
+  {
+    "title": "Sendai Do",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "japan", "japanese", "samaurai"],
+    "description": "A pattern for a set of Japanese samaurai armor",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Sendai+Do.pdf"
+  },
+  {
+    "title": "Simple Basket Hilt",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "accessories"],
+    "description": "A pattern for a basket hilt (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Simple+Basket+Hilt.pdf"
+  },
+  {
+    "title": "Spangenhelm",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "helm"],
+    "description": "A pattern for a Spangenhelm (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Spangenhelm.pdf"
+  },
+  {
+    "title": "Wisby Coat-of-Plates 1",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal"],
+    "description": "A pattern for a Wisby coat-of-plates.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Wisby+Coat-of-Plates+1.pdf"
+  },
+  {
+    "title": "Wisby Coat-of-Plates 2",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal"],
+    "description": "A pattern for a Wisby coat-of-plates.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Wisby+Coat-of-Plates+2.pdf"
+  },
+  {
+    "title": "Wisby Coat-of-Plates 3",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal"],
+    "description": "A pattern for a Wisby coat-of-plates.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Wisby+Coat-of-Plates+3.pdf"
   },
   {
     "title": "Beads: Symbols of Indigenous Cultural Resilience and Value",
