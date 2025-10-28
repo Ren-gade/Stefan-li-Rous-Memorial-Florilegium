@@ -1,122 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tag Results</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <!-- Placeholder for injected header -->
-  <div id="header-container"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tag Results</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Placeholder for injected header -->
+    <div id="header-container"></div>
 
-  <div style="display: flex;">
-    <div id="sidebar" style="width:200px; padding:10px;">
-      <input type="text" placeholder="Search by tag or title..." id="sidebarSearch" style="width:100%; box-sizing:border-box; margin-bottom:1rem;">
+    <div style="display: flex">
+      <div id="sidebar" style="width: 200px; padding: 10px">
       <div id="categoryList"></div>
+      </div>
+
+      <main id="contentArea" style="padding-top: 50px; flex: 1"></main>
     </div>
 
-    <main id="contentArea" style="padding-top:50px; flex:1;"></main>
-  </div>
+    <!-- Inject header + handle dark mode -->
+    <script src="data/header.js"></script>
 
-  <!-- Inject header + handle dark mode -->
-  <script src="data/header.js"></script>
-  <div id="footer-container"></div>
-  <script src="data/footer.js"></script>
-  <script src="js/script.js"></script>
+    <!-- Back to Top Button -->
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">
+      ↑ Top
+    </button>
 
-  <!-- Sidebar category loader -->
-  <script>
-    function loadCategories() {
-      fetch('updated-menu.html')
-        .then(response => response.text())
-        .then(data => {
-          const sidebar = document.getElementById('sidebar');
-          sidebar.querySelector('#categoryList').innerHTML = data;
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    <script src="data/footer.js"></script>
 
-          // Highlight current page
-          const currentPage = window.location.pathname.split('/').pop();
-          const links = sidebar.querySelectorAll('.category');
-          links.forEach(link => {
-            if (link.getAttribute('data-page') === currentPage) {
-              link.href = '#';
-            }
-          });
-        })
-        .catch(error => console.error('Error loading categories:', error));
-    }
-    window.onload = loadCategories;
-  </script>
+    <script src="js/script.js"></script>
 
-  <!-- Tag search handling -->
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const tag = params.get("tag");
+    <!-- Sidebar category loader -->
+    <script>
+      function loadCategories() {
+        fetch("updated-menu.html")
+          .then((response) => response.text())
+          .then((data) => {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.querySelector("#categoryList").innerHTML = data;
 
-    fetch("data/data.json")
-      .then(res => res.json())
-      .then(allItems => {
-        const contentArea = document.getElementById("contentArea");
-        if (!contentArea) return;
-
-        if (!tag) {
-          contentArea.innerHTML = "<p>No tag specified.</p>";
-          return;
-        }
-
-        const filtered = allItems.filter(item =>
-          item.tags && item.tags.some(t => t.toLowerCase() === tag.toLowerCase())
-        );
-
-        if (filtered.length === 0) {
-          contentArea.innerHTML = `<h2>Results for #${tag}</h2><p>Oops… try a different search term.</p>`;
-          return;
-        }
-
-        // Display articles
-        contentArea.innerHTML = `<h2>Results for #${tag}</h2>`;
-        filtered.forEach(item => {
-          const card = document.createElement("div");
-          card.className = "card";
-
-          // Title
-          const title = document.createElement("h5");
-          title.textContent = item.title;
-
-          // Description
-          const desc = document.createElement("p");
-          desc.textContent = item.description;
-
-          // Download button
-          const downloadBtn = document.createElement("button");
-          downloadBtn.className = "download-btn";
-          downloadBtn.textContent = "Download";
-          downloadBtn.onclick = () => window.open(item.download_url, "_blank");
-
-          // Tags
-          const tagsDiv = document.createElement("div");
-          tagsDiv.className = "tags";
-          if (item.tags) {
-            item.tags.forEach(t => {
-              const span = document.createElement("span");
-              span.className = "tag-badge";
-              span.textContent = `#${t}`;
-              span.onclick = () => {
-                window.location.href = `tag.html?tag=${encodeURIComponent(t)}`;
-              };
-              tagsDiv.appendChild(span);
+            // Highlight current page
+            const currentPage = window.location.pathname.split("/").pop();
+            const links = sidebar.querySelectorAll(".category");
+            links.forEach((link) => {
+              if (link.getAttribute("data-page") === currentPage) {
+                link.href = "#";
+              }
             });
+          })
+          .catch((error) => console.error("Error loading categories:", error));
+      }
+      window.onload = loadCategories;
+    </script>
+
+    <!-- Tag search handling -->
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const tag = params.get("tag");
+      const contentArea = document.getElementById("contentArea");
+
+      fetch("data/data.json")
+        .then((res) => res.json())
+        .then((allItems) => {
+          if (!contentArea) return;
+
+          if (!tag) {
+            contentArea.innerHTML = `<h2 style="text-align:center;">Oops… try a different search term.</h2>`;
+            return;
           }
 
-          card.appendChild(title);
-          card.appendChild(desc);
-          card.appendChild(downloadBtn);
-          card.appendChild(tagsDiv);
+          const filtered = allItems.filter(
+            (item) =>
+              item.tags &&
+              item.tags.some((t) => t.toLowerCase() === tag.toLowerCase())
+          );
 
-          contentArea.appendChild(card);
-        });
-      })
-      .catch(err => console.error(err));
-  </script>
-</body>
+          if (filtered.length === 0) {
+            contentArea.innerHTML = `<h2 style="text-align:center;">Oops… try a different search term.</h2>`;
+            return;
+          }
+
+          // Display filtered articles
+          filtered.forEach((item) => {
+            const card = document.createElement("div");
+            card.className = "card";
+
+            // Title
+            const title = document.createElement("h5");
+            title.textContent = item.title;
+
+            // Description
+            const desc = document.createElement("p");
+            desc.textContent = item.description;
+
+            // Download button
+            const downloadBtn = document.createElement("button");
+            downloadBtn.className = "download-btn";
+            downloadBtn.textContent = "Download";
+            downloadBtn.onclick = () =>
+              window.open(item.download_url, "_blank");
+
+            // Tags
+            const tagsDiv = document.createElement("div");
+            tagsDiv.className = "tags";
+            if (item.tags) {
+              item.tags.forEach((t) => {
+                const span = document.createElement("span");
+                span.className = "tag-badge";
+                span.textContent = `#${t}`;
+                span.onclick = () => {
+                  window.location.href = `tag.html?tag=${encodeURIComponent(
+                    t
+                  )}`;
+                };
+                tagsDiv.appendChild(span);
+              });
+            }
+
+            card.appendChild(title);
+            card.appendChild(desc);
+            card.appendChild(downloadBtn);
+            card.appendChild(tagsDiv);
+
+            contentArea.appendChild(card);
+          });
+        })
+        .catch((err) => console.error(err));
+    </script>
+
+    <!-- Back to Top functionality -->
+    <script>
+      const backBtn = document.getElementById("backToTopBtn");
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+          backBtn.style.display = "block";
+        } else {
+          backBtn.style.display = "none";
+        }
+      };
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+  </body>
 </html>
