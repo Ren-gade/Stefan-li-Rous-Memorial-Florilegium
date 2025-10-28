@@ -92,37 +92,67 @@ document.addEventListener("DOMContentLoaded", function () {
         const card = document.createElement("div");
         card.className = "card";
 
-        let tagsHtml = "";
+        // Title
+        const title = document.createElement("h5");
+        title.innerHTML = query
+          ? item.title.replace(
+              new RegExp(`(${query})`, "gi"),
+              '<span class="highlight">$1</span>'
+            )
+          : item.title;
+
+        // Description
+        const desc = document.createElement("p");
+        desc.innerHTML = query
+          ? item.description.replace(
+              new RegExp(`(${query})`, "gi"),
+              '<span class="highlight">$1</span>'
+            )
+          : item.description;
+
+        // Download button
+        const downloadBtn = document.createElement("button");
+        downloadBtn.className = "download-btn btn btn-sm btn-primary";
+        downloadBtn.textContent = "Download";
+        downloadBtn.addEventListener("click", function () {
+          window.open(item.download_url, "_blank");
+
+          // ✅ GA4 event tracking
+          if (typeof gtag === "function") {
+            const fileName = item.download_url.split("/").pop();
+            gtag("event", "file_download", {
+              event_category: "Downloads",
+              event_label: fileName,
+              file_name: fileName,
+              file_url: item.download_url,
+              category: item.category || "Unknown",
+            });
+          }
+        });
+
+        // Tags
+        const tagsDiv = document.createElement("div");
+        tagsDiv.className = "tags";
         if (item.tags) {
           item.tags.forEach((tag) => {
-            tagsHtml += `<span class="tag-badge" onclick="window.location.href='category-${tag
-              .toLowerCase()
-              .replace(/ /g, "-")
-              .replace(/[&]/g, "and")}.html'">#${tag}</span>`;
+            const span = document.createElement("span");
+            span.className = "tag-badge";
+            span.textContent = `#${tag}`;
+            span.addEventListener("click", () => {
+              window.location.href = `category-${tag
+                .toLowerCase()
+                .replace(/ /g, "-")
+                .replace(/[&]/g, "and")}.html`;
+            });
+            tagsDiv.appendChild(span);
           });
         }
 
-        let titleHtml = item.title;
-        let descHtml = item.description;
-
-        // Highlight query matches
-        if (query) {
-          const regex = new RegExp(`(${query})`, "gi");
-          titleHtml = titleHtml.replace(
-            regex,
-            '<span class="highlight">$1</span>'
-          );
-          descHtml = descHtml.replace(
-            regex,
-            '<span class="highlight">$1</span>'
-          );
-        }
-
-        // Create the download button as a proper <a> with target="_blank"
-        card.innerHTML = `<h5>${titleHtml}</h5>
-                          <p>${descHtml}</p>
-                          <a href="${item.download_url}" class="download-btn" target="_blank" rel="noopener noreferrer">Download</a>
-                          <div class="tags">${tagsHtml}</div>`;
+        // Assemble card
+        card.appendChild(title);
+        card.appendChild(desc);
+        card.appendChild(downloadBtn);
+        card.appendChild(tagsDiv);
 
         contentArea.appendChild(card);
       });

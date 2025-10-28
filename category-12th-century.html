@@ -4,76 +4,84 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>12th Century</title>
-      <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
   </head>
- <body>
-  <!-- Header placeholder -->
-  <div id="header-container"></div>
+  <body>
+    <!-- Header placeholder -->
+    <div id="header-container"></div>
 
-  <!-- Main layout wrapper -->
-  <div id="page-wrapper" style="display:flex; flex:1; min-height:0;">
-    <!-- Sidebar -->
-    <aside id="sidebar" style="width:200px; padding:10px;">
-      <input type="text" placeholder="Search..." id="sidebarSearch"><br>
-      <div id="categoryList"></div>
-    </aside>
+    <!-- Main layout wrapper -->
+    <div id="page-wrapper" style="display: flex; flex: 1; min-height: 0">
+      <!-- Sidebar -->
+      <aside id="sidebar" style="width: 200px; padding: 10px">
+        <input type="text" placeholder="Search..." id="sidebarSearch" /><br />
+        <div id="categoryList"></div>
+      </aside>
 
-    <!-- Main content -->
-    <main id="contentArea" style="flex:1; min-height:0;">
-      <!-- Cards injected by script.js -->
-    </main>
-  </div>
+      <!-- Main content -->
+      <main id="contentArea" style="flex: 1; min-height: 0">
+        <!-- Cards injected by script.js -->
+      </main>
+    </div>
 
-  <!-- Back to Top Button -->
-  <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑ Top</button>
+    <!-- Back to Top Button -->
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">
+      ↑ Top
+    </button>
 
-  <!-- Footer placeholder -->
-  <div id="footer-container"></div>
+    <!-- Footer placeholder -->
+    <div id="footer-container"></div>
 
-  <!-- Scripts -->
-  <script>
-    // Category for this page
-    window.currentCategory = "12th Century";
+    <!-- Scripts -->
+    <script>
+      // Category for this page
+      window.currentCategory = "12th Century";
 
-    // Sidebar categories
-    function loadCategories() {
-      fetch('updated-menu.html')
-        .then(response => response.text())
-        .then(data => {
-          const currentPage = window.location.pathname.split('/').pop();
-          const sidebar = document.getElementById('sidebar');
-          sidebar.innerHTML = data;
+      // Sidebar categories
+      function loadCategories() {
+        fetch("updated-menu.html")
+          .then((response) => response.text())
+          .then((data) => {
+            const currentPage = window.location.pathname.split("/").pop();
+            const sidebar = document.getElementById("sidebar");
+            sidebar.innerHTML = data;
 
-          // Modify links
-          const links = sidebar.querySelectorAll('.category');
-          links.forEach(link => {
-            if (link.getAttribute('data-page') === currentPage) {
-              link.href = '#';
-            }
-          });
-        })
-        .catch(error => console.error('Error loading categories:', error));
-    }
-    window.onload = loadCategories;
-
-    // Back to top
-    window.onscroll = function() { scrollFunction(); };
-    function scrollFunction() {
-      const button = document.getElementById("backToTopBtn");
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        button.style.display = "block";
-      } else {
-        button.style.display = "none";
+            // Modify links
+            const links = sidebar.querySelectorAll(".category");
+            links.forEach((link) => {
+              if (link.getAttribute("data-page") === currentPage) {
+                link.href = "#";
+              }
+            });
+          })
+          .catch((error) => console.error("Error loading categories:", error));
       }
-    }
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  </script>
+      window.onload = loadCategories;
 
-  <!-- Injected header, cards, footer -->
-  <script src="data/header.js"></script>
-  <script src="js/script.js"></script>
-  <script src="data/footer.js"></script>
-</body>
+      // Back to top
+      window.onscroll = function () {
+        scrollFunction();
+      };
+      function scrollFunction() {
+        const button = document.getElementById("backToTopBtn");
+        if (
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+          button.style.display = "block";
+        } else {
+          button.style.display = "none";
+        }
+      }
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+
+    <!-- Injected header, cards, footer -->
+    <script src="data/header.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="data/footer.js"></script>
+  </body>
 </html>
