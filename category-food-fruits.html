@@ -7,15 +7,8 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
-     <header style="display:flex; align-items:center; justify-content:flex-start; padding:10px;">
-  <span style="display:flex; align-items:center;">
-    <img src="img/Trillium_flower.svg.png" alt="Icon" style="width:50px; height:50px;">
-    <span style="margin-left:450px;">Stefan li Rous Memorial Florilegium</span>
-  </span>
-      <button id="modeToggle" style="float: right; margin-left: 300px;">
-        🌙
-      </button>
-    </header>
+ <!-- Placeholder for injected header -->
+  <div id="header-container"></div>
  <div style="display: flex">
      <div id="sidebar" style="width:200px; padding:10px;">
     <input type="text" placeholder="Search..." id="sidebarSearch"><br>
@@ -54,15 +47,30 @@
       // Set category for this page
       window.currentCategory = "Fruit";
     </script>
-     <!-- Back to Top Button -->
-<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑ Top</button>
+     <!-- Inject header + handle dark mode -->
+  <script src="data/header.js"></script>
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑ Top</button>
     <script src="js/script.js"></script>
-    
-    
+    <script>
+  // Show button when scrolled down
+  window.onscroll = function() {scrollFunction()};
 
-     <footer class="site-footer">
-  <p>© <span id="year"></span> Rencraft 2025</p>
-</footer>
+  function scrollFunction() {
+    const button = document.getElementById("backToTopBtn");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      button.style.display = "block";
+    } else {
+      button.style.display = "none";
+    }
+  }
+
+  // Smooth scroll to top
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
+   <div id="footer-container"></div>
+<script src="data/footer.js"></script>
   </body>
 </html>
 

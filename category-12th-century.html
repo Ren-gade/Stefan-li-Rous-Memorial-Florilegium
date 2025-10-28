@@ -4,83 +4,76 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>12th Century</title>
-    <link href="css/style.css" rel="stylesheet" />
+      <link href="css/style.css" rel="stylesheet" />
   </head>
-  <body>
-          <header style="display:flex; align-items:center; justify-content:flex-start; padding:10px;">
-  <span style="display:flex; align-items:center;">
-    <img src="img/Trillium_flower.svg.png" alt="Icon" style="width:50px; height:50px;">
-    <span style="margin-left:600px; margin-right: 400px;">SLR Memorial Florilegium</span>
-  </span>
-      <button id="modeToggle" style="float: right;">
-        🌙
-      </button>
-    </header>
- <div style="display: flex">
-     <div id="sidebar" style="width:200px; padding:10px;">
-    <input type="text" placeholder="Search..." id="sidebarSearch"><br>
-    <div id="categoryList">
-       <script>
-        function loadCategories() {
-            fetch('updated-menu.html')
-                .then(response => response.text())
-                .then(data => {
-                    const currentPage = window.location.pathname.split('/').pop(); // Get current page
-                    const sidebar = document.getElementById('sidebar');
-                    sidebar.innerHTML = data;
+ <body>
+  <!-- Header placeholder -->
+  <div id="header-container"></div>
 
-                    // Modify links
-                    const links = sidebar.querySelectorAll('.category');
-                    links.forEach(link => {
-                        if (link.getAttribute('data-page') === currentPage) {
-                            link.href = '#'; // Replace href with '#'
-                        }
-                    });
-                })
-                .catch(error => console.error('Error loading categories:', error));
-        }
+  <!-- Main layout wrapper -->
+  <div id="page-wrapper" style="display:flex; flex:1; min-height:0;">
+    <!-- Sidebar -->
+    <aside id="sidebar" style="width:200px; padding:10px;">
+      <input type="text" placeholder="Search..." id="sidebarSearch"><br>
+      <div id="categoryList"></div>
+    </aside>
 
-        window.onload = loadCategories;
-    </script>
-    </div>
-</div>
+    <!-- Main content -->
+    <main id="contentArea" style="flex:1; min-height:0;">
+      <!-- Cards injected by script.js -->
+    </main>
+  </div>
 
-        <!-- Main Content -->
-        <main class="col-md-10" id="contentArea">
-          <!-- Cards populated dynamically by script.js -->
-        </main>
-      </div>
-    </div>
-    <!-- Back to Top Button -->
-<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑ Top</button>
+  <!-- Back to Top Button -->
+  <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑ Top</button>
 
- <footer class="site-footer">
-  <p>© <span id="year"></span> Rencraft 2025</p>
-</footer>
-    <script>
-      // Set category for this page
-      window.currentCategory = "12th Century";
-    </script>
- <script>
-  // Show button when scrolled down
-  window.onscroll = function() {scrollFunction()};
+  <!-- Footer placeholder -->
+  <div id="footer-container"></div>
 
-  function scrollFunction() {
-    const button = document.getElementById("backToTopBtn");
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      button.style.display = "block";
-    } else {
-      button.style.display = "none";
+  <!-- Scripts -->
+  <script>
+    // Category for this page
+    window.currentCategory = "12th Century";
+
+    // Sidebar categories
+    function loadCategories() {
+      fetch('updated-menu.html')
+        .then(response => response.text())
+        .then(data => {
+          const currentPage = window.location.pathname.split('/').pop();
+          const sidebar = document.getElementById('sidebar');
+          sidebar.innerHTML = data;
+
+          // Modify links
+          const links = sidebar.querySelectorAll('.category');
+          links.forEach(link => {
+            if (link.getAttribute('data-page') === currentPage) {
+              link.href = '#';
+            }
+          });
+        })
+        .catch(error => console.error('Error loading categories:', error));
     }
-  }
+    window.onload = loadCategories;
 
-  // Smooth scroll to top
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-</script>
+    // Back to top
+    window.onscroll = function() { scrollFunction(); };
+    function scrollFunction() {
+      const button = document.getElementById("backToTopBtn");
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        button.style.display = "block";
+      } else {
+        button.style.display = "none";
+      }
+    }
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
 
-    <script src="js/script.js"></script>
-
-  </body>
+  <!-- Injected header, cards, footer -->
+  <script src="data/header.js"></script>
+  <script src="js/script.js"></script>
+  <script src="data/footer.js"></script>
+</body>
 </html>

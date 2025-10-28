@@ -11,8 +11,7 @@
   font-family: "Cormorant Garamond", serif;
   color: #3a2a1a;
   margin: 0;
-  padding-top: 60px; /* header space */
-}
+       }
 
         .alphabet-nav {
           text-align: center;
@@ -79,30 +78,10 @@
       </style>
     </head>
     <body>
-      <header
-        style="
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-          padding: 10px;
-        "
-      >
-        <span style="display: flex; align-items: center">
-          <img
-            src="img/Trillium_flower.svg.png"
-            alt="Icon"
-            style="width: 50px; height: 50px"
-          />
-          <a href="index.html" style="text-decoration:none; color:#3a2a1a;">🏠</a>
-          <span style="margin-left: 550px"
-            >Stefan li Rous Memorial Florilegium</span
-          >
-        </span>
-        <button id="modeToggle" style="float: right; margin-left: 550px">
-          🌙
-        </button>
-      </header>
+      <!-- Placeholder for injected header -->
+  <div id="header-container"></div>
             <nav class="alphabet-nav">
+               <a href="index.html">🏠</a>
         <a href="#A">A</a>
         <a href="#B">B</a>
         <a href="#C">C</a>
@@ -310,6 +289,8 @@
           </ul>
         </div>                                           
        </div>
+        <!-- Inject header + handle dark mode -->
+  <script src="data/header.js"></script>
         <!-- Back to Top Button -->
 <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑ Top</button>
 <script>
@@ -330,9 +311,8 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 </script>
-       <footer class="site-footer">
-  <p>© <span id="year"></span> Rencraft 2025</p>
-</footer>
+    <div id="footer-container"></div>
+<script src="data/footer.js"></script>
     </body>
   </html>
 </html>

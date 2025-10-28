@@ -13,17 +13,8 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
-    
-    <header style="display:flex; align-items:center; justify-content:flex-start; padding:10px;">
-  <span style="display:flex; align-items:center;">
-    <img src="img/Trillium_flower.svg.png" alt="Icon" style="width:50px; height:50px;">
-    <span style="margin-left:550px;">SLR Memorial Florilegium</span>
-  </span>
-      <button id="modeToggle" style="float: right; margin-left: 450px;">
-        🌙
-      </button>
-    </header>
-
+ <!-- Placeholder for injected header -->
+  <div id="header-container"></div>
     <div style="display: flex">
      <div id="sidebar" style="width:200px; padding:10px;">
     <input type="text" placeholder="Search..." id="sidebarSearch"><br>
@@ -54,8 +45,7 @@
 </div>
 
       <main style="padding-top: 50px">
-        <div id="contentArea">
-          <h2>Welcome</h2>
+         <h2>Welcome</h2>
           <p>
             This Florilegium was initially assembled by The Honorable Lord Stefan li
             Rous (Mark S. Harris) who passed away before I ever had the chance to
@@ -99,9 +89,10 @@
                </div>
       </main>
     </div>
+    <!-- Inject header + handle dark mode -->
+  <script src="data/header.js"></script>
      <!-- Back to Top Button -->
 <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑ Top</button>
-    <div id="footer-container"></div>
 <script>
   fetch("footer.html")
     .then(res => res.text())
@@ -127,21 +118,8 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 </script>
+<div id="footer-container"></div>
+<script src="data/footer.js"></script>
   </body>
-  <script>
-  const modeToggle = document.getElementById('modeToggle');
-  modeToggle.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark-mode');
-    const isDark = document.documentElement.classList.contains('dark-mode');
-    modeToggle.textContent = isDark ? '☀️' : '🌙';
-    localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
-  });
-
-  // Preserve mode preference between pages
-  if (localStorage.getItem('darkMode') === 'enabled') {
-    document.documentElement.classList.add('dark-mode');
-    modeToggle.textContent = '☀️';
-  }
-</script>
 
 </html>
