@@ -118,10 +118,11 @@ document.addEventListener("DOMContentLoaded", function () {
           );
         }
 
+        // Create the download button as a proper <a> with target="_blank"
         card.innerHTML = `<h5>${titleHtml}</h5>
-                                  <p>${descHtml}</p>
-                                  <a href="${item.download_url}" class="btn btn-sm btn-primary" target="_blank">Download</a>
-                                  <div class="tags">${tagsHtml}</div>`;
+                          <p>${descHtml}</p>
+                          <a href="${item.download_url}" class="download-btn" target="_blank" rel="noopener noreferrer">Download</a>
+                          <div class="tags">${tagsHtml}</div>`;
 
         contentArea.appendChild(card);
       });

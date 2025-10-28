@@ -212,3 +212,34 @@ header,
   color: #f2f2f2;
   border-color: #555;
 }
+
+.download-btn {
+  background-color: #b5651d; /* rich bronze */
+  color: #fff;
+  border: 1px solid #8b4513;
+  border-radius: 5px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: min(0.9rem, 3vw);
+}
+
+.download-btn:hover {
+  background-color: #8b4513; /* darker bronze */
+  transform: scale(1.05);
+}
+
+/* Dark mode styling with warmer tones */
+.dark-mode .download-btn,
+.modern-dark-mode .download-btn {
+  background-color: #8b5a2b; /* warm dark bronze */
+  color: #fff;
+  border-color: #7a4920;
+}
+
+.dark-mode .download-btn:hover,
+.modern-dark-mode .download-btn:hover {
+  background-color: #704421; /* slightly darker on hover */
+  border-color: #60391b;
+}
+
