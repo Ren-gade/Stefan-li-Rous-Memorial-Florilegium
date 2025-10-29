@@ -2,16 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Memorial Florilegium</title>
     <link href="css/style.css" rel="stylesheet" />
   </head>
+  <script src="js/analytics.js"></script>
   <body>
     <!-- Placeholder for injected header -->
     <div id="header-container"></div>
     <div style="display: flex">
       <div id="sidebar" style="width: 200px; padding: 10px">
         <div id="categoryList">
+          <script>
+            function loadCategories() {
+              fetch("updated-menu.html")
+                .then((response) => response.text())
+                .then((data) => {
+                  const currentPage = window.location.pathname.split("/").pop(); // Get current page
+                  const sidebar = document.getElementById("sidebar");
+                  sidebar.innerHTML = data;
+
+                  // Modify links
+                  const links = sidebar.querySelectorAll(".category");
+                  links.forEach((link) => {
+                    if (link.getAttribute("data-page") === currentPage) {
+                      link.href = "#"; // Replace href with '#'
+                    }
+                  });
+                })
+                .catch((error) =>
+                  console.error("Error loading categories:", error)
+                );
+            }
+
+            window.onload = loadCategories;
+          </script>
+        </div>
+      </div>
 
       <main style="padding-top: 50px; flex: 1">
         <h2>Welcome</h2>
@@ -81,45 +108,22 @@
 
     <!-- Inject header + handle dark mode -->
     <script src="data/header.js"></script>
-
     <!-- Back to Top Button -->
     <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">
       ↑ Top
     </button>
 
-    <!-- Footer -->
-    <div id="footer-container"></div>
-    <script src="data/footer.js"></script>
-
-    <!-- Sidebar category loader -->
     <script>
-      function loadCategories() {
-        fetch("updated-menu.html")
-          .then((response) => response.text())
-          .then((data) => {
-            const sidebar = document.getElementById("sidebar");
-            sidebar.querySelector("#categoryList").innerHTML = data;
-
-            // Highlight current page
-            const currentPage = window.location.pathname.split("/").pop();
-            const links = sidebar.querySelectorAll(".category");
-            links.forEach((link) => {
-              if (link.getAttribute("data-page") === currentPage) {
-                link.href = "#";
-              }
-            });
-          })
-          .catch((error) => console.error("Error loading categories:", error));
-      }
-
-      window.addEventListener("DOMContentLoaded", loadCategories);
+      // Set category for this page
+      window.currentCategory = "Accessory";
     </script>
 
-    <!-- Back-to-top button logic -->
     <script>
+      // Show button when scrolled down
       window.onscroll = function () {
         scrollFunction();
       };
+
       function scrollFunction() {
         const button = document.getElementById("backToTopBtn");
         if (
@@ -132,13 +136,13 @@
         }
       }
 
+      // Smooth scroll to top
       function scrollToTop() {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
     </script>
-
-    <!-- Main JS (includes search and article handling) -->
+    <div id="footer-container"></div>
+    <script src="data/footer.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/analytics.js"></script>
   </body>
 </html>
