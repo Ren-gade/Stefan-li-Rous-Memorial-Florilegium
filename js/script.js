@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // --- Dark mode toggle ---
   const modeToggle = document.getElementById("modeToggle");
   if (modeToggle) {
-    // Initialize mode from localStorage
     if (localStorage.getItem("darkMode") === "enabled") {
       document.documentElement.classList.add("dark-mode");
       modeToggle.textContent = "☀️";
@@ -10,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
       modeToggle.textContent = "🌙";
     }
 
-    // Toggle on click
     modeToggle.addEventListener("click", () => {
       document.documentElement.classList.toggle("dark-mode");
       const isDark = document.documentElement.classList.contains("dark-mode");
@@ -20,8 +18,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const query = new URLSearchParams(window.location.search).get("q");
-  const currentCategory = window.currentCategory || null;
-  const currentTag = window.currentTag || null; // tag from tag.html or sidebar
+
+  // --- Universal search bar handler ---
+  const mainSearchInput = document.getElementById("searchInput");
+  if (mainSearchInput) {
+    mainSearchInput.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        const query = mainSearchInput.value.trim();
+        if (query) {
+          window.location.href = `tag.html?tag=${encodeURIComponent(query)}`;
+        }
+      }
+    });
+  }
 
   // --- Load Sidebar Categories ---
   fetch("updated-menu.html")
@@ -31,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!sidebar) return;
       sidebar.innerHTML = data;
 
-      // Highlight current page
       const currentPage = window.location.pathname.split("/").pop();
       const links = sidebar.querySelectorAll(".category");
       links.forEach((link) => {
@@ -40,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      // --- Sidebar tag search ---
       const tagSearchInput = document.getElementById("sidebarTagSearch");
       if (tagSearchInput) {
         tagSearchInput.addEventListener("keypress", function (e) {
@@ -62,9 +69,26 @@ document.addEventListener("DOMContentLoaded", function () {
       const contentArea = document.getElementById("contentArea");
       if (!contentArea) return;
 
-      function displayArticles(displayData, highlight = "") {
-        contentArea.innerHTML = ""; // Clear existing content
+      const params = new URLSearchParams(window.location.search);
+      const currentTag = params.get("tag");
 
+      let displayData = data;
+
+      // --- Filter data ---
+      if (currentTag) {
+        const tagLower = currentTag.toLowerCase();
+
+        displayData = displayData.filter(
+          (item) =>
+            item.title.toLowerCase().includes(tagLower) ||
+            item.description.toLowerCase().includes(tagLower) ||
+            (item.tags &&
+              item.tags.some((t) => t.toLowerCase().includes(tagLower)))
+        );
+      }
+
+      // --- Display function ---
+      function displayArticles(displayData, highlight = "") {
         if (!displayData || displayData.length === 0) {
           contentArea.innerHTML = `<p>Oops… try a different search term.</p>`;
           return;
@@ -74,7 +98,6 @@ document.addEventListener("DOMContentLoaded", function () {
           const card = document.createElement("div");
           card.className = "card";
 
-          // Title
           const title = document.createElement("h5");
           title.innerHTML = highlight
             ? item.title.replace(
@@ -83,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
               )
             : item.title;
 
-          // Description
           const desc = document.createElement("p");
           desc.innerHTML = highlight
             ? item.description.replace(
@@ -92,19 +114,15 @@ document.addEventListener("DOMContentLoaded", function () {
               )
             : item.description;
 
-          // Download button
           const downloadBtn = document.createElement("button");
           downloadBtn.className = "download-btn btn btn-sm btn-primary";
           downloadBtn.textContent = "Download";
-          downloadBtn.setAttribute("data-download-url", item.download_url);
-
           downloadBtn.addEventListener("click", function () {
             const fileUrl = item.download_url;
             window.open(fileUrl, "_blank");
             sendGAEvent(fileUrl, item.category);
           });
 
-          // Tags
           const tagsDiv = document.createElement("div");
           tagsDiv.className = "tags";
           if (item.tags) {
@@ -113,7 +131,6 @@ document.addEventListener("DOMContentLoaded", function () {
               span.className = "tag-badge";
               span.textContent = `#${tag}`;
               span.addEventListener("click", () => {
-                // Redirect to tag page for clicked tag
                 window.location.href = `tag.html?tag=${encodeURIComponent(
                   tag
                 )}`;
@@ -122,7 +139,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
           }
 
-          // Assemble card
           card.appendChild(title);
           card.appendChild(desc);
           card.appendChild(downloadBtn);
@@ -130,47 +146,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
           contentArea.appendChild(card);
         });
-      }
-
-      // --- Filter data by category, tag, or search query ---
-      let displayData = data;
-
-      // Tag filter (highest priority)
-      if (currentTag) {
-        const tagLower = currentTag.toLowerCase();
-        displayData = displayData.filter(
-          (item) =>
-            item.tags && item.tags.some((t) => t.toLowerCase() === tagLower)
-        );
-      } else {
-        // Category filter
-        if (currentCategory) {
-          const catLower = currentCategory.toLowerCase();
-          displayData = displayData.filter(
-            (item) =>
-              (item.category && item.category.toLowerCase() === catLower) ||
-              (item.tags && item.tags.some((t) => t.toLowerCase() === catLower))
-          );
-        }
-
-        // Search query filter
-        if (query) {
-          const qLower = query.toLowerCase();
-          displayData = displayData.filter(
-            (item) =>
-              item.title.toLowerCase().includes(qLower) ||
-              item.description.toLowerCase().includes(qLower) ||
-              (item.tags &&
-                item.tags.some((t) => t.toLowerCase().includes(qLower)))
-          );
-        }
-      }
-
-      // Display heading for tag search
-      if (currentTag) {
-        const header = document.createElement("h2");
-        header.textContent = `Results for #${currentTag}`;
-        contentArea.prepend(header);
       }
 
       displayArticles(displayData, currentTag || query || "");
