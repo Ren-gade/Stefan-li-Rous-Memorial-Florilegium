@@ -2,158 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>About SLR</title>
     <link href="css/style.css" rel="stylesheet" />
   </head>
+  <script src="js/analytics.js"></script>
   <body>
     <!-- Placeholder for injected header -->
     <div id="header-container"></div>
     <div style="display: flex">
       <div id="sidebar" style="width: 200px; padding: 10px">
         <div id="categoryList">
-    <style>
-      body {
-        margin: 0;
-        font-family: "Cormorant Garamond", serif;
-        background-color: #f5f0e1;
-        color: #3a2a1a;
-      }
+          <script>
+            function loadCategories() {
+              fetch("menu-no-search.html")
+                .then((response) => response.text())
+                .then((data) => {
+                  const currentPage = window.location.pathname.split("/").pop(); // Get current page
+                  const sidebar = document.getElementById("sidebar");
+                  sidebar.innerHTML = data;
 
-      .page-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-      }
+                  // Modify links
+                  const links = sidebar.querySelectorAll(".category");
+                  links.forEach((link) => {
+                    if (link.getAttribute("data-page") === currentPage) {
+                      link.href = "#"; // Replace href with '#'
+                    }
+                  });
+                })
+                .catch((error) =>
+                  console.error("Error loading categories:", error)
+                );
+            }
 
-      #sidebar {
-        flex: 0 0 220px;
-        padding: 10px;
-        background: #f0eee6;
-        box-sizing: border-box;
-      }
-
-      #sidebar input {
-        width: 100%;
-        padding: 5px;
-        margin-bottom: 10px;
-        border: 1px solid #d2b48c;
-        border-radius: 4px;
-        box-sizing: border-box;
-      }
-
-      #contentArea {
-        flex: 1;
-        padding: 30px;
-        box-sizing: border-box;
-      }
-
-      .subtitle {
-        font-style: italic;
-        color: #555;
-      }
-
-      a {
-        color: #0077cc;
-        text-decoration: none;
-      }
-
-      a:hover {
-        color: #005999;
-        text-decoration: underline;
-      }
-
-      /* Back to Top Button */
-      #backToTopBtn {
-        display: none;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 99;
-        border: 2px solid #d2b48c;
-        outline: none;
-        background-color: #f5f0e1;
-        color: #3a2a1a;
-        cursor: pointer;
-        padding: 10px 16px;
-        border-radius: 10px;
-        font-size: 1rem;
-        font-weight: bold;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease;
-      }
-
-      #backToTopBtn:hover {
-        background-color: #e8dfc4;
-        border-color: #c7a26a;
-        transform: scale(1.05);
-      }
-
-      /* Dark Mode */
-      .dark-mode body {
-        background-color: #1c1c1c;
-        color: #f2f2f2;
-      }
-
-      .dark-mode #sidebar {
-        background-color: #2d2d2d;
-        color: #fff;
-      }
-
-      .dark-mode #sidebar input {
-        background-color: #444;
-        color: #fff;
-        border-color: #666;
-      }
-
-      .dark-mode a {
-        color: #88c0ff;
-      }
-
-      .dark-mode a:hover {
-        color: #5590cc;
-      }
-
-      .dark-mode #backToTopBtn {
-        background-color: #333;
-        border-color: #888;
-        color: #fff;
-      }
-
-      .dark-mode #backToTopBtn:hover {
-        background-color: #444;
-        border-color: #aaa;
-      }
-
-      /* Responsive adjustments */
-      @media (max-width: 768px) {
-        .page-container {
-          flex-direction: column;
-        }
-
-        #sidebar {
-          width: 100%;
-          flex: 0 0 auto;
-          margin-bottom: 20px;
-        }
-
-        #contentArea {
-          padding: 15px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-   
-
-    <!-- Page Content -->
-    <div class="page-container">
-      <!-- Sidebar -->
-      <div id="sidebar">
-        <div id="categoryList"></div>
+            window.onload = loadCategories;
+          </script>
+        </div>
       </div>
-
-      <!-- Main Content -->
       <main style="padding: min(0.5rem, 2vw) min(1rem, 3vw)">
         <h2>The Honorable Lord Stefan li Rous</h2>
         <p class="subtitle">
@@ -208,26 +93,24 @@
       </main>
     </div>
 
+    <!-- Inject header + handle dark mode -->
+    <script src="data/header.js"></script>
     <!-- Back to Top Button -->
     <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">
       ↑ Top
     </button>
 
-    <!-- Scripts -->
-    <script src="data/header.js"></script>
     <script>
-      // Sidebar category loader
-      function loadCategories() {
-        fetch("updated-menu.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("categoryList").innerHTML = data;
-          })
-          .catch((err) => console.error(err));
-      }
-      window.onload = loadCategories;
+      // Set category for this page
+      window.currentCategory = "Accessory";
+    </script>
 
-      // Back to top
+    <script>
+      // Show button when scrolled down
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
       function scrollFunction() {
         const button = document.getElementById("backToTopBtn");
         if (
@@ -239,27 +122,10 @@
           button.style.display = "none";
         }
       }
-      window.onscroll = scrollFunction;
 
+      // Smooth scroll to top
       function scrollToTop() {
         window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-
-      // Dark Mode Toggle
-      const modeToggle = document.getElementById("modeToggle");
-      if (modeToggle) {
-        modeToggle.addEventListener("click", () => {
-          document.documentElement.classList.toggle("dark-mode");
-          const isDark =
-            document.documentElement.classList.contains("dark-mode");
-          modeToggle.textContent = isDark ? "☀️" : "🌙";
-          localStorage.setItem("darkMode", isDark ? "enabled" : "disabled");
-        });
-
-        if (localStorage.getItem("darkMode") === "enabled") {
-          document.documentElement.classList.add("dark-mode");
-          modeToggle.textContent = "☀️";
-        }
       }
     </script>
     <div id="footer-container"></div>
