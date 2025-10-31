@@ -168,6 +168,27 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/MSG+-+Body+Piercings.pdf"
   },
   {
+    "title": "LINK - Brooches",
+    "category": "Accessory",
+    "tags": ["jewelry", "jewels", "brooch"],
+    "description": "A list of resource links for period brooches",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/LINK+-+Brooches.pdf"
+  },
+  {
+    "title": "MSG - Chain of Estate",
+    "category": "Accessory",
+    "tags": ["jewelry", "jobs"],
+    "description": "A message thread about chains of estate and the jobs that receive them",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/MSG+-+Chain+of+Estate.pdf"
+  },
+  {
+    "title": "MSG - Chastity Belts",
+    "category": "Accessory",
+    "tags": ["belt"],
+    "description": "A message thread about the use of chastity belts in period",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/MSG+-+Chastity+Belts.pdf"
+  },
+  {
     "title": "Cloth Circlets",
     "category": "Accessory",
     "tags": ["accessories", "hat", "clothing"],
@@ -182,6 +203,13 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Diamonds.pdf"
   },
   {
+    "title": "MSG - Ear piercings",
+    "category": "Accessory",
+    "tags": ["jewelry", "jewels"],
+    "description": "A message thread about ear piercings in period ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/MSG+-+Ear+piercings.pdf"
+  },
+  {
     "title": "Early Period Hats",
     "category": "Accessory",
     "tags": ["hat", "accessories"],
@@ -194,6 +222,27 @@
     "tags": ["jewelry", "jewels"],
     "description": " ",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/Emeralds+Throughout+History.pdf"
+  },
+  {
+    "title": "MSG - Fans",
+    "category": "Accessory",
+    "tags": ["fan", "feathers"],
+    "description": "A message thread about period fans. ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/MSG+-+Fans.pdf"
+  },
+  {
+    "title": "MSG - Favors",
+    "category": "Accessory",
+    "tags": ["chivalry", "combat"],
+    "description": "A message thread about favors and the ettique behind them, as well as some ideas ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/MSG+-+Favors.pdf"
+  },
+  {
+    "title": "MSG - Feathers",
+    "category": "Accessory",
+    "tags": ["feathers"],
+    "description": "A message thread about obtaining and cleaning feathers and their uses. ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Accessories/MSG+-+Feathers.pdf"
   },
   {
     "title": "Fourteenth Century Drawstring Pouch",
@@ -435,11 +484,25 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Armor+Patterns+2.pdf"
   },
   {
+    "title": "Arms",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "arm"],
+    "description": "A pattern for arms (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Arms.pdf"
+  },
+  {
+    "title": "Articulated Demi Gauntlets",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "hand", "demi gauntlet"],
+    "description": "A pattern for demi gauntlets (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Articulated+Demi-Gauntlets.pdf"
+  },
+  {
     "title": "Barbute",
     "category": "Armor",
     "tags": ["armor", "pattern", "metalwork", "metal", "helm"],
     "description": "A pattern for a Barbute helm (metal)",
-    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Arming+Cap.pdf"
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Barbute.pdf"
   },
   {
     "title": "Bascinet (Based on Mid 14th Century Style)",
@@ -447,6 +510,13 @@
     "tags": ["armor", "pattern", "metalwork", "metal", "helm", "14th century"],
     "description": "A pattern for a bascinet helm (metal)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Bascinet+(Based+on+Mid+14th+Century+Style_).pdf"
+  },
+  {
+    "title": "Bazubands",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "arm"],
+    "description": "A pattern for bazubands (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Bazubands+1.pdf"
   },
   {
     "title": "Bevor",
@@ -538,6 +608,13 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Cup+Hilt+(SCA+Sport+Hilt).pdf"
   },
   {
+    "title": "Demi Gauntlets",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "hand", "demi gauntlet"],
+    "description": "A pattern for demi gauntlets (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Demi-Gauntlets.pdf"
+  },
+  {
     "title": "Early 14th Century Style Sugar Loaf Helm with Visor",
     "category": "Armor",
     "tags": ["armor", "pattern", "metalwork", "metal", "helm"],
@@ -550,6 +627,56 @@
     "tags": ["armor", "pattern", "metalwork", "metal", "helm"],
     "description": "A pattern for a Sugar Loaf Helm (metal)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Early+14th+Century+Style+Sugar+Loaf+Helm.pdf"
+  },
+  {
+    "title": "Early 15th Century Style Right Pauldron",
+    "category": "Armor",
+    "tags": [
+      "armor",
+      "pattern",
+      "metalwork",
+      "metal",
+      "shoulder",
+      "15th century"
+    ],
+    "description": "A pattern for right pauldron (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Early+15th+Century+Style+Right+Pauldron.pdf"
+  },
+  {
+    "title": "Early 15th Century Italian style Arm harnesses",
+    "category": "Armor",
+    "tags": [
+      "armor",
+      "pattern",
+      "metalwork",
+      "metal",
+      "arm",
+      "15th century",
+      "italian"
+    ],
+    "description": "A pattern for right pauldron (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Early-15th+Century+Italian+style+Arm+harnesses.pdf"
+  },
+  {
+    "title": "Elbow Cop",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "arm"],
+    "description": "A pattern for elbow cops (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Elbow+Cop.pdf"
+  },
+  {
+    "title": "Elbow with Rondel",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "arm", "15th century"],
+    "description": "A pattern for elbow armor with rondel (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Elbow+with+Rondel.pdf"
+  },
+  {
+    "title": "Elbows",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "arm"],
+    "description": "A pattern for a elbow armor (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Elbows.pdf"
   },
   {
     "title": "English Style Close Helm (c. 1510",
@@ -565,6 +692,41 @@
     ],
     "description": "A pattern for a English Close Helm",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/English+Style+Close+Helm+(c.+1510).pdf"
+  },
+  {
+    "title": "Fingered Gauntlets",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "hand"],
+    "description": "A pattern for fingered gauntlet (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Fingered+Gauntlets.pdf"
+  },
+  {
+    "title": "Floating Elbows",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "arm"],
+    "description": "A pattern for floating elbows (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Floating+Elbows.pdf"
+  },
+  {
+    "title": "Gauntlet Thumbs",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "hand"],
+    "description": "A pattern for gauntlet thumbs (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Gauntlet+Thumbs.pdf"
+  },
+  {
+    "title": "Gauntlets 1",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "hand"],
+    "description": "A pattern for gauntlets (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Gauntlets+2.pdf"
+  },
+  {
+    "title": "Gauntlets 2",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "hand"],
+    "description": "A pattern for gauntlets (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Gauntlets+3.pdf"
   },
   {
     "title": "Generic Bascinet",
@@ -631,11 +793,46 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Greathelm.pdf"
   },
   {
+    "title": "Greaves (14th c)",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "leg", "14th century"],
+    "description": "A pattern for greaves (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Greaves+(14th+Century).pdf"
+  },
+  {
+    "title": "Horseman's Pauldrom",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "shoulder"],
+    "description": "A pattern for horseman's pauldrons (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Horseman's+Pauldron.pdf"
+  },
+  {
+    "title": "Hourglass Gauntlet",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "hand"],
+    "description": "A pattern for gauntlets (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Hourglass+Gauntlet.pdf"
+  },
+  {
+    "title": "LINK - Japanese Armor",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "japan", "japanese"],
+    "description": "A list of resource links for Japanese armor",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/LINK+-+Japanese+Armor.pdf"
+  },
+  {
     "title": "Kettle Helm",
     "category": "Armor",
     "tags": ["armor", "pattern", "metalwork", "metal", "helm"],
     "description": "A pattern for a kettle helm (metal)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Kettle+Helm.pdf"
+  },
+  {
+    "title": "Knees 1",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "leg"],
+    "description": "A pattern for knee cops (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Knees.pdf"
   },
   {
     "title": "Leather Helm",
@@ -659,6 +856,13 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Mid-14th+Century+style+Klapp+Visor+Bascinet.pdf"
   },
   {
+    "title": "Mid-15th Century Italian style leg harnesses",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "leg", "15th century"],
+    "description": "A pattern for leg armor (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Mid-15th+Century+Italian+style+leg+harnesses.pdf"
+  },
+  {
     "title": "Milanese Style Armet (c. 1500)",
     "category": "Armor",
     "tags": [
@@ -675,6 +879,13 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Milanese+Style+Armet+(c.+1500).pdf"
   },
   {
+    "title": "Mitten Gauntlets",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "hand"],
+    "description": "A pattern for gauntlets (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Mitten+Gauntlets.pdf"
+  },
+  {
     "title": "Norman Spangenhelm",
     "category": "Armor",
     "tags": ["armor", "pattern", "metalwork", "metal", "helm", "norman"],
@@ -687,6 +898,13 @@
     "tags": ["armor", "pattern", "clothing", "gambeson", "15th century"],
     "description": "A pattern for a padded gambeson",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Padded+Jack+(c.+15th+Century+Style).pdf"
+  },
+  {
+    "title": "Pauldron 1",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "shoulder"],
+    "description": "A pattern for pauldron (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Pauldron+1.pdf"
   },
   {
     "title": "Peascod Breastplate",
@@ -703,6 +921,13 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Pigface+Klappvisor.pdf"
   },
   {
+    "title": "Sabatons",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "leg"],
+    "description": "A pattern for sabatons (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Sabatons.pdf"
+  },
+  {
     "title": "Sallet",
     "category": "Armor",
     "tags": ["armor", "pattern", "metalwork", "metal", "helm"],
@@ -712,8 +937,8 @@
   {
     "title": "Sendai Do",
     "category": "Armor",
-    "tags": ["armor", "pattern", "japan", "japanese", "samaurai"],
-    "description": "A pattern for a set of Japanese samaurai armor",
+    "tags": ["armor", "pattern", "japan", "japanese", "samurai"],
+    "description": "A pattern for a set of Japanese samurai armor",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Sendai+Do.pdf"
   },
   {
@@ -724,11 +949,46 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Simple+Basket+Hilt.pdf"
   },
   {
+    "title": "Simple Elbow Cop",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "arm"],
+    "description": "A pattern for elbow cops (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Simple+Elbow+Cop.pdf"
+  },
+  {
+    "title": "Simple Greaves",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "leg"],
+    "description": "A pattern for greaves (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Simple+Greaves.pdf"
+  },
+  {
+    "title": "Simple Knee Cops",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "leg"],
+    "description": "A pattern for knee cops (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Simple+Knee+Cop.pdf"
+  },
+  {
     "title": "Spangenhelm",
     "category": "Armor",
     "tags": ["armor", "pattern", "metalwork", "metal", "helm"],
     "description": "A pattern for a Spangenhelm (metal)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Spangenhelm.pdf"
+  },
+  {
+    "title": "Spaulders 1",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "shoulder"],
+    "description": "A pattern for spaulders(metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Spaulders+1.pdf"
+  },
+  {
+    "title": "Spaulders 2",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "shoulder"],
+    "description": "A pattern for spaulders(metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Spaulders+1-1.pdf"
   },
   {
     "title": "Wisby Coat-of-Plates 1",
@@ -751,7 +1011,13 @@
     "description": "A pattern for a Wisby coat-of-plates.",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Wisby+Coat-of-Plates+3.pdf"
   },
-
+  {
+    "title": "Wisby Style Gauntlets",
+    "category": "Armor",
+    "tags": ["armor", "pattern", "metalwork", "metal", "hand"],
+    "description": "A pattern for gauntlets (metal)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Wisby-Style+Gauntlets.pdf"
+  },
   {
     "title": "Beads: Symbols of Indigenous Cultural Resilience and Value",
     "category": "FN Indigenous",
@@ -772,6 +1038,13 @@
     "tags": ["accessories", "native", "first nations", "art"],
     "description": "This is an article on the history of Indigenous art in Canada.",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Indigenous+North+America/History+of+Indigenous+Art+in+Canada.pdf"
+  },
+  {
+    "title": "Pumpkin and its uses for Indigenous North America",
+    "category": "FN Indigenous",
+    "tags": ["native", "first nations", "food"],
+    "description": "This is an article on the history of how pumpkin was used by first nations peoples in North America",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Indigenous+North+America/Pumpkin+and+its+uses+for+Indigenous+North+America.pdf"
   },
   {
     "title": "Trade Ornament Usage Among the Native peoples",
@@ -1080,6 +1353,13 @@
     "tags": ["scribal arts", "illumination", "manuscripts"],
     "description": "Their art and their technique. Originally published in 1892.",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Illumination+and+Scrolls/Illuminated+Manuscripts+in+Classical+and+Mediaeval+Times.pdf"
+  },
+  {
+    "title": "A brief experiment with Gouache",
+    "category": "Scribal",
+    "tags": ["scribal arts", "illumination", "manuscripts"],
+    "description": "An experiment with gouache showing the outcome of several different kinds and costs",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Scribal+Arts/Scribal+materials.pdf"
   },
   {
     "title": "Medieval & Renaissance Manuscripts",
