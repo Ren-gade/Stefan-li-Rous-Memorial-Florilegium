@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
             "✅ Search input found, attaching Enter listener (final)."
           );
 
-          // Clear any previous listener
           tagSearchInput.onkeydown = null;
 
           tagSearchInput.addEventListener("keydown", function (e) {
@@ -77,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-      // Wait a bit longer on slower builds (Netlify)
       setTimeout(attachSidebarSearch, 500);
     })
     .catch((error) => console.error("Error loading sidebar:", error));
@@ -91,10 +89,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const params = new URLSearchParams(window.location.search);
       const currentTag = params.get("tag");
+      const currentCategory = window.currentCategory || null;
 
       let displayData = data;
 
-      // --- Filter data by tag if present ---
+      // --- Filter by category first ---
+      if (currentCategory) {
+        const catLower = currentCategory.toLowerCase();
+        displayData = displayData.filter(
+          (item) =>
+            (item.category && item.category.toLowerCase() === catLower) ||
+            (item.tags && item.tags.some((t) => t.toLowerCase() === catLower))
+        );
+      }
+
+      // --- Then filter by tag if present ---
       if (currentTag) {
         const tagLower = currentTag.toLowerCase();
         displayData = displayData.filter(
@@ -119,7 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
           const card = document.createElement("div");
           card.className = "card";
 
-          // Title
           const title = document.createElement("h5");
           title.innerHTML = highlight
             ? item.title.replace(
@@ -128,7 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {
               )
             : item.title;
 
-          // Description
           const desc = document.createElement("p");
           desc.innerHTML = highlight
             ? item.description.replace(
@@ -137,7 +144,6 @@ document.addEventListener("DOMContentLoaded", function () {
               )
             : item.description;
 
-          // Download button
           const downloadBtn = document.createElement("button");
           downloadBtn.className = "download-btn btn btn-sm btn-primary";
           downloadBtn.textContent = "Download";
@@ -147,7 +153,6 @@ document.addEventListener("DOMContentLoaded", function () {
             sendGAEvent(fileUrl, item.category);
           });
 
-          // Tags
           const tagsDiv = document.createElement("div");
           tagsDiv.className = "tags";
           if (item.tags) {
@@ -172,7 +177,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       }
 
-      displayArticles(displayData, currentTag || query || "");
+      displayArticles(
+        displayData,
+        currentTag || currentCategory || query || ""
+      );
     })
     .catch((err) => console.error(err));
 
