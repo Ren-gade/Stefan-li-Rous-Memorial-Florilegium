@@ -19,20 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const query = new URLSearchParams(window.location.search).get("q");
 
-  // --- Universal search bar handler ---
-  const mainSearchInput = document.getElementById("searchInput");
-  if (mainSearchInput) {
-    mainSearchInput.addEventListener("keypress", function (e) {
-      if (e.key === "Enter") {
-        const query = mainSearchInput.value.trim();
-        if (query) {
-          window.location.href = `tag.html?tag=${encodeURIComponent(query)}`;
-        }
-      }
-    });
-  }
-
-  // --- Load Sidebar Categories ---
+  // --- Load Sidebar (updated-menu.html) ---
   fetch("updated-menu.html")
     .then((res) => res.text())
     .then((data) => {
@@ -40,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!sidebar) return;
       sidebar.innerHTML = data;
 
+      // Highlight current page
       const currentPage = window.location.pathname.split("/").pop();
       const links = sidebar.querySelectorAll(".category");
       links.forEach((link) => {
@@ -48,17 +36,32 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      const tagSearchInput = document.getElementById("sidebarTagSearch");
-      if (tagSearchInput) {
-        tagSearchInput.addEventListener("keypress", function (e) {
-          if (e.key === "Enter") {
-            const q = tagSearchInput.value.trim();
-            if (q) {
-              window.location.href = `tag.html?tag=${encodeURIComponent(q)}`;
+      // --- Sidebar search input (#sidebarTagSearch) ---
+      function attachSidebarSearch() {
+        const tagSearchInput = document.getElementById("sidebarTagSearch");
+
+        if (
+          tagSearchInput &&
+          typeof tagSearchInput.addEventListener === "function"
+        ) {
+          console.log("✅ Search input found, attaching Enter listener.");
+          tagSearchInput.addEventListener("keydown", function (e) {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              const q = tagSearchInput.value.trim();
+              if (q) {
+                console.log("Redirecting to tag.html?tag=" + q);
+                window.location.assign(`tag.html?tag=${encodeURIComponent(q)}`);
+              }
             }
-          }
-        });
+          });
+        } else {
+          console.warn("Waiting for sidebarTagSearch...");
+          setTimeout(attachSidebarSearch, 300);
+        }
       }
+
+      attachSidebarSearch();
     })
     .catch((error) => console.error("Error loading sidebar:", error));
 
@@ -74,10 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       let displayData = data;
 
-      // --- Filter data ---
+      // --- Filter data by tag if present ---
       if (currentTag) {
         const tagLower = currentTag.toLowerCase();
-
         displayData = displayData.filter(
           (item) =>
             item.title.toLowerCase().includes(tagLower) ||
@@ -87,8 +89,10 @@ document.addEventListener("DOMContentLoaded", function () {
         );
       }
 
-      // --- Display function ---
+      // --- Display articles ---
       function displayArticles(displayData, highlight = "") {
+        contentArea.innerHTML = ""; // Clear content
+
         if (!displayData || displayData.length === 0) {
           contentArea.innerHTML = `<p>Oops… try a different search term.</p>`;
           return;
@@ -98,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const card = document.createElement("div");
           card.className = "card";
 
+          // Title
           const title = document.createElement("h5");
           title.innerHTML = highlight
             ? item.title.replace(
@@ -106,6 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
               )
             : item.title;
 
+          // Description
           const desc = document.createElement("p");
           desc.innerHTML = highlight
             ? item.description.replace(
@@ -114,6 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
               )
             : item.description;
 
+          // Download button
           const downloadBtn = document.createElement("button");
           downloadBtn.className = "download-btn btn btn-sm btn-primary";
           downloadBtn.textContent = "Download";
@@ -123,6 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
             sendGAEvent(fileUrl, item.category);
           });
 
+          // Tags
           const tagsDiv = document.createElement("div");
           tagsDiv.className = "tags";
           if (item.tags) {
@@ -143,7 +151,6 @@ document.addEventListener("DOMContentLoaded", function () {
           card.appendChild(desc);
           card.appendChild(downloadBtn);
           card.appendChild(tagsDiv);
-
           contentArea.appendChild(card);
         });
       }
