@@ -50,8 +50,15 @@ document.addEventListener("DOMContentLoaded", function () {
               e.preventDefault();
               const q = tagSearchInput.value.trim();
               if (q) {
-                console.log("Redirecting to tag.html?tag=" + q);
-                window.location.assign(`tag.html?tag=${encodeURIComponent(q)}`);
+                console.log(
+                  "Redirecting to:",
+                  `${window.location.origin}/tag.html?tag=${encodeURIComponent(
+                    q
+                  )}`
+                );
+                window.location.href = `${
+                  window.location.origin
+                }/tag.html?tag=${encodeURIComponent(q)}`;
               }
             }
           });
