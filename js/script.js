@@ -44,10 +44,17 @@ document.addEventListener("DOMContentLoaded", function () {
           tagSearchInput &&
           typeof tagSearchInput.addEventListener === "function"
         ) {
-          console.log("✅ Search input found, attaching Enter listener.");
+          console.log(
+            "✅ Search input found, attaching Enter listener (final)."
+          );
+
+          // Clear any previous listener
+          tagSearchInput.onkeydown = null;
+
           tagSearchInput.addEventListener("keydown", function (e) {
             if (e.key === "Enter") {
               e.preventDefault();
+              e.stopPropagation();
               const q = tagSearchInput.value.trim();
               if (q) {
                 console.log(
@@ -59,16 +66,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 window.location.href = `${
                   window.location.origin
                 }/tag.html?tag=${encodeURIComponent(q)}`;
+              } else {
+                console.log("Empty query, no redirect.");
               }
             }
           });
         } else {
-          console.warn("Waiting for sidebarTagSearch...");
+          console.log("⏳ Waiting for sidebarTagSearch to exist...");
           setTimeout(attachSidebarSearch, 300);
         }
       }
 
-      attachSidebarSearch();
+      // Wait a bit longer on slower builds (Netlify)
+      setTimeout(attachSidebarSearch, 500);
     })
     .catch((error) => console.error("Error loading sidebar:", error));
 
