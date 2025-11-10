@@ -235,6 +235,42 @@ header,
   color: #fff;
 }
 
+.slr {
+  transition: color 0.3s ease;
+  color: #222;
+}
+
+.dark-mode .slr.s {
+  color: #ffffff;
+} /* S */
+.dark-mode .slr.l {
+  color: #ffffff;
+} /* L */
+.dark-mode .slr.r {
+  color: #ffffff;
+} /* R */
+
+/* dark mode override */
+.dark-mode .menu-home {
+  color: #ffffff; /* or whatever light color fits your palette */
+}
+/* Light mode: normal link color */
+#sidebar a {
+  color: #3a2a1a; /* your current brownish tone */
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+/* Dark mode: always blue */
+.dark-mode #sidebar a {
+  color: #66ccff; /* pick your preferred blue */
+}
+
+/* Optional hover effect for dark mode */
+.dark-mode #sidebar a:hover {
+  color: #99ddff; /* slightly lighter blue */
+}
+
 /* --- Footer --- */
 .site-footer {
   text-align: center;
