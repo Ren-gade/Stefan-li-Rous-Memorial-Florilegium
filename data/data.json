@@ -621,6 +621,307 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Animals/A+Historic+Look+at+the+Sport+of+Angling.pdf"
   },
   {
+    "title": "16th c Arrown Bag",
+    "category": "Archery",
+    "tags": ["archery", "16th century"],
+    "description": "A quick article on the making of a 16th c arrow bag",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/16th+c+Arrow+Bag.pdf"
+  },
+  {
+    "title": "A Period Archery Target for the SCA",
+    "category": "Archery",
+    "tags": ["archery", "target"],
+    "description": "An article on the making and shooting of a period archery target",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/A+Period+Archery+Target+for+the+SCA.pdf"
+  },
+  {
+    "title": "Archer's Half Gauntlet",
+    "category": "Archery",
+    "tags": ["archery", "armor", "arm"],
+    "description": "An article on the making of an archer's half gauntlet.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Archer's+Half+Gauntlet.pdf"
+  },
+  {
+    "title": "Bow and Buckler Competition",
+    "category": "Archery",
+    "tags": ["archery", "buckler"],
+    "description": "A quick article on a bow and buckler competition.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Bow+and+Buckler+Competition+.pdff"
+  },
+  {
+    "title": "16th c Arrown Bag",
+    "category": "Archery",
+    "tags": ["archery", "16th century"],
+    "description": "A quick article on the making of a 16th c arrow bag",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/16th+c+Arrow+Bag.pdf"
+  },
+  {
+    "title": "Building the Japanese Arrow for Target Archery",
+    "category": "Archery",
+    "tags": ["archery", "arrow", "japan", "japanese"],
+    "description": "A quick article on the building of a Japanese arrow for target archery.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Building+the+Japanese+Arrow+for+Target+Archery.pdf"
+  },
+  {
+    "title": "Buying a Used Bow",
+    "category": "Archery",
+    "tags": ["archery", "thrift"],
+    "description": "Tips and suggestions for buying a used bow.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Buying+a+Used+Bow.pdf"
+  },
+  {
+    "title": "Care of a Crossbow",
+    "category": "Archery",
+    "tags": ["archery", "crossbow"],
+    "description": "An article on the care of a crossbow.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Care+of+a+Crossbow.pdf"
+  },
+  {
+    "title": "Combat Archery Manual for Western Archers",
+    "category": "Archery",
+    "tags": ["archery", "combat archery"],
+    "description": "A manual for combat archery (Kingdom of the West).",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Combat+Archery+a+Manual+for+Western+Archers.pdf"
+  },
+  {
+    "title": "Combat Archery Basics",
+    "category": "Archery",
+    "tags": ["archery", "combat archery"],
+    "description": "An article on the basics of combat archery.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Combat+Archery+Basics.pdf"
+  },
+  {
+    "title": "Combat Arrow and Bolt Inspection Guidelines",
+    "category": "Archery",
+    "tags": ["archery", "arrow", "bolt", "inspection", "marshal"],
+    "description": "A quick article on the inspection of arrows and bolts for combat archery.",
+    "download_url": "hhttps://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Combat+Arrow+and+Bolt+Inspection+Guidelines.pdf"
+  },
+  {
+    "title": "Crane Beaks: Markland Type Arrowheads that can be Re-used",
+    "category": "Archery",
+    "tags": ["archery", "arrow"],
+    "description": "A quick article on the making markland type arrowheads that can be re-used.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/CRANE+BEAKS+--+MARKLAND-TYPE+ARROWHEADS+THAT+CAN+BE+REUSED.pdff"
+  },
+  {
+    "title": "Defensive Combat Archery Techniques",
+    "category": "Archery",
+    "tags": ["archery", "combat archery"],
+    "description": "An article on defensive techniques for combat archery.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Defensive+Combat+Archery+Techniques.pdf"
+  },
+  {
+    "title": "Encouraging Archery Participation",
+    "category": "Archery",
+    "tags": ["archery"],
+    "description": " ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Encouraging+Archery+Participation.pdf"
+  },
+  {
+    "title": "Experimental Fiberglass Shafts and Plastic Cored Blunts",
+    "category": "Archery",
+    "tags": ["archery", "arrow"],
+    "description": "If you wish to use the fiberglass shafts or the UHMW blunts you must first check with your kingdom marshal.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Experimental+Fiberglass+Shafts+and+Plastic+Cored+Blunts.pdf"
+  },
+  {
+    "title": "Getting into Shape for Archery",
+    "category": "Archery",
+    "tags": ["archery", "exercise"],
+    "description": "Recommendations on how to get in shape for archery.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Getting+in+Shape+for+Archery.pdf"
+  },
+  {
+    "title": "1Getting into Target Archery",
+    "category": "Archery",
+    "tags": ["archery"],
+    "description": " ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Getting+into+Target+Archery.pdf"
+  },
+  {
+    "title": "Handbow vs Crossbow",
+    "category": "Archery",
+    "tags": ["archery", "crossbow"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Handbow+vs+Crossbow.pdff"
+  },
+  {
+    "title": "How to Build and Install a Siloflex Nock",
+    "category": "Archery",
+    "tags": ["archery", "arrow"],
+    "description": "Please check with your local Marshalate before buying/building/using Siloflex nocks.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/How+to+Build+and+Install+a+Siloflex+Nock.pdf"
+  },
+  {
+    "title": "How to Make a Rattan Bow",
+    "category": "Archery",
+    "tags": ["archery"],
+    "description": " ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/How+to+make+a+Rattan+Bow.pdf"
+  },
+  {
+    "title": "Hunting Tips for Combat Archers",
+    "category": "Archery",
+    "tags": ["archery", "combat archery"],
+    "description": "Please note this was written from the viewpoint of a combat archer in the SCA kingdom of Ansteorra. Weapons and armor may differ in different kingdoms.",
+    "download_url": "stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Hunting+tips+for+Combat+Archers.pdf"
+  },
+  {
+    "title": "Make Your Own Arrows",
+    "category": "Archery",
+    "tags": ["archery", "arrow"],
+    "description": "Make Your Own Arrows (Atlantia).",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Make+your+Own+Arrows.pdf"
+  },
+  {
+    "title": "Making Moving Targets",
+    "category": "Archery",
+    "tags": ["archery", "target"],
+    "description": "A quick article on the making a moving target for target archery",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Making+Moving+Targets.pdf"
+  },
+  {
+    "title": "Marshal's Field Box",
+    "category": "Archery",
+    "tags": ["archery", "marshal"],
+    "description": "A quick article on the things one should have inside a Marshal's box.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Marshal's+Field+Box.pdf"
+  },
+  {
+    "title": "Modern Wooden Arrow Making",
+    "category": "Archery",
+    "tags": ["archery", "arrow"],
+    "description": "steps to make arrows using modern materials.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Modern+Wooden+Arrow+Making.pdf"
+  },
+  {
+    "title": "On Target: A Pig Hunt",
+    "category": "Archery",
+    "tags": ["archery", "target"],
+    "description": "A quick article on the making of a target and its use.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/On+Target_+A+Pig+Hunt.pdf"
+  },
+  {
+    "title": "Precision Arrow Matching",
+    "category": "Archery",
+    "tags": ["archery", "arrow"],
+    "description": "If you have a set of properly matched arrows you can greatly improve your archery scores... ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Precision+Arrow+Matching.pdf"
+  },
+  {
+    "title": "Quarter Inch Arrows for Youngsters",
+    "category": "Archery",
+    "tags": ["archery", "arrow", "children", "youth"],
+    "description": "A quick article on recommendations for and the making of 1/4in arrows for kids up to the age of 8 (from Quivers and Quarrels).",
+    "download_url": "hhttps://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Quarter-Inch+Arrows+for+Youngsters.pdf"
+  },
+  {
+    "title": "Scottish Archers",
+    "category": "Archery",
+    "tags": ["archery", "scotland"],
+    "description": "A presentation on Scottish archers by Lord Mungo Napier. ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Scottish+Archers.pdf"
+  },
+  {
+    "title": "Simple Bow Tuning for Novice Archers",
+    "category": "Archery",
+    "tags": ["archery", "bow"],
+    "description": " ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Simple+Bow+Tuning+for+Novice+Archers.pdf"
+  },
+  {
+    "title": "Target Arrows with Medieval Features",
+    "category": "Archery",
+    "tags": ["archery", "target", "arrow"],
+    "description": "A quick article on target arrows with medieval features for tournament shooting.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Target+Arrows+with+Medieval+Features+for+Tournament+Shooting.pdf"
+  },
+  {
+    "title": "Target-less Practice",
+    "category": "Archery",
+    "tags": ["archery"],
+    "description": "There is a way to practice, improve your skills and stay in condition even if you live in a small apartment in town...",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Target-less+Practice.pdf"
+  },
+  {
+    "title": "Teaching Archery to Kids",
+    "category": "Archery",
+    "tags": ["archery", "children", "youth"],
+    "description": "A brief guide on teaching archery to children.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Teaching+Archery+to+Kids.pdf"
+  },
+  {
+    "title": "The Efficacy of the Longbow during the Middle Ages",
+    "category": "Archery",
+    "tags": ["archery", "16th century"],
+    "description": "An article on the efficacy of the longbow in the Middle Ages by HL Christophe of Grey",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/The+Efficacy+of+the+Longbow+during+the+Middle+Ages.pdf"
+  },
+  {
+    "title": "The Existence of Back Quivers in the Middle Ages",
+    "category": "Archery",
+    "tags": ["archery", "quiver"],
+    "description": "An article on the existence of back quivers in the Middle Ages.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/The+Existence+of+Back+Quivers+in+the+Middle+Ages.pdf"
+  },
+  {
+    "title": "The Robin Hood Shoot",
+    "category": "Archery",
+    "tags": ["archery", "tournament"],
+    "description": "A quick article on a type of shoot you can run.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/The+Robin+Hood+Shoot.pdf"
+  },
+  {
+    "title": "The Triangle Target",
+    "category": "Archery",
+    "tags": ["archery", "target"],
+    "description": "A quick article on the making and use of a Fitz-Rauf Target.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/The+Triangle+or+Fitz-Rauf+Target.pdf"
+  },
+  {
+    "title": "Trouble Shooting",
+    "category": "Archery",
+    "tags": ["archery", "16th century"],
+    "description": "Let's talk about trouble shooting common archery problems.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Trouble+Shooting.pdf"
+  },
+  {
+    "title": "Turkish Flight Archery",
+    "category": "Archery",
+    "tags": ["archery", "turkey"],
+    "description": "Turkish Flight Archery with Notes on the Construction of Flight Arrows (An Tir)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Turkish+Flight+Archery.pdf"
+  },
+  {
+    "title": "Unredy Combat Crossbow",
+    "category": "Archery",
+    "tags": ["archery", "crossbow", "combat archery"],
+    "description": "An article on building the unredy combat crossbow",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Unredy+Combat+Crossbow.pdf"
+  },
+  {
+    "title": "War Archery",
+    "category": "Archery",
+    "tags": ["archery"],
+    "description": "An article on War Archery and Social Status.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/War+Archery.pdf"
+  },
+  {
+    "title": "Which Bow is Best?",
+    "category": "Archery",
+    "tags": ["archery", "bow"],
+    "description": "This article is going to discuss different bow types and advantages, disadvantages of each. I'll also include a few suggestions along the way.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Which+Bow+is+Best.pdf"
+  },
+  {
+    "title": "Winner's Choice Competition",
+    "category": "Archery",
+    "tags": ["archery", "tournament"],
+    "description": "The Winner's Choice competition is similar to roving, except that it does not require a large area or multiple objects at which to shoot...",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Winner's+Choice+Competition.pdf"
+  },
+  {
     "title": "Arming Cap",
     "category": "Armor",
     "tags": ["armor", "pattern", "accessories"],
