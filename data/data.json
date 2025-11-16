@@ -614,11 +614,88 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Animals/MSG+-+Period+Beekeeping.pdf"
   },
   {
+    "title": "The Sheep that Changed the Face of Art and History",
+    "category": "Animals",
+    "tags": ["animals", "sheep"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Animals/The+Sheep+that+Changed+the+Face+of+Art+and+History.pdf"
+  },
+  {
+    "title": "Sheep and Their Wool",
+    "category": "Animals",
+    "tags": ["animals", "sheep", "wool"],
+    "description": "Sheep and Their Wool Throughout History",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Animals/Sheep+and+Their+Wool.pdf"
+  },
+  {
+    "title": "On Being a Sheep Farmer",
+    "category": "Animals",
+    "tags": ["animals", "sheep"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Animals/On+Being+a+Sheep+Farmer.pdf"
+  },
+  {
+    "title": "Pest Control",
+    "category": "Animals",
+    "tags": ["animals"],
+    "description": "Medieval Household Pest Control",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Animals/Pest+Control.pdf"
+  },
+  {
+    "title": "Line Fishing",
+    "category": "Animals",
+    "tags": ["animals", "fish"],
+    "description": "Medieval Line Fishing",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Animals/Line+Fishing.pdf"
+  },
+  {
+    "title": "Amra's Capsule of Cleaning For Freshwater Fish",
+    "category": "Animals",
+    "tags": ["animals", "fish"],
+    "description": "Intended for Beginners",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Animals/Amra's+Capsule+of+Cleaning+For+Freshwater+Fish.pdf"
+  },
+  {
+    "title": "Period Pet Names",
+    "category": "Animals",
+    "tags": ["animals", "italian", "italy", "pet"],
+    "description": "Renaissance Italian Pets and Pet Names",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Animals/Period+Pet+Names.pdf"
+  },
+  {
+    "title": "White Ferrets, Genets, Virgins And Unicorns",
+    "category": "Animals",
+    "tags": ["animals", "ferret"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Animals/White+Ferrets%2C+Genets%2C+Virgins+And+Unicorns.pdf"
+  },
+  {
+    "title": "Rabbit Hunting with Ferrets",
+    "category": "Animals",
+    "tags": ["animals", "ferret"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Animals/Rabbit+Hunting+with+Ferrets.pdf"
+  },
+  {
+    "title": "Hounds in Period",
+    "category": "Animals",
+    "tags": ["animals", "dog"],
+    "description": "Hounds in Period & in the Society",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Animals/Hounds+in+Period.pdf"
+  },
+  {
     "title": "The Bestiary",
     "category": "Animals",
     "tags": ["animals"],
     "description": "A Brief Overview of Bestiary by Lady Katharine of Caithness",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Animals/A+Historic+Look+at+the+Sport+of+Angling.pdf"
+  },
+  {
+    "title": "Zoomorphis in Celtic Irish Illumination",
+    "category": "Animals",
+    "tags": ["animals", "scribal arts", "illumination"],
+    "description": "",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Animals/Zoomorphics+In+Celtic+Irish+Illumination.pdf"
   },
   {
     "title": "16th c Arrown Bag",
@@ -1476,6 +1553,154 @@
     "tags": ["armor", "pattern", "metalwork", "metal", "hand"],
     "description": "A pattern for gauntlets (metal)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor+2/Wisby-Style+Gauntlets.pdf"
+  },
+  {
+    "title": "12 Step Mead",
+    "category": "Beverages",
+    "tags": ["mead"],
+    "description": "The Twelve Step Method to Making Mead by Master Rurik Petrovitch Stoianov.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/12+Step+Mead.pdf"
+  },
+  {
+    "title": "A Brief History of Mead",
+    "category": "Beverages",
+    "tags": ["mead"],
+    "description": "A Brief History of Mead: More of an Historic Overview, Really by Sorcha Prechan",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/A+Brief+History+of+Mead.pdf"
+  },
+  {
+    "title": "A Calamondin Ratafia or Liqueur",
+    "category": "Beverages",
+    "tags": ["liqueur", "ratafia"],
+    "description": "A Calamondin Ratafia or Liqueur by Ld. Daniel Raoul Le Vascon du Navarre",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/A+Calamondin+Ratafia+or+Liqueur.pdf"
+  },
+  {
+    "title": "A Fresh Laid Egge",
+    "category": "Beverages",
+    "tags": ["soapmaking", "cooking","brewing"],
+    "description": "A fresh laid egge' - The Egg Float Test explained, for period Soapmakers, Cooks and Brewers by Unnr in elska Ã¡ FjÃ¡rfella.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/A+fresh+laid+egge.pdf"
+  },
+  {
+    "title": "Apricot Cardamon Cordial",
+    "category": "Beverages",
+    "tags": ["cordial"],
+    "description": "Apricot Cardamom Cordial by Constance de LaRose.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Apricot+Cardamon+Cordial.pdf"
+  },
+  {
+    "title": "Atholl Brose",
+    "category": "Beverages",
+    "tags": ["scotch", "whiskey"],
+    "description": "Atholl Brose by Mistress Morgana yr Oerfa, O.P..",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Atholl+Brose.pdf"
+  },
+  {
+    "title": "Bottle Labels",
+    "category": "Beverages",
+    "tags": ["brewing"],
+    "description": "'Labels? We don't need no stinking labels.' Yes you do! by HL Rory McGowen.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Bottle+Labels.pdf"
+  },
+  {
+    "title": "Brewing a 1503 English 'Small Beer'",
+    "category": "Beverages",
+    "tags": ["beer", "small beer", "England", "16th century"],
+    "description": "Brewing a 1503 English 'Small Beer by Master William Brewer.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Brewing+a+1503+English+'Small+Beer'.pdf"
+  },
+  {
+    "title": "Brewing Beer in 1503 England",
+    "category": "Beverages",
+    "tags": ["beer", "16th century"],
+    "description": "Brewing Beer in 1503 England by Master William Brewer.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Brewing+Beer+in+1503+England.pdf"
+  },
+  {
+    "title": "Brewing Ciders",
+    "category": "Beverages",
+    "tags": ["cider, brewing"],
+    "description": "Article on brewing ciders",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Brewing+Ciders.pdf"
+  },
+  {
+    "title": "Buttered Beer",
+    "category": "Beverages",
+    "tags": ["beer"],
+    "description": "Buttered Beer by Tiarna Brann mac Finnchad.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Buttered+Beer.pdf"
+  },
+  {
+    "title": "Chocolate Mead",
+    "category": "Beverages",
+    "tags": ["mead"],
+    "description": "Chocolate Mead aka Liquid Sex Mead by Lord Rhys, Capten gen y Arian Lloer.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Chocolate+Mead.pdf"
+  },
+  {
+    "title": "Cordials, Brewing and Vinting",
+    "category": "Beverages",
+    "tags": ["cordial", "brewing","vinting"],
+    "description": "Cordials, Brewing, and Vinting - using herbs and spices by Lord William Ismeade.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Cordials%2C+Brewing%2C+and+Vinting.pdf"
+  },
+  {
+    "title": "Did You Know You can Malt Acorns: Part 1",
+    "category": "Beverages",
+    "tags": ["malt"],
+    "description": "Did you know you can malt acorns? Part 1 by THL Madoc Arundel.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Did+you+know+you+can+malt+acorns_+Part+1.pdf"
+  },
+  
+  {
+    "title": "Gruit",
+    "category": "Beverages",
+    "tags": ["brewing"],
+    "description": "Gruit: Before There Were Hops There Was Gruit by Lord John Marshall atte Forde.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Gruit.pdf"
+  },
+  {
+    "title": "Hong Qu Jiu (Red Rice Wine)",
+    "category": "Beverages",
+    "tags": ["wine", "rice wine"],
+    "description": "A brief history of 'HONG QU JIU'(Red Rice Wine) by T.H.L. Eidiard an Gobihainn.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Hong+Qu+Jiu+(Red+Rice+Wine).pdf"
+  },
+  {
+    "title": "Intermediate Guide to Brewing",
+    "category": "Beverages",
+    "tags": ["brewing"],
+    "description": "Intermediate Guide to Brewing by HL Rory McGowen.",
+    "download_url": "hhttps://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Intermediate+Guide+to+Brewing.pdf"
+  },
+  {
+    "title": "Ipocras: 3 Ways",
+    "category": "Beverages",
+    "tags": ["win"],
+    "description": "Ipocras - 3 ways, from 'The Booke of Carving and Sewing' (1613) by Baroness Lucia de Enzinas.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Ipocras+-+3+ways.pdf"
+  },
+  {
+    "title": "Kumiss",
+    "category": "Beverages",
+    "tags": ["brewing", "russian", "mongol"],
+    "description": "Kumiss - A Practical Fermentation Guide by Baron Drake Morgan, OL.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Kumiss+-+A+Practical+Fermentation+Guide.pdf"
+  },
+  {
+    "title": "Mead",
+    "category": "Beverages",
+    "tags": ["mead", "England", "13th century", "14th century"],
+    "description": "Mead, using a 13th/14th century English manuscript - The 'Tractatus de magnete et operationibus eius' England, 13th century by Rhys Terafan Greydragon",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Mead%2C+using+a+13th_14th+century+English+manuscript.pdf"
+  },
+  {
+    "title": "Medieval Beverages for a Hot Day",
+    "category": "Beverages",
+    "tags": ["beverages"],
+    "description": "Medieval Beverages for a Hot Day by Mistress Euriol of Lothian, O.P.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Medieval+Beverages+for+a+Hot+Day.pdf"
   },
   {
     "title": "Introduction to Natural Dyeing",
