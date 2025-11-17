@@ -1578,7 +1578,7 @@
   {
     "title": "A Fresh Laid Egge",
     "category": "Beverages",
-    "tags": ["soapmaking", "cooking","brewing"],
+    "tags": ["soapmaking", "cooking", "brewing"],
     "description": "A fresh laid egge' - The Egg Float Test explained, for period Soapmakers, Cooks and Brewers by Unnr in elska Ã¡ FjÃ¡rfella.",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/A+fresh+laid+egge.pdf"
   },
@@ -1641,7 +1641,7 @@
   {
     "title": "Cordials, Brewing and Vinting",
     "category": "Beverages",
-    "tags": ["cordial", "brewing","vinting"],
+    "tags": ["cordial", "brewing", "vinting"],
     "description": "Cordials, Brewing, and Vinting - using herbs and spices by Lord William Ismeade.",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Cordials%2C+Brewing%2C+and+Vinting.pdf"
   },
@@ -1652,7 +1652,6 @@
     "description": "Did you know you can malt acorns? Part 1 by THL Madoc Arundel.",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Did+you+know+you+can+malt+acorns_+Part+1.pdf"
   },
-  
   {
     "title": "Gruit",
     "category": "Beverages",
@@ -1701,6 +1700,76 @@
     "tags": ["beverages"],
     "description": "Medieval Beverages for a Hot Day by Mistress Euriol of Lothian, O.P.",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Medieval+Beverages+for+a+Hot+Day.pdf"
+  },
+  {
+    "title": "Of Boiling and Seething",
+    "category": "Beverages",
+    "tags": ["brewing", "cooking"],
+    "description": "A re-evaluation of the common cooking terms in connection with brewing by Unnr in elska Ã¡ FjÃ¡rfella.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Of+Boiling+and+Seething.pdf"
+  },
+  {
+    "title": "Period drinks - Spiced Wines and Sweet Waters",
+    "category": "Beverages",
+    "tags": ["wine"],
+    "description": "Period drinks - Spiced Wines and Sweet Waters by Vicente Coenca.",
+    "download_url": "Period drinks - Spiced Wines and Sweet Waters"
+  },
+  {
+    "title": "Prickly Gooseberry, Mango, Cardamom, Cordial",
+    "category": "Beverages",
+    "tags": ["cordial"],
+    "description": "by Constance de LaRose",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Prickly+Gooseberry%2C+Mango%2C+Cardamom%2C+Cordial.pdf"
+  },
+  {
+    "title": "Recreating a 16th Century Scandinavian Beer: Part II",
+    "category": "Beverages",
+    "tags": ["beer"],
+    "description": "The Mill by Master Magnus hvalmagi.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Recreating+a+16th+Century+Scandinavian+Beer%2C+Part+II.pdf"
+  },
+  {
+    "title": "Recreating a 16th Century Scandinavian Beer: Part I",
+    "category": "Beverages",
+    "tags": ["beer"],
+    "description": "The Malt by Master Magnus hvalmagi",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Recreating+a+16th+Century+Scandinavian+Beer.pdf"
+  },
+  {
+    "title": "Tablets of Drinking Chocolate in the Spanish Style",
+    "category": "Beverages",
+    "tags": ["chocolate", "hot chocolate", "spain", "spanish"],
+    "description": "by Lady Elinor Strangewayes.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Tablets+of+Drinking+Chocolate+in+the+Spanish+Style.pdf"
+  },
+  {
+    "title": "The Basics of Beer Making",
+    "category": "Beverages",
+    "tags": ["beer"],
+    "description": "by THL George Anne",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/The+Basics+of+Beer+Making.pdf"
+  },
+  {
+    "title": "The History of Coffee",
+    "category": "Beverages",
+    "tags": ["coffee"],
+    "description": "by TH Lady Miriam bat Shimeon",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/The+History+of+Coffee.pdf"
+  },
+  {
+    "title": "The History of Eggnog",
+    "category": "Beverages",
+    "tags": ["beverages"],
+    "description": "by Nanna Rognvaldardottir of Iceland.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/The+History+of+Eggnog.pdf"
+  },
+  {
+    "title": "The Making of Mead",
+    "category": "Beverages",
+    "tags": ["mead"],
+    "description": "By H.L. Barat FitzWalter Reynolds",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/The+Making+of+Mead.pdf"
   },
   {
     "title": "Introduction to Natural Dyeing",
@@ -2125,7 +2194,7 @@
   {
     "title": "The Thrifty Anachronist",
     "category": "Newcomers Corner",
-    "tags": ["garb", "clothing"],
+    "tags": ["garb", "clothing", "thrift"],
     "description": "Thrifting for the SCA",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Newcomer's+Corner/The+Thrifty+Anachronist.pdf"
   },
