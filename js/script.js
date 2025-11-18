@@ -1,4 +1,87 @@
-document.addEventListener("DOMContentLoaded", function () {
+// ===========================================
+// ADDITIONAL SEARCH SOURCES
+// ===========================================
+
+// A: Scrape Class Recordings
+async function loadClassRecordings() {
+  try {
+    const response = await fetch("class-recordings-by-category.html");
+    const html = await response.text();
+
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, "text/html");
+
+    const sections = doc.querySelectorAll(".letter-section");
+
+    let results = [];
+
+    sections.forEach((section) => {
+      const sectionTitle = section.querySelector("h2")?.innerText.trim();
+      const id = section.getAttribute("id");
+
+      section.querySelectorAll("li").forEach((li) => {
+        const link = li.querySelector("a");
+        if (!link) return;
+
+        // NORMALIZED: card-friendly entry format
+        results.push({
+          title: link.innerText.trim(),
+          description: "Class recording",
+          category: sectionTitle,
+          tags: ["class-recording"],
+          download_url: link.href,
+        });
+      });
+    });
+
+    return results;
+  } catch (err) {
+    console.error("Error loading Class Recordings:", err);
+    return [];
+  }
+}
+
+// B: Scrape Food-by-Region Page
+async function loadFoodByRegion() {
+  try {
+    const response = await fetch("category-food-by-region.html");
+    const html = await response.text();
+
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, "text/html");
+
+    let results = [];
+
+    doc.querySelectorAll("h2").forEach((h2) => {
+      const region = h2.innerText.trim();
+      const sectionId = h2.getAttribute("id");
+
+      const list = h2.nextElementSibling;
+      if (!list || !list.querySelectorAll) return;
+
+      list.querySelectorAll("li").forEach((li) => {
+        const text = li.innerText.trim();
+        if (!text) return;
+
+        // NORMALIZED: card-friendly entry format
+        results.push({
+          title: text,
+          description: `Entry from ${region}`,
+          category: region,
+          tags: ["food", region.toLowerCase()],
+          download_url: `category-food-by-region.html#${sectionId}`,
+        });
+      });
+    });
+
+    return results;
+  } catch (err) {
+    console.error("Error scraping Food By Region:", err);
+    return [];
+  }
+}
+
+document.addEventListener("DOMContentLoaded", async function () {
   // --- Dark mode toggle ---
   const modeToggle = document.getElementById("modeToggle");
   if (modeToggle) {
@@ -36,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      // --- Sidebar search input (#sidebarTagSearch) ---
+      // --- Sidebar search input ---
       function attachSidebarSearch() {
         const tagSearchInput = document.getElementById("sidebarTagSearch");
 
@@ -56,17 +139,9 @@ document.addEventListener("DOMContentLoaded", function () {
               e.stopPropagation();
               const q = tagSearchInput.value.trim();
               if (q) {
-                console.log(
-                  "Redirecting to:",
-                  `${window.location.origin}/tag.html?tag=${encodeURIComponent(
-                    q
-                  )}`
-                );
                 window.location.href = `${
                   window.location.origin
                 }/tag.html?tag=${encodeURIComponent(q)}`;
-              } else {
-                console.log("Empty query, no redirect.");
               }
             }
           });
@@ -80,118 +155,113 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch((error) => console.error("Error loading sidebar:", error));
 
-  // --- Load and display articles ---
-  fetch("data/data.json")
-    .then((response) => response.json())
-    .then((data) => {
-      const contentArea = document.getElementById("contentArea");
-      if (!contentArea) return;
+  // --- Load and merge articles ---
+  const rootData = await fetch("data/data.json")
+    .then((r) => r.json())
+    .catch(() => []);
 
-      const params = new URLSearchParams(window.location.search);
-      const currentTag = params.get("tag");
-      const currentCategory = window.currentCategory || null;
+  const extraClassData = await loadClassRecordings();
+  const extraFoodData = await loadFoodByRegion();
 
-      let displayData = data;
+  const mergedData = [...rootData, ...extraClassData, ...extraFoodData];
 
-      // --- Filter by category first ---
-      if (currentCategory) {
-        const catLower = currentCategory.toLowerCase();
-        displayData = displayData.filter(
-          (item) =>
-            (item.category && item.category.toLowerCase() === catLower) ||
-            (item.tags && item.tags.some((t) => t.toLowerCase() === catLower))
-        );
-      }
+  const contentArea = document.getElementById("contentArea");
+  if (!contentArea) return;
 
-      // --- Then filter by tag if present ---
-      if (currentTag) {
-        const tagLower = currentTag.toLowerCase();
-        displayData = displayData.filter(
-          (item) =>
-            item.title.toLowerCase().includes(tagLower) ||
-            item.description.toLowerCase().includes(tagLower) ||
-            (item.tags &&
-              item.tags.some((t) => t.toLowerCase().includes(tagLower)))
-        );
-      }
+  const params = new URLSearchParams(window.location.search);
+  const currentTag = params.get("tag");
+  const currentCategory = window.currentCategory || null;
 
-      // --- Display articles ---
-      function displayArticles(displayData, highlight = "") {
-        contentArea.innerHTML = ""; // Clear content
+  let displayData = mergedData;
 
-        if (!displayData || displayData.length === 0) {
-          contentArea.innerHTML = `<p>Oops… try a different search term.</p>`;
-          return;
-        }
+  // --- Category filter ---
+  if (currentCategory) {
+    const catLower = currentCategory.toLowerCase();
+    displayData = displayData.filter(
+      (item) =>
+        (item.category && item.category.toLowerCase() === catLower) ||
+        (item.tags && item.tags.some((t) => t.toLowerCase() === catLower))
+    );
+  }
 
-        displayData.forEach((item) => {
-          const card = document.createElement("div");
-          card.className = "card";
+  // --- Tag filter ---
+  if (currentTag) {
+    const tagLower = currentTag.toLowerCase();
+    displayData = displayData.filter(
+      (item) =>
+        item.title.toLowerCase().includes(tagLower) ||
+        item.description?.toLowerCase().includes(tagLower) ||
+        (item.tags && item.tags.some((t) => t.toLowerCase().includes(tagLower)))
+    );
+  }
 
-          const title = document.createElement("h5");
-          title.innerHTML = highlight
-            ? item.title.replace(
-                new RegExp(`(${highlight})`, "gi"),
-                '<span class="highlight">$1</span>'
-              )
-            : item.title;
+  // --- Display renderer ---
+  function displayArticles(displayData, highlight = "") {
+    contentArea.innerHTML = "";
 
-          const desc = document.createElement("p");
-          desc.innerHTML = highlight
-            ? item.description.replace(
-                new RegExp(`(${highlight})`, "gi"),
-                '<span class="highlight">$1</span>'
-              )
-            : item.description;
+    if (!displayData || displayData.length === 0) {
+      contentArea.innerHTML = `<p>Oops… try a different search term.</p>`;
+      return;
+    }
 
-          const downloadBtn = document.createElement("button");
-          downloadBtn.className = "download-btn btn btn-sm btn-primary";
-          downloadBtn.textContent = "Download";
-          downloadBtn.addEventListener("click", function () {
-            const fileUrl = item.download_url;
-            window.open(fileUrl, "_blank");
-            sendGAEvent(fileUrl, item.category);
+    displayData.forEach((item) => {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      const title = document.createElement("h5");
+      title.innerHTML = highlight
+        ? item.title.replace(
+            new RegExp(`(${highlight})`, "gi"),
+            '<span class="highlight">$1</span>'
+          )
+        : item.title;
+
+      const desc = document.createElement("p");
+      desc.innerHTML = highlight
+        ? (item.description || "").replace(
+            new RegExp(`(${highlight})`, "gi"),
+            '<span class="highlight">$1</span>'
+          )
+        : item.description || "";
+
+      const downloadBtn = document.createElement("button");
+      downloadBtn.className = "download-btn btn btn-sm btn-primary";
+      downloadBtn.textContent = "Open";
+      downloadBtn.addEventListener("click", function () {
+        const fileUrl = item.download_url;
+        window.open(fileUrl, "_blank");
+        sendGAEvent(fileUrl, item.category);
+      });
+
+      const tagsDiv = document.createElement("div");
+      tagsDiv.className = "tags";
+      if (item.tags) {
+        item.tags.forEach((tag) => {
+          const span = document.createElement("span");
+          span.className = "tag-badge";
+          span.textContent = `#${tag}`;
+          span.addEventListener("click", () => {
+            window.location.href = `tag.html?tag=${encodeURIComponent(tag)}`;
           });
-
-          const tagsDiv = document.createElement("div");
-          tagsDiv.className = "tags";
-          if (item.tags) {
-            item.tags.forEach((tag) => {
-              const span = document.createElement("span");
-              span.className = "tag-badge";
-              span.textContent = `#${tag}`;
-              span.addEventListener("click", () => {
-                window.location.href = `tag.html?tag=${encodeURIComponent(
-                  tag
-                )}`;
-              });
-              tagsDiv.appendChild(span);
-            });
-          }
-
-          card.appendChild(title);
-          card.appendChild(desc);
-          card.appendChild(downloadBtn);
-          card.appendChild(tagsDiv);
-          contentArea.appendChild(card);
+          tagsDiv.appendChild(span);
         });
       }
 
-      displayArticles(
-        displayData,
-        currentTag || currentCategory || query || ""
-      );
-    })
-    .catch((err) => console.error(err));
+      card.appendChild(title);
+      card.appendChild(desc);
+      card.appendChild(downloadBtn);
+      card.appendChild(tagsDiv);
+      contentArea.appendChild(card);
+    });
+  }
+
+  displayArticles(displayData, currentTag || currentCategory || query || "");
 
   // --- Back to Top Button ---
   const backBtn = document.getElementById("backToTopBtn");
   if (backBtn) {
     window.onscroll = function () {
-      if (
-        document.body.scrollTop > 200 ||
-        document.documentElement.scrollTop > 200
-      ) {
+      if (document.documentElement.scrollTop > 200) {
         backBtn.style.display = "block";
       } else {
         backBtn.style.display = "none";
