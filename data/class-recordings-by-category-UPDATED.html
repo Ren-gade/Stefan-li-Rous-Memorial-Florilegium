@@ -1,0 +1,3217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Recordings</title>
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- DARK MODE READY STYLES -->
+    <style>
+      :root {
+        --font-heading: "Cormorant Garamond", serif;
+        --font-body: "Lora", serif;
+
+        /* Light mode */
+        --text-color: #3a2a1a;
+        --background-color: #f5f0e1;
+        --card-bg: #ffffff;
+        --border-color: #d6c9b6;
+
+        --link-color: #0077cc;
+        --link-hover: #005999;
+
+        --header-accent: #0077cc;
+      }
+
+      .dark-mode {
+        --text-color: #eee;
+        --background-color: #1e1e1e;
+        --card-bg: #2c2c2c;
+        --border-color: #555;
+
+        --link-color: #6bb6ff;
+        --link-hover: #91c9ff;
+
+        --header-accent: #6bb6ff;
+      }
+
+      body {
+        margin: 0;
+        background: var(--background-color);
+        font-family: var(--font-body);
+        color: var(--text-color);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        font-size: min(1.1rem, 3vw);
+      }
+
+      .page-layout {
+        display: flex;
+        padding-top: 1rem;
+      }
+
+      /* SIDEBAR */
+      .sidebar-index {
+        width: 250px;
+        padding: 1rem;
+        background: var(--background-color);
+        border-right: 1px solid var(--border-color);
+        position: sticky;
+        top: 80px;
+
+        /* FIXED VERSION */
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+      }
+
+      .sidebar-group {
+        margin-bottom: 1.4rem;
+      }
+
+      .sidebar-letter {
+        font-family: var(--font-heading);
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 0.3rem;
+        padding-bottom: 0.2rem;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .sidebar-group a {
+        display: block;
+        padding-left: 6px;
+        margin: 4px 0;
+        text-decoration: none;
+        color: var(--link-color);
+      }
+
+      .sidebar-group a:hover {
+        text-decoration: underline;
+        color: var(--link-hover);
+      }
+
+      /* MAIN CONTENT */
+      .alphabet-list {
+        flex: 1;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .letter-section {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+      }
+
+      .letter-section h2 {
+        font-family: var(--font-heading);
+        font-size: 1.6rem;
+        color: var(--header-accent);
+        border-bottom: 2px solid var(--header-accent);
+        padding-bottom: 0.3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .letter-section ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .letter-section a {
+        color: var(--text-color);
+        text-decoration: none;
+      }
+
+      .letter-section a:hover {
+        color: var(--link-color);
+        text-decoration: underline;
+      }
+
+      .pdf-icon {
+        margin-left: 6px;
+        font-size: 1.2rem;
+      }
+      .sidebar-home {
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .home-link {
+        font-size: 1.2rem;
+        color: var(--link-color);
+        text-decoration: none;
+        font-weight: bold;
+        display: block;
+      }
+
+      .home-link:hover {
+        text-decoration: underline;
+        color: var(--link-hover);
+      }
+      /* Light mode (your existing rule) */
+      .letter-section li {
+        margin: 1rem 0;
+        padding: 0.75rem 1rem;
+        background: var(--background-color);
+        border-left: 4px solid var(--border-color);
+
+        border-radius: 4px;
+      }
+
+      /* Dark mode */
+      .dark-mode .letter-section li {
+        background: var(--card-bg);
+        border-left: 4px solid var(--link-color);
+        color: var(--text-color);
+      }
+      .dark-mode .letter-section a {
+        color: var(--link-color);
+      }
+
+      .dark-mode .letter-section a:hover {
+        color: var(--link-hover);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+    <div class="page-layout">
+      <!-- ==========================
+         SIDEBAR INDEX
+         ========================== -->
+      <div class="sidebar-index">
+        <div class="sidebar-home">
+          <a class="home-link" href="/">🏠 Home</a>
+        </div>
+        <div class="sidebar-group">
+          <div class="sidebar-letter">A</div>
+          <a href="#A-Archery">Archery</a>
+          <a href="#A-Armored-Combat">Armored Combat</a>
+          <a href="#A-Astronomy">Astronomy</a>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-letter">B</div>
+          <a href="#B-Bardic">Bardic</a>
+          <a href="#B-Beekeeping">Beekeeping</a>
+          <a href="#B-Blockprinting">Block Print/Painting</a>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-letter">C</div>
+          <a href="#C-Cartography">Cartography</a>
+          <a href="#C-Carving">Carving</a>
+          <a href="#C-Ceramics">Ceramics</a>
+          <a href="#C-Cosmetics">Cosmetics</a>
+          <a href="#C-Culinary">Culinary</a>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-letter">D</div>
+          <a href="#D-Dance">Dance</a>
+          <a href="#D-DEI">DEI</a>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-letter">E</div>
+          <a href="#E-Equestrian">Equestrian</a>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-letter">F</div>
+          <a href="#F-Falconry">Falconry</a>
+          <a href="#F-Fencing">Fencing</a>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-letter">G</div>
+          <a href="#G-Games">Games</a>
+          <a href="#G-Garb">Garb</a>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-letter">H</div>
+          <a href="#H-Hair">Hair</a>
+          <a href="#H-Heraldry">Heraldry</a>
+          <a href="#H-History">History</a>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-letter">I</div>
+          <a href="#I-IT">IT</a>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-letter">J</div>
+          <a href="#J-Jewelry">Jewelry</a>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-letter">L</div>
+          <a href="#L-Language">Language</a>
+          <a href="#L-Leatherworking">Leatherworking</a>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-letter">M</div>
+          <a href="#M-Martial">Martial</a>
+          <a href="#M-Metalworking">Metalworking</a>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-letter">P</div>
+          <a href="#P-Painting">Painting</a>
+          <a href="#P-Photography">Photography</a>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-letter">R</div>
+          <a href="#R-Research">Research</a>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-letter">S</div>
+          <a href="#S-SCA">SCA</a>
+          <a href="#S-Scribal">Scribal</a>
+          <a href="#S-Service">Service</a>
+          <a href="#S-Silverpoint">Silverpoint</a>
+          <a href="#S-Sglass">Stained Glass</a>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-letter">T</div>
+          <a href="#T-Textile">Textile</a>
+          <a href="#T-Thrown">Thrown Weapons</a>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-letter">W</div>
+          <a href="#W-Woodworking">Woodworking</a>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-letter">Y</div>
+          <a href="#Y-Youth">Youth</a>
+        </div>
+      </div>
+
+      <!-- ==========================
+         MAIN CONTENT SECTIONS
+         ========================== -->
+
+      <div class="alphabet-list">
+        <div>
+          <h5>
+            These class recordings and handouts have been meticulously gathered
+            by Thomas of Eoforwic.
+          </h5>
+        </div>
+        <!-- A -->
+        <div class="letter-section" id="A-Archery">
+          <h2>Archery</h2>
+          <ul>
+            <li>
+              <a
+                href="https://youtu.be/fI5bFjP7GCI"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                The Grand Archery Tournament (GAT) and Scores Website by
+                Forester Gerard von Lowenstein (26 Nov 2020)
+              </a>
+              <span class="class-tags"> | #archery</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/Z-_Ih9natZU"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Shooting at Ground Targets (AKA: Shooting at Your Feet without
+                Hitting Your Feet) by Baroness Genevieve Rose de Glendalough and
+                Forester Edward Aelredson (26 Nov 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/xvSgczSXJ80"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Arrow's Flight: Improvement as an Archer by THL Eve Stonehart
+                (26 Nov 2020)
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/The+Arrow's+Flight.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Handout
+              </a>
+              <span class="class-tags"> | #archery</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/OPT1bjgeZaM"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Aim Higher! No, Low, Now to the Left...: Aiming in Archery by
+                Forester Yaacov Ben haRav Eliezer (26 Nov 2020)
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/aiming+class+handout.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Handout
+              </a>
+              <span class="class-tags"> | #archery</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/XXizF_BMmlM"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Care &amp; Feeding of Crossbows for Archery by Baron Padraig
+                MacRaigne (26 Nov 2020)
+              </a>
+              <span class="class-tags"> | #archery</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/iygHrqzk5sg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                So, You Thought About Being a Missle Weapons Marshal... by
+                Forester Edward Aelredson (26 Nov 2020)
+              </a>
+              <span class="class-tags"> | #marshal</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/vbw_bfs5Zoc"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Introduction to Combat Archery by Master Nyilas Kazmer (26 Nov
+                2020)
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/CA+-+Handout.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Handout
+              </a>
+              <span class="class-tags"> | #archery #armored</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/3gsVCemwSlM"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Precision Shooting for the Crossbow Archery by Timothy of
+                Sherwood (25 Apr 2020)
+              </a>
+              <span class="class-tags"> | #archery #crafts</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/Nu_vtCHU8po"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Fletching Demonstration by Forester Gerard von Lowenstein (26
+                Nov 2020)
+              </a>
+              <span class="class-tags"> | #archery</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/GyvKFTjjdII"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Introduction to Arrow Cresting byBaroness Ilaria Volpe Della
+                Scala &amp; Master Finnian McBride (9 Nov 2020)
+              </a>
+              <span class="class-tags"> | #archery</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/Q7rAYgxh-aI"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Arrow Crafting byLord Callum of Skye (9 Nov 2020)
+              </a>
+              <span class="class-tags"> | #archery #crafts</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/0-XMAiiUFDU"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Duties of a Local Archery Marshal by THL Karl Thorgeirsson (7
+                Oct 2020)
+              </a>
+              <span class="class-tags"> | #archery #marshal</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/FHYLFsc5iZk"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Youth Archery &amp; Range Etiquette by Lady Dagrun
+                Gunnarsdottir, ODB, OW (26 Nov 2020)
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Archery/Youth-Etiquettefsf.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Handout
+              </a>
+              <span class="class-tags"> | #archery #youth</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/4WNrHimN0us"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                SCA Archery for Kids by Mistress Lorelei Greenleafe (5 Feb 2025)
+              </a>
+              <span class="class-tags"> | #archery #youth</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="letter-section" id="A-Armored-Combat">
+          <h2>Armored Combat</h2>
+          <ul>
+            <li>
+              <a
+                href="https://youtu.be/IFE2R_WSrbU"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Italian Poleaxe Fighting by Warder Raphael di Merisi (11 OCt
+                2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/0rnnW_awimY"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Aggression for the Compassionate: Impact on the Fighting Field
+                by Sir Jaime von Atzinger (16 Feb 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/8g7a3LEkBOc"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                How to Stay Sharp While Staying at Home: Fighting Training by
+                Count Seto Gesshuko (17 Feb 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/Krm4ihUBOUg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Using a Back-up Weapon with a Spear by Sir Pelinor of Shadowed
+                Stars (20 Feb 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/8GYF4nhN-4o"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Train Like You Mean It for Armored Combat: Part 2 by Count
+                William of Fairhaven (24 Feb 2021)
+              </a>
+              <span class="class-tags"> | #armored</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/I8xxP_qeS1Q"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Principles and Techniques of the Drop Step in SCA Fighting by
+                Baron Louis LeCoffrier (27 Feb 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/DlrWg6sIaNk"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Battle Field Commands for Melee: Battlefield Communication by
+                Sir Pelinor of Shadowed Stars (15 Feb 2022)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/_0yqbEOTmhs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                We Happy Few: Training Methods for Small Group Fight Practices
+                by Sir Jaime von Atzinger (26 Nov 2020)
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/We+Happy+Few.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Handout
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/70gh2LKJ1tg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Armored Combat Refresher by Duke Cellach MacChormach, KEM (21
+                Mar 2024)
+              </a>
+              <span class="class-tags"> | #armored</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/VowvTTWc1ns"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Intro to SCA Melee Tactics: Blast from the Past: Martial RUM
+                2015 by Captain CuMhara Of Holyhead, called Kope (16 Dec 2024)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/H3Yg1fMGB4o"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                40 Years a Fighter: Blast from the Past: Martial RUM 2015 by
+                Captain CuMhara Of Holyhead, called Kope (16 Dec 2024)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/hBrpJo4zcew"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                5 Ways of Attack with Duke Dag: Blast from the Past by Duke Dag
+                Thorgrimsson (20 Dec 2024)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/UshA1wp6Ia8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Selling the Feint: Blast from the Past by Duke Dag Thorgrimsson
+                (23 Dec 2024)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/E-zgAZn1aKs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Embrace the Grind: Blast from the Past by Sir WIlliam of
+                Fairhaven (26 Dec 2024)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/h3UqrIQOBuo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Train Like You Mean It: Blast from the Past by Sir WIlliam of
+                Fairhaven (30 Dec 2024)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/-mGLESWU77E"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                What You Need to Know About Spear:Blast from the Past by Captain
+                Krisztian Von Atzinger (2 Jan 2025)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/c0yCKPoEqJY"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Malfechten Style Longsword Clinic: Part 1: Early Fundamentals by
+                Duke EikBrandr Solgyaf (2 Feb 2025)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/ZjMpUoTJzUA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Malfechten Style Longsword Clinic: Part 2: More Fundamentals by
+                Duke EikBrandr Solgyaf (4 Feb 2025)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/TttftE5Zt_A"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Malfechten Style Longsword Clinic: Part 3: Parrys, Guards, and
+                Attack/Defense Drills by Duke EikBrandr Solgyaf (11 Feb 2025)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/u0tnOxrOLNk"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Malfechten Style Longsword Clinic: Part 4: Intermediate Skills
+                by Duke EikBrandr Solgyaf (18 Feb 2025)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/y-nFCBKFWJ0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Malfechten Style Longsword Clinic: Part 5: Advanced Skills by
+                Duke EikBrandr Solgyaf (27 Feb 2025)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/US-qDIWz2Pg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                TMalfechten Style Longsword Clinic: Part 6: Armored Sparring by
+                Duke EikBrandr Solgyaf (5 Mar 2025)
+              </a>
+              <span class="class-tags"> | #armored</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/hm21sK7v9T8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Gender Minority Armored Fighters: Navigating and Helping to
+                Remove Invisible Barriers by Duchess Signy Heri, Dame Sbyslava
+                Ruslanova, Baroness Ingegerd Kastanrazi, Baroness Puffin, and
+                THL Tegan of Anglesey (6 Jun 2023)
+              </a>
+              <span class="class-tags"> | #armored</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/XS_TQJoNN4s"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                MOL 101 by Lady Qualan Chaghan (26 Nov 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/XS_TQJoNN4s"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                MOL and Technology by Lady Qualan Chaghan (11 Jul 2024)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/cWzITmlxX5g"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                MOL 102 by Lady Qualan Chaghan (11 Jul 2024)
+              </a>
+            </li>
+            <li>
+              <a href="28 May 2020" target="_blank" rel="noopener noreferrer">
+                Wrap Shots Demo by Sir Ataias (28 May 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/hseduNigY8o"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                How to Win Fighter Practice by Maestra Nicolina de Parre (18 May
+                2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/OZaF6HVSZUg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Basics of 9' Spear Fighting by Daman Macmillan (20 May 20200)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/biPmp_n33jE"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                5 Methods to Be a Better Fighter: With Duke Sean, Part 1 (22 Mar
+                2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/tqMhCJjKR_g"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                5 Methods to Be a Better Fighter: With Duke Sean, Part 2 (23 Mar
+                2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/VBQkxSOr6ME"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                5 Methods to Be a Better Fighter: With Duke Flóki (23 Mar 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/BrSXnSqBeNo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                5 Methods to Be a Better Fighter: With Duke Dietrich (24 Mar
+                2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/V80AWSCxj5g"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                5 Methods to Be a Better Fighter: With Duke Paul of Bellatrix
+                (25 Mar 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/HH5PmLAmvII"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                5 Methods to Be a Better Fighter: HRM Duke Cuan (5 Methods to Be
+                a Better Fighter: HRM Duke Cuan)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/HH5PmLAmvII"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                5 Methods to Be a Better Fighter: HRM Duke Cuan
+              </a>
+            </li>
+            <li>
+              <a
+                href='https://youtu.be/m9iX_F8D2sU"'
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                5 Methods to Be a Better Fighter: HRM Seto Gesshuko (29 Mar
+                2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/OeTDocvM6i4"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                5 Methods to Be a Better Fighter: Sir Brealthen (30 Mar 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/dyOT-lUu4h0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                5 Methods to Be a Better Fighter: HRM Duke Timothy (1 Apr 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/F9dxsVBCn3Q"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                5 Methods to Be a Better Fighter: HRM Duke Uther (3 APR 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/X22wCbmP0Qs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                5 Methods to Be a Better Fighter: Duke Tomuki (8 Apr 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/2xm8PiyohtQ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                5 Methods to Be a Better Fighter: HRM Sven Randullson of
+                Ansteorra (10 Apr 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/FJFtkhP-6Dw"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                5 Methods to Be a Better Fighter: Duchess Angharad Banadaspus
+                Drakenhefd (15 May 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/GpvczoL5CYk"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                5 Methods to Be a Better Fighter: Master Lash of Black Company
+                (21 May 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/Mnfd1BHxs2Y"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                5 Methods to Be a Better Fighter: Duke Hans von Wolfbolz of the
+                West (23 May 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/jb-4z0U6R0c"
+                target="_blank"
+                rel="noopener noreferrer"
+                >5 Methods to Be a Better Fighter: Jarl Niáll of Lochac (9 Jun
+                2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/1-JAQeijsTA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                5 Methods to Be a Better Fighter: Duke Timmur of Artemisia (20
+                Jun 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/cfaUwEQ1FGs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Introduction to Great Weapons: Use, Theory, and Skill
+                Development by Sir Sun Jiang (16 Jul 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/bPqRre5tDXk"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Movement &amp; Motion in SCA Combat by Sir Octamasades (12 Feb
+                2021)
+              </a>
+              <span class="class-tags"> | #armored</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/Hjc1QZp4HK8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Training Optimization by Sir Eva Von Danzig (10 Nov 2020)
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Optimize+Your+Training+7.11.20.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Handout
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/j0q-RIBnT_A"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Introduction to Heavy Marshaling by HE Sir Einar Knuteson (1
+                Sept 2020)
+              </a>
+              <span class="class-tags"> | #marshal</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/p3cYDekcXDw"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Women and Gender Minority Fighters Meet Up 2020 by Porcia Vera
+                of Vito’s Minions, Anna von Eschenbach, Arnora is Skarpa
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/BQyx05yOx6I"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Tips for Getting Newcomers in Armor (7 Oct 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/uToA7eUj_fA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                How to Handle Giant Lysts Quickly by Mistress Emma (6 Oct 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/rsfK_qCiORU"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Duties of Kingdom Earl Marshal by Master Phelim (6 Oct 2020)
+              </a>
+              <span class="class-tags"> | #marshal</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/pGnczT4Zq7Y"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                TRunning Small Tournaments by Maestrs Biatrichi Canzionani
+                Malatesta di Palermo (6 Oct 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/VcBkqmziVs8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Duties of the Youth Chivalric Marshal by Baroness Muirenn
+                Chernaig (25 Jun 2021)
+              </a>
+              <span class="class-tags"> | #youth #marshal</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="letter-section" id="A-Astronomy">
+          <h2>Astronomy</h2>
+          <ul>
+            <li>
+              <a
+                href="https://youtu.be/LvzFArGRo3A"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Astronomy 101: Astronomy for the SCA by HL Taran Saraev (4 Aug
+                2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/vjtBEhGQSoU"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Astronomy 102: Quadrants &amp; Astrolabes by HL Taran Saraev (5
+                Aug 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/UetlpejyYFo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Astronomy 103: Sol and Luna by HL Taran Saraev (7 Aug 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/lKDEzs3qGgI"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Astronomy 104: The Five Wanderers by HL Taran Saraev (10 Aug
+                2020)
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- B -->
+        <div class="letter-section" id="B-Bardic">
+          <h2>Bardic</h2>
+          <ul>
+            <li>
+              <a
+                href="https://youtu.be/H-09hkoLohU"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Sestinas, Triolets &amp; Ballades: How to Write Three Medieval
+                Period Poetry Forms by Baron Andreas Blacwode (4 Apr 2020)
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Bardic/Sestinas%2C+Triolets+and+Ballades.docx.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Handout
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/NBV80QnXFmM"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Five Easy Ways to Get Your Performances to the Next Level by
+                William of Fairhaven (10 Apr 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/S-iIIrr-J1U"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Bardic Is Storytelling by Mistress Tyzes Sofia called Zsof (11
+                May 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/bqeLd7MucN4"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Taking the Teeth Out of Stage Fright by Baroness Sophia the
+                Orange (8 Jun 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/Fe7SWi7c2pg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Performance Preparation and Basic Concert Gear by Count William
+                of Fairhaven (8 Jun 2020)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/ajiWn3fAGrw"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Music Production Equipment, Recording Equipment &amp; Sound
+                Equipment by Count William of Fairhaven (6 jul 2020)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/nazwag0J5yE"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Text to Tale: Crafting a Compelling Performance from Source
+                Material by Ollamh BrendanO Corraidhe (6 Jul 2020)
+              </a>
+
+              <span class="class-tags"> | #crafts</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/WQeMQlH0GVo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Lyric Writing: How to Create a Foundation of Rhythm by Lady
+                Líadan Liathán (29 Sept 2020)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/TZ1IsxITjes"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Introduction to the Bodhrán and How to Play by Lady Líadan
+                Liathán (14 Nov 2020)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/9FFoIrhkemg?si=QPzs_aV1ySBdtTKw"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                History of the Harpsichord: from the 14th to the 18th Century by
+                Lady Jolicia atte Northclyfe (16 Nov 2020)
+              </a>
+
+              <span class="class-tags"> | #research</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/F9vDMPE_Ieg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Performing in Persona: Discussing the Ins and Outs by Mistress
+                Tyzes Sofia called Zsof (17 Nov 2020)
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Bardic/Copy+of+Period+Resources+for+the+SCA+bard.docx.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Handout
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/mmjHi1D2i14"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Pulling the Teeth Out of Stage Fright by Maestra Lucia Elena
+                Braganca and Baroness Sophia the Orange (19 Nov 2020)
+              </a>
+              <a
+                href='https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Bardic/Stage+Fright+Handout+by+LUCIA+%26+SOPHIE+OCT+2020.doc.pdf"'
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Handout
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/9gcSDMgSeMU"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Introduction to the Anglo Saxon/Germanic Lyre by THL Sivrid
+                Brumbach
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Bardic/Lyre_Notes_RUM_10_2020.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Handout
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/bAZVjwCh0mc"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Body Movement for Commedia dell'Arte: Advanced by Baroness
+                Sophia the Orange (20 Nov 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/d65sdvTpCtA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Bodhrán Rhythms Workshop: Jigs, Slip Jigs, and Mazurka by Lady
+                Liadan Liathan (21 Nov 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/azVTItl3dkE"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                My Ukelele Is a Guitar: Medieval Instruments by Signore Tommaso
+                Franceschi (12 Mar 2021)</a
+              >
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Bardic/My+Ukulele+is+a+Guitar.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Handout
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/GGjmhcf4cMQ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Discussion of Professionalism in Performance by Master Brendan O
+                Corraidhe and others (20 Feb 2022)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/0EidE-09RvA"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Introduction to the Minnesänger: Medieval German Poetry by
+                Captain Sivrid Brumbach (3 Mar 2022)</a
+              >
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Bardic/Minneanger_RUM_2_22.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Slides
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/_9gGEu7EJiw"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Recording for Bards by Master Philip the Pilgrim (18 Mar
+                2024)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/qxYUXGujsc4"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Chords and the Circle of Fifths by Countess Isolde de la Ramée
+                (19 Mar 2024)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/reb5vKloZQY"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Natural Trumpets in Medieval Period by Sir Mieczko the Swift of
+                Jaroslaw (21 Mar 2024)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/vr2MLo12r5w"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Broadside Baddies and Tudor True Crime by Lady Katherine
+                Coscombe (13 Nov 2024)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/IbZE1Ez9r6k"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Not You Billy! Elizabethan Theatre Beyond the Bard by Lady
+                Katherine Coscombe (4 Dec 2024)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/CNi_3HbZTxo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                My Guitar's Persona Is a Lute by Lord Drake Oranwood (25 Apr
+                2020)
+              </a>
+
+              <span class="class-tags"> | #crafts</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/LYByj0OvK7c"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Old Norse Poetry by Grim the Skald (25 May 2020)
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Bardic/Norse+Poetry+Handout+2019-07-31.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Handout
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/zBuCAGgIlXE"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Intro to Recorder I by Pia Maletesta d'Rimini (23 Jul 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/HYzbtIW3q08"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Intro to Recorder II by Pia Maletesta d'Rimini (23 Jul 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/zpeAUyEF2NA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Intro to Recorder III by Pia Maletesta d'Rimini (26 Aug 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/SiKNhZ4nkoY"
+                target="_blank"
+                rel="noopener noreferrer"
+                >The Art of Wordsmithing by Tiarna Sean Dubh (5 May 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/SGGYI6LdiG8"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Commedia dell' Arte: The SCA Version by Dame Sophia the Orange
+                (15 Feb 2025)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/mf8lk5ruf4s"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Cantigas de Escarino e Maldizer: The Disses and Rap Battles of
+                the 13th Century Iberian Peninsula by Mistress Ana de Guzmán (17
+                Feb 2025)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/0YaQmOGvYtY"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Fairy Tales: The Rise of the 16th Century Written Story by
+                Baronessa Praxilla Taurina (22 Jun 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href='https://youtu.be/wmG6bk-H5Xk"'
+                target="_blank"
+                rel="noopener noreferrer"
+                >Intro to War Drumming by Isgerthr Bjargeyjardottir (18 May
+                2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/6ELwPTBm1zc"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Breathing Exercises and Relaxation Techniques for Performers by
+                THL Inez Errotabehere (1 Nov 2024)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/y-C5HcEV_RM"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Introduction To Commedia dell'Arte by Baroness Sophia the
+                Orange (20 Mar 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/AtwK2hmCFBE"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Introduction to Recorder Part One: History and Basic Technique
+                by Anneleyn Cornelisse (28 Nov 2020)
+              </a>
+
+              <span class="class-tags"> | #research</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/yOd052Z5oD8"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Introduction to Recorder Part Two: Playing a Tune by Anneleyn
+                Cornelisse (28 Nov 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/orEbEjAinvg"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instrumental Music in the 16th Century by Vincenzo de Brescia
+                (23 Jun 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/F0m9WOYAy2g"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Bardic College Moot by THL Dietrich von Sachsen (23 Jun 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/sMR0gFCH7WM"
+                target="_blank"
+                rel="noopener noreferrer"
+                >An Introduction to the Lap Harp by m'Lady Melody (10 Jun 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/f6JRxjICl20"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Vince Conaway Playing Hammered Dulcimer (11 May 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/JJvw_Wkh5bM"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Early Opera Performance by Laila al-Sanna al Andalusiyya (11
+                May 2020)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/J090PEGvD-Y"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Introduction to Italian for Bards by Enise bint Öghuz (14 Jun
+                2022)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/YV_laf6z04U"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Commedia dell' Arte by Sophia the Orange (14 Jun 2022)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/IaWVSyQxWIg"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Modes and Motifs: a Medieval Songwriter's Toolkit by Magistra
+                Iselda de Narbonne of Atlantia (1 Apr 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/0MNIKyCPEAk"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Pre-Hispanic Music in Latin America - PART I (14 Jun 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/vR_A671PlGE"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Voice Body Alignment for Singers by The Stag Choir (8 Dec 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/j7MhR6PWGLo"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Five Easy Ways to Get Your Performance to the Next Level by
+                William of Fairhaven (24 Jul 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/BAT4J7uFKgw"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Old Norse Poetry: An Introduction by Baron Bersi Eðvarðarson
+                (aka Bear Goodson) (15 Nov 2020)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/Bx2uotql4Nc"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Songs of Sorrow: Ladino/Sephardic Music from Pre-Expulsion
+                Spain by Sayyida Laila al-Sanna' al-Andalusiyya' (31 Mar 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/i55cdrldH4s"
+                target="_blank"
+                rel="noopener noreferrer"
+                >A Survey of Sephardic Music from Andalucía Prior to the
+                Expulsion by Barone Antonio Giordano da Siclia, OP, OL (23 Jul
+                2020)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/xtehfvgcnz0"
+                target="_blank"
+                rel="noopener noreferrer"
+                >My Ukulele is a Guitar - Introduction to 4 Course Guitar by
+                Signore Tomasso Franceschi (10 Jun 2021)
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Bardic/my-ukulele-is-a-guitar.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Handout
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/gzjQ0T9jFuk"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Las Cantigas de Santa maria: Songs of Faith and Devotion
+                Compiled by Alfonso X "El Sabio", King of Castile and Leon by
+                Master Antonio Giordano da Sicilia (19 Jun 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/yrK_M-2pG00"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Bardic 101 by Maire Blakater (29 Dec 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/I4VWq1LsUzg"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Write Gooder Poetry by Braennan the Misguided (7 Dec 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/BybuZTEjWCA"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Basics of Self-Recording for Digital Performance by Gavin Kent
+                (30 Jul 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/tzfAgXo2r2U"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Pennsic Storytelling Academy: The Basics of Storytelling: Part
+                1 by Mistress Gabrielle d'Auvergne (25 Jul 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/A4o8qDMhtjc"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Pennsic Storytelling Academy: The Basics of Storytelling: Part
+                2 by Mistress Gabrielle d'Auvergne (25 Jul 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/k1lLKVHHY4Q"
+                target="_blank"
+                rel="noopener noreferrer"
+                >How to Write and Tell a Great Story by Lord Chengir abu ben
+                Said (25 Jul 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/aIJwgwXXb_0"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Mad Words: The Japanese Comedic Theatre of Kyōgen by Niccolò
+                Bartolazzi (25 Jul 2020)
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Bardic/2016-06-20_kyogen-class-notes.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Handout
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/SleqfNTQQi0"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Flirts &amp; Fools: An Intro to Commedia dell'Arte by Niccolò
+                Bartolazzi (25 Jul 2020)
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Bardic/2016-06-19_Intro-to-Commedia_class.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Handout
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/F8uZ1Eoaw_4"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Foundations of Performing by Lord Gavin Kent (30 Jul 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/RT81_f1Q3m0"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Medieval Drama by Magistra Fiana of Clare (30 Jul 2022)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/XgJY5wfspks"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Medieval Fan Fiction by Magistra Fiana of Clare (30 Jul
+                2022)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/mHtbRt-35gg"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Introduction to Puppetry by THL Volk the Grey (4 May 2020)
+              </a>
+              <a
+                href="https://earlysweden.wordpress.com/2020/05/04/online-class-introduction-to-puppetry-with-hl-volk-the-grey/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Resource
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/hPXWNo_6hic"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Dreamweaving: Storytelling in the SCA by THL Maire nic Siobhan
+                (15 Sept 2020)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/EjZMeF69YEE"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Modern Music Notation by Dame Elisabeth Piper (28 Mar 2021)
+              </a>
+              <a
+                href="https://earlysweden.wordpress.com/2021/03/28/online-class-modern-music-notation-with-dame-elisabeth-piper/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Resource
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/GoDq2sxdTxs"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Everything But the Words: Movement, Props, &amp; Body Language
+                in Performance by TH Filidh Siobhán an Einigh (16 Oct 2025)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/ZHnH7J4pmeA"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Youth Commedia Day 1 by THL Cael o'Conaill the Leafy Greene (2
+                Aug 2020)</a
+              >
+
+              <span class="class-tags"> | #youth</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/QzY-G9FGwJ8"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Youth Commedia Day 2 by THL Cael o'Conaill the Leafy Greene (3
+                Aug 2020)
+              </a>
+
+              <span class="class-tags"> | #youth</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/88WS-Kqfc1E"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Youth Commedia Day 3 by THL Cael o'Conaill the Leafy Greene (4
+                Aug 2020)</a
+              >
+
+              <span class="class-tags"> | #youth</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/K1Dm1MfNr1o"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Youth Commedia Day 4 by THL Cael o'Conaill the Leafy Greene (5
+                Aug 2020)</a
+              >
+
+              <span class="class-tags"> | #youth</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/WfGoewv3UIU"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Putting Together Set Lists Like a Rock Star by William of
+                Fairhaven (14 May 2020)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/esEYXy-RjxI"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Commedia dell'Arte for the AUDIENCE by Baroness Sophia the
+                Orange</a
+              >
+              <a
+                href="https://www.ifirenzi.com/starterkit"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Resource
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="letter-section" id="B-Beekeeping">
+          <h2>Beekeeping</h2>
+          <ul>
+            <li>
+              <a
+                href="https://youtu.be/5I4v6HKAzKE"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Beekeeping Through the Ages: Exploring Tools, Techniques and
+                Hive Designs by THL Melissa of Dalmatia (13 Jul 2020)</a
+              >
+
+              <span class="class-tags"> | #art</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/5dhM-BPBiKE"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Wax and Honey: How to Get the Goodies by THL Melissa of
+                Dalmatia (10 Jan 2021)
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="letter-section" id="B-Blockprinting">
+          <h2>Block Print/Painting</h2>
+          <ul>
+            <li>
+              <a
+                href="https://youtu.be/7HHS29dfIY8"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Troubleshooting Block Printing by THL Melissa of Dalmatia (19
+                Apr 2020)
+              </a>
+
+              <span class="class-tags"> | #art</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/8s0oQh3KM2s"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Blockprinting for Every Budget by Baroness Morrghan
+                O'Siodhachain (28 Dec 2021)</a
+              >
+
+              <span class="class-tags"> | #art</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- C -->
+        <div class="letter-section" id="C-Cartography">
+          <h2>Cartography</h2>
+          <ul>
+            <li>
+              <a
+                href="https://youtu.be/_f0a27ps5Wc"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Cartography in the SCA - or - Mapping the Known World by Sir
+                Seumas mac Brehon (8 Aug 2020)
+              </a>
+              <a
+                href="https://earlysweden.wordpress.com/2020/08/08/online-class-cartography-in-the-sca-or-mapping-the-knowne-world-with-sir-seumas-mac-brehon/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Resource
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="letter-section" id="C-Carving">
+          <h2>Carving</h2>
+          <ul>
+            <li>
+              <a
+                href="https://youtu.be/8VLEX4keXK0"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Wax Carving by THL Orla Oshanahan (24 Jun 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/nxeNOwxP9w8"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Bone Carving Basics by Mistress Ari Usni (11 Jun 2020)</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="letter-section" id="C-Ceramics">
+          <h2>Ceramics</h2>
+          <ul>
+            <li>
+              <a
+                href="https://youtu.be/86rGDgut47k"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Spotters Guide to Medieval Iberian Ceramics by Ant of Saint
+                Cloud (15 Jun 2021)
+              </a>
+              <a
+                href="https://scaiberia.wordpress.com/wp-content/uploads/2021/06/237-spotters-guide-to-iberian-ceramics_notes.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Handout
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/1O5CDLQsZ2A"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Learn to Make Iron-Age Norwegian Bucket-Shaped Pottery: Part 1
+                by Farolfus filius Richard (Sept 2022)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/HSFcTjUM8eM"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Learn to Make Iron-Age Norwegian Bucket-Shaped Pottery: Part 2
+                by Farolfus filius Richard (Sept 2022)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/vJnfKQ5fi20"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Lady Liadan’s Learning Library: Pottery by Lady Liadan of
+                Patrin-Or (25 Jul 2020)</a
+              >
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Unclassified/Lady+Liadan%E2%80%99s+Learning+Library_+Pottery+Handout.docx.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Handout
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/3efcbssVuyE"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Creating a Tripod Pipkin in Clay by Dame Gwen the Potter (4 Jun
+                2020)
+              </a>
+              <a
+                href="https://earlysweden.wordpress.com/2020/06/04/online-class-creating-a-tripod-pipkin-in-clay-with-dame-gwen-the-potter/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Resource
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/e-f0_y_6WVU"
+                target="_blank"
+                rel="noopener noreferrer"
+                >How to Build a Clay Oven by Lady Caryn of Cynnabar (30 Jul
+                2020)
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Unclassified/Caryn+-+How+to+build+a+Clay+Oven.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Handout
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="letter-section" id="C-Cosmetics">
+          <h2>Cosmetics</h2>
+          <ul>
+            <li>
+              <a
+                href="https://youtu.be/hF5SPeSizcY"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Henna Ancient Beauty: The History and Use of Henna by (22 Jan
+                2021)
+              </a>
+
+              <span class="class-tags"> | #research</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/9J0Dtf9Z-Vw"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Henna Application Demo by Lady Shahzada Isfahani
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/IoZFQY5CCxE"
+                target="_blank"
+                rel="noopener noreferrer"
+                >A 15th Century Paste for Conditioning the Hands as Used &amp;
+                Collected by Caterina Sforza, Countess of ForlÍ and Imola
+                1463-1509 by Melisende Fitzwalter OL (28 Nov 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/lAfBBoV91LA"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Period Makeup Without Lead Poisoning Lady Katherine
+                Throckmorton (26 Apr 2020)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/LDD8ZQ5o_HA"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Reproducing Roman Cosmetics by Lady Katherine Throckmorton (30
+                Apr 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/7vpqeaVNxxo"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Make Soap with 4 Household Ingredients by Lady Ida Grim (17 Jun
+                2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/NXJuOc6R5J0"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Galen's Cold Cream by Gwlados Vachan (11 May 2020)
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Unclassified/SalondiFiesole-ColdCreamDemo-LGwladosVachan.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Handout
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/26PcITVO_KY"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Historical Beauty &amp; Hygiene from the Trotula by Gwlados
+                Vachan (13 May 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/wqA6HQCt1y4"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Female Beauty in Spanish Lands in the 13th and 14th Centuries:
+                Cosmetic Ingredients and Skin Care in Medieval Castile,
+                Depilation and Antiperspirants by Anna Hrachova &amp; Vit “Hark”
+                Hrachovy (4 Aug 2020)
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="letter-section" id="C-Culinary">
+          <h2>Culinary</h2>
+          <ul>
+            <li>
+              <a
+                href='https://youtu.be/qBu-xIrOEyw""'
+                target="_blank"
+                rel="noopener noreferrer"
+                >Anti-Brewing Vinegar by Oswyn of Baðon (20 Apr 2020)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/iVKwLjHKRi8"
+                target="_blank"
+                rel="noopener noreferrer"
+                >16th Century Apple Tarts by Baroness Lote Winterborn (7 May
+                2020)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/MlPOCeQxJlQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                >How to Make Acid Set Cheese by THL Tegan Marie Silvertree (29
+                Sept 2020)</a
+              >
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Unclassified/How+to+make+acid+set+cheese.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Handout
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/cdigfLOFl04"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Preservation 101: Pickling: How to Pickle by Sandro dei Strozzi
+                da Montefeltro (11 Oct 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/_KSQy_r2V9Y"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Fantastic Feasts and How to Build Them by Mistress Gwyneth
+                Banfhidhleir (15 Nov 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/cDLJ-f8a1P0"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Historical Winter Beverages for Home &amp; Gifts by Baroness
+                Verena Entenwirth (12 Dec 2020)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/fEqIv4LSUys"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Feast Horror Stories and What to Learn from Them by Master
+                Llewellyn ap Tiernon (24 Dec 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/XeiIu5broDE"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Unmaking a Boar: Butchering by Duchess Vukasin Ullrić (24 Dec
+                2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/84u-pCMn3u8"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Introduction to Drinking: Methods and Process of Tasting,
+                Cider, Wine, &amp; Beer by Baroness Verena Entenwirth (10 Jan
+                2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/2Ndvlz1-rjI"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Legs and Head of a Good Brew by Baroness Verena Entenwirth (20
+                Jan 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/iFdLRltCd_4"
+                target="_blank"
+                rel="noopener noreferrer"
+                >A Shot of Division V: A Brewing &amp; Vintning Entry in the
+                A&amp;S Fair by Legs and Head of a Good Brew (29 Jan 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/qZofweWDQKQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Brewing 102: Little Yeastie Beasties by Baroness Verena
+                Entenwirth (11 Mar 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/K4DAbBcEJR0"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Cooking with Hadley: Alfred and the Oatcakes by Dame Hadley of
+                Beckenham (16 Mar 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/fm3STDv5ZtQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Lombard Eggs: 16th Century Recipe from the Netherlands by (4
+                Jul 2021)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/DNd1v9M3lno"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Baking a Tudor Twelfth Night Cake: In the Kitchen with Lote,
+                Episode 1 by Baroness Lote Winterborn (17 Jan 2022)
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Unclassified/Twelfth+Night+Cake+Class+Presentation.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Slides
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/GSSu8qOh82U"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Making Teganitai, A Romain Fried Bread: In the Kitchen with
+                Lote, Episode 2 by Baroness Lote Winterborn (16 Feb 2022)
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Unclassified/Roman+fried+bread.pptx.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Slides
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/EOUYugDN3vQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Teganitai: Roman Fried Bread: Cooking with Baroness Lote (3 Mar
+                2022)
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Unclassified/Roman+fried+bread.pptx.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Slides
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/I8JG1PnECJE"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Modern Science for Medieval Sausage by THL Reinhold von Glier
+                (28 Jun 2024)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/Wid2mfimMlA"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Historic Period Cordials by THL Caristonia Ainslie (11 Nov
+                2024)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/-pl_4G8Rjmc"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Forgotten Fruits: Medieval Medlars by Dame CuMhara of Holyhead
+                (15 Nov 2024)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/ujzTKztEHk4"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Modern Cordials for the SCA by THL Caristonia Ainslie (19 Nov
+                2024)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/_xFlc6jP0Pg"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Three Edible Weeds by Mistress Ellice de Valles (25 Apr 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/kuDBTxBCowA"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Cooking with Galefridus: "Sour Orange Chicken" by Magister
+                Galefridus Peregrinus (25 Apr 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/0GAWjI_L9pc"
+                target="_blank"
+                rel="noopener noreferrer"
+                >A Food &amp; Cooking Open Forum and Q&amp;A Session by Mistress
+                Brighid ni Chiarain, Mistress Charis Accipiter, Mistress Judith
+                bas Rabbi Mendel, Mistress Juliana von Altenfeld, and Magister
+                Galefridus Peregrinus (27 May 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/NhkgWMJE0VM"
+                target="_blank"
+                rel="noopener noreferrer"
+                >A Quick Farmer's Cheese by Adrienne d'Evreus (23 Jul 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/2fqqyZCJj30"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Menu Planning for Events by Katya Gordon (30 Oct 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/EMX2uty3xFE"
+                target="_blank"
+                rel="noopener noreferrer"
+                >So You Want to Be a Head Cook by Katya Gordon (1 Nov 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/5mB-xFeHjmg"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Growing a Medieval Feast Mistress Lorelei Greenleafe (14 Jun
+                2023)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/-dpRCjEndW8"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Introduction to Cheesemaking by Lady Leonarda Delchiaro (15 Nov
+                2023)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/oOSrCcCCY40"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Lacto Fermentation as a Medieval Food Preservation by Mistress
+                Lorelei Greenleafe (7 Mar 204)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/ySEVjzXte2U"
+                target="_blank"
+                rel="noopener noreferrer"
+                >The Foods that Built Spain by Doña Mariana Ruiz de Medina (5
+                Mar 2025)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/nK-Y0F4pwRY"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Garden Tour by Claire le Deyare (27 Mar 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/1GRyEK0lvS8"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Planning Your Medieval Veggie Garden by Duchess Eleanor de
+                Bolton (28 May 2020)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/1GRyEK0lvS8"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Winter Garden Veggies by Duchess Eleanor de Bolton (4 Jul 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/U1LpQINHbiI"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Let's Make Rosewater! by Baronessa Praxilla Taurina
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Unclassified/Let%E2%80%99s+Make+Rosewater!.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Slides
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://youtu.be/SwkbsRM9ACI"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Planning a Picnic Lunch or Dayboard by Baronessa Praxilla
+                Taurina (20 Jun 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/F5WoN1PEwPw"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Spanish Almond Pastries by Lady Lianor da Costa
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/LJwjWKq-p18"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Making Your Own Middle Eastern Lunch (16 May 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/MiQfrRcGBSw"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Frugal Feast Steward by HE Casamira (16 May 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/l3WaTdwfeHQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Viking Cooking by Duchess Inga the Unfettered (18 May 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/aVkKdSKSGsU"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Cheesemaking by Master Alexandre d'Avinge (28 Nov 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/NIdipjBbSJE"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Kingdom University Virtual Feast: Biefe Pie by Amphelise de
+                Wodeham (28 Nov 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/nMB4t8Tcbrc"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Kingdom University Virtual Feast: Chicken in Lemmons by (28 Nov
+                2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/Ig6rlcTbeig"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Kingdom University Virtual Feast: Tarte of Cheese by Amphelise
+                de Wodeham (28 Nov 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/HR6o36dFX18"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Kingdom University Virtual Feast: Tarte of Green Pease by
+                Amphelise de Wodeham (28 Nov 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/fGDbdBHAm2k"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Kingdom University Virtual Feast: Peach Pie by Amphelise de
+                Wodeham (28 Nov 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/rG3__AQmRMw"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Kingdom University Virtual Feast: Rose Water Biscuits by
+                Amphelise de Wodeham (28 Nov 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/yWwDGTE8920"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Dumplings Class by Marina Anastasia Ozeroski (3 Sept 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/EJUtsFd1bUM"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Mead by Baudouin de Domrémy, Lucia de Enzinas (23 Spet 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/mzjnmtuGMSE"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Medicinal Plant Roundtable by Lady Christiana de Mundegumri (23
+                Jun 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/hIKRQFeWy7U"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Medieval Food Preservation Techniques in our Modern Food-Safe
+                World by Arwyn of Leicester (2 Sept 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/9We42NQXYfk"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Sausage Roundtable by HE Penn de Moranza (9 Spet 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/XPeLBtqjtng"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Campfire Cooking with Friends by Countess Jane Falada and
+                Mistress Arielle de Brabazon (3 Jan 2025)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/2SdQK7ha-GY"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Cooking with Kids by Countess Jane Falada (22 Dec 2024)
+              </a>
+
+              <span class="class-tags"> | #youth</span>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/OaL7nqL0Nvw"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Spinach and Chicken Pasties, Egg Nog by Countess Jane Falada
+                (24 Dec 2023)
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Food/SPINACH+AND+CHICKEN+PASTIES+Recipe.docx.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Pastie Recipe
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Food/EGG+NOG+Recipe.docx.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Eggnog Recipe
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/ddLTbvXLK5o"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Tiny Spanish Meatballs in Almond Sauce by Mistress Arielle de
+                Brabazon (28 Dec 2023)
+              </a>
+              <a
+                href="https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Food/MeatballsAlmondSauce+Recipe.docx.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pdf-icon"
+              >
+                📄Recipe
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/zOadNsQdDdY"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Mushroom Pie by Master Katryne MacIntosh the Strange (1 Jan
+                2024)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/2YfmQPBFsjw"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Tarta de Santiago by Mistress Arielle de Brabazon (26 Dec 2022)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/edo0GsgD9WA"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Apple Cake by Countess Jane Falada (27 Dec 2022)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/Tm21PGtrF1U"
+                target="_blank"
+                rel="noopener noreferrer"
+                >La Befana Cake by Dame Sara de la Petra (6 Jan 2023)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/5EAt-7_eg0U"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Savillum &amp; Sambocade Part 1 by Master Katryne MacIntosh the
+                Strange (27 Dec 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/Tt9SOtL6ssQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Savillum &amp; Sambocade Part 2 by Master Katryne MacIntosh the
+                Strange (27 Dec 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/uNy2S4iAtfg"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Roasted Goose by THL Avice of York (7 Jan 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/57c1S_a4_LU"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Roasted Chicken with Grapes by Dame Tipperith (7 jan 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/L3dO8fl-CFg"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Wassail Cocktail by Dame Tipperith (7 Jan 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/vl3FIEb-ql0"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Pumpkin Fries by Dame Sara de la Petra (7 Jan 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/e9FvMkC0s3g"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Pumpkin Soup by Dame Sara de la Petra (7 Jan 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/WkalJS5Fz04"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Bread Pudding Part 1 by Master Katryne MacIntosh the Strange (7
+                Jan 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/1leK1PyPDlQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Bread Pudding Part 2 by Master Katryne MacIntosh the Strange (7
+                Jan 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/_vhYVPggsIA"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Marzipan by Mistress Arielle de Brabazon (7 Jan 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/OJcHZy4X79U"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ontbijtkoek (Spiced Cake) Part 1 by Countess Jane Falada (7 Jan
+                2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/OJcHZy4X79U"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ontbijtkoek (Spiced Cake) Part 2 by Countess Jane Falada (7 Jan
+                2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/_LfTG0KknJA"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Marzipan Part 1 b Mistress Arielle de Brabazon (9 Jan 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/l2ii9YK07Lo"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Marzipan Part 2 by Mistress Arielle de Brabazon (9 Jan 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/xedGZv9KTd0"
+                target="_blank"
+                rel="noopener noreferrer"
+                >... And Shape Ir Like a Ciambelle by THL Aislinge MacCuithein
+                (2 May 2022)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/VXagKe8Y4Po"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Sausages by Tiarna Rørik mac Lugdach (2 May 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/pXQ9lQliMLo"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Brandied Raspberry Lemonade by Lady Auelyn Spyle Syngere &amp;
+                Lord Thome Spyle Syngere (22 Apr 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/ofBah2hEP4I"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Basic Sauces and Spice Mixes by Sir Mingo (17 May 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/R4cFR-CXNqA"
+                target="_blank"
+                rel="noopener noreferrer"
+                >The Basics of Mead Making by Sir Domagnev Volkovich (30 May
+                2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/7sQhZKB9_X8"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Planning and Publicizing a War Kitchen Menu by Bannthegn
+                Gwenfrewi (30 May 2020)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/_uGhGuoXVbM"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Archaeology of Roman Diet by Honorable Lady Fina MacGrioghair
+                (28 Apr 2021)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/gBneDvFQRZ0"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Archaeology of the Roman Diet by Honorable Lady Fina
+                MacGrioghair (14 Jun 2022)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/xSteNrroay0"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Olive Oil: From Antiquity to Your Kitchen by Tellina di
+                Giuseppe da Fiesole (14 Jun 2022)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/0zKOGrgLpfQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                >15th and 16th Century Ottoman Cuisine by Mary Isin (29 Mar
+                2022)
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- D -->
+        <div class="letter-section" id="D-Dance">
+          <h2>Dance</h2>
+          <ul></ul>
+        </div>
+
+        <div class="letter-section" id="D-DEI">
+          <h2>DEI</h2>
+          <ul></ul>
+        </div>
+
+        <!-- E -->
+        <div class="letter-section" id="E-Equestrian">
+          <h2>Equestrian</h2>
+          <ul></ul>
+        </div>
+
+        <!-- F -->
+        <div class="letter-section" id="F-Falconry">
+          <h2>Falconry</h2>
+          <ul></ul>
+        </div>
+
+        <div class="letter-section" id="F-Fencing">
+          <h2>Fencing</h2>
+          <ul></ul>
+        </div>
+
+        <!-- G -->
+        <div class="letter-section" id="G-Games">
+          <h2>Games</h2>
+          <ul></ul>
+        </div>
+
+        <div class="letter-section" id="G-Garb">
+          <h2>Garb</h2>
+          <ul></ul>
+        </div>
+
+        <!-- H -->
+        <div class="letter-section" id="H-Hair">
+          <h2>Hair</h2>
+          <ul></ul>
+        </div>
+
+        <div class="letter-section" id="H-Heraldry">
+          <h2>Heraldry</h2>
+          <ul></ul>
+        </div>
+
+        <div class="letter-section" id="H-History">
+          <h2>History</h2>
+          <ul></ul>
+        </div>
+
+        <!-- I -->
+        <div class="letter-section" id="I-IT">
+          <h2>IT</h2>
+          <ul></ul>
+        </div>
+
+        <!-- J -->
+        <div class="letter-section" id="J-Jewelry">
+          <h2>Jewelry</h2>
+          <ul></ul>
+        </div>
+
+        <!-- L -->
+        <div class="letter-section" id="L-Language">
+          <h2>Language</h2>
+          <ul></ul>
+        </div>
+
+        <div class="letter-section" id="L-Leatherworking">
+          <h2>Leatherworking</h2>
+          <ul></ul>
+        </div>
+
+        <!-- M -->
+        <div class="letter-section" id="M-Martial">
+          <h2>Martial</h2>
+          <ul></ul>
+        </div>
+
+        <div class="letter-section" id="M-Metalworking">
+          <h2>Metalworking</h2>
+          <ul></ul>
+        </div>
+
+        <!-- P -->
+        <div class="letter-section" id="P-Painting">
+          <h2>Painting</h2>
+          <ul></ul>
+        </div>
+
+        <div class="letter-section" id="P-Photography">
+          <h2>Photography</h2>
+          <ul></ul>
+        </div>
+
+        <!-- R -->
+        <div class="letter-section" id="R-Research">
+          <h2>Research</h2>
+          <ul></ul>
+        </div>
+
+        <!-- S -->
+        <div class="letter-section" id="S-SCA">
+          <h2>SCA</h2>
+          <ul></ul>
+        </div>
+
+        <div class="letter-section" id="S-Scribal">
+          <h2>Scribal</h2>
+          <ul></ul>
+        </div>
+
+        <div class="letter-section" id="S-Service">
+          <h2>Service</h2>
+          <ul></ul>
+        </div>
+
+        <div class="letter-section" id="S-Silverpoint">
+          <h2>Silverpoint</h2>
+          <ul></ul>
+        </div>
+
+        <div class="letter-section" id="S-Sglass">
+          <h2>Stained Glass</h2>
+          <ul></ul>
+        </div>
+
+        <!-- T -->
+        <div class="letter-section" id="T-Textile">
+          <h2>Textile</h2>
+          <ul></ul>
+        </div>
+
+        <div class="letter-section" id="T-Thrown">
+          <h2>Thrown Weapons</h2>
+          <ul></ul>
+        </div>
+
+        <!-- W -->
+        <div class="letter-section" id="W-Woodworking">
+          <h2>Woodworking</h2>
+          <ul></ul>
+        </div>
+
+        <!-- Y -->
+        <div class="letter-section" id="Y-Youth">
+          <h2>Youth</h2>
+          <ul></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER & FOOTER -->
+    <script src="data/header.js"></script>
+
+    <!-- SCROLL TO TOP -->
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">
+      ↑ Top
+    </button>
+
+    <script>
+      window.onscroll = function () {
+        const btn = document.getElementById("backToTopBtn");
+        btn.style.display =
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+            ? "block"
+            : "none";
+      };
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+
+    <div id="footer-container"></div>
+    <script src="data/footer.js"></script>
+  </body>
+</html>

@@ -4,54 +4,45 @@ const fs = require("fs");
 const prettier = require("prettier");
 
 const URL =
-  "https://memorial-florilegium.netlify.app/class-recordings-by-category.html";
+  "https://memorial-florilegium.netlify.app/class-recordings-by-category";
 
 async function scrapeClassRecordings() {
-  try {
-    console.log("Fetching page...");
+  console.log("Fetching page...");
 
-    const response = await axios.get(URL);
-    const dom = new JSDOM(response.data);
-    const document = dom.window.document;
+  const response = await axios.get(URL);
+  const dom = new JSDOM(response.data);
+  const document = dom.window.document;
 
-    const sections = document.querySelectorAll(".letter-section");
+  const sections = document.querySelectorAll(".letter-section");
 
-    let results = [];
+  let results = [];
 
-    sections.forEach((section) => {
-      const h2 = section.querySelector("h2");
-      const sectionTitle = h2 ? h2.textContent.trim() : "Untitled";
+  sections.forEach((section) => {
+    const h2 = section.querySelector("h2");
+    const title = h2 ? h2.textContent.trim() : "Untitled";
 
-      const id = section.getAttribute("id");
+    const id = section.getAttribute("id");
 
-      // FIXED: get only the FIRST <a> inside the <li>, even if multiple exist
-      const items = section.querySelectorAll("li");
+    const items = section.querySelectorAll("li a:first-child");
 
-      items.forEach((li) => {
-        const firstLink = li.querySelector("a");
-
-        if (!firstLink) return;
-
-        results.push({
-          title: firstLink.textContent.trim(),
-          category: sectionTitle,
-          url: `class-recordings-by-category.html#${id}`,
-          tags: [], // placeholder, filled later
-        });
+    items.forEach((a) => {
+      results.push({
+        title: a.textContent.trim(),
+        category: title,
+        url: `class-recordings-by-category.html#${id}`,
+        tags: [], // will fill later
       });
     });
+  });
 
-    // Pretty-print JSON
-    const output = prettier.format(JSON.stringify(results), {
-      parser: "json",
-    });
+  // ⭐ FIXED: Prettier v3 requires await
+  const output = await prettier.format(JSON.stringify(results), {
+    parser: "json",
+  });
 
-    fs.writeFileSync("class-recordings.json", output);
+  fs.writeFileSync("class-recordings.json", output);
 
-    console.log("✅ Done! Saved as class-recordings.json");
-  } catch (err) {
-    console.error("❌ Scrape failed:", err);
-  }
+  console.log("Done! File saved as class-recordings.json");
 }
 
-scrapeClassRecordings();
+scrapeClassRecordings().catch(console.error);
