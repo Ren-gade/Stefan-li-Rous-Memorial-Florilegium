@@ -53,7 +53,8 @@ header,
 .header-title {
   flex: 1;
   text-align: center;
-  font-family: "Cormorant Garamond", serif; /* legible historical font for the rest */
+  font-family:
+    "Cormorant Garamond", serif; /* legible historical font for the rest */
   font-size: clamp(1.5rem, 2.5vw, 2rem); /* responsive size */
   color: var(--text-color, #3a2a1a);
 }
@@ -350,4 +351,68 @@ header,
 
 .header-title .slr-middle {
   margin: 0 0.2em; /* adds extra space around the L */
+}
+/* ===========================
+   MOBILE SIDEBAR DRAWER
+   =========================== */
+
+@media (max-width: 900px) {
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background-color: var(--background-color);
+    border-right: 1px solid var(--border-color);
+    padding: 1rem;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 9999;
+  }
+
+  /* When opened */
+  body.sidebar-open #sidebar {
+    transform: translateX(0);
+  }
+
+  /* Overlay */
+  #mobileSidebarOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 9998;
+  }
+
+  body.sidebar-open #mobileSidebarOverlay {
+    display: block;
+  }
+
+  /* Show toggle button on mobile */
+  .sidebar-toggle {
+    display: block;
+  }
+}
+
+/* Desktop: sidebar always visible, no drawer behavior */
+@media (min-width: 901px) {
+  #sidebar {
+    position: static;
+    width: 250px;
+    transform: none !important;
+    height: auto;
+  }
+
+  #mobileSidebarOverlay {
+    display: none !important;
+  }
+
+  .sidebar-toggle {
+    display: none;
+  }
 }

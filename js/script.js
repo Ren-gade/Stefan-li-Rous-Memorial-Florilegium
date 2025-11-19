@@ -1,5 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // --- Dark mode toggle ---
+// ============================================================
+// MAIN SCRIPT
+// ============================================================
+
+document.addEventListener("DOMContentLoaded", async function () {
+  // ----------------------------------------------------------
+  // DARK MODE
+  // ----------------------------------------------------------
   const modeToggle = document.getElementById("modeToggle");
   if (modeToggle) {
     if (localStorage.getItem("darkMode") === "enabled") {
@@ -19,7 +25,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const query = new URLSearchParams(window.location.search).get("q");
 
-  // --- Load Sidebar (updated-menu.html) ---
+  // ----------------------------------------------------------
+  // LOAD SIDEBAR (updated-menu.html)
+  // ----------------------------------------------------------
   fetch("updated-menu.html")
     .then((res) => res.text())
     .then((data) => {
@@ -29,49 +37,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Highlight current page
       const currentPage = window.location.pathname.split("/").pop();
-      const links = sidebar.querySelectorAll(".category");
-      links.forEach((link) => {
+      sidebar.querySelectorAll("[data-page]").forEach((link) => {
         if (link.getAttribute("data-page") === currentPage) {
           link.href = "#";
         }
       });
 
-      // --- Sidebar search input (#sidebarTagSearch) ---
+      // Sidebar search initialization
       function attachSidebarSearch() {
         const tagSearchInput = document.getElementById("sidebarTagSearch");
 
-        if (
-          tagSearchInput &&
-          typeof tagSearchInput.addEventListener === "function"
-        ) {
-          console.log(
-            "✅ Search input found, attaching Enter listener (final)."
-          );
-
+        if (tagSearchInput) {
           tagSearchInput.onkeydown = null;
 
           tagSearchInput.addEventListener("keydown", function (e) {
             if (e.key === "Enter") {
               e.preventDefault();
-              e.stopPropagation();
               const q = tagSearchInput.value.trim();
               if (q) {
-                console.log(
-                  "Redirecting to:",
-                  `${window.location.origin}/tag.html?tag=${encodeURIComponent(
-                    q
-                  )}`
-                );
-                window.location.href = `${
-                  window.location.origin
-                }/tag.html?tag=${encodeURIComponent(q)}`;
-              } else {
-                console.log("Empty query, no redirect.");
+                window.location.href = `tag.html?tag=${encodeURIComponent(q)}`;
               }
             }
           });
         } else {
-          console.log("⏳ Waiting for sidebarTagSearch to exist...");
           setTimeout(attachSidebarSearch, 300);
         }
       }
@@ -80,140 +68,150 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch((error) => console.error("Error loading sidebar:", error));
 
-  // --- Load and display articles ---
-  fetch("data/data.json")
-    .then((response) => response.json())
-    .then((data) => {
-      const contentArea = document.getElementById("contentArea");
-      if (!contentArea) return;
+  // ----------------------------------------------------------
+  // MOBILE SIDEBAR DRAWER
+  // ----------------------------------------------------------
+  const sidebarToggle = document.getElementById("sidebarToggle");
+  const overlay = document.getElementById("mobileSidebarOverlay");
 
-      const params = new URLSearchParams(window.location.search);
-      const currentTag = params.get("tag");
-      const currentCategory = window.currentCategory || null;
-
-      let displayData = data;
-
-      // --- Filter by category first ---
-      if (currentCategory) {
-        const catLower = currentCategory.toLowerCase();
-        displayData = displayData.filter(
-          (item) =>
-            (item.category && item.category.toLowerCase() === catLower) ||
-            (item.tags && item.tags.some((t) => t.toLowerCase() === catLower))
-        );
-      }
-
-      // --- Then filter by tag if present ---
-      if (currentTag) {
-        const tagLower = currentTag.toLowerCase();
-        displayData = displayData.filter(
-          (item) =>
-            item.title.toLowerCase().includes(tagLower) ||
-            item.description.toLowerCase().includes(tagLower) ||
-            (item.tags &&
-              item.tags.some((t) => t.toLowerCase().includes(tagLower)))
-        );
-      }
-
-      // --- Display articles ---
-      function displayArticles(displayData, highlight = "") {
-        contentArea.innerHTML = ""; // Clear content
-
-        if (!displayData || displayData.length === 0) {
-          contentArea.innerHTML = `<p>Oops… try a different search term.</p>`;
-          return;
-        }
-
-        displayData.forEach((item) => {
-          const card = document.createElement("div");
-          card.className = "card";
-
-          const title = document.createElement("h5");
-          title.innerHTML = highlight
-            ? item.title.replace(
-                new RegExp(`(${highlight})`, "gi"),
-                '<span class="highlight">$1</span>'
-              )
-            : item.title;
-
-          const desc = document.createElement("p");
-          desc.innerHTML = highlight
-            ? item.description.replace(
-                new RegExp(`(${highlight})`, "gi"),
-                '<span class="highlight">$1</span>'
-              )
-            : item.description;
-
-          const downloadBtn = document.createElement("button");
-          downloadBtn.className = "download-btn btn btn-sm btn-primary";
-          downloadBtn.textContent = "Download";
-          downloadBtn.addEventListener("click", function () {
-            const fileUrl = item.download_url;
-            window.open(fileUrl, "_blank");
-            sendGAEvent(fileUrl, item.category);
-          });
-
-          const tagsDiv = document.createElement("div");
-          tagsDiv.className = "tags";
-          if (item.tags) {
-            item.tags.forEach((tag) => {
-              const span = document.createElement("span");
-              span.className = "tag-badge";
-              span.textContent = `#${tag}`;
-              span.addEventListener("click", () => {
-                window.location.href = `tag.html?tag=${encodeURIComponent(
-                  tag
-                )}`;
-              });
-              tagsDiv.appendChild(span);
-            });
-          }
-
-          card.appendChild(title);
-          card.appendChild(desc);
-          card.appendChild(downloadBtn);
-          card.appendChild(tagsDiv);
-          contentArea.appendChild(card);
-        });
-      }
-
-      displayArticles(
-        displayData,
-        currentTag || currentCategory || query || ""
-      );
-    })
-    .catch((err) => console.error(err));
-
-  // --- Back to Top Button ---
-  const backBtn = document.getElementById("backToTopBtn");
-  if (backBtn) {
-    window.onscroll = function () {
-      if (
-        document.body.scrollTop > 200 ||
-        document.documentElement.scrollTop > 200
-      ) {
-        backBtn.style.display = "block";
-      } else {
-        backBtn.style.display = "none";
-      }
-    };
-
-    backBtn.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+  if (sidebarToggle) {
+    sidebarToggle.addEventListener("click", () => {
+      document.body.classList.toggle("sidebar-open");
     });
   }
 
-  // --- GA4 helper ---
-  function sendGAEvent(fileUrl, category = "Unknown") {
-    if (typeof gtag === "function") {
-      const fileName = fileUrl.split("/").pop();
-      gtag("event", "file_download", {
-        event_category: "Downloads",
-        event_label: fileName,
-        file_name: fileName,
-        file_url: fileUrl,
-        category: category,
-      });
+  if (overlay) {
+    overlay.addEventListener("click", () => {
+      document.body.classList.remove("sidebar-open");
+    });
+  }
+
+  // ----------------------------------------------------------
+  // LOAD DATA.JSON
+  // ----------------------------------------------------------
+  const data = await fetch("data/data.json")
+    .then((response) => response.json())
+    .catch(() => []);
+
+  const contentArea = document.getElementById("contentArea");
+  if (!contentArea) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const currentTag = params.get("tag");
+  const currentCategory = window.currentCategory || null;
+
+  let displayData = data;
+
+  // Category filter first
+  if (currentCategory) {
+    const catLower = currentCategory.toLowerCase();
+    displayData = displayData.filter(
+      (item) =>
+        (item.category && item.category.toLowerCase() === catLower) ||
+        (item.tags && item.tags.some((t) => t.toLowerCase() === catLower))
+    );
+  }
+
+  // Tag filter second
+  if (currentTag) {
+    const tagLower = currentTag.toLowerCase();
+    displayData = displayData.filter(
+      (item) =>
+        item.title.toLowerCase().includes(tagLower) ||
+        (item.description &&
+          item.description.toLowerCase().includes(tagLower)) ||
+        (item.tags && item.tags.some((t) => t.toLowerCase().includes(tagLower)))
+    );
+  }
+
+  // Search query filter
+  if (query) {
+    const qLower = query.toLowerCase();
+    displayData = displayData.filter(
+      (item) =>
+        item.title.toLowerCase().includes(qLower) ||
+        (item.description && item.description.toLowerCase().includes(qLower))
+    );
+  }
+
+  // ----------------------------------------------------------
+  // DISPLAY RESULTS
+  // ----------------------------------------------------------
+  function displayArticles(list, highlight = "") {
+    contentArea.innerHTML = "";
+
+    if (!list || list.length === 0) {
+      contentArea.innerHTML = `<p>Oops… try a different search term.</p>`;
+      return;
     }
+
+    list.forEach((item) => {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      const title = document.createElement("h5");
+      title.innerHTML = highlight
+        ? item.title.replace(
+            new RegExp(`(${highlight})`, "gi"),
+            '<span class="highlight">$1</span>'
+          )
+        : item.title;
+
+      const desc = document.createElement("p");
+      desc.innerHTML = highlight
+        ? item.description.replace(
+            new RegExp(`(${highlight})`, "gi"),
+            '<span class="highlight">$1</span>'
+          )
+        : item.description;
+
+      const downloadBtn = document.createElement("button");
+      downloadBtn.className = "download-btn";
+      downloadBtn.textContent = "Open";
+      downloadBtn.addEventListener("click", () => {
+        const fileUrl = item.download_url || item.url;
+        if (fileUrl) {
+          window.open(fileUrl, "_blank");
+        }
+      });
+
+      const tagsDiv = document.createElement("div");
+      tagsDiv.className = "tags";
+
+      if (item.tags) {
+        item.tags.forEach((tag) => {
+          const tagSpan = document.createElement("span");
+          tagSpan.className = "tag-badge";
+          tagSpan.textContent = `#${tag}`;
+          tagSpan.addEventListener("click", () => {
+            window.location.href = `tag.html?tag=${encodeURIComponent(tag)}`;
+          });
+          tagsDiv.appendChild(tagSpan);
+        });
+      }
+
+      card.appendChild(title);
+      card.appendChild(desc);
+      card.appendChild(downloadBtn);
+      card.appendChild(tagsDiv);
+      contentArea.appendChild(card);
+    });
+  }
+
+  displayArticles(displayData, currentTag || currentCategory || query || "");
+
+  // ----------------------------------------------------------
+  // BACK TO TOP BUTTON
+  // ----------------------------------------------------------
+  const backBtn = document.getElementById("backToTopBtn");
+  if (backBtn) {
+    window.addEventListener("scroll", () => {
+      backBtn.style.display =
+        document.documentElement.scrollTop > 200 ? "block" : "none";
+    });
+
+    backBtn.addEventListener("click", () =>
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    );
   }
 });
