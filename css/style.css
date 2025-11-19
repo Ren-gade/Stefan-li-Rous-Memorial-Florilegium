@@ -289,7 +289,7 @@ header,
 
 /* Footer links in dark mode — force white */
 .dark-mode .site-footer a {
-  color: #ffffff !important;
+  color: blue !important;
   text-decoration: underline;
 }
 
