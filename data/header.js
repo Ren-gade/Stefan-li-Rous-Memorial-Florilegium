@@ -4,7 +4,9 @@ fetch("header.html")
     // Inject header HTML
     document.getElementById("header-container").innerHTML = html;
 
-    // --- GA4 snippet injection ---
+    // ============================================================
+    // GA4 SNIPPET
+    // ============================================================
     (function () {
       const gtagScript = document.createElement("script");
       gtagScript.async = true;
@@ -22,24 +24,50 @@ fetch("header.html")
       document.head.appendChild(inlineScript);
     })();
 
-    // --- Dark Mode Handling ---
+    // ============================================================
+    // DARK MODE
+    // ============================================================
     const modeToggle = document.getElementById("modeToggle");
-    if (!modeToggle) return;
 
-    // Initialize mode from localStorage
-    if (localStorage.getItem("darkMode") === "enabled") {
-      document.documentElement.classList.add("dark-mode");
-      modeToggle.textContent = "☀️";
-    } else {
-      modeToggle.textContent = "🌙";
+    if (modeToggle) {
+      if (localStorage.getItem("darkMode") === "enabled") {
+        document.documentElement.classList.add("dark-mode");
+        modeToggle.textContent = "☀️";
+      } else {
+        modeToggle.textContent = "🌙";
+      }
+
+      modeToggle.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark-mode");
+        const isDark = document.documentElement.classList.contains("dark-mode");
+        modeToggle.textContent = isDark ? "☀️" : "🌙";
+        localStorage.setItem("darkMode", isDark ? "enabled" : "disabled");
+      });
     }
 
-    // Toggle on click
-    modeToggle.addEventListener("click", () => {
-      document.documentElement.classList.toggle("dark-mode");
-      const isDark = document.documentElement.classList.contains("dark-mode");
-      modeToggle.textContent = isDark ? "☀️" : "🌙";
-      localStorage.setItem("darkMode", isDark ? "enabled" : "disabled");
-    });
+    // ============================================================
+    // MOBILE SIDEBAR TOGGLE  (THIS WAS MISSING!)
+    // ============================================================
+    setTimeout(() => {
+      const sidebarToggle = document.getElementById("sidebarToggle");
+      const overlay = document.getElementById("mobileSidebarOverlay");
+
+      if (!sidebarToggle) {
+        console.warn("⚠️ sidebarToggle not found yet");
+        return;
+      }
+
+      console.log("✅ Sidebar toggle FOUND & ACTIVATED");
+
+      sidebarToggle.addEventListener("click", () => {
+        document.body.classList.toggle("sidebar-open");
+      });
+
+      if (overlay) {
+        overlay.addEventListener("click", () => {
+          document.body.classList.remove("sidebar-open");
+        });
+      }
+    }, 50); // small delay ensures header is fully injected
   })
   .catch((error) => console.error("Error loading header:", error));

@@ -281,6 +281,18 @@ header,
   font-size: min(1rem, 3vw);
   color: var(--text-color);
 }
+/* Footer links in light mode */
+.site-footer a {
+  color: blue;
+  text-decoration: underline;
+}
+
+/* Footer links in dark mode — force white */
+.dark-mode .site-footer a {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
 
 .site-footer p {
   margin: 0;
@@ -415,4 +427,54 @@ header,
   .sidebar-toggle {
     display: none;
   }
+}
+/* Shared styling for mode + sidebar buttons */
+.mode-style {
+  background: none;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-color);
+}
+
+/* Hover */
+.mode-style:hover {
+  background-color: #e8dfc4;
+  transform: scale(1.05);
+}
+
+/* Dark mode for both buttons */
+.dark-mode .mode-style {
+  background: none;
+  border-color: #888;
+  color: #fff;
+}
+/* Make sidebar toggle match the dark mode button */
+#sidebarToggle {
+  background: none;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: min(0.5rem, 2vw) min(1rem, 3vw); /* same padding */
+  font-size: min(1.2rem, 4vw);              /* same font size */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: min(1rem, 3vw); /* optional spacing */
+}
+
+#sidebarToggle:hover {
+  background-color: #e8dfc4;
+  transform: scale(1.05);
+}
+
+/* Dark mode matching */
+.dark-mode #sidebarToggle {
+  border-color: #888;
+  color: #fff;
+}
+
+.dark-mode #sidebarToggle:hover {
+  background-color: #444;
 }

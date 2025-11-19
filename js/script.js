@@ -130,7 +130,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     displayData = displayData.filter(
       (item) =>
         item.title.toLowerCase().includes(qLower) ||
-        (item.description && item.description.toLowerCase().includes(qLower))
+        (item.description &&
+          item.description.toLowerCase().includes(qLower))
     );
   }
 
