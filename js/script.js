@@ -1,110 +1,5 @@
-// ============================================================
-// SCRAPERS
-// ============================================================
-
-// A: Scrape Class Recordings
-async function loadClassRecordings() {
-  try {
-    const response = await fetch("class-recordings-by-category.html");
-    const html = await response.text();
-
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, "text/html");
-
-    const sections = doc.querySelectorAll(".letter-section");
-
-    let results = [];
-
-    sections.forEach((section) => {
-      const sectionTitle = section.querySelector("h2")?.innerText.trim();
-      if (!sectionTitle) return;
-
-      const categoryLower = sectionTitle.toLowerCase();
-      const id = section.getAttribute("id");
-
-      section.querySelectorAll("li").forEach((li) => {
-        const link = li.querySelector("a[href]");
-        if (!link) return;
-
-        const text = link.innerText.trim();
-
-        // Tags inside <span class="tags">
-        let tags = [];
-        const tagSpan = li.querySelector("span.tags");
-        if (tagSpan) {
-          tags = tagSpan.innerText
-            .split(",")
-            .map((t) => t.trim().toLowerCase())
-            .filter((t) => t.length > 0);
-        }
-
-        results.push({
-          title: text,
-          description: "(Class Recording)",
-          category: categoryLower,
-          tags: tags,
-          download_url: link.href,
-          url: `class-recordings-by-category.html#${id}`,
-        });
-      });
-    });
-
-    return results;
-  } catch (err) {
-    console.error("Error loading Class Recordings:", err);
-    return [];
-  }
-}
-
-// B: Scrape Food-by-Region Page
-async function loadFoodByRegion() {
-  try {
-    const response = await fetch("category-food-by-region.html");
-    const html = await response.text();
-
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, "text/html");
-
-    let results = [];
-
-    doc.querySelectorAll("h2").forEach((h2) => {
-      const region = h2.innerText.trim();
-      const regionLower = region.toLowerCase();
-      const sectionId = h2.getAttribute("id");
-
-      const list = h2.nextElementSibling;
-      if (!list || !list.querySelectorAll) return;
-
-      list.querySelectorAll("li").forEach((li) => {
-        const text = li.innerText.trim();
-        if (!text) return;
-
-        results.push({
-          title: text,
-          description: `(Food by Region – ${region})`,
-          category: regionLower,
-          tags: ["food", "region"],
-          download_url: "",
-          url: `category-food-by-region.html#${sectionId}`,
-        });
-      });
-    });
-
-    return results;
-  } catch (err) {
-    console.error("Error scraping Food By Region:", err);
-    return [];
-  }
-}
-
-// ============================================================
-// MAIN SCRIPT
-// ============================================================
-
-document.addEventListener("DOMContentLoaded", async function () {
-  // ----------------------------------------------------------
-  // DARK MODE
-  // ----------------------------------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+  // --- Dark mode toggle ---
   const modeToggle = document.getElementById("modeToggle");
   if (modeToggle) {
     if (localStorage.getItem("darkMode") === "enabled") {
@@ -124,9 +19,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   const query = new URLSearchParams(window.location.search).get("q");
 
-  // ----------------------------------------------------------
-  // LOAD SIDEBAR (updated-menu.html)
-  // ----------------------------------------------------------
+  // --- Load Sidebar (updated-menu.html) ---
   fetch("updated-menu.html")
     .then((res) => res.text())
     .then((data) => {
@@ -143,7 +36,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
       });
 
-      // Attach sidebar tag search
+      // --- Sidebar search input (#sidebarTagSearch) ---
       function attachSidebarSearch() {
         const tagSearchInput = document.getElementById("sidebarTagSearch");
 
@@ -151,6 +44,10 @@ document.addEventListener("DOMContentLoaded", async function () {
           tagSearchInput &&
           typeof tagSearchInput.addEventListener === "function"
         ) {
+          console.log(
+            "✅ Search input found, attaching Enter listener (final)."
+          );
+
           tagSearchInput.onkeydown = null;
 
           tagSearchInput.addEventListener("keydown", function (e) {
@@ -159,11 +56,22 @@ document.addEventListener("DOMContentLoaded", async function () {
               e.stopPropagation();
               const q = tagSearchInput.value.trim();
               if (q) {
-                window.location.href = `tag.html?tag=${encodeURIComponent(q)}`;
+                console.log(
+                  "Redirecting to:",
+                  `${window.location.origin}/tag.html?tag=${encodeURIComponent(
+                    q
+                  )}`
+                );
+                window.location.href = `${
+                  window.location.origin
+                }/tag.html?tag=${encodeURIComponent(q)}`;
+              } else {
+                console.log("Empty query, no redirect.");
               }
             }
           });
         } else {
+          console.log("⏳ Waiting for sidebarTagSearch to exist...");
           setTimeout(attachSidebarSearch, 300);
         }
       }
@@ -172,131 +80,140 @@ document.addEventListener("DOMContentLoaded", async function () {
     })
     .catch((error) => console.error("Error loading sidebar:", error));
 
-  // ----------------------------------------------------------
-  // LOAD DATA.JSON + SCRAPED DATA
-  // ----------------------------------------------------------
+  // --- Load and display articles ---
+  fetch("data/data.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const contentArea = document.getElementById("contentArea");
+      if (!contentArea) return;
 
-  const baseData = await fetch("data/data.json")
-    .then((r) => r.json())
-    .catch(() => []);
+      const params = new URLSearchParams(window.location.search);
+      const currentTag = params.get("tag");
+      const currentCategory = window.currentCategory || null;
 
-  const classRecordings = await loadClassRecordings();
-  const foodByRegion = await loadFoodByRegion();
+      let displayData = data;
 
-  const combinedData = [...baseData, ...classRecordings, ...foodByRegion];
+      // --- Filter by category first ---
+      if (currentCategory) {
+        const catLower = currentCategory.toLowerCase();
+        displayData = displayData.filter(
+          (item) =>
+            (item.category && item.category.toLowerCase() === catLower) ||
+            (item.tags && item.tags.some((t) => t.toLowerCase() === catLower))
+        );
+      }
 
-  const contentArea = document.getElementById("contentArea");
-  if (!contentArea) return;
+      // --- Then filter by tag if present ---
+      if (currentTag) {
+        const tagLower = currentTag.toLowerCase();
+        displayData = displayData.filter(
+          (item) =>
+            item.title.toLowerCase().includes(tagLower) ||
+            item.description.toLowerCase().includes(tagLower) ||
+            (item.tags &&
+              item.tags.some((t) => t.toLowerCase().includes(tagLower)))
+        );
+      }
 
-  const params = new URLSearchParams(window.location.search);
-  const currentTag = params.get("tag");
-  const currentCategory = window.currentCategory || null;
+      // --- Display articles ---
+      function displayArticles(displayData, highlight = "") {
+        contentArea.innerHTML = ""; // Clear content
 
-  let displayData = combinedData;
+        if (!displayData || displayData.length === 0) {
+          contentArea.innerHTML = `<p>Oops… try a different search term.</p>`;
+          return;
+        }
 
-  // CATEGORY FILTER
-  if (currentCategory) {
-    const catLower = currentCategory.toLowerCase();
-    displayData = displayData.filter(
-      (item) =>
-        (item.category && item.category.toLowerCase() === catLower) ||
-        (item.tags && item.tags.includes(catLower))
-    );
-  }
+        displayData.forEach((item) => {
+          const card = document.createElement("div");
+          card.className = "card";
 
-  // TAG FILTER
-  if (currentTag) {
-    const tagLower = currentTag.toLowerCase();
-    displayData = displayData.filter(
-      (item) =>
-        item.title.toLowerCase().includes(tagLower) ||
-        (item.description &&
-          item.description.toLowerCase().includes(tagLower)) ||
-        (item.tags && item.tags.some((t) => t.includes(tagLower)))
-    );
-  }
+          const title = document.createElement("h5");
+          title.innerHTML = highlight
+            ? item.title.replace(
+                new RegExp(`(${highlight})`, "gi"),
+                '<span class="highlight">$1</span>'
+              )
+            : item.title;
 
-  // SEARCH TERM FILTER
-  if (query) {
-    const qLower = query.toLowerCase();
-    displayData = displayData.filter(
-      (item) =>
-        item.title.toLowerCase().includes(qLower) ||
-        (item.description && item.description.toLowerCase().includes(qLower))
-    );
-  }
+          const desc = document.createElement("p");
+          desc.innerHTML = highlight
+            ? item.description.replace(
+                new RegExp(`(${highlight})`, "gi"),
+                '<span class="highlight">$1</span>'
+              )
+            : item.description;
 
-  // ----------------------------------------------------------
-  // DISPLAY RESULTS USING YOUR EXISTING CARD STYLE
-  // ----------------------------------------------------------
-  function displayArticles(dataList, highlight = "") {
-    contentArea.innerHTML = "";
-
-    if (!dataList || dataList.length === 0) {
-      contentArea.innerHTML = `<p>Oops… try a different search term.</p>`;
-      return;
-    }
-
-    dataList.forEach((item) => {
-      const card = document.createElement("div");
-      card.className = "card";
-
-      const title = document.createElement("h5");
-      title.innerHTML = highlight
-        ? item.title.replace(
-            new RegExp(`(${highlight})`, "gi"),
-            '<span class="highlight">$1</span>'
-          )
-        : item.title;
-
-      const desc = document.createElement("p");
-      desc.textContent = item.description || "";
-
-      const downloadBtn = document.createElement("button");
-      downloadBtn.className = "download-btn";
-      downloadBtn.textContent = "Open";
-      downloadBtn.addEventListener("click", function () {
-        window.open(item.download_url || item.url, "_blank");
-      });
-
-      const tagsDiv = document.createElement("div");
-      tagsDiv.className = "tags";
-
-      if (item.tags) {
-        item.tags.forEach((tag) => {
-          const span = document.createElement("span");
-          span.className = "tag-badge";
-          span.textContent = `#${tag}`;
-          span.addEventListener("click", () => {
-            window.location.href = `tag.html?tag=${encodeURIComponent(tag)}`;
+          const downloadBtn = document.createElement("button");
+          downloadBtn.className = "download-btn btn btn-sm btn-primary";
+          downloadBtn.textContent = "Download";
+          downloadBtn.addEventListener("click", function () {
+            const fileUrl = item.download_url;
+            window.open(fileUrl, "_blank");
+            sendGAEvent(fileUrl, item.category);
           });
-          tagsDiv.appendChild(span);
+
+          const tagsDiv = document.createElement("div");
+          tagsDiv.className = "tags";
+          if (item.tags) {
+            item.tags.forEach((tag) => {
+              const span = document.createElement("span");
+              span.className = "tag-badge";
+              span.textContent = `#${tag}`;
+              span.addEventListener("click", () => {
+                window.location.href = `tag.html?tag=${encodeURIComponent(
+                  tag
+                )}`;
+              });
+              tagsDiv.appendChild(span);
+            });
+          }
+
+          card.appendChild(title);
+          card.appendChild(desc);
+          card.appendChild(downloadBtn);
+          card.appendChild(tagsDiv);
+          contentArea.appendChild(card);
         });
       }
 
-      card.appendChild(title);
-      card.appendChild(desc);
-      card.appendChild(downloadBtn);
-      card.appendChild(tagsDiv);
+      displayArticles(
+        displayData,
+        currentTag || currentCategory || query || ""
+      );
+    })
+    .catch((err) => console.error(err));
 
-      contentArea.appendChild(card);
-    });
-  }
-
-  displayArticles(displayData, currentTag || currentCategory || query || "");
-
-  // ----------------------------------------------------------
-  // BACK TO TOP BUTTON
-  // ----------------------------------------------------------
+  // --- Back to Top Button ---
   const backBtn = document.getElementById("backToTopBtn");
   if (backBtn) {
     window.onscroll = function () {
-      backBtn.style.display =
-        document.documentElement.scrollTop > 200 ? "block" : "none";
+      if (
+        document.body.scrollTop > 200 ||
+        document.documentElement.scrollTop > 200
+      ) {
+        backBtn.style.display = "block";
+      } else {
+        backBtn.style.display = "none";
+      }
     };
 
     backBtn.addEventListener("click", function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
+  }
+
+  // --- GA4 helper ---
+  function sendGAEvent(fileUrl, category = "Unknown") {
+    if (typeof gtag === "function") {
+      const fileName = fileUrl.split("/").pop();
+      gtag("event", "file_download", {
+        event_category: "Downloads",
+        event_label: fileName,
+        file_name: fileName,
+        file_url: fileUrl,
+        category: category,
+      });
+    }
   }
 });

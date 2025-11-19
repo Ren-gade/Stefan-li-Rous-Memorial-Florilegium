@@ -240,17 +240,20 @@ header,
   color: #222;
 }
 
-.dark-mode .slr.s,
-.dark-mode .slr.l,
+.dark-mode .slr.s {
+  color: #ffffff;
+} /* S */
+.dark-mode .slr.l {
+  color: #ffffff;
+} /* L */
 .dark-mode .slr.r {
   color: #ffffff;
-}
+} /* R */
 
 /* dark mode override */
 .dark-mode .menu-home {
   color: #ffffff; /* or whatever light color fits your palette */
 }
-
 /* Light mode: normal link color */
 #sidebar a {
   color: #3a2a1a; /* your current brownish tone */
@@ -263,6 +266,7 @@ header,
   color: #66ccff; /* pick your preferred blue */
 }
 
+/* Optional hover effect for dark mode */
 .dark-mode #sidebar a:hover {
   color: #99ddff; /* slightly lighter blue */
 }
@@ -314,22 +318,23 @@ header,
 
 .dark-mode .download-btn:hover,
 .modern-dark-mode .download-btn:hover {
-  background-color: #704421;
+  background-color: #704421; /* slightly darker on hover */
   border-color: #60391b;
 }
-
 /* Import Mea Culpa for SLR letters */
 @import url("https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap");
 
+/* Fancy SLR letters */
 .header-title .slr {
-  font-family: "Mea Culpa", cursive;
-  font-size: 2.5rem;
-  letter-spacing: 0.15em;
+  font-family: "Mea Culpa", cursive; /* fancy script */
+  font-size: 2.5rem; /* adjust for large screens */
+  letter-spacing: 0.15em; /* spacing between letters */
   color: #3a2a1a;
   line-height: 1;
   vertical-align: middle;
 }
 
+/* Responsive scaling for small screens */
 @media (max-width: 768px) {
   .header-title .slr {
     font-size: 1.8rem;
@@ -340,75 +345,9 @@ header,
 .header-title .slr {
   font-family: "Mea Culpa", cursive;
   font-size: 2.5rem;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.15em; /* general spacing */
 }
 
 .header-title .slr-middle {
-  margin: 0 0.2em;
-}
-
-/* ======================================================
-   Independent Scrolling Sidebar (for updated-menu.html)
-   ====================================================== */
-
-#sidebar {
-  width: 250px;
-  padding: 1rem 1.4rem 1rem 1rem; /* NEW right padding */
-  background-color: var(--background-color);
-  border-right: 1px solid var(--border-color);
-
-  position: sticky;
-  top: 80px;
-
-  max-height: calc(100vh - 80px);
-  overflow-y: auto;
-
-  flex-shrink: 0;
-}
-
-/* Scrollbar styling */
-#sidebar::-webkit-scrollbar {
-  width: 8px;
-}
-#sidebar::-webkit-scrollbar-track {
-  background: var(--background-color);
-}
-#sidebar::-webkit-scrollbar-thumb {
-  background: var(--border-color);
-  border-radius: 4px;
-}
-
-/* Dark mode scrollbar */
-.dark-mode #sidebar {
-  background-color: #2d2d2d;
-  border-color: #555;
-}
-
-.dark-mode #sidebar::-webkit-scrollbar-track {
-  background: #2d2d2d;
-}
-.dark-mode #sidebar::-webkit-scrollbar-thumb {
-  background: #777;
-}
-
-/* ======================================================
-   Mobile Responsive Sidebar
-   ====================================================== */
-
-@media (max-width: 768px) {
-  #sidebar {
-    width: 100%;
-    max-height: none;
-    position: relative;
-    top: 0;
-    border-right: none;
-    border-bottom: 1px solid var(--border-color);
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  #contentArea {
-    padding: 1rem;
-    grid-template-columns: 1fr;
-  }
+  margin: 0 0.2em; /* adds extra space around the L */
 }
