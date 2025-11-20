@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 
   // ----------------------------------------------------------
-  // LOAD DATA.JSON
+  // LOAD data.json
   // ----------------------------------------------------------
   const data = await fetch("data/data.json")
     .then((response) => response.json())
@@ -102,7 +102,51 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   let displayData = data;
 
-  // Category filter first
+  // ----------------------------------------------------------
+  // ⭐ LOAD FOOD + CLASS LINKS INTO SEARCH
+  // ----------------------------------------------------------
+  if (currentTag || query) {
+    async function loadLinksFromPage(url) {
+      try {
+        const html = await fetch(url).then((r) => r.text());
+        const doc = new DOMParser().parseFromString(html, "text/html");
+
+        const links = [...doc.querySelectorAll(".letter-section ul li a")];
+
+        return links.map((a) => ({
+          title: a.textContent.trim(),
+          description: "",
+          tags: [],
+          url: a.href,
+          download_url: a.href,
+        }));
+      } catch (err) {
+        console.error("Error loading page:", url, err);
+        return [];
+      }
+    }
+
+    const [foodItems, classItems] = await Promise.all([
+      loadLinksFromPage("category-food-by-region.html"),
+      loadLinksFromPage("class-recordings-by-category.html").then((items) =>
+        items.map((i) => ({ ...i, type: "class" }))
+      ),
+    ]);
+
+    displayData = [...displayData, ...foodItems, ...classItems];
+  }
+
+  // ----------------------------------------------------------
+  // ⭐ SYNONYM EXPANSION (loaded from synonyms.js)
+  // ----------------------------------------------------------
+  function expandSearchTerm(term) {
+    const t = term.toLowerCase().trim();
+    return window.synonymLookup?.[t] || [t];
+  }
+
+  // ----------------------------------------------------------
+  // CATEGORY FILTER
+  // ----------------------------------------------------------
   if (currentCategory) {
     const catLower = currentCategory.toLowerCase();
     displayData = displayData.filter(
@@ -112,27 +156,42 @@ document.addEventListener("DOMContentLoaded", async function () {
     );
   }
 
-  // Tag filter second
+  // ----------------------------------------------------------
+  // TAG FILTER (uses synonyms)
+  // ----------------------------------------------------------
   if (currentTag) {
-    const tagLower = currentTag.toLowerCase();
-    displayData = displayData.filter(
-      (item) =>
-        item.title.toLowerCase().includes(tagLower) ||
-        (item.description &&
-          item.description.toLowerCase().includes(tagLower)) ||
-        (item.tags && item.tags.some((t) => t.toLowerCase().includes(tagLower)))
-    );
+    const expandedTerms = expandSearchTerm(currentTag);
+
+    displayData = displayData.filter((item) => {
+      const text = (
+        item.title +
+        " " +
+        (item.description || "") +
+        " " +
+        (item.tags ? item.tags.join(" ") : "")
+      ).toLowerCase();
+
+      return expandedTerms.some((term) => text.includes(term));
+    });
   }
 
-  // Search query filter
+  // ----------------------------------------------------------
+  // QUERY FILTER (uses synonyms)
+  // ----------------------------------------------------------
   if (query) {
-    const qLower = query.toLowerCase();
-    displayData = displayData.filter(
-      (item) =>
-        item.title.toLowerCase().includes(qLower) ||
-        (item.description &&
-          item.description.toLowerCase().includes(qLower))
-    );
+    const expandedTerms = expandSearchTerm(query);
+
+    displayData = displayData.filter((item) => {
+      const text = (
+        item.title +
+        " " +
+        (item.description || "") +
+        " " +
+        (item.tags ? item.tags.join(" ") : "")
+      ).toLowerCase();
+
+      return expandedTerms.some((term) => text.includes(term));
+    });
   }
 
   // ----------------------------------------------------------
@@ -168,7 +227,9 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       const downloadBtn = document.createElement("button");
       downloadBtn.className = "download-btn";
-      downloadBtn.textContent = "Open";
+      downloadBtn.textContent =
+        item.type === "class" ? "Class Recording 🎞️" : "Open Article 📜";
+
       downloadBtn.addEventListener("click", () => {
         const fileUrl = item.download_url || item.url;
         if (fileUrl) {

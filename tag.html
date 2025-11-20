@@ -29,32 +29,10 @@
     <!-- Footer -->
     <div id="footer-container"></div>
     <script src="data/footer.js"></script>
-
+<script src="js/synonyms.js"></script>
     <script src="js/script.js"></script>
 
-    <!-- Sidebar category loader
-    <script>
-      function loadCategories() {
-        fetch("updated-menu.html")
-          .then((response) => response.text())
-          .then((data) => {
-            const sidebar = document.getElementById("sidebar");
-            sidebar.querySelector("#categoryList").innerHTML = data;
-
-            // Highlight current page
-            const currentPage = window.location.pathname.split("/").pop();
-            const links = sidebar.querySelectorAll(".category");
-            links.forEach((link) => {
-              if (link.getAttribute("data-page") === currentPage) {
-                link.href = "#";
-              }
-            });
-          })
-          .catch((error) => console.error("Error loading categories:", error));
-      }
-      window.onload = loadCategories;
-    </script>
- -->
+   
     <!-- Tag search handling -->
     <script>
       const params = new URLSearchParams(window.location.search);
