@@ -1653,6 +1653,13 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Did+you+know+you+can+malt+acorns_+Part+1.pdf"
   },
   {
+    "title": "Did You Know You can Malt Acorns: Part 2",
+    "category": "Beverages",
+    "tags": ["malt"],
+    "description": "Did you know you can malt acorns? Part 2 by THL Madoc Arundel.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Did+you+know+you+can+malt+acorns_+Part+2.pdf"
+  },
+  {
     "title": "Gruit",
     "category": "Beverages",
     "tags": ["brewing"],
@@ -1770,6 +1777,209 @@
     "tags": ["mead"],
     "description": "By H.L. Barat FitzWalter Reynolds",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/The+Making+of+Mead.pdf"
+  },
+  {
+    "title": "Mead Making Tips",
+    "category": "Beverages",
+    "tags": ["mead"],
+    "description": "Did you know you can malt acorns? Part 1 by THL Madoc Arundel.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Mead+Making+Tips.pdf"
+  },
+  {
+    "title": "The History of Chocolate",
+    "category": "Beverages",
+    "tags": ["chocolate", "hot chocolate"],
+    "description": "Medieval Chocolate by TH Lady Miriam bat Shimeon 2012 (updated Jan 2013).",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/The+History+of+Chocolate.pdf"
+  },
+  {
+    "title": "Mythbusting: Medeival Mead Brewing",
+    "category": "Beverages",
+    "tags": ["mead"],
+    "description": "Mythbusting: Medieval Mead Brewing by Elska á Fjárfelli OL. (2013)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Mythbusting_+Medieval+Mead+Brewing.pdf"
+  },
+  {
+    "title": "The Malt House",
+    "category": "Beverages",
+    "tags": ["malt"],
+    "description": "The Malt House and the Making of Malt by Mistress Lina von Wissen (Thorgrimsdottir), O.L. (2000).",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/The+Malt+House.pdf"
+  },
+  {
+    "title": "Peach Coriander Brandy",
+    "category": "Beverages",
+    "tags": ["brandy"],
+    "description": "Peach Coriander Brandy by Lady Constance de LaRose. (2001)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Peach+Coriander+Brandy.pdf"
+  },
+  {
+    "title": "Citrus Summer Drinks",
+    "category": "Beverages",
+    "tags": ["beverages"],
+    "description": "Orange and Lemon Drinks of Summer by THL Johnnae llyn Lewis, CE (2007)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Orange+and+Lemon+Drinks+of+Summer.pdf"
+  },
+  {
+    "title": "Of Honey Wine and Melomels",
+    "category": "Beverages",
+    "tags": ["wine", "honey", "melomel"],
+    "description": "Of Honey Wine and Melomels by Unnr in elska Ã¡ FjÃ¡rfella, of the Dominion of Myrkfaelinn (2017)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Of+Honey+Wine+and+Melomels.pdf"
+  },
+  {
+    "title": "Non-Alcoholic Drinks in Period",
+    "category": "Beverages",
+    "tags": ["non-alcoholic"],
+    "description": "Non-Alcoholic Drinks in Period by Count Gunthar Jonsson, OL, KSCA (2007)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Non-Alcoholic+Drinks+in+Period.pdf"
+  },
+  {
+    "title": "Non Alcoholic Beverages of the Middle Ages",
+    "category": "Beverages",
+    "tags": ["non-alcoholic"],
+    "description": " Non Alcoholic Beverages of the Middle Ages by HL Rory McGowen (2010)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Non+Alcoholic+Beverages+of+the+Middle+Ages.pdf"
+  },
+  {
+    "title": "Yet Another Newbie Guide to Brewing",
+    "category": "Beverages",
+    "tags": ["brewing"],
+    "description": "Yet Another Newbie Guide to Brewing by HL Rory McGowen (2001)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Yet+Another+Newbie+Guide+to+Brewing.pdf"
+  },
+  {
+    "title": "How to Brew Mead on the Cheap",
+    "category": "Beverages",
+    "tags": ["mead", "thrift"],
+    "description": "How to Brew Mead on the Cheap by Master William Brewer (2018)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/How+to+Brew+Mead+on+the+Cheap.pdf"
+  },
+  {
+    "title": "Warm Beere",
+    "category": "Beverages",
+    "tags": ["beer", "England"],
+    "description": "An aside— on Beer and English Customs by THL Johnnae llyn Lewis (2007)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Warm+Beere+(2007).pdf"
+  },
+  {
+    "title": "Vodka - The Little Water of Life",
+    "category": "Beverages",
+    "tags": ["vodka", "russian", "rus"],
+    "description": "Vodka-The Little Water of Life by Marija Kotok (2002)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Vodka-The+Little+Water+of+Life+(2002).pdf"
+  },
+  {
+    "title": "A Vineyard Experiment: Harvest",
+    "category": "Beverages",
+    "tags": ["wine", "vinting"],
+    "description": "A Vineyard Experiment by Baron Damon Hroarsson (2008)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/A+Vineyard+Experiment_+Harvest+(2008).pdf"
+  },
+  {
+    "title": "A Vineyard Experiment: Tools",
+    "category": "Beverages",
+    "tags": ["wine", "vinting"],
+    "description": "A Vineyard Experiment by Baron Damon Hroarsson - Appendix 1 (2008)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/A+Vineyard+Experiment_+Tools+(2008).pdf"
+  },
+  {
+    "title": "A Vineyard Experiment: Process",
+    "category": "Beverages",
+    "tags": ["wine", "vinting"],
+    "description": "A Vineyard Experiment by Baron Damon Hroarsson - Appendix 2 (2008)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/A+Vineyard+Experiment_+Process+(2008).pdf"
+  },
+  {
+    "title": "The Egg Test for Period Brewers and Mead Makers ",
+    "category": "Beverages",
+    "tags": ["mead", "brewing"],
+    "description": "The Egg Test for Period Brewers and Mead Makers by Mistress Roheisa le Sarjent) (2014)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/The+Egg+Test+for+Period+Brewers+and+Mead+Makers+(2014).pdf"
+  },
+  {
+    "title": "A Sweet Tisane",
+    "category": "Beverages",
+    "tags": ["tisane", "non-alcoholic"],
+    "description": "A Sweet Tisane by Mistress Kiriel du Papillon (OL, OP) (2017)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/A+Sweet+Tisane+(2017).pdf"
+  },
+  {
+    "title": "Sekanjabin & Oxymel: The Basics",
+    "category": "Beverages",
+    "tags": ["non-alcoholic", "honey"],
+    "description": "Sekanjabin & Oxymel: The Basics by Lady Murienne l'aloiere (2013)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Sekanjabin+%26+Oxymel_+The+Basics+(2013).pdf"
+  },
+  {
+    "title": "How Period is Root Beer",
+    "category": "Beverages",
+    "tags": ["non-alcoholic"],
+    "description": "How Period is Root Beer? by Unnr in elska Ã¡ FjÃ¡rfella (2018)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/How+Period+is+Root+Beer_+(2018).pdf"
+  },
+  {
+    "title": "Coffee for the Historical Cook",
+    "category": "Beverages",
+    "tags": ["coffee", "non-alcoholic"],
+    "description": "Qawha, Coffee for the Historical Cook by HL Baric Firehand (1998)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Beverages/Qawha%2C+Coffee+for+the+Historical+Cook+(1998).pdf"
+  },
+  {
+    "title": "All Stings Considered",
+    "category": "Camping",
+    "tags": ["sting", "spider bite", "camping", "injury"],
+    "description": "All Stings Considered by THLord Conal Mac Nachtan (2007)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Camping/All+Stings+Considered+(2007).pdf"
+  },
+  {
+    "title": "Bear Safety",
+    "category": "Camping",
+    "tags": ["bear", "animals"],
+    "description": "Bear Safety in Oertha by Kurios Halfdan 'Two Bears' Ozurrson (2013)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Camping/Bear+Safety+(2013).pdf"
+  },
+  {
+    "title": "Camping Sink",
+    "category": "Camping",
+    "tags": ["sink", "campsite"],
+    "description": "Camp Sink by Lord Gregor Reinhardt von Holstein and Baroness Genoveva von Lübeck (2011)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Camping/Camp+Sink.pdf"
+  },
+  {
+    "title": "Campfire Safety in the SCA",
+    "category": "Camping",
+    "tags": ["campfire"],
+    "description": "Campfire Safety in the SCA by HL Ivo Blackfox (2014)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Camping/Campfire+safety+in+the+SCA.pdf"
+  },
+  {
+    "title": "Camping Courtesies",
+    "category": "Camping",
+    "tags": ["etiquette", "camping"],
+    "description": "Camping Courtesies by Baroness Dana Mac an Ghabhann (2002)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Camping/Camping+Courtesies+(2002).pdf"
+  },
+  {
+    "title": "Camping Etiquette",
+    "category": "Camping",
+    "tags": ["etiquette", "camping"],
+    "description": "Camping Etiquette by Baroness Sine ni Dheaghaidh, OL (2011)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Camping/Camping+Etiquette.pdf"
+  },
+  {
+    "title": "The Care and Feeding of the Porta-Privy",
+    "category": "Camping",
+    "tags": [""],
+    "description": "On the Care and Feeding of the Wild Porta-Privy by Lord Iain mac Caradoc (2000)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Camping/On+the+Care+and+Feeding+of+the+Wild+Porta-Privy.pdf"
+  },
+  {
+    "title": "Packing for Camp Cooking",
+    "category": "Camping",
+    "tags": ["cooking", "campsite"],
+    "description": "Feeding yourselves with out living in a kitchen at war (2010)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Camping/Packing+for+Camp+Cooking+(2010).pdf"
   },
   {
     "title": "Introduction to Natural Dyeing",
