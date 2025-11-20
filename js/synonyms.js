@@ -1,245 +1,311 @@
-// ============================================================
-// SYNONYM CLUSTERS
-// (Cleaned, deduped, normalized)
-// ============================================================
+const synonyms = {
+  /* --- REGIONS & CULTURES --- */
 
-const synonymClusters = {
+  algeria: ["algeria", "algerian", "maghreb"],
+  anatolia: ["anatolia", "turkey", "ottoman"],
+  andalusia: [
+    "andalusia",
+    "andalusian",
+    "al-andalus",
+    "moors",
+    "moorish",
+    "islamic spain",
+  ],
+  arab: ["arab", "arabic", "abbasid", "caliphate", "middle east", "levant"],
+  armenia: ["armenia", "armenian", "caucasus"],
+
+  balkans: [
+    "balkans",
+    "balkan",
+    "serbia",
+    "serbian",
+    "croatia",
+    "croatian",
+    "bulgaria",
+    "bulgarian",
+    "slavic",
+    "byzantine",
+  ],
+  berber: [
+    "berber",
+    "amazigh",
+    "tamazight",
+    "maghreb",
+    "maghrebi",
+    "morocco",
+    "algeria",
+    "tunisia",
+  ],
   britain: [
-    "anglo",
-    "anglo-saxon",
     "britain",
     "british",
     "england",
     "english",
     "uk",
+    "anglo",
+    "anglo-saxon",
   ],
-
-  celtic: [
-    "celtic",
-    "cornish",
-    "cornwall",
-    "ireland",
-    "irish",
-    "scotland",
-    "scottish",
-    "wales",
-    "welsh",
-  ],
-
-  ireland: ["hibernia", "ireland", "irish"],
-  scotland: ["alba", "scotland", "scottish"],
-  wales: ["cymru", "wales", "welsh"],
-
-  italy: [
-    "italian",
-    "italy",
-    "roman",
-    "romans",
-    "romano",
-    "venetian",
-    "venice",
-  ],
-
-  roman: ["italy", "roman", "romans"],
-  venice: ["italian", "italy", "venetian", "venice"],
-
-  spain: [
-    "castile",
-    "castilian",
-    "hispanic",
-    "iberia",
-    "iberian",
-    "spain",
-    "spanish",
-  ],
-
-  andalusia: [
-    "al-andalus",
-    "andalusia",
-    "andalusian",
-    "islamic spain",
-    "moors",
-    "moorish",
-  ],
-
-  france: ["france", "frankish", "gaul", "gaulish", "french"],
-  french: ["france", "french", "frankish"],
-  norman: ["france", "norman", "normandy"],
-
-  germany: ["german", "germany", "hre", "holy roman empire", "teutonic"],
-  german: ["german", "germany", "holy roman empire", "teutonic"],
-
-  viking: [
-    "danish",
-    "denmark",
-    "norse",
-    "norway",
-    "norwegian",
-    "scandinavia",
-    "scandinavian",
-    "sweden",
-    "swedish",
-    "viking",
-  ],
-
-  greece: ["greece", "greek", "hellas", "hellenic"],
-  greek: ["greece", "greek", "hellas"],
-
-  byzantium: [
-    "byzantine",
+  byzantine: [
     "byzantium",
+    "byzantine",
     "constantinople",
     "eastern roman empire",
   ],
 
-  ottoman: ["anatolia", "osmanli", "ottoman", "turkey", "turkish"],
-  turkish: ["turkish", "ottoman", "anatolia"],
-
-  arab: ["arab", "arabic", "abbasid", "caliphate", "levant", "middle east"],
-
-  levant: ["lebanon", "levant", "levantine", "palestine", "syria"],
-
-  middleeast: [
-    "abbasid",
-    "arab",
-    "assyrian",
-    "babylonian",
-    "islamic",
-    "levant",
-    "mesopotamia",
-    "middle east",
-    "ottoman",
+  celtic: [
+    "celtic",
+    "ireland",
+    "irish",
+    "scotland",
+    "scottish",
+    "welsh",
+    "wales",
+    "cornwall",
+    "cornish",
   ],
+  china: ["china", "chinese", "sino"],
+  cyprus: ["cyprus", "cypriot", "cypriote", "kibris"],
 
-  mesopotamia: ["assyrian", "babylonian", "mesopotamia"],
+  egypt: ["egypt", "egyptian", "mamluk", "coptic", "misr", "fustat", "cairo"],
+  england: ["england", "english", "britain", "british", "uk", "anglo"],
+  ethiopia: ["ethiopia", "ethiopian", "abyssinia"],
 
-  persia: [
-    "farsi",
+  france: ["france", "french", "frankish", "gaul", "gaulish"],
+
+  greece: ["greece", "greek", "hellas", "hellenic"],
+
+  iberia: ["iberia", "iberian", "spain", "spanish"],
+  india: ["india", "indian", "hindustan", "mughal", "mughal empire"],
+  iran: [
     "iran",
-    "iranian",
-    "parthian",
     "persia",
     "persian",
+    "iranian",
+    "farsi",
+    "parthian",
     "sassanian",
     "sassanid",
   ],
+  ireland: ["ireland", "irish", "hibernia"],
+  israel: ["israel", "hebrew", "jewish", "judah", "judea", "yisrael"],
 
-  india: ["hindustan", "india", "indian", "mughal", "mughal empire"],
+  italy: [
+    "italy",
+    "italian",
+    "venice",
+    "venetian",
+    "roman",
+    "romans",
+    "romano",
+  ],
 
-  china: ["china", "chinese", "sino"],
-  japanese: ["japan", "japanese", "nippon"],
   japan: ["japan", "japanese", "nippon"],
 
-  aztec: ["aztec", "mexica", "mesoamerica", "nahua"],
-  mesoamerica: ["aztec", "maya", "mesoamerica", "mexica", "olmec"],
-
-  aubergine: ["aubergine", "brinjal", "eggplant"],
-  eggplant: ["aubergine", "eggplant"],
-  chickpea: ["chick pea", "chickpea", "garbanzo"],
-  garbanzo: ["chick pea", "chickpea", "garbanzo"],
-
-  fava: ["broad bean", "fava"],
-  broadbean: ["broad bean", "fava"],
-
-  lamb: ["lamb", "mutton"],
-  pottage: ["potherbs", "pottage", "porridge"],
-  spice: ["seasoning", "spice", "spices"],
-
-  portugal: [
-    "iberia",
-    "iberian",
+  levant: [
+    "levant",
+    "levantine",
+    "middle east",
+    "syria",
+    "palestine",
+    "lebanon",
+  ],
+  lusitania: [
     "lusitania",
     "lusitanian",
     "portugal",
-    "portugall",
-    "portugese",
     "portuguese",
-    "portingale",
+    "iberia",
+    "iberian",
   ],
 
-  morocco: [
-    "amazigh",
-    "barbary",
-    "berber",
+  maghreb: [
     "maghreb",
     "maghrebi",
+    "north africa",
+    "morocco",
+    "algeria",
+    "tunisia",
+    "berber",
+    "amazigh",
+  ],
+  mesopotamia: ["mesopotamia", "assyrian", "babylonian"],
+  morocco: [
     "morocco",
     "moroccan",
-    "north africa",
+    "maghreb",
+    "maghrebi",
+    "berber",
+    "amazigh",
     "tamazight",
   ],
 
+  norman: ["norman", "normandy", "france"],
+  norse: ["norse", "viking", "scandinavian"],
+  northafrica: [
+    "north africa",
+    "maghreb",
+    "morocco",
+    "algeria",
+    "tunisia",
+    "berber",
+    "amazigh",
+  ],
+
+  ottoman: ["ottoman", "turkish", "turkey", "anatolia", "osmanli"],
+
+  poland: ["poland", "polish", "slavic", "slav"],
+  portugal: [
+    "portugal",
+    "portuguese",
+    "lusitania",
+    "lusitanian",
+    "portugall",
+    "portingale",
+    "iberia",
+    "iberian",
+  ],
+  provence: ["provence", "provencal", "occitan", "occitania", "langue d'oc"],
+
+  rome: ["rome", "roman", "romans", "italy"],
+  rus: [
+    "rus",
+    "kiev",
+    "kievan rus",
+    "slavic",
+    "slav",
+    "russia",
+    "russian",
+    "ukraine",
+    "ukrainian",
+    "byzantine influence",
+  ],
+
+  scandinavia: [
+    "scandinavia",
+    "scandinavian",
+    "viking",
+    "norway",
+    "sweden",
+    "denmark",
+    "norwegian",
+    "danish",
+    "swedish",
+  ],
+  scotland: ["scotland", "scottish", "alba"],
   sicily: [
-    "sicilia",
-    "sicilian",
     "sicily",
-    "trinacria",
+    "sicilian",
     "norman sicily",
     "saracen sicily",
     "islamic sicily",
+    "sicilia",
+    "trinacria",
   ],
-
-  outremer: [
-    "acre",
-    "antioch",
-    "crusader states",
-    "holy land",
-    "jerusalem",
-    "outremer",
-    "palestine",
-    "syria",
-    "tripoli",
-  ],
-
-  rus: [
-    "kiev",
-    "kievan rus",
-    "russian",
-    "russia",
-    "slav",
-    "slavic",
-    "ukraine",
-    "ukrainian",
-    "rus",
-  ],
-
   slavic: [
-    "bohemia",
-    "bohemian",
-    "bulgarian",
-    "bulgaria",
-    "czech",
-    "croatia",
-    "croatian",
-    "moravia",
-    "poland",
-    "polish",
-    "serbia",
-    "serbian",
-    "slav",
     "slavic",
+    "slav",
+    "rus",
+    "russian",
+    "ukrainian",
+    "polish",
+    "czech",
+    "bohemian",
+    "moravian",
+    "serbian",
+    "croatian",
     "slovene",
-    "ukraine",
+    "bulgarian",
+  ],
+  spain: [
+    "spain",
+    "spanish",
+    "iberia",
+    "iberian",
+    "castile",
+    "castilian",
+    "hispanic",
   ],
 
-  occitan: [
-    "langue d'oc",
-    "occitan",
-    "occitania",
-    "provence",
-    "provencal",
-    "southern france",
-  ],
+  tunisia: ["tunisia", "tunisian", "maghreb", "ifriqiya"],
+  turkey: ["turkey", "turkish", "anatolia", "ottoman", "osmanli"],
 
-  egypt: [
-    "alexandria",
-    "cairo",
-    "coptic",
-    "egypt",
-    "egyptian",
-    "fustat",
-    "mamluk",
-    "misr",
+  ukraine: ["ukraine", "ukrainian", "rus", "kievan rus", "slavic"],
+
+  wales: ["wales", "welsh", "cymru"],
+
+  /* --- RELIGION / GROUPS --- */
+
+  christian: ["christian", "church", "ecclesiastical", "catholic"],
+  jewish: [
+    "jewish",
+    "hebrew",
+    "israelite",
+    "yisrael",
+    "semitic",
+    "judah",
+    "judea",
+  ],
+  muslim: ["muslim", "islamic", "islam", "umayyad", "abbasid"],
+
+  /* --- INGREDIENTS & FOOD TERMS --- */
+
+  aubergine: ["aubergine", "eggplant", "brinjal"],
+  barley: ["barley", "grain", "cereal"],
+  bread: ["bread", "loaf", "breadmaking", "baker", "baking"],
+
+  butter: ["butter", "ghee", "clarified butter"],
+
+  cheese: ["cheese", "curd"],
+  chickpea: ["chickpea", "garbanzo", "chick peas"],
+  dairy: ["dairy", "milk", "cheese", "butter", "cream"],
+  duck: ["duck", "waterfowl"],
+
+  fava: ["fava", "broad bean"],
+  fruit: ["fruit", "fruits"],
+
+  grain: ["grain", "cereal", "barley", "wheat", "emmer", "einkorn"],
+
+  goose: ["goose", "geese", "waterfowl"],
+
+  herbs: ["herbs", "spices", "seasoning", "aromatics"],
+  lamb: ["lamb", "mutton"],
+
+  mint: ["mint", "mentha"],
+  basil: ["basil", "ocimum"],
+
+  pork: ["pork", "hog", "boar"],
+
+  rice: ["rice", "oryza"],
+
+  spice: ["spice", "spices", "seasoning"],
+
+  stew: ["stew", "stewed", "stewing", "potage", "broth", "soup"],
+
+  wheat: ["wheat", "grain", "flour"],
+
+  /* --- TECHNIQUES & METHODS --- */
+
+  roast: ["roast", "roasting", "rotisserie", "spit roast"],
+  fry: ["fry", "fried", "frying", "saute", "sauteed"],
+  brew: ["brew", "brewing", "ale", "mead", "beer", "fermentation"],
+
+  /* --- MEDIEVAL / SCA --- */
+
+  armor: ["armor", "armour", "mail", "chainmail", "hauberk"],
+  sword: ["sword", "blade", "arming sword", "longsword", "rattan"],
+
+  fencing: ["fencing", "rapier", "foil", "sidesword"],
+
+  manuscript: ["manuscript", "illumination", "codex", "folio"],
+  ink: ["ink", "pigment", "dye"],
+
+  medieval: [
+    "medieval",
+    "middle ages",
+    "feudal",
+    "feudalism",
+    "dark ages",
+    "european",
   ],
 };
 
