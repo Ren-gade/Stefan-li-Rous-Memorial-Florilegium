@@ -6,188 +6,248 @@
     <title>Class Recordings</title>
     <link href="css/style.css" rel="stylesheet" />
 
-    <!-- DARK MODE READY STYLES -->
-    <style>
-      :root {
-        --font-heading: "Cormorant Garamond", serif;
-        --font-body: "Lora", serif;
+   <style>
+:root {
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Lora", serif;
 
-        /* Light mode */
-        --text-color: #3a2a1a;
-        --background-color: #f5f0e1;
-        --card-bg: #ffffff;
-        --border-color: #d6c9b6;
+  /* Light mode */
+  --text-color: #3a2a1a;
+  --background-color: #f5f0e1;
+  --card-bg: #ffffff;
+  --border-color: #d6c9b6;
 
-        --link-color: #0077cc;
-        --link-hover: #005999;
+  --link-color: #0077cc;
+  --link-hover: #005999;
 
-        --header-accent: #0077cc;
-      }
+  --header-accent: #0077cc;
+}
 
-      .dark-mode {
-        --text-color: #eee;
-        --background-color: #1e1e1e;
-        --card-bg: #2c2c2c;
-        --border-color: #555;
+/* Dark Mode Variables */
+.dark-mode {
+  --text-color: #eee;
+  --background-color: #1e1e1e;
+  --card-bg: #2c2c2c;
+  --border-color: #555;
 
-        --link-color: #6bb6ff;
-        --link-hover: #91c9ff;
+  --link-color: #6bb6ff;
+  --link-hover: #91c9ff;
 
-        --header-accent: #6bb6ff;
-      }
+  --header-accent: #6bb6ff;
+}
 
-      body {
-        margin: 0;
-        background: var(--background-color);
-        font-family: var(--font-body);
-        color: var(--text-color);
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        font-size: min(1.1rem, 3vw);
-      }
+/* Body Layout */
+body {
+  margin: 0;
+  background: var(--background-color);
+  font-family: var(--font-body);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: min(1.1rem, 3vw);
+}
 
-      .page-layout {
-        display: flex;
-        padding-top: 1rem;
-      }
+/* Page Layout */
+.page-layout {
+  display: flex;
+  padding-top: 1rem;
+}
 
-      /* SIDEBAR */
-      .sidebar-index {
+/* SIDEBAR (Desktop default) */
+.sidebar-index {
   width: 250px;
   padding: 1rem;
   background: var(--background-color);
   border-right: 1px solid var(--border-color);
   position: sticky;
   top: 80px;
-
-  /* FIXED VERSION */
   max-height: calc(100vh - 80px);
   overflow-y: auto;
 }
 
-      .sidebar-group {
-        margin-bottom: 1.4rem;
-      }
+.sidebar-group {
+  margin-bottom: 1.4rem;
+}
 
-      .sidebar-letter {
-        font-family: var(--font-heading);
-        font-size: 1.4rem;
-        font-weight: bold;
-        margin-bottom: 0.3rem;
-        padding-bottom: 0.2rem;
-        border-bottom: 1px solid var(--border-color);
-      }
+.sidebar-letter {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid var(--border-color);
+}
 
-      .sidebar-group a {
-        display: block;
-        padding-left: 6px;
-        margin: 4px 0;
-        text-decoration: none;
-        color: var(--link-color);
-      }
+.sidebar-group a {
+  display: block;
+  padding-left: 6px;
+  margin: 4px 0;
+  text-decoration: none;
+  color: var(--link-color);
+}
 
-      .sidebar-group a:hover {
-        text-decoration: underline;
-        color: var(--link-hover);
-      }
+.sidebar-group a:hover {
+  text-decoration: underline;
+  color: var(--link-hover);
+}
 
-      /* MAIN CONTENT */
-      .alphabet-list {
-        flex: 1;
-        padding: 2rem;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
+/* MAIN CONTENT */
+.alphabet-list {
+  flex: 1;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
 
-      .letter-section {
-        background: var(--card-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        padding: 1rem;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-      }
+.letter-section {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
 
-      .letter-section h2 {
-        font-family: var(--font-heading);
-        font-size: 1.6rem;
-        color: var(--header-accent);
-        border-bottom: 2px solid var(--header-accent);
-        padding-bottom: 0.3rem;
-        margin-bottom: 0.5rem;
-      }
+.letter-section h2 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--header-accent);
+  border-bottom: 2px solid var(--header-accent);
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
+}
 
-      .letter-section ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
+.letter-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-      .letter-section a {
-        color: var(--text-color);
-        text-decoration: none;
-      }
+.letter-section a {
+  color: var(--text-color);
+  text-decoration: none;
+}
 
-      .letter-section a:hover {
-        color: var(--link-color);
-        text-decoration: underline;
-      }
+.letter-section a:hover {
+  color: var(--link-color);
+  text-decoration: underline;
+}
 
-      .pdf-icon {
-        margin-left: 6px;
-        font-size: 1.2rem;
-      }
-      .sidebar-home {
-        padding-bottom: 1rem;
-        margin-bottom: 1rem;
-        border-bottom: 1px solid var(--border-color);
-      }
+.letter-section li {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  background: var(--background-color);
+  border-left: 4px solid var(--border-color);
+  border-radius: 4px;
+}
 
-      .home-link {
-        font-size: 1.2rem;
-        color: var(--link-color);
-        text-decoration: none;
-        font-weight: bold;
-        display: block;
-      }
+/* Dark Mode List Styling */
+.dark-mode .letter-section li {
+  background: var(--card-bg);
+  border-left: 4px solid var(--link-color);
+  color: var(--text-color);
+}
+.dark-mode .letter-section a {
+  color: var(--link-color);
+}
+.dark-mode .letter-section a:hover {
+  color: var(--link-hover);
+}
 
-      .home-link:hover {
-        text-decoration: underline;
-        color: var(--link-hover);
-      }
-      /* Light mode (your existing rule) */
-      .letter-section li {
-        margin: 1rem 0;
-        padding: 0.75rem 1rem;
-        background: var(--background-color);
-        border-left: 4px solid var(--border-color);
+/* HOME LINK */
+.sidebar-home {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
 
-        border-radius: 4px;
-      }
+.home-link {
+  font-size: 1.2rem;
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+}
+.home-link:hover {
+  text-decoration: underline;
+  color: var(--link-hover);
+}
 
-      /* Dark mode */
-      .dark-mode .letter-section li {
-        background: var(--card-bg);
-        border-left: 4px solid var(--link-color);
-        color: var(--text-color);
-      }
-      .dark-mode .letter-section a {
-        color: var(--link-color);
-      }
+/* ===========================
+   MOBILE SIDEBAR DRAWER
+   =========================== */
 
-      .dark-mode .letter-section a:hover {
-        color: var(--link-hover);
-      }
-    </style>
+@media (max-width: 900px) {
+  .page-layout {
+    display: block; /* content goes full width */
+  }
+
+  .sidebar-index {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background: var(--background-color);
+    border-right: 1px solid var(--border-color);
+    padding: 1rem;
+    overflow-y: auto;
+    transform: translateX(-100%); /* HIDDEN by default */
+    transition: transform 0.3s ease;
+    z-index: 9999;
+  }
+
+  body.sidebar-open .sidebar-index {
+    transform: translateX(0);
+  }
+
+  /* Overlay: needed for closing */
+  #mobileSidebarOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 9998;
+  }
+
+  body.sidebar-open #mobileSidebarOverlay {
+    display: block;
+  }
+}
+
+/* ===========================
+   DESKTOP BEHAVIOR
+   =========================== */
+@media (min-width: 901px) {
+  .page-layout {
+    display: flex;
+  }
+
+  .sidebar-index {
+    position: sticky;
+    top: 80px;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    transform: none !important;
+  }
+
+  #mobileSidebarOverlay {
+    display: none !important;
+  }
+}
+</style>
+
   </head>
   <body>
+    <div id="mobileSidebarOverlay"></div>
+
     <div id="header-container"></div>
 
     <div class="page-layout">
-      <!-- ==========================
-         SIDEBAR INDEX
-         ========================== -->
       <div class="sidebar-index">
         <div class="sidebar-home">
           <a href="index.html" class="home-link">🏠 Home</a>
@@ -3674,7 +3734,7 @@
         </div
       </div>
     </div>
-
+  </div>
     <!-- HEADER & FOOTER -->
     <script src="data/header.js"></script>
     <script src="js/synonyms.js"></script>
