@@ -85,6 +85,18 @@ document.addEventListener("DOMContentLoaded", async function () {
       document.body.classList.remove("sidebar-open");
     });
   }
+  // ----------------------------------------------------------
+  // CLOSE CLASS-RECORDINGS SIDEBAR ON LINK CLICK
+  // ----------------------------------------------------------
+  const classSidebar = document.querySelector(".sidebar-index");
+
+  if (classSidebar) {
+    classSidebar.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        document.body.classList.remove("sidebar-open");
+      });
+    });
+  }
 
   // ----------------------------------------------------------
   // LOAD data.json
