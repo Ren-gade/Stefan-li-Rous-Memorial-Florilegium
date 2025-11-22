@@ -1970,7 +1970,7 @@
   {
     "title": "The Care and Feeding of the Porta-Privy",
     "category": "Camping",
-    "tags": [""],
+    "tags": ["campsite"],
     "description": "On the Care and Feeding of the Wild Porta-Privy by Lord Iain mac Caradoc (2000)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Camping/On+the+Care+and+Feeding+of+the+Wild+Porta-Privy.pdf"
   },
@@ -1980,6 +1980,62 @@
     "tags": ["cooking", "campsite"],
     "description": "Feeding yourselves with out living in a kitchen at war (2010)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Camping/Packing+for+Camp+Cooking+(2010).pdf"
+  },
+  {
+    "title": "Clan Black Stag Cooking Platform",
+    "category": "Camping",
+    "tags": ["cooking", "metalwork"],
+    "description": "Clan Black Stag Cooking Platform designed and built by Seitheach Earnan Mac Bearach (2014)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Camping/Clan+Black+Stag+Cooking+Platf.pdf"
+  },
+  {
+    "title": "Firepit Design",
+    "category": "Camping",
+    "tags": ["campfire", "cooking", "camping"],
+    "description": "Duke Frederick's Firepit Design(2003).",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Camping/Duke+Frederick's+Firepit+Design(2003).pdf"
+  },
+  {
+    "title": "A Ladye's Guide to Safety at War",
+    "category": "Camping",
+    "tags": ["events", "safety"],
+    "description": "A Ladye's Guide to Safety at War by Lady Rosalie Langmod of Calontir (2018)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Camping/A+Ladye's+Guide+to+Safety+at+War+(2018).pdf"
+  },
+  {
+    "title": "Handy Knots for Re-enactors",
+    "category": "Camping",
+    "tags": ["camping", "knots"],
+    "description": "Handy Knots for Re-enactors by Master William de Wyke (2015)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Camping/Handy+Knots+for+Re-enactors+(2015).pdf"
+  },
+  {
+    "title": "Eat Like a King",
+    "category": "Camping",
+    "tags": ["camping", "cooking"],
+    "description": "Eat Like a King - SCA single camper dining ideas and tools by Dame Hróðný Rognvaldsdóttir, OP, OL (2017)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Camping/Eat+Like+a+King.pdf"
+  },
+  {
+    "title": "Sheetwalls",
+    "category": "Camping",
+    "tags": ["camping", "tent"],
+    "description": "On the Creating of Sheet Walls By Lady Meliora Leuedai de Ardescote (2000)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Camping/Sheetwalls.pdf"
+  },
+  {
+    "title": "Tick Prevention",
+    "category": "Camping",
+    "tags": ["camping", "safety"],
+    "description": "TICK...TICK...TICK PENNSIC TERRORISTS by Baron Dur of Hidden Mountain ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Camping/Tick+Prevention.pdf"
+  },
+  {
+    "title": "",
+    "category": "Camping",
+    "tags": [""],
+    "description": "",
+    "download_url": ""
   },
   {
     "title": "Introduction to Natural Dyeing",
