@@ -2038,18 +2038,186 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Celebrations+%26+Events/Twelfth+Night+(97).pdf"
   },
   {
-    "title": "",
+    "title": "A Camper's Guide to Lilies War",
     "category": "celebrations",
-    "tags": [""],
-    "description": "",
-    "download_url": "   "
+    "tags": ["event", "camping"],
+    "description": "A Camper's Guide to Lilies War by Mistress Sofya la Rus (OL) (2017)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Celebrations+%26+Events/A+Camper's+Guide+to+Lilies+War+(2017).pdf"
   },
   {
-    "title": "",
+    "title": "A dog's viewpoint of the 1999 Ransom of Leyland event",
     "category": "celebrations",
-    "tags": [""],
-    "description": "",
-    "download_url": ""
+    "tags": ["past events"],
+    "description": "Ransom of Leyland by Baroness Jenna of SouthWind, OP: An event report by Ruby the Eeeper (1999)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Celebrations+%26+Events/A+dog's+viewpoint+of+the+1999+Ransom+of+Leyland+event+.pdf"
+  },
+  {
+    "title": "A dog's viewpoint of the 2012 Ceilidh event",
+    "category": "celebrations",
+    "tags": ["past events"],
+    "description": "Ceilidh by Baroness Jenna of SouthWind, OP:A report by Deke, Fierce Hound Hunter of Horrible Flying Flies. ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Celebrations+%26+Events/A+dog's+viewpoint+of+the+2012+_Ceilidh_+event.pdf"
+  },
+  {
+    "title": "Autumn Moons and Holidays",
+    "category": "celebrations",
+    "tags": ["holidays", "traditions"],
+    "description": "Autumn Moons and Holidays by THL Johnnae llyn Lewis (2007)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Celebrations+%26+Events/Autumn+Moons+and+Holidays+(2007).pdf"
+  },
+  {
+    "title": "Cast Iron Chef 2019",
+    "category": "celebrations",
+    "tags": ["cooking"],
+    "description": "Cast Iron Chef 2019 by THL Dagonell Collingwood",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Celebrations+%26+Events/Cast+Iron+Chef+2019.pdf"
+  },
+  {
+    "title": "Christmas Gifting ",
+    "category": "celebrations",
+    "tags": ["holidays", "gift"],
+    "description": "Christmas Gifting by mistress katherine kerr",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Celebrations+%26+Events/Christmas+Gifting+(2015).pdf"
+  },
+  {
+    "title": "Coronation ceremony of Artemisia",
+    "category": "celebrations",
+    "tags": ["past events"],
+    "description": "Coronation ceremony of Artemisia's 2nd crown (1998) as recorded by Aquilanne",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Celebrations+%26+Events/Coronation+ceremony+of+Artemisia's+2nd+crown+(1998).pdf"
+  },
+  {
+    "title": "Grimfells Renaissance",
+    "category": "celebrations",
+    "tags": ["past events"],
+    "description": "Grimfells Renaissance by Baroness Jenna of SouthWind, OP (2009)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Celebrations+%26+Events/Grimfells+Renaissance.pdf"
+  },
+  {
+    "title": "halloween, Medieval Style",
+    "category": "celebrations",
+    "tags": ["holidays", "traditions"],
+    "description": "HALLOWEEN, MEDIEVAL STYLE by Lady Muireann ni Riordain, MOAS Ponte Alto, Silver Nautilus (1997)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Celebrations+%26+Events/Halloween%2C+Medieval+Style.pdf"
+  },
+  {
+    "title": "History of the Birka Event",
+    "category": "celebrations",
+    "tags": ["past events", "birka"],
+    "description": "Event report from Birka by Lord Olaf Of Trollhiemsfjord",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Celebrations+%26+Events/History+of+the+Birka+event.pdf"
+  },
+  {
+    "title": "Jewish Holiday Traditions of the Sephardic Peoples ",
+    "category": "celebrations",
+    "tags": ["jewish", "holidays", "traditions"],
+    "description": "Jewish Holiday Traditions of the Sephardic Peoples By Lady Sindara Lind Rachael of the Falconshield (2001)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Celebrations+%26+Events/Jewish+Holiday+Traditions+of+the+Sephardic+Peoples+(2001).pdf"
+  },
+  {
+    "title": "May Anniversaries and Festivals",
+    "category": "celebrations",
+    "tags": ["festivals", "holidays"],
+    "description": "May Anniversaries and Festivals by THL Johnnae llyn Lewis (2006)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Celebrations+%26+Events/May+Anniversaries+and+Festivals.pdf"
+  },
+  {
+    "title": "Medieval Christmas",
+    "category": "celebrations",
+    "tags": ["holidays"],
+    "description": "On Christmas in the Middle Ages by Nicolaa de Bracton of Leicester (1994)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Celebrations+%26+Events/Medieval+Christmas+(1994).pdf"
+  },
+  {
+    "title": "Surviving Estrella War",
+    "category": "celebrations",
+    "tags": ["past events", "camping"],
+    "description": "Surviving Estrella War by Mordonna DuBois",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Celebrations+%26+Events/SURVIVING+ESTRELLA+WAR.pdf"
+  },
+  {
+    "title": "The Battle of Hastings",
+    "category": "celebrations",
+    "tags": ["past events"],
+    "description": "Hastings 2000: Our Experiences at the Battle of Hastings by Duke Arthur of Lockehaven, MSCA, OL, OP with Duke Henrik of Havn, KSCA, OL, OP",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Celebrations+%26+Events/The+Battle+of+Hastings+(2000).pdf"
+  },
+  {
+    "title": "The True Meaning of Xmas",
+    "category": "celebrations",
+    "tags": ["holidays", "christmas"],
+    "description": "The True Meaning of Xmas by Nicolaa de Bracton of Leiceste (1996)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Celebrations+%26+Events/The+True+Meaning+of+Xmas+(1996).pdf"
+  },
+  {
+    "title": "The Viking Celebration of Yule",
+    "category": "celebrations",
+    "tags": ["holidays", "viking", "christmas"],
+    "description": "The Viking Celebration of Yule by Elska á Fjárfelli, of the Dominion of Myrkfaelinn (2019)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Celebrations+%26+Events/The+Viking+Celebration+of+Yule+(2019).pdf"
+  },
+  {
+    "title": "The Yule Log ",
+    "category": "celebrations",
+    "tags": ["holidays", "christmas"],
+    "description": "The Yule Log by Lady Katharine of Caithness (2010)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Celebrations+%26+Events/The+Yule+Log+(2010).pdf"
+  },
+  {
+    "title": "Wassail Traditions",
+    "category": "celebrations",
+    "tags": ["holidays", "christmas"],
+    "description": "Wassail Traditions by THL Johnnae llyn Lewis, CE (2007)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Celebrations+%26+Events/Wassail+Traditions+(2007).pdf"
+  },
+  {
+    "title": "A Child's Seat",
+    "category": "Children",
+    "tags": ["children", "kids", "woodworking", "accessories"],
+    "description": "A Child’s Seat by Mistress Slaine ni Chiarain (2007)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Children/A+Child%E2%80%99s+Seat.pdf"
+  },
+  {
+    "title": "Miniature Houses in Period",
+    "category": "Children",
+    "tags": ["diy", "woodworking", "toys"],
+    "description": "The Middle Ages: Through a Magnifying Glass by Margery La Affayte (2001)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Children/Building+miniature+houses+in+period+styles.pdf"
+  },
+  {
+    "title": "Children's Costumes",
+    "category": "Children",
+    "tags": ["children", "garb", "clothing"],
+    "description": "Children's Costumes at SCA Events: A Personal Testimonial by Mistress AElflæd of Duckford (1987)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Children/Children's+Costumes.pdf"
+  },
+  {
+    "title": "Horsey Toys",
+    "category": "Children",
+    "tags": ["children", "toys"],
+    "description": "Horsey Toys by Lady Ryska Goodwyfe Shipbuilder(2006)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Children/Horsey+Toys.pdf"
+  },
+  {
+    "title": "Kindergarb",
+    "category": "Children",
+    "tags": ["children", "garb", "clothing"],
+    "description": "Kindergarb - Suggestions and Thoughts for Making Children's Garb Compiled by Lady Hrosvitha von Celle (2002)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Children/Kindergarb.pdf"
+  },
+  {
+    "title": "Lights Shared",
+    "category": "Children",
+    "tags": ["children", "activity"],
+    "description": "Lights Shared: Children's Activity for any time of the year Contributed by Countess Mistress Tessa of the Gardens (2001) ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Children/Lights+Shared.pdf"
+  },
+  {
+    "title": "Two Ideas for Hobbyhorses",
+    "category": "Children",
+    "tags": ["children", "toys"],
+    "description": "wo Ideas for Hobbyhorses by Mistress Slaine ni Chiarain(2000)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Children/Two+Ideas+for+Hobbyhorses.pdf"
   },
   {
     "title": "Introduction to Natural Dyeing",
