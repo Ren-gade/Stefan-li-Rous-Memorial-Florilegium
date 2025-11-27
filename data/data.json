@@ -2220,11 +2220,165 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Children/Two+Ideas+for+Hobbyhorses.pdf"
   },
   {
+    "title": "Chivalry and Feudalism",
+    "category": "Chivalry",
+    "tags": ["chivalry", "feudalism"],
+    "description": "Chivalry and Feudalism by Peregrine Payne(1991)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Chivalry/Chivalry+and+Feudalism.pdf"
+  },
+  {
+    "title": "Chivalry: Its Origins and Evolution",
+    "category": "Chivalry",
+    "tags": [""],
+    "description": "Chivalry: It's Origins and Evolution by Sir Valtorr of Oslo, Knight of AnTir (2014)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Chivalry/Chivalry_+It's+Origins+and+Evolution+(2014).pdf"
+  },
+  {
+    "title": "Fealty in the SCA",
+    "category": "Chivalry",
+    "tags": [""],
+    "description": "Fealty by Baron Hrolf Herjolffsen OP (2002)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Chivalry/Fealty+in+the+SCA+(2002).pdf"
+  },
+  {
+    "title": "Knightly Orders of Spain",
+    "category": "Chivalry",
+    "tags": [""],
+    "description": "Knightly Orders of Spain by Marija Kotok (2002)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Chivalry/Knightly+Orders+of+Spain+(2002).pdf"
+  },
+  {
+    "title": "Recreating the Position of Squire in These Current Middle Ages",
+    "category": "Chivalry",
+    "tags": [""],
+    "description": "Recreating the Position of Squire in These Current Middle Ages by Ld. Rurik Petrovitch Stoianov (1988)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Chivalry/Recreating+the+Position+of+Squire+in+These+Current+Middle+Ages+(1988).pdf"
+  },
+  {
+    "title": "The Court of Love",
+    "category": "Chivalry",
+    "tags": [""],
+    "description": "The Court of Love by Mevanou verch Reys Yriskynit (2011)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Chivalry/The+Court+of+Love+(2011).pdf"
+  },
+  {
+    "title": "The Rules of Love",
+    "category": "Chivalry",
+    "tags": [""],
+    "description": "The Rules of Love by Master Giles de Laval. (2001)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Chivalry/The+Rules+of+Love.pdf"
+  },
+  {
+    "title": "To Squire or not to Squire",
+    "category": "Chivalry",
+    "tags": [""],
+    "description": "To Squire or Not to Squire? That is the question??? by Viscount Sterling, KSCA (2005)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Chivalry/To+Squire+or+Not+to+Squire.pdf"
+  },
+  {
+    "title": "Why I was 25 years late, Swearing Fealty to the Crown",
+    "category": "Chivalry",
+    "tags": [""],
+    "description": "Why I Was Twenty-five Years Late, Swearing Fealty to the Crown by Duke Arthur of Lockehaven, MSCA, OL, OP (2000)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Chivalry/Why+I+Was+Twenty-five+Years+Late%2C+Swearing+Fealty+to+the+Crown+.pdf"
+  },
+  {
+    "title": "10 Medieval Ways to Stay Warm with an Old Woolen Blanket",
+    "category": "Clothing",
+    "tags": ["clothing", "garb"],
+    "description": "10 medieval ways to stay warm with an old woolen blanket by Teffania de Tukerton (2012)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/10+medieval+ways+to+stay+warm+with+an+old+woolen+blanket+(2012).pdf"
+  },
+  {
+    "title": "10C Embroidered Turnshoes",
+    "category": "Clothing",
+    "tags": ["10th century", "shoes", "garb"],
+    "description": "10thCentury Embroidered Turnshoes by Lord Robert of Ferness (2018) ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/10C+Embroidered+Turnshoes.pdf"
+  },
+  {
+    "title": "10C Scandinavian Ankle Boot",
+    "category": "Clothing",
+    "tags": ["10th century", "scandinavia", "shoes", "garb"],
+    "description": "10th Century Scandinavian Ankle Boot: A Brief History and Method for Turnshoe Construction by Sir Óláfr Þorvarðarson (2017)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/10c+Scandinavian+Ankle+Boot+(2017).pdf"
+  },
+  {
+    "title": "16C Irish Dress",
+    "category": "Clothing",
+    "tags": ["clothing", "garb", "irish", "ireland", "celtic"],
+    "description": "16th Century Irish Dress by Tiarna Brann mac Finnchad (2014)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/16th+Century+Irish+Dress+(2014).pdf"
+  },
+  {
+    "title": "An Age of Change: Examining 14C Fashion",
+    "category": "Clothing",
+    "tags": ["garb", "14th century"],
+    "description": "An Age of Change: Examining 14th century Fashion by Duchess Aislinn Morcroft (2015)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/An+Age+of+Change_+Examining+14th+century+Fashion+(2015).pdf"
+  },
+  {
+    "title": "An Anglo-Saxon Cloak",
+    "category": "Clothing",
+    "tags": ["garb", "clothing"],
+    "description": "An Anglo-Saxon Cloak by Lady Eowyn 'Eo' Swiftlere (2002)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/An+Anglo-Saxon+Cloak+(2002).pdf"
+  },
+  {
+    "title": "Attaching Aiglets",
+    "category": "Clothing",
+    "tags": ["garb", "notions"],
+    "description": "Attaching Aiglets by Ld. Gerald Loosehelm (2015)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Attaching+Aiglets+(2015).pdf"
+  },
+  {
+    "title": "Attaching Buttons to the Garment",
+    "category": "Clothing",
+    "tags": ["garb", "notions", "buttons"],
+    "description": "Attaching Buttons to the Garment by Mistress Dunstana Talana the Violet, OL. (2012)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Attaching+Buttons+to+the+Garment+(2012).pdf"
+  },
+  {
+    "title": "Buttonholes",
+    "category": "Clothing",
+    "tags": ["garb", "notions", "buttons"],
+    "description": "Buttonholes by Mistress Dunstana Talana the Violet, OL. (2012)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Buttonholes+(2012).pdf"
+  },
+  {
+    "title": "Caligae - Roman Army Boots",
+    "category": "Clothing",
+    "tags": ["roman", "shoes", "garb"],
+    "description": "Caligae – Roman Army Boots by Viscount Sir Corin Anderson (KSCA, OP) (2006)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Caligae+-+Roman+Army+Boots.pdf"
+  },
+  {
     "title": "Introduction to Natural Dyeing",
     "category": "Clothing",
     "tags": ["garb", "clothing", "dye", "fiber arts"],
     "description": "Basic principles on how to get started dyeing",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Japan/Introduction+to+Natural+Dyeing.pdf"
+  },
+  {
+    "title": "making Medieval Ball Buttons",
+    "category": "Clothing",
+    "tags": ["garb", "notions", "buttons"],
+    "description": "Making Medieval Ball Buttons by Mistress Dunstana Talana the Violet, OL (2012)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Making+Medieval+Ball+Buttons+(2012).pdf"
+  },
+  {
+    "title": "The Mysterious Bliaut Revealed ",
+    "category": "Clothing",
+    "tags": ["garb"],
+    "description": "The Mysterious Bliaut Revealed by Mistress Enid d’Auliere, OL (2007)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/The+Mysterious+Bliaut+Revealed+(2007).pdf"
+  },
+  {
+    "title": "To Shod a Shire",
+    "category": "Clothing",
+    "tags": ["shoes", "garb"],
+    "description": "To Shod A Shire by Lady Eowyn 'Eo' Swiftlere (2002)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/To+Shod+A+Shire+(2002).pdf"
   },
   {
     "title": "Beads: Symbols of Indigenous Cultural Resilience and Value",
