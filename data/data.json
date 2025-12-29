@@ -3231,5 +3231,61 @@
     "tags": ["woodworking", "chair", "13th century"],
     "description": "An article on Building a reproduction of a 13th century chair using period techniques by Iohn Spooner.",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Unclassified/Press+and+Plow.pdf"
+  },
+  {
+    "title": "The Origin of the Holy Grail",
+    "category": "Unclassified",
+    "tags": ["grail", "arthur", "myth", "folklore", "britain"],
+    "description": "The Origin of the Holy Grail by Da'ved Man of Letters Lord Xaviar the Eccentric(1997)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Unclassified/The+Origin+of+the+Holy+Grail+(1997).docx.pdf"
+  }
+    {
+    "title": "MSG - Medieval whips. Construction and use",
+    "category": "Unclassified",
+    "tags": ["whips"],
+    "description": "A message thread about Medieval whips. Construction and use (2008)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Unclassified/MSG+-+Medieval+whips.+Construction+and+use+(2008).docx.pdf"
+  }  {
+    "title": "MSG - Slavery in medieval Europe and Middle East",
+    "category": "Unclassified",
+    "tags": ["slavery"],
+    "description": "A message thread about Slavery in medieval Europe and Middle East (2008)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Unclassified/MSG+-+Slavery+in+medieval+Europe+and+Middle+East+(2008).docx.pdf"
+  }  {
+    "title": "MSG - Movies",
+    "category": "Unclassified",
+    "tags": ["movies"],
+    "description": "A message thread about Movies (2008)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Unclassified/MSG+-+Movies+(2008).docx.pdf"
+  }  {
+    "title": "MSG - Living History",
+    "category": "Unclassified",
+    "tags": ["britain", "dark age", "roman", "history"],
+    "description": "A message thread about Living History (1994)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Unclassified/MSG+-+Living+History+(1994).docx.pdf"
+  }  {
+    "title": "MSG - Flirting",
+    "category": "Unclassified",
+    "tags": ["social"],
+    "description": "A message thread about Flirting (2019)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Unclassified/MSG+-+Flirting+(2019).docx.pdf"
+  }  {
+    "title": "MSG - Cryptography",
+    "category": "Unclassified",
+    "tags": ["codebreaking","cypher"],
+    "description": "A message thread about Cryptography (1999)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Unclassified/MSG+-+Cryptography+(1999).docx.pdf"
+  }  {
+    "title": "MSG - Cameras",
+    "category": "Unclassified",
+    "tags": ["event","events"],
+    "description": "A message thread about cameras at events (2008)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Unclassified/MSG+-+Cameras+(2008).docx.pdf"
+  }  {
+    "title": "MSG - Beggers",
+    "category": "Unclassified",
+    "tags": ["people", "peasants"],
+    "description": "A message thread about beggars in period (1997)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Unclassified/MSG+-+Beggers+(1997).docx.pdf"
   }
 ]
