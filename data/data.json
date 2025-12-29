@@ -2311,6 +2311,20 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/16th+Century+Irish+Dress+(2014).pdf"
   },
   {
+    "title": "A 15th Century Indian Sari",
+    "category": "Clothing",
+    "tags": ["garb", "15th century", "india"],
+    "description": "A 15th Century Indian Sari: Using the Technique of Wax Resist and Dye by Baroness Anastasia Alexandrovana Andreeva (OL)(2011)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/A+15th+Century+Indian+Sari+(2011).pdf"
+  },
+  {
+    "title": "A Brief Critical Look at Women's Thirteenth Century Dress ",
+    "category": "Clothing",
+    "tags": ["garb", "woman", "women", "13th century"],
+    "description": "A Brief Critical Look at Women's Thirteenth Century Dress by Mistress Nicolaa de Bracton of Leicester(1996)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/A+Brief+Critical+Look+at+Women's+Thirteenth+Century+Dress+(1996).pdf"
+  },
+  {
     "title": "An Age of Change: Examining 14C Fashion",
     "category": "Clothing",
     "tags": ["garb", "14th century"],
@@ -2323,6 +2337,27 @@
     "tags": ["garb", "clothing"],
     "description": "An Anglo-Saxon Cloak by Lady Eowyn 'Eo' Swiftlere (2002)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/An+Anglo-Saxon+Cloak+(2002).pdf"
+  },
+  {
+    "title": "An Easy Italian Renaissance Gown",
+    "category": "Clothing",
+    "tags": ["garb", "woman", "women", "italian"],
+    "description": "An Easy Italian Renaissance Gown by Madonna Contessa Ilaria Veltri degli Ansari (2014)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/An+Easy+Italian+Renaissance+Gown.pdf"
+  },
+  {
+    "title": "An Elizabethan Gown of 1575-6",
+    "category": "Clothing",
+    "tags": ["garb", "woman", "women", "16th century"],
+    "description": "An Elizabethan Gown of 1575-6 by Mistress Marguerite Dinard, O.L. (2007)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/An+Elizabethan+Gown+of+1575-6.pdf"
+  },
+  {
+    "title": "A Reconstructed 11th Century Danish Costume",
+    "category": "Clothing",
+    "tags": ["garb", "danish", "11th century"],
+    "description": "A Reconstructed 11th Century Danish Costume by Master Giles de Laval (2001)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/A+Reconstructed+11th+Century+Danish+Costume+(2001).pdf"
   },
   {
     "title": "Attaching Aiglets",
@@ -2339,6 +2374,13 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Attaching+Buttons+to+the+Garment+(2012).pdf"
   },
   {
+    "title": "Basic Romano British Costume",
+    "category": "Clothing",
+    "tags": ["garb", "roman", "britain"],
+    "description": "Basic Romano British Costume by Sion Glas (1995)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Basic+Romano+British+Costume.pdf"
+  },
+  {
     "title": "Buttonholes",
     "category": "Clothing",
     "tags": ["garb", "notions", "buttons"],
@@ -2353,6 +2395,41 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Caligae+-+Roman+Army+Boots.pdf"
   },
   {
+    "title": "Confessions of a Garbaholic As Told By 'T'",
+    "category": "Clothing",
+    "tags": ["garb"],
+    "description": "Confessions of a Garbaholic As Told By 'T' (1991)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Confessions+of+a+Garbaholic+As+Told+By+'T'+(1991).pdf"
+  },
+  {
+    "title": "Dressing-Up T-Tunics",
+    "category": "Clothing",
+    "tags": ["garb", "tunic", "equestrian", "pattern"],
+    "description": "Dressing-Up T-Tunics by Lady Ealasaid Mac al'Bhaird (2013)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Dressing-Up+T-Tunics.pdf"
+  },
+  {
+    "title": "Four Panel Cotehardies - History and Construction",
+    "category": "Clothing",
+    "tags": ["garb", "pattern"],
+    "description": "Four Panel Cotehardies - History and Construction by Lady Rosalie Langmod of Calontir (2013)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Four+Panel+Cotehardies_+History+and+Construction.pdf"
+  },
+  {
+    "title": "Gaelic Dress",
+    "category": "Clothing",
+    "tags": ["garb", "ireland", "scotland", "gaels", "manx"],
+    "description": "Gaelic Dress by HL Finnacan Dub(2005)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Gaelic+Dress+(2005).pdf"
+  },
+  {
+    "title": "How to find Great Historic type Fabric for Garb cheaply, at Thrift Stores",
+    "category": "Clothing",
+    "tags": ["garb", "thrift"],
+    "description": "How to find Great Historic type Fabric for Garb cheaply, at Thrift Stores by Lady Catherine Rose FitzEdmunds(2011)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/How+to+find+Great+Historic+type+Fabric+for+Garb+cheaply%2C+at+Thrift+Stores+(2011).pdf"
+  },
+  {
     "title": "Introduction to Natural Dyeing",
     "category": "Clothing",
     "tags": ["garb", "clothing", "dye", "fiber arts"],
@@ -2360,18 +2437,155 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Japan/Introduction+to+Natural+Dyeing.pdf"
   },
   {
-    "title": "making Medieval Ball Buttons",
+    "title": "Intro to Roman Clothing",
+    "category": "Clothing",
+    "tags": ["garb", "roman", "byzantine"],
+    "description": "Intro to Roman Clothing by Domina Tullia Saturnina(2015)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Intro+to+Roman+Clothing+(2015).pdf"
+  },
+  {
+    "title": "Knitted Stockings",
+    "category": "Clothing",
+    "tags": ["garb", "knitting", "fiber arts"],
+    "description": "Knitted Stockings by Baroness Rhiall of Wystanesdon (2001)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Knitted+Stockings+(2001).pdf"
+  },
+  {
+    "title": "Making a Viking Leather Slipper",
+    "category": "Clothing",
+    "tags": ["garb", "accessories", "shoes", "viking"],
+    "description": "Making a Viking Leather Slipper by Mistress Gwendolen Wold (2011)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Making+a+Viking+Leather+Slipper+(2011).pdf"
+  },
+  {
+    "title": "Making Medieval Ball Buttons",
     "category": "Clothing",
     "tags": ["garb", "notions", "buttons"],
     "description": "Making Medieval Ball Buttons by Mistress Dunstana Talana the Violet, OL (2012)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Making+Medieval+Ball+Buttons+(2012).pdf"
   },
   {
+    "title": "Middle Eastern Clothing Practical Primer",
+    "category": "Clothing",
+    "tags": ["garb", "middle east"],
+    "description": "Middle Eastern Clothing Practical Primer by asim al-talib(2007)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Middle+Eastern+Clothing+Practical+Primer+(2007).pdf"
+  },
+  {
+    "title": "More than you ever wanted to know about the kilt in the 1590s ",
+    "category": "Clothing",
+    "tags": ["garb", "scotland", "16th century"],
+    "description": "More than you ever wanted to know about the kilt in the 1590s by Lord Gregor Mac Beathain (2008)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/More+than+you+ever+wanted+to+know+about+the+kilt+in+the+1590s+(2008).pdf"
+  },
+  {
+    "title": "Ottoman Clothing in SCA Period - An Overview",
+    "category": "Clothing",
+    "tags": ["garb", "turkey", "ottoman"],
+    "description": "Ottoman Clothing in SCA Period - An Overview by asim al-talib(2007)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Ottoman+Clothing+in+SCA+Period_+An+Overview+(2007).pdf"
+  },
+  {
+    "title": "Ottoman Costume: An Overview of 16th Century Turkish Dress",
+    "category": "Clothing",
+    "tags": ["garb", "16th century", "turkey", "ottoman"],
+    "description": "Ottoman Costume: An Overview of 16th Century Turkish Dress by Master Giles de Laval(2001)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/OTTOMAN+COSTUME+An+Overview+of+16th+Century+Turkish+Dress+(2001).pdf"
+  },
+
+  {
+    "title": "Quick and Dirty Trunk Hose",
+    "category": "Clothing",
+    "tags": ["garb", "accessories"],
+    "description": "Quick and Dirty Trunk Hose by Don Tivar Moodragon (2009)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Quick+and+Dirty+Trunk+Hose+(2009).pdf"
+  },
+  {
+    "title": "Hosiery Manufacture in the Middle Ages (A Translation)",
+    "category": "Clothing",
+    "tags": ["garb", "accessories"],
+    "description": "Hosiery Manufacture in the Middle Ages by Marguerite Dubuisson, Bulletin of the Needle and Bobbin Club (Translated. 1997 by Johanna Lemercer)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Hosiery+Manufacture+in+the+Middle+Ages+(1997).pdf"
+  },
+  {
+    "title": "The Houppelande C.1355-1450",
+    "category": "Clothing",
+    "tags": [
+      "garb",
+      "England",
+      "france",
+      "germany",
+      "italy",
+      "14th century",
+      "15th century"
+    ],
+    "description": "The Houppelande C.1355-1450 by Allison Poinvillars de Tours",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/The+Houppelande+C.1355-1450+.pdf"
+  },
+  {
     "title": "The Mysterious Bliaut Revealed ",
     "category": "Clothing",
     "tags": ["garb"],
-    "description": "The Mysterious Bliaut Revealed by Mistress Enid d’Auliere, OL (2007)",
+    "description": "The Mysterious Bliaut Revealed by Mistress Enid d'Auliere, OL (2007)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/The+Mysterious+Bliaut+Revealed+(2007).pdf"
+  },
+  {
+    "title": "The Pleatwork Apron",
+    "category": "Clothing",
+    "tags": ["garb", "accessories"],
+    "description": "The Pleatwork Apron by Meisterin Felicity Fluβmüllnerin (2016)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/The+Pleatwork+Apron+(2016).pdf"
+  },
+  {
+    "title": "Recreating the Costume of Medieval Persia",
+    "category": "Clothing",
+    "tags": ["garb", "persia", "persona"],
+    "description": "Recreating the Costume of Medieval Persia by Master ibn Jelal (2012)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Recreating+the+Costume+of+Medieval+Persia.pdf"
+  },
+  {
+    "title": "Re-Examining the Evidence - A Study of Medieval Irish Women's Dress between 750 and 900 CE",
+    "category": "Clothing",
+    "tags": [
+      "garb",
+      "irish",
+      "ireland",
+      "woman",
+      "women",
+      "8th century",
+      "9th century",
+      "10th century"
+    ],
+    "description": "Re-Examining the Evidence - A Study of Medieval Irish Women's Dress between 750 and 900 CE by Sadb an Fheadha (2014)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Re-Examining+the+Evidence+-+A+Study+of+Medieval+Irish+Women's+Dress+between+750+and+900+CE.pdf"
+  },
+  {
+    "title": "Romani Women's Costume in the Renaissance",
+    "category": "Clothing",
+    "tags": ["garb", "roma", "romani"],
+    "description": "Romani Women's Costume in the Renaissance by Old Marian, also known as Marian of Edwinstowe(2004)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Romani+Women's+Costume+in+the+Renaissance+(2004).pdf"
+  },
+  {
+    "title": "SCA Upcycling - Costuming on a Budget",
+    "category": "Clothing",
+    "tags": ["garb", "thrift"],
+    "description": "SCA Upcycling - Costuming on a Budget by Lady Jeanne-Marie la Verriere(2010)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/SCA+Upcycling_+Costuming+on+a+Budget+(2010).pdf"
+  },
+  {
+    "title": "Survey of Indian Costume",
+    "category": "Clothing",
+    "tags": ["garb", "india"],
+    "description": "Survey of Indian Costume by Baroness Anastasia Alexandrovna Andreeva (OL)(2009)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Survey+of+Indian+Costume+(2009).pdf"
+  },
+  {
+    "title": "Thorsbjerg Trousers",
+    "category": "Clothing",
+    "tags": ["garb"],
+    "description": "Thorsbjerg Trousers by Lady Rosalye Langmod(2014)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Thorsbjerg+Trousers+(2014).pdf"
   },
   {
     "title": "To Shod a Shire",
@@ -2380,6 +2594,21 @@
     "description": "To Shod A Shire by Lady Eowyn 'Eo' Swiftlere (2002)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/To+Shod+A+Shire+(2002).pdf"
   },
+  {
+    "title": "The Wardrobe of a 12th Century Frankish Noblewoman ",
+    "category": "Clothing",
+    "tags": ["garb", "woman", "women", "12th century", "franks", "german"],
+    "description": "The Wardrobe of a 12th Century Frankish Noblewoman by Mistress Roheisa Le Sarjent(2002)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/The+Wardrobe+of+a+12th+Century+Frankish+Noblewoman+(2002).pdf"
+  },
+  {
+    "title": "Weaving an 11th Century Irish Brat",
+    "category": "Clothing",
+    "tags": ["garb", "ireland", "irish", "11th century", "fiber arts"],
+    "description": "Weaving an 11th Century Irish Brat by THL Cassandra of Glastonbury(2005)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Weaving+an+11th+Century+Irish+Brat+(2005).pdf"
+  },
+
   {
     "title": "Beads: Symbols of Indigenous Cultural Resilience and Value",
     "category": "FN Indigenous",
@@ -2953,6 +3182,13 @@
     "tags": ["eoforwic", "ealdormere"],
     "description": "",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Unclassified/Chronicles+of+Eoforwic+Vol+7.pdf"
+  },
+  {
+    "title": "Ciphers: Enciphering and Deciphering period ciphers",
+    "category": "Unclassified",
+    "tags": ["cypher", "codebreaking"],
+    "description": "Ciphers: Enciphering and Deciphering period ciphers by Seigneur Lucien de La Rochelle (2009).",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Unclassified/Ciphers+(2009).docx.pdf"
   },
   {
     "title": "The Founding of Eoforwic",
