@@ -2608,7 +2608,230 @@
     "description": "Weaving an 11th Century Irish Brat by THL Cassandra of Glastonbury(2005)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Clothing/Weaving+an+11th+Century+Irish+Brat+(2005).pdf"
   },
-
+  {
+    "title": "A Proper Tournament Fence",
+    "category": "Combat",
+    "tags": ["rattan", "woodworking", "list"],
+    "description": "A Proper Tournament Fence by Sir Dafydd ap Gwystl (200*) ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/A+Proper+Tournament+Fence+(2008).pdf"
+  },
+  {
+    "title": "An Essay on Melee Tactics",
+    "category": "Combat",
+    "tags": ["rattan", "melee"],
+    "description": "An Essay on Melee Tactics By HRM Kein MacEwan (1998)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/An+Essay+on+Melee+Tactics+(1998).pdf"
+  },
+  {
+    "title": "Archer's Half Gauntlet",
+    "category": "Archery",
+    "tags": ["archery", "arm", "armor"],
+    "description": "Archer's Half Gauntlet by The Honorable Lord Jochen Schwalbe (2010)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/Archer's+Half+Gauntlet+(2010).pdf"
+  },
+  {
+    "title": "Basic Conditioning for Heavy List Combat",
+    "category": "Combat",
+    "tags": ["rattan", "exercise"],
+    "description": "Basic Conditioning for Heavy List Combat by Baron Matthew Moraveous Avdenmork (2017)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/Basic+Conditioning+for+Heavy+List+Combat+(2017).pdf"
+  },
+  {
+    "title": "Basic Shieldwall Techniques",
+    "category": "Combat",
+    "tags": ["melee", "rattan"],
+    "description": "Basic Shieldwall Techniques by Master Colyne Stewart (2003)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/Basic+Shieldwall+Techniques+(2003).pdf"
+  },
+  {
+    "title": "Building Better Wooden Shields",
+    "category": "Combat",
+    "tags": ["shield", "pattern", "rattan"],
+    "description": "Building Better Wooden Shields by Centurion Micolay Haiduk (2016)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/Building+Better+Wooden+Shields+92016).pdf"
+  },
+  {
+    "title": "Challenges and Boasts: A Compendium and Guide",
+    "category": "Combat",
+    "tags": ["challenge", "herald"],
+    "description": "Challenges and Boasts: A Compendium and Guide By Michael and Elizabeth Labbe-Webb (2000)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/Challenges+and+Boasts_+A+Compendium+and+Guide.pdf"
+  },
+  {
+    "title": "Crossing the Wet parts against nasties",
+    "category": "Combat",
+    "tags": ["rattan", "war", "tactics"],
+    "description": "Crossing the Wet parts against nasties by Pavel Itsnarrowhereavich, edited by William Hairy Dick",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/Crossing+the+Wet+parts+against+nasties.pdf"
+  },
+  {
+    "title": "Fighting for those of Small Stature",
+    "category": "Combat",
+    "tags": ["rattan"],
+    "description": "Fighting for those of Small Stature By Centurion Romanius Vesperanius (1999)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/Fighting+for+those+of+Small+Stature+(1999).pdf"
+  },
+  {
+    "title": "How to Balance your Shield to YOU",
+    "category": "Combat",
+    "tags": ["rattan", "shield"],
+    "description": "How to Balance your Shield to YOU (or how to deal with that ten pounds of wood hanging on your arm) by Master Sir Anluan Trelaine (1997)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/How+to+Balance+your+Shield+to+YOU+(1997).pdf"
+  },
+  {
+    "title": "How to Build a Thrust and Throw Javelin",
+    "category": "Combat",
+    "tags": ["rattan", "thrown weapons"],
+    "description": "How to Build a Thrust and Throw Javelin by THLady Ingilborg Sigmundardottir of Caid (2008)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/How+to+Build+a+Thrust+and+Throw+Javelin+(2008).pdf"
+  },
+  {
+    "title": "How to Capture a Castle",
+    "category": "Combat",
+    "tags": ["rattan", "war", "tactics"],
+    "description": "How to Capture a Castle by Lady Katharine of Caithness(2012)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/How+to+Capture+a+Castle+(2012).pdf"
+  },
+  {
+    "title": "How to make a Medieval English Scabbard",
+    "category": "Combat",
+    "tags": ["England", "scabbard", "diy"],
+    "description": "How to make a Medieval English Scabbard Using Period Techniques and Tools by HL Czina Angielczyka (2012)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/How+to+make+a+Medieval+English+Scabbard+(2012).pdf"
+  },
+  {
+    "title": "How to make a Seax Scabbard with a Metal Edge Binding",
+    "category": "Combat",
+    "tags": ["diy", "scabbard", "seax"],
+    "description": "How to make a Seax Scabbard with a Metal Edge Binding by Ana Deissler (2005)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/How+to+make+a+Seax+Scabbard+with+a+Metal+Edge+Binding+92005).pdf"
+  },
+  {
+    "title": "How To Throw Rocks Really Far",
+    "category": "Combat",
+    "tags": ["rattan", "war"],
+    "description": "How To Throw Rocks Really Far: A Fustibalus by Jehanne de Wodeford (2008)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/How+To+Throw+Rocks+Really+Far_+A+Fustibalus.pdf"
+  },
+  {
+    "title": "Leather Swan Helm Crest",
+    "category": "Combat",
+    "tags": ["rattan", "armor", "helm"],
+    "description": "Leather Swan Helm Crest by Lady Angela Mori(2014)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/Leather+Swan+Helm+Crest+(2014).pdf"
+  },
+  {
+    "title": "Light Leg Harness",
+    "category": "Combat",
+    "tags": ["armor", "leg", "pattern"],
+    "description": "Light Leg Harness: Tube-reinforced Gamboised Cuisses by Baron Timothy Garagchan o'Leitrim ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/Light+Leg+Harness.pdf"
+  },
+  {
+    "title": "Chainmaille Tutorial for Beginners",
+    "category": "Combat",
+    "tags": ["armor", "chainmail", "diy"],
+    "description": "Chainmaille Tutorial for Beginners by Culann Mac Cruimeinn",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/Msg+-+Chainmail.pdf"
+  },
+  {
+    "title": "On more Period Tournaments",
+    "category": "Combat",
+    "tags": ["tournament", "rattan"],
+    "description": "On more Period Tournaments by Arval (1995)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/On+more+Period+Tournaments+(1995)+.pdf"
+  },
+  {
+    "title": "On Warfighting",
+    "category": "Combat",
+    "tags": ["war", "tactics"],
+    "description": "On Warfighting by Master Donal Mac Ruiseart, O. Pel. (2011)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/On+Warfighting+(2011).pdf"
+  },
+  {
+    "title": "Revised Pool Noodle or Javelin Tip Design for Ballista Missiles",
+    "category": "Combat",
+    "tags": ["war", "diy", "siege weapons"],
+    "description": "Revised Pool Noodle or Javelin Tip Design for Ballista Missiles by Master Jean Paul Pierrepont, OL (2008)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/Revised+Pool+Noodle+or+Javelin+Tip+Design+for+Ballista+Missiles+(2008).pdf"
+  },
+  {
+    "title": "Sisters in Arms",
+    "category": "Combat",
+    "tags": ["women"],
+    "description": "Sisters in Arms: European Woman in Combat in the Late Medieval Period by Lady Katerin ferch Gwenllian, OW (2008)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/Sisters+in+Arms_+European+Woman+in+Combat+in+the+Late+Medieval+Period+(2008).pdf"
+  },
+  {
+    "title": "Small Siege Rock Construction",
+    "category": "Combat",
+    "tags": ["war", "siege weapons"],
+    "description": "Small Siege Rock Construction by Baron Jonathas Reinisch, KSCA (2019)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/Small+Siege+Rock+Construction.pdf"
+  },
+  {
+    "title": "The Good German Armor Stand ",
+    "category": "Combat",
+    "tags": ["diy", "armor", "woodworking"],
+    "description": "The Good German Armor Stand: How to Make a Portable, Folding Wood Armor Stand in Less Than Three Hours by Lord Gregor Reinhardt von Holstein and  Baroness Genoveva von Lübeck (2015)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/The+Good+German+Armor+Stand+(2015).pdf"
+  },
+  {
+    "title": "The Handy-Squire's Pontification Guide",
+    "category": "Combat",
+    "tags": ["list", "rattan", "chivalry"],
+    "description": "The Handy-Squire's Pontification Guide: How to Look Good in the Lists by Master Colyne Stewart (2006)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/The+Handy-Squire's+Pontification+Guide.pdf"
+  },
+  {
+    "title": "The Highland Targe",
+    "category": "Combat",
+    "tags": ["shield", "diy", "scotland", "scottish"],
+    "description": "The Highland Targe by Lord Mungo Napier (2012)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/THE+HIGHLAND+TARGE+(2012).pdf"
+  },
+  {
+    "title": "The Joust",
+    "category": "Combat",
+    "tags": ["jousting", "equestrian"],
+    "description": "The Joust by Marija Kotok(2002)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/The+Joust+(2002).pdf"
+  },
+  {
+    "title": "The Killing Blow Dilemma",
+    "category": "Combat",
+    "tags": ["rattan"],
+    "description": "The Killing Blow Dilemma: A Modest Suggestion for Its Partial Resolution by Ld. Daniel Raoul le Vascon du Navarre' (1999)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/The+Killing+Blow+Dilemma+(1999).pdf"
+  },
+  {
+    "title": "The Secrets of Sword Fighting",
+    "category": "Combat",
+    "tags": ["rattan"],
+    "description": "The Secrets of Sword Fighting (Now they can be yours!) by Arthur of Lockehaven (2004)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/The+Secrets+of+Sword+Fighting+(2004).pdf"
+  },
+  {
+    "title": "The Well Rounded Fighter",
+    "category": "Combat",
+    "tags": ["rattan"],
+    "description": "The Well Rounded Fighter by H.E. Brian du Val (2004)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/The+Well+Rounded+Fighter+(2004).pdf"
+  },
+  {
+    "title": "Women and the Art of Battle in the Late Middle Ages",
+    "category": "Combat",
+    "tags": ["women"],
+    "description": "Women and the Art of Battle in the Late Middle Ages by Robin Anderson of Ross (Robin E. Craig)(1998)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/Women+and+the+Art+of+Battle+in+the+Late+Middle+Ages+(1998+).pdf"
+  },
+  {
+    "title": "Women Warriors",
+    "category": "Combat",
+    "tags": ["women", "amazons", "gladiators", "viking", "asians", "arabs"],
+    "description": "Women Warriors: Myth or Reality? by Mistress Siobhan ni Seaghdha (2001)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat/Women+Warriors_+Myth+or+Reality_+(2001).pdf"
+  },
   {
     "title": "Beads: Symbols of Indigenous Cultural Resilience and Value",
     "category": "FN Indigenous",
