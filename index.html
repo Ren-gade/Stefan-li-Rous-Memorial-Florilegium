@@ -67,11 +67,7 @@
         <p>
           I hope you find these files useful, interesting, amusing or all three.
         </p>
-        <section class="recent-uploads">
-          <h2>Recently Added</h2>
-          <div id="recentUploads"></div>
-        </section>
-
+      
         <h3>How it works</h3>
         <ul>
           <li>Browse categories using the sidebar.</li>
@@ -109,6 +105,10 @@
             messages copied from a discord/facebook/thread.
           </li>
         </ul>
+  <section class="recent-uploads">
+          <h2>Recently Added</h2>
+          <div id="recentUploads"></div>
+        </section>
 
         <h3>Submit an article</h3>
         <p>
@@ -134,36 +134,41 @@
     </script>
 
     <script>
-      fetch("data/data.json")
-        .then((res) => res.json())
-        .then((data) => {
-          // Sort by newest upload
-          data.sort((a, b) => {
-            const dateA = a.uploaded
-              ? new Date(a.uploaded)
-              : new Date("1900-01-01");
-            const dateB = b.uploaded
-              ? new Date(b.uploaded)
-              : new Date("1900-01-01");
-            return dateB - dateA;
-          });
+       fetch("data/data.json")
+    .then((res) => res.json())
+    .then((data) => {
+      // Sort by newest upload
+      data.sort((a, b) => {
+        const dateA = a.uploaded ? new Date(a.uploaded) : new Date("1900-01-01");
+        const dateB = b.uploaded ? new Date(b.uploaded) : new Date("1900-01-01");
+        return dateB - dateA;
+      });
 
-          // Take only the newest 4
-          const recent = data.slice(0, 4);
+      // Take only the newest 6
+      const recent = data.slice(0, 6);
 
-          const container = document.getElementById("recentUploads");
+      const container = document.getElementById("recentUploads");
 
-          recent.forEach((item) => {
-            container.innerHTML += `
-        <div class="recent-card">
+      recent.forEach((item) => {
+        // Create the card element
+        const card = document.createElement("div");
+        card.classList.add("recent-card");
+
+        // If dark mode is active on body, also add dark-mode to this card
+        if (document.body.classList.contains("dark-mode")) {
+          card.classList.add("dark-mode");
+        }
+
+        // Add inner content
+        card.innerHTML = `
           <h3>${item.title}</h3>
           <p>${item.description}</p>
           <a href="${item.download_url}" target="_blank">Open Article</a>
-        </div>
-      `;
-          });
-        });
+        `;
 
+        container.appendChild(card);
+      });
+    });
       // Show button when scrolled down
       window.onscroll = function () {
         scrollFunction();
