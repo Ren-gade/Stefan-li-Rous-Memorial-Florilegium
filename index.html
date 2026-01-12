@@ -40,7 +40,14 @@
         </div>
       </div>
 
-      <main style="padding-top: 50px; padding-left: 50px; padding-right: 50px; flex: 1">
+      <main
+        style="
+          padding-top: 50px;
+          padding-left: 50px;
+          padding-right: 50px;
+          flex: 1;
+        "
+      >
         <h2>Welcome</h2>
         <p>
           This Florilegium was initially assembled by The Honorable Lord Stefan
@@ -60,20 +67,27 @@
         <p>
           I hope you find these files useful, interesting, amusing or all three.
         </p>
+        <section class="recent-uploads">
+          <h2>Recently Added</h2>
+          <div id="recentUploads"></div>
+        </section>
 
         <h3>How it works</h3>
         <ul>
           <li>Browse categories using the sidebar.</li>
           <li>
-            Search by keywords, tags or titles in the sidebar search box. You can also
-            click on a tag to view all items with that tag.
+            Search by keywords, tags or titles in the sidebar search box. You
+            can also click on a tag to view all items with that tag.
           </li>
           <li>
-          Click the “Open Article” button on a card to view the file in a new tab. From there, you can download your own copy directly from your browser.
+            Click the “Open Article” button on a card to view the file in a new
+            tab. From there, you can download your own copy directly from your
+            browser.
           </li>
           <li>
-        For some entries, you'll see a “Class Recording” button, which opens a video in a new tab.
-These cards may also include handouts, resource links, or slide decks—download them the same way as above.
+            For some entries, you'll see a “Class Recording” button, which opens
+            a video in a new tab. These cards may also include handouts,
+            resource links, or slide decks—download them the same way as above.
           </li>
         </ul>
 
@@ -120,6 +134,36 @@ These cards may also include handouts, resource links, or slide decks—download
     </script>
 
     <script>
+      fetch("data/data.json")
+        .then((res) => res.json())
+        .then((data) => {
+          // Sort by newest upload
+          data.sort((a, b) => {
+            const dateA = a.uploaded
+              ? new Date(a.uploaded)
+              : new Date("1900-01-01");
+            const dateB = b.uploaded
+              ? new Date(b.uploaded)
+              : new Date("1900-01-01");
+            return dateB - dateA;
+          });
+
+          // Take only the newest 4
+          const recent = data.slice(0, 4);
+
+          const container = document.getElementById("recentUploads");
+
+          recent.forEach((item) => {
+            container.innerHTML += `
+        <div class="recent-card">
+          <h3>${item.title}</h3>
+          <p>${item.description}</p>
+          <a href="${item.download_url}" target="_blank">Open Article</a>
+        </div>
+      `;
+          });
+        });
+
       // Show button when scrolled down
       window.onscroll = function () {
         scrollFunction();

@@ -20,6 +20,31 @@ body {
   font-size: min(1.1rem, 3vw);
   line-height: 1.6;
 }
+.recent-uploads {
+  margin-top: 2rem;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  #recentUploads {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .recent-card {
+    background-color: #e2d6b3;
+  border: 1px solid #d2b48c;
+  border-radius: 5px;
+  padding: min(1rem, 4vw);
+  width: 100%;
+  max-width: 400px; /* prevents cards from getting too wide */
+  box-sizing: border-box;
+  margin: 0 auto; /* centers card inside grid column */
+  }
+}
+
 
 #contentArea {
   flex: 1; /* main content grows to fill space */
