@@ -1373,7 +1373,7 @@
   {
     "title": "Leather Helm",
     "category": "Armor",
-    "tags": ["armor", "pattern", "mleatherwork", "leather", "helm"],
+    "tags": ["armor", "pattern", "leatherwork", "leather", "helm"],
     "description": "A pattern for a leather helm",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Armor/Leather+Helm.pdf"
   },
@@ -2923,7 +2923,7 @@
   {
     "title": "To make a Square Target",
     "category": "Rapier",
-    "tags": ["rapier","shield", "diy"],
+    "tags": ["rapier", "shield", "diy"],
     "uploaded": "2026-01-13",
     "description": "To make a Square Target In the Style of Marozzo or DiGrassi by Don Tivar Moodragon (2009)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat+-+Rapier/To+make+a+Square+Target+In+the+Style+of+Marozzo+or+DiGrassi.pdf"
@@ -2937,11 +2937,650 @@
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Combat+-+Rapier/The+Styles+of+Swordplay+(2001).pdf"
   },
   {
+    "title": "Behind the Scenes of A&S",
+    "category": "Commerce",
+    "tags": ["moneyers guild", "A&S", "coin making"],
+    "uploaded": "2026-01-13",
+    "description": "Behind the Scenes of A&S: Medieval Coins by the Moneyers Guild - Episode 1 by THL Elska á Fjárfella (2020)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Commerce/Behind+the+Scenes+of+A%26S+(202).pdf"
+  },
+  {
+    "title": "A Boke on the Financing of Warre",
+    "category": "Commerce",
+    "tags": ["war", "history"],
+    "uploaded": "2026-01-13",
+    "description": "A Boke on the Financing of Warre, of Courtes and the Other Divers Expenditures of Princes by their servant Anton de Stoc (2002)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Commerce/A+Boke+on+the+Financing+of+Warre+(2002).pdf"
+  },
+  {
     "title": "Beads: Symbols of Indigenous Cultural Resilience and Value",
     "category": "FN Indigenous",
     "tags": ["accessories", "native", "first nations", "beads"],
     "description": "This is a study on the history of beads in relation to Indigenous culture(s).",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Indigenous+North+America/Beads+Indigenous+Thesis.pdf"
+  },
+  {
+    "title": "A Brief History of the Worshipful Company of Waxchandlers",
+    "category": "Commerce",
+    "tags": [
+      "candle making",
+      "history",
+      "England",
+      "13th century",
+      "14th century",
+      "15th century",
+      "16th century",
+      "17th century"
+    ],
+    "uploaded": "2026-01-13",
+    "description": "A Brief History of the Worshipful Company of Waxchandlers, London from the 13th to 17th Centuries by Lady Kate the Candelmaker (2009)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Commerce/A+Brief+History+of+the+Worshipful+Company+of+Waxchandlers+(2009).pdf"
+  },
+  {
+    "title": "A review of useful sources for Period Prices",
+    "category": "Commerce",
+    "tags": ["price", "merchant"],
+    "uploaded": "2026-01-13",
+    "description": "A review of useful sources for Period Prices by Lord Anton de Stoc (2002)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Commerce/A+review+of+useful+sources+for+Period+Prices+(2002).pdf"
+  },
+  {
+    "title": "English Weights and Measures",
+    "category": "Commerce",
+    "tags": ["merchant", "England"],
+    "uploaded": "2026-01-13",
+    "description": "English Weights and Measures By Lord Anton de Stoc (2002)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Commerce/English+Weights+and+Measures+(2002).pdf"
+  },
+  {
+    "title": "Measures",
+    "category": "Commerce",
+    "tags": ["merchant"],
+    "uploaded": "2026-01-13",
+    "description": "Measures by Diarmaid(1998)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Commerce/Measures+(1998).pdf"
+  },
+  {
+    "title": "Medieval Apprenticeship Indentures",
+    "category": "Commerce",
+    "tags": ["apprenticeship", "indenture"],
+    "uploaded": "2026-01-13",
+    "description": "Medieval Apprenticeship Indentures by Master Crispin Sexi(2006)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Commerce/Medieval+Apprenticeship+Indentures+(2006).pdf"
+  },
+  {
+    "title": "Medieval Merchants and Artisans",
+    "category": "Commerce",
+    "tags": ["merchant"],
+    "uploaded": "2026-01-13",
+    "description": "Medieval Merchants and Artisans By Catriona Macperson (AKA Milly McCloskey) (1998). This was originally published as a Compleat Anachronist pamplet.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Commerce/Medieval+Merchants+and+Artisans+(1998).pdf"
+  },
+  {
+    "title": "Medieval Messengers",
+    "category": "Commerce",
+    "tags": ["messengers"],
+    "uploaded": "2026-01-13",
+    "description": "Medieval Messengers by Byron Whited (2001). A review and summary of books about medieval messengers.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Commerce/Medieval+Messengers+(2001).pdf"
+  },
+  {
+    "title": "Of Charcoal and Ashes",
+    "category": "Commerce",
+    "tags": [""],
+    "uploaded": "2026-01-13",
+    "description": "Of Charcoal and Ashes by Elska á Fjárfella (2017)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Commerce/Of+Charcoal+and+Ashes+(2017).pdf"
+  },
+  {
+    "title": "The Salt of the Earth",
+    "category": "Commerce",
+    "tags": ["herbs", "spices"],
+    "uploaded": "2026-01-13",
+    "description": "The Salt of the Earth By Da`ved Man of Letters Lord Xaviar the Eccentric. (1996)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Commerce/The+Salt+of+the+Earth+(1996).pdf"
+  },
+  {
+    "title": "Wooden seals for tribute bags",
+    "category": "Commerce",
+    "tags": [""],
+    "uploaded": "2026-01-13",
+    "description": "Wooden seals for tribute bags from Novgorod by HL Marya Kargashina(2017)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Commerce/Wooden+seals+for+tribute+bags+(2017).pdf"
+  },
+  {
+    "title": "A Brief Historical Timeline of Early Decorated Eggs",
+    "category": "Crafts",
+    "tags": ["Pysanky"],
+    "uploaded": "2026-01-19",
+    "description": "A Brief Historical Timeline of Early Decorated Eggs and the Lviv Pysanky by Mistress Kataryna Tkach, O.L. (2014)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/A+Brief+Historical+Timeline+of+Early+Decorated+Eggs+(2014).pdf"
+  },
+  {
+    "title": "A Lapidary",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "A Lapidary Translated into the Language of the People of Calontir by Agnes deLanvallei ",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/A+Lapidary+.pdf"
+  },
+  {
+    "title": "A Pewter Spangle Event Token",
+    "category": "Crafts",
+    "tags": ["pewter", "event", "events", "token"],
+    "uploaded": "2026-01-19",
+    "description": "A Pewter Spangle Event Token by Master Crispin Sexi (2006)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/A+Pewter+Spangle+Event+Token+(2006).pdf"
+  },
+  {
+    "title": "A Simple Portable Brake Drum Forge",
+    "category": "Crafts",
+    "tags": ["forge", "blacksmithing", "blacksmith"],
+    "uploaded": "2026-01-19",
+    "description": "A Simple Portable Brake Drum Forge by Master Magnus Malleus (2002)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/A+Simple+Portable+Brake+Drum+Forge+(2002).pdf"
+  },
+  {
+    "title": "Acid Etched Eggs",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "Acid Etched Eggs by Kataryna Tkach (2014)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Acid+Etched+Eggs.pdf"
+  },
+  {
+    "title": "Archaic Chemical Names and Modern Equivalents",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "Archaic Chemical Names and Modern Equivalents by Baron Ibrahim ibn Abih al Thaalibi, OP, OL",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Archaic+Chemical+Names+and+Modern+Equivalents.pdf"
+  },
+  {
+    "title": "Beginning Copper Etching",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "Beginning Copper Etching by Beatrix Alfray",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Beginning+Copper+Etching+.pdf"
+  },
+  {
+    "title": "Beginning Period Woodworking",
+    "category": "Crafts",
+    "tags": ["woodworking"],
+    "uploaded": "2026-01-19",
+    "description": "Beginning Period Woodworking By Master Tamlene ap Guidgen, O.L. (2002)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Beginning+Period+Woodworking+(2002).pdf"
+  },
+  {
+    "title": "BIB - Ceramics",
+    "category": "Crafts",
+    "tags": ["ceramics"],
+    "uploaded": "2026-01-19",
+    "description": "A ceramics, pottery and tile bibliography.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/BIB+-+Ceramics.pdf"
+  },
+  {
+    "title": "BIB - Medieval Blacksmithing Bibliography",
+    "category": "Crafts",
+    "tags": ["blacksmith", "blacksmithing"],
+    "uploaded": "2026-01-19",
+    "description": "Medieval Blacksmithing Bibliography by Master Tamlene ap Guidgen, O.L.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/BIB+-+Medieval+Blacksmithing+Bibliography.pdf"
+  },
+  {
+    "title": "Boiled - Exploration of the History and Construction of Bentwood Boxes",
+    "category": "Crafts",
+    "tags": ["woodworking"],
+    "uploaded": "2026-01-19",
+    "description": "Boiled - Exploration of the History and Construction of Bentwood Boxes by HL Alasdair Mac Roibeirt (2019)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Boiled+-+Exploration+of+the+History+and+Construction+of+Bentwood+Boxes.pdf"
+  },
+  {
+    "title": "Carving Rock Crystal According to Theophilius",
+    "category": "Crafts",
+    "tags": ["crystal"],
+    "uploaded": "2026-01-19",
+    "description": "Carving Rock Crystal According to Theophilius by Lord Valdis of Gotland",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Carving+Rock+Crystal+According+to+Theophilius.pdf"
+  },
+  {
+    "title": "Cheese Glue",
+    "category": "Crafts",
+    "tags": ["glue"],
+    "uploaded": "2026-01-19",
+    "description": "Cheese Glue by Mistress Alexandra Hartshorne, OL (2016)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Cheese+Glue+(2016).pdf"
+  },
+  {
+    "title": "Easily Made Primitive Lathe",
+    "category": "Crafts",
+    "tags": ["woodworking"],
+    "uploaded": "2026-01-19",
+    "description": "Easily Made Primitive Lathe by Master Magnus Malleus (2003)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Easily+Made+Primitive+Lathe+(2003).pdf"
+  },
+  {
+    "title": "Eight-Legged Roman Workbench",
+    "category": "Crafts",
+    "tags": ["diy", "woodworking"],
+    "uploaded": "2026-01-19",
+    "description": "Eight-Legged Roman Workbench by Morgan Kynith",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Eight-Legged+Roman+Workbench+(2018).pdf"
+  },
+  {
+    "title": "Etching...Uncovering the Hidden Image Pt 1",
+    "category": "Crafts",
+    "tags": ["copper", "metalwork"],
+    "uploaded": "2026-01-19",
+    "description": "The Stages for Chemically Etching Copper Alloys Gæira Aggadóttir",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Etching...Uncovering+the+Hidden+Image+Pt+1.pdf"
+  },
+  {
+    "title": "Etching...Uncovering the Hidden Image Pt 2",
+    "category": "Crafts",
+    "tags": ["copper", "metalwork"],
+    "uploaded": "2026-01-19",
+    "description": "Heat Transferring the Toner Image onto Flat Metal by Gæira Aggadóttir",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Etching...Uncovering+the+Hidden+Image+Pt+2.pdf"
+  },
+  {
+    "title": "FAQ - Metalworking",
+    "category": "Crafts",
+    "tags": ["metalwork"],
+    "uploaded": "2026-01-19",
+    "description": "FAQ from the metalworking newsgroup.",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/FAQ+-+Metalworking+(1993).pdf"
+  },
+  {
+    "title": "Gemstone cutting and polishing in the 12-15th century",
+    "category": "Crafts",
+    "tags": [
+      "gem",
+      "12th century",
+      "13th century",
+      "14th century",
+      "15th century"
+    ],
+    "uploaded": "2026-01-19",
+    "description": "Gemstone cutting and polishing in the 12-15th century by Lord Silvius Foppa (2012)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Gemstone+cutting+and+polishing+in+the+12-15th+century+(2012).pdf"
+  },
+  {
+    "title": "Hardening Leather (2014)",
+    "category": "Crafts",
+    "tags": ["leather", "leatherwork"],
+    "uploaded": "2026-01-19",
+    "description": "Hardening Leather by The Honorable Christophe of Grey",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Hardening+Leather+(2014).pdf"
+  },
+  {
+    "title": "How to build your own Casting Frame for Sandcasting",
+    "category": "Crafts",
+    "tags": ["metal", "casting", "sandcasting"],
+    "uploaded": "2026-01-19",
+    "description": "How to build your own Casting Frame for Sandcasting by Lord Camlan Bayne Wallace (2015)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/How+to+build+your+own+Casting+Frame+for+Sandcasting+(2015).pdf"
+  },
+  {
+    "title": "How To Buy Leather (2014)",
+    "category": "Crafts",
+    "tags": ["leatherwork"],
+    "uploaded": "2026-01-19",
+    "description": "How To Buy Leather by The Honorable Christophe of Grey (2014)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/How+To+Buy+Leather+(2014).pdf"
+  },
+  {
+    "title": "Intaglio: Sculpture in Reverse",
+    "category": "Crafts",
+    "tags": ["sculpture"],
+    "uploaded": "2026-01-19",
+    "description": "Intaglio: Sculpture in Reverse (or: Hey! My jewelry does impressions!) by Lady Rekon of Saaremaa (2010)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Intaglio_+Sculpture+in+Reverse+(2010).pdf"
+  },
+  {
+    "title": "Intermediate Pewter Casting in Soapstone",
+    "category": "Crafts",
+    "tags": ["casting", "soapstone"],
+    "uploaded": "2026-01-19",
+    "description": "Intermediate Pewter Casting in Soapstone Beyond a Simple Site Token by Baroness Giliana Attewatyr, O,L",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Intermediate+Pewter+Casting+in+Soapstone.pdf"
+  },
+  {
+    "title": "Intro to Leatherworking Making a Belt Pouch",
+    "category": "Crafts",
+    "tags": ["leatherwork", "pouch", "diy"],
+    "uploaded": "2026-01-19",
+    "description": "Intro to Leatherworking – Making a Belt Pouch by Lord Dafydd ap Alan (2018)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Intro+to+Leatherworking+%E2%80%93+Making+a+Belt+Pouch.pdf"
+  },
+  {
+    "title": "Introduction to Pewter Casting",
+    "category": "Crafts",
+    "tags": ["pewter", "casting"],
+    "uploaded": "2026-01-19",
+    "description": "Introduction to Pewter Casting by Baron Christopher MacConing, OL (2013)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Introduction+to+Pewter+Casting+(2013)+.pdf"
+  },
+  {
+    "title": "Jewelry Soldering Simplified",
+    "category": "Crafts",
+    "tags": ["jewelry"],
+    "uploaded": "2026-01-19",
+    "description": "Jewelry Soldering Simplified by HL HRothgar Thorsson (2008)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Jewelry+Soldering+Simplified.pdf"
+  },
+  {
+    "title": "Leather Hardware for the Woodworker (2007)",
+    "category": "Crafts",
+    "tags": ["woodworking"],
+    "uploaded": "2026-01-19",
+    "description": "Leather ‘Hardware‘ for the Woodworker by Master Sven Odin Eye (2007)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Leather+%E2%80%98Hardware%E2%80%98+for+the+Woodworker+(2007).pdf"
+  },
+  {
+    "title": "Leather Dyes (2018)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "Medieval Leather Dyes by Lord Dafydd ap Alan (2018)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Leather+Dyes+(2018).pdf"
+  },
+  {
+    "title": "Leather Mallet Medallion, Repousse",
+    "category": "Crafts",
+    "tags": ["leatherwork", "token", "medallion"],
+    "uploaded": "2026-01-19",
+    "description": "Leather Mallet Medallion, Repoussé by Lady Ingeborg bildsbriótr Ulfsdottir (2009)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Leather+Mallet+Medallion%2C+Repouss%C3%A9+(2009).pdf"
+  },
+  {
+    "title": "Lye Soap (1997)",
+    "category": "Crafts",
+    "tags": ["soapmaking", "lye"],
+    "uploaded": "2026-01-19",
+    "description": "Lye Soap by Baroness Leonora Kathryn de Provence (1997)",
+    "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Lye+Soap+(1997).pdf"
+  },
+  {
+    "title": "Making a Horn Cup (2001)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Making a Simple Viking Ring Brooch (2008)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Making a Tusk Tenon for Knockdown Furniture (2017)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Making and Using a Pole Lathe",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Making Charcoal",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Making Paint Brushes Using Fur (2018)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Making Pilgrim Souvenirs (2008)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Method for period horn work (2006)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Methods and Techniques of Painting in Early 15th Century Italy",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Modern & Medieval Soap Making Compared (2016)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "MSG - Merchants",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "MSG - Metalworking",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Paper Folding in 15th Century Europe",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Pewter Casting In Wood (2009)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Pyrography (2001)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Reconstruction and Use of a Saxon Plane (1994)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Relief Carving 101 (1999)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Sand Casting in History (2015)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Sharpening Tools (2002)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Soap Making in the Current Middle Ages",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Soapstone Pewter Casting",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Split that stick! Preparing bamboo for oriental kites",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "The Backyard Blacksmith (2007)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "The Method to the Madness - Creating Glass in the Medieval Period",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Throwing Pots (2001)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Tool Making",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Trichinopoly Chainwork (2005)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Venetian Betrothal Goblets (2011)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Viking Wire Weaving (2010)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Visual Typology of Twisted or Plaited Viking Age Rings Part 1 (2019)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Working With Beeswax (2008)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Working with Horn and Skeletal Materials (2008)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Working with Slate (2007)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Working With Tallow (2008)",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
+  },
+  {
+    "title": "Working-Horn-pamphlet",
+    "category": "Crafts",
+    "tags": [""],
+    "uploaded": "2026-01-19",
+    "description": "",
+    "download_url": "nan"
   },
   {
     "title": "Costumes of the Plains Indians",

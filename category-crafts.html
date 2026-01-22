@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Commerce</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <script src="js/analytics.js"></script>
+  <body>
+<!-- Placeholder for injected header -->
+  <div id="header-container"></div>
+ <div style="display: flex">
+     <div id="sidebar" style="width:200px; padding:10px;">
+    <input type="text" placeholder="Search..." id="sidebarSearch"><br>
+    <div id="categoryList">
+       <script>
+        function loadCategories() {
+            fetch('updated-menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    const currentPage = window.location.pathname.split('/').pop(); // Get current page
+                    const sidebar = document.getElementById('sidebar');
+                    sidebar.innerHTML = data;
+
+                    // Modify links
+                    const links = sidebar.querySelectorAll('.category');
+                    links.forEach(link => {
+                        if (link.getAttribute('data-page') === currentPage) {
+                            link.href = '#'; // Replace href with '#'
+                        }
+                    });
+                })
+                .catch(error => console.error('Error loading categories:', error));
+        }
+
+        window.onload = loadCategories;
+    </script>
+    </div>
+</div>
+ <!-- Main Content -->
+        <main class="col-md-10" id="contentArea">
+          <!-- Cards populated dynamically by script.js -->
+        </main>
+      </div>
+    </div>
+    <script>
+      // Set category for this page
+      window.currentCategory = "Crafts";
+    </script>
+     <!-- Inject header + handle dark mode -->
+  <script src="data/header.js"></script>
+     <!-- Back to Top Button -->
+<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑ Top</button>
+<script src="js/synonyms.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+  // Show button when scrolled down
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    const button = document.getElementById("backToTopBtn");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      button.style.display = "block";
+    } else {
+      button.style.display = "none";
+    }
+  }
+
+  // Smooth scroll to top
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
+  <div id="footer-container"></div>
+<script src="data/footer.js"></script>
+  </body>
+</html>
+
+
