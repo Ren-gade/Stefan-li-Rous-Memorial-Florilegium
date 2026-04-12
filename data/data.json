@@ -3337,7 +3337,7 @@
   {
     "title": "Making Charcoal",
     "category": "Crafts",
-    "tags": [""],
+    "tags": ["diy", "charcoal"],
     "uploaded": "2026-01-24",
     "description": "Making Charcoal by Viscount Sir Corin Anderson (KSCA, OP) (2006)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Making+Charcoal.pdf"
@@ -3353,7 +3353,7 @@
   {
     "title": "Making Pilgrim Souvenirs (2008)",
     "category": "Crafts",
-    "tags": [""],
+    "tags": ["diy"],
     "uploaded": "2026-01-24",
     "description": "Making Pilgrim Souvenirs by Honorable Lady Jutte Haberlein (2008)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Making+Pilgrim+Souvenirs+(2008).pdf"
@@ -3361,7 +3361,7 @@
   {
     "title": "Method for period horn work (2006)",
     "category": "Crafts",
-    "tags": [""],
+    "tags": ["horn"],
     "uploaded": "2026-01-24",
     "description": "Method for period horn work by Kirk Morrison (2006)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crafts/Method+for+period+horn+work+(2006).pdf"
