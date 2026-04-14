@@ -3586,6 +3586,7 @@
     "title": "LINK - Medieval Crime and Punishment",
     "category": "Crime",
     "tags": [""],
+    "uploaded": "2026-04-12",
     "description": "Medieval Crime and Punishment by Dame Aoife Finn of Ynos Mon",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crime/LINK+-+Medieval+Crime+and+Punishment.pdf"
   },
@@ -3593,6 +3594,7 @@
     "title": "Medieval Legal Terms and Concepts for the SCA",
     "category": "Crime",
     "tags": [""],
+    "uploaded": "2026-04-12",
     "description": "Medieval Legal Terms and Concepts for the SCA by Ioseph of Locksley (1996)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crime/Medieval+Legal+Terms+and+Concepts+for+the+SCA+(1996).pdf"
   },
@@ -3600,13 +3602,15 @@
     "title": "MSG - Period Law Enforcement",
     "category": "Crime",
     "tags": [""],
+    "uploaded": "2026-04-12",
     "description": "A message thread about period law enforcement",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crime/MSG+-+Period+law+enforcement.pdf"
   },
   {
     "title": "MSG - Period Torture, Executions and Punishements",
-    "category": "",
+    "category": "Crime",
     "tags": [""],
+    "uploaded": "2026-04-12",
     "description": "A message thread on period torture and punishments",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crime/MSG+-+Period+Torture%2C+Executions+and+Punishments.pdf"
   },
@@ -3614,6 +3618,7 @@
     "title": "MSG - Poisons",
     "category": "Crime",
     "tags": [""],
+    "uploaded": "2026-04-12",
     "description": "A message thread on poisons",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crime/MSG+-+Poisons.pdf"
   },
@@ -3621,6 +3626,7 @@
     "title": "Poison Hemlock",
     "category": "Crime",
     "tags": [""],
+    "uploaded": "2026-04-12",
     "description": "Poison Hemlock - conium maculatum by Baroness Adelindis filia Gotefridi (2017)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crime/Poison+Hemlock+(2017).pdf"
   },
@@ -3628,6 +3634,7 @@
     "title": "The Silent Weapon",
     "category": "Crime",
     "tags": [""],
+    "uploaded": "2026-04-12",
     "description": "The Silent Weapon: Poisons and Antidotes in the Middle Ages (1994)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/Crime/The+Silent+Weapon+(1994).pdf"
   },
@@ -3635,6 +3642,7 @@
     "title": "A Survey of Food in Late 13th and Early 14th Century Englands",
     "category": "Food",
     "tags": ["13th century", "14th century", "England"],
+    "uploaded": "2026-04-12",
     "description": "A Survey of Food in Late 13th and Early 14th Century England by HL Eulalia Piebakere (2018)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/General+Food+files/A+Survey+of+Food+in+Late+13th+and+Early+14th+Century+Englands.pdf"
   },
@@ -3642,6 +3650,7 @@
     "title": "Apicius for the Impoverished",
     "category": "Food",
     "tags": [""],
+    "uploaded": "2026-04-12",
     "description": "Apicius for the Impoverished by Damhnait ferch Odharnait ap Llewellyn [ekenamed Margali] (1998)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/General+Food+files/Apicius+for+the+Impoverished+(1998).pdf"
   },
@@ -3649,6 +3658,7 @@
     "title": "Blancmange",
     "category": "Food",
     "tags": [""],
+    "uploaded": "2026-04-12",
     "description": "Blancmange by Ysabel de la Oya (2018)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/General+Food+files/Blancmange+(2018).pdf"
   },
@@ -3656,6 +3666,7 @@
     "title": "Breaking the Fast",
     "category": "Food",
     "tags": [""],
+    "uploaded": "2026-04-12",
     "description": "Breaking the Fast or What did they eat for breakfast? By Mistress Christianna MacGrain (2000)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/General+Food+files/Breaking+the+Fast.pdf"
   },
@@ -3663,6 +3674,7 @@
     "title": "Camp Cooking",
     "category": "Food",
     "tags": ["camping"],
+    "uploaded": "2026-04-12",
     "description": "Camp Cooking by Lady Caointiarn (1999)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/General+Food+files/Camp+Cooking.pdf"
   },
@@ -3670,6 +3682,7 @@
     "title": "Comparison of Animal Fats for Use in Cooking",
     "category": "Food",
     "tags": [""],
+    "uploaded": "2026-04-12",
     "description": "Comparison of Animal Fats for Use in Cooking by Magister Galefridus Peregrinus (2016)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/General+Food+files/Comparison+of+Animal+Fats+for+Use+in+Cooking+(2016).pdf"
   },
@@ -3677,6 +3690,7 @@
     "title": "English - 14th Century Fingerfoods",
     "category": "Food",
     "tags": ["England", "14th century"],
+    "uploaded": "2026-04-12",
     "description": "English - 14th Century Fingerfoods by THL Kateryn de Develyn (2001)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/General+Food+files/English+-+14th+Century+Fingerfoods+(2001).pdf"
   },
@@ -3684,6 +3698,7 @@
     "title": "Polish Black Soup",
     "category": "Food",
     "tags": [""],
+    "uploaded": "2026-04-12",
     "description": "Polish Black Soup by Mistress Casamira Jawjalny (2000)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/General+Food+files/Polish+Black+Soup.pdf"
   },
@@ -3691,6 +3706,7 @@
     "title": "To A Baron's Taste",
     "category": "Food",
     "tags": [""],
+    "uploaded": "2026-04-12",
     "description": "To A Baron's Taste: Period and period style recipes by Baron Hrolf Herjolfssen (2010)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/General+Food+files/To+A+Baron's+Taste+(2010).pdf"
   },
@@ -3698,6 +3714,7 @@
     "title": "Two Italian Tarts",
     "category": "Food",
     "tags": [""],
+    "uploaded": "2026-04-12",
     "description": "Two Italian Tarts by Lady Ysabel de la Oya (2018)",
     "download_url": "https://stefan-florilegium-files.s3.us-east-1.amazonaws.com/General+Food+files/Two+Italian+Tarts+(2018).pdf"
   },
